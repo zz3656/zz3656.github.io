@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.inte8.cn/"/>
-  <updated>2020-02-21T10:17:31.580Z</updated>
+  <updated>2020-02-21T10:27:32.956Z</updated>
   <id>https://blog.inte8.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.inte8.cn/2020/02/21/hexo-github/"/>
     <id>https://blog.inte8.cn/2020/02/21/hexo-github/</id>
     <published>2020-02-21T09:47:23.000Z</published>
-    <updated>2020-02-21T10:17:31.580Z</updated>
+    <updated>2020-02-21T10:27:32.956Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,14 @@
     </summary>
     
     
+      <category term="网页前端" scheme="https://blog.inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="hexo" scheme="https://blog.inte8.cn/tags/hexo/"/>
+    
+      <category term="GitHub" scheme="https://blog.inte8.cn/tags/GitHub/"/>
+    
+      <category term="blog" scheme="https://blog.inte8.cn/tags/blog/"/>
     
   </entry>
   
@@ -44,7 +52,7 @@
     <link href="https://blog.inte8.cn/2020/02/21/hexo-theme-matery/"/>
     <id>https://blog.inte8.cn/2020/02/21/hexo-theme-matery/</id>
     <published>2020-02-21T09:31:52.000Z</published>
-    <updated>2020-02-21T09:40:17.496Z</updated>
+    <updated>2020-02-21T10:29:07.499Z</updated>
     
     <summary type="html">
     
@@ -62,6 +70,16 @@
     </summary>
     
     
+      <category term="网页前端" scheme="https://blog.inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="hexo" scheme="https://blog.inte8.cn/tags/hexo/"/>
+    
+      <category term="blog" scheme="https://blog.inte8.cn/tags/blog/"/>
+    
+      <category term="主题" scheme="https://blog.inte8.cn/tags/%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="使用方法" scheme="https://blog.inte8.cn/tags/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   

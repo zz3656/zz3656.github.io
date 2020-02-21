@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.inte8.cn/"/>
-  <updated>2020-02-21T12:59:09.593Z</updated>
+  <updated>2020-02-21T13:29:49.984Z</updated>
   <id>https://blog.inte8.cn/</id>
   
   <author>
@@ -17,11 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>原来我不帅 Windows_Server_2016_x64_数据中心版 （20191212更新）</title>
+    <link href="https://blog.inte8.cn/2020/02/21/2016windows/"/>
+    <id>https://blog.inte8.cn/2020/02/21/2016windows/</id>
+    <published>2020-02-21T13:19:50.000Z</published>
+    <updated>2020-02-21T13:29:49.984Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;系统介绍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;1、采用微软官方原版优化制作；未做任何精简！~&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2、补丁更新到2019年12月底，FLASH，VC组件，全部是最新版；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;3、集成服务器常用的一些
+        
+      
+    
+    </summary>
+    
+    
+      <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="原来我不帅" scheme="https://blog.inte8.cn/tags/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E5%B8%85/"/>
+    
+      <category term="网吧系统" scheme="https://blog.inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>原来我不帅 马蹄更新v2.1.0_Win7x64_Win10x64_无盘公包（v2020版 V4） 2020.02.10 更新</title>
     <link href="https://blog.inte8.cn/2020/02/21/matigengxin/"/>
     <id>https://blog.inte8.cn/2020/02/21/matigengxin/</id>
     <published>2020-02-21T12:53:40.000Z</published>
-    <updated>2020-02-21T12:59:09.593Z</updated>
+    <updated>2020-02-21T13:13:08.729Z</updated>
     
     <summary type="html">
     
@@ -39,9 +75,9 @@
       <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="网吧系统" scheme="https://blog.inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
-    
       <category term="原来我不帅" scheme="https://blog.inte8.cn/tags/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E5%B8%85/"/>
+    
+      <category term="网吧系统" scheme="https://blog.inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   

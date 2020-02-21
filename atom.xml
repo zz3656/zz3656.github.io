@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.inte8.cn/"/>
-  <updated>2020-02-21T13:29:49.984Z</updated>
+  <updated>2020-02-21T15:46:25.821Z</updated>
   <id>https://blog.inte8.cn/</id>
   
   <author>
@@ -15,6 +15,99 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PVE下安装AdGuard Home搭建一个带广告过滤的私有DNS服务器及优化部署</title>
+    <link href="https://blog.inte8.cn/2020/02/21/pve-aguard/"/>
+    <id>https://blog.inte8.cn/2020/02/21/pve-aguard/</id>
+    <published>2020-02-21T15:27:06.000Z</published>
+    <updated>2020-02-21T15:46:25.821Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="GitHub" scheme="https://blog.inte8.cn/tags/GitHub/"/>
+    
+      <category term="Linux" scheme="https://blog.inte8.cn/tags/Linux/"/>
+    
+      <category term="去广告" scheme="https://blog.inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+    
+      <category term="AdGuard Home" scheme="https://blog.inte8.cn/tags/AdGuard-Home/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ROS主路由+OpenWrt旁路由+Adguard去广告配置教程</title>
+    <link href="https://blog.inte8.cn/2020/02/21/ros-openwrt-adguard/"/>
+    <id>https://blog.inte8.cn/2020/02/21/ros-openwrt-adguard/</id>
+    <published>2020-02-21T15:03:21.000Z</published>
+    <updated>2020-02-21T15:42:54.597Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="LINUX应用" scheme="https://blog.inte8.cn/categories/LINUX%E5%BA%94%E7%94%A8/"/>
+    
+    
+      <category term="Linux" scheme="https://blog.inte8.cn/tags/Linux/"/>
+    
+      <category term="去广告" scheme="https://blog.inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+    
+      <category term="AdGuard Home" scheme="https://blog.inte8.cn/tags/AdGuard-Home/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用AdGuard Home搭建一个无广告和跟踪的公共DNS</title>
+    <link href="https://blog.inte8.cn/2020/02/21/adguard/"/>
+    <id>https://blog.inte8.cn/2020/02/21/adguard/</id>
+    <published>2020-02-21T14:43:27.000Z</published>
+    <updated>2020-02-21T15:04:21.858Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;简单点说AdGuard Home就是一个公共DNS服务，如Google的公共DNS&lt;code&gt;8.8.8.8&lt;/code&gt;，和DNSmasq一样AdGuard&lt;br&gt;Home是开源的，可以自行搭建安装后在客户端配置使用。xiaoz之前分享过一个自己写的项目&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="LINUX应用" scheme="https://blog.inte8.cn/categories/LINUX%E5%BA%94%E7%94%A8/"/>
+    
+    
+      <category term="Linux" scheme="https://blog.inte8.cn/tags/Linux/"/>
+    
+      <category term="去广告" scheme="https://blog.inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>原来我不帅 Windows_Server_2016_x64_数据中心版 （20191212更新）</title>
@@ -144,7 +237,7 @@
     <link href="https://blog.inte8.cn/2020/02/21/linux/"/>
     <id>https://blog.inte8.cn/2020/02/21/linux/</id>
     <published>2020-02-21T11:08:29.000Z</published>
-    <updated>2020-02-21T11:20:56.819Z</updated>
+    <updated>2020-02-21T15:43:09.719Z</updated>
     
     <summary type="html">
     
@@ -162,7 +255,7 @@
       <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="linux" scheme="https://blog.inte8.cn/tags/linux/"/>
+      <category term="Linux" scheme="https://blog.inte8.cn/tags/Linux/"/>
     
       <category term="备忘录" scheme="https://blog.inte8.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     

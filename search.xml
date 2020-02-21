@@ -4,6 +4,93 @@
   
     
     <entry>
+      <title>PVE下安装AdGuard Home搭建一个带广告过滤的私有DNS服务器及优化部署</title>
+      <link href="/2020/02/21/pve-aguard/"/>
+      <url>/2020/02/21/pve-aguard/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>很多人可能会问：AdGuard<br>Home是干嘛用的？假如我们把整个互联网比喻成一个城市的供水，每个地区自来水厂提供的水质和你所在管网末端位置的不同，有些家庭会明智的选择使用前置净水器，可以解决管道中的二次污染、软化水质、阻止水垢、防止锈蚀、保护净水器，当然还有太阳能和燃气热水器等等，但最终享受干净水的是人。精致的家庭还会使用厨下式厨余垃圾处理器，而很多的家庭也许都不知道什么是前置净水器、什么是厨余处理器。互联网和供水一样，有大带宽和小带宽，有管网污染的问题，有被政府监控和被黑客偷窥的问题，还有烦人的广告问题，无论是视频前和视频中的广告，所以在入户光猫之后的主路由器上安装并使用私有DNS服务器（AdGuard Home），就可以有助于“清洗流量”。根据AdGuard Home 官网介绍，AdGuard Home 是一款全网广告拦截与反跟踪软件。在您将其安装完毕后，它将保护您所有家用设备，同时您不再需要安装任何客户端软件。随着物联网与连接设备的兴起，掌控您自己的整个网络环境变得越来越重要。简单的点讲就比如Google的8.8.8.8，阿里云的223.5.5.5，114的114.114.114.114，还有Cloudflare的1.1.1.1，这些都是提供DNS服务的公共DNS服务器。而AdGuard Home在给我们提供DNS服务的同时还提供去广告的功能，这就有点意思了吧~~</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/0.png" alt="avatar"></p><pre><code>   博主是用PVE作为宿主机的环境，所以就在PVE系统里面安装了这个AdGuard Home，来看看怎么安装和使用吧。</code></pre><p>一、安装教程</p><p>1、下载AdGuardHome_PVE-<br>LXC.tar.gz镜像文件：打开下载地址<a href="https://dl.gxnas.com，进入“Proxmox-VE（PVE虚拟平台）”文件夹，找到“AdGuardHome_PVE-LXC.tar.gz”，右键复制下载链接到迅雷下载；" target="_blank" rel="noopener">https://dl.gxnas.com，进入“Proxmox-VE（PVE虚拟平台）”文件夹，找到“AdGuardHome_PVE-LXC.tar.gz”，右键复制下载链接到迅雷下载；</a></p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/1-1.png" alt="avatar"></p><p>2、通过SSH工具（本教程采用WinSCP），把下载的“AdGuardHome_PVE-<br>LXC.tar.gz”，上传到PVE系统下的“/var/lib/vz/template/cache”里面；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/2-1.png" alt="avatar"></p><p>3、通过网页访问PVE后台，点击右上角“创建CT”；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/3-1.png" alt="avatar"></p><p>4、创建：LXC容器，“一般”标签栏的输入以下信息：<br>主机名称：自己随便写<br>密码：自己设置<br>确认密码：同上<br>然后点下一步</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/4-1.png" alt="avatar"></p><p>5、点“模板”标签栏的“模版”下拉菜单，选择“AdGuardHome_PVE-LXC.tar.gz”，下一步；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/5-1.png" alt="avatar"></p><p>6、“根磁盘“标签设置磁盘大小2G，下一步；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/6-1.png" alt="avatar"></p><p>7、”CPU“标签设置1核，下一步；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/7-1.png" alt="avatar"></p><p>8、”内存“标签设置内存1024M ，交换分区用默认的512，下一步；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/8-1.png" alt="avatar"></p><p>9、”网络“标签的IPv4可以根据自己的内网设置静态IP（本教程内网是192.168.1.X的号段，所以设置192.168.1.2/24），IPv6设置DHCP，下一步；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/9-1.png" alt="avatar"></p><p>10、“DNS”标签这里不需要设置，直接下一步；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/10-1.png" alt="avatar"></p><p>11、“确认”标签，最后确认一下信息，如果正确无误就勾选左下角的“创建后启动”再点“完成”。</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/11-1.png" alt="avatar"></p><p>二、相关的设置<br>1、回到PVE系统的“数据中心”，找到刚刚建立的AdGuard容器，点它进入控制台，输入登录的用户名root，回车，再输入之前设置的密码，输入ip<br>addr回车，检查一下显示的IP地址是否与刚才安装时设置的IP地址一致；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/12.png" alt="avatar"></p><p>2、输入ping baidu.com，回车，检查容器能否连通外网；有外网IP地址返回的表示外网连接正常，按一下Ctrl+C结束测试。</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/13.png" alt="avatar"></p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/14.png" alt="avatar"></p><p>3、在局域网电脑的浏览器地址栏输入刚才安装AdGuardHome设置的IP:3000（比如我的是192.168.1.2:3000）；</p><p>4、开始配置；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/15.png" alt="avatar"></p><p>5、网页管理界面，我们用默认的端口，不需要更改，下一步；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/16.png" alt="avatar"></p><p>6、身份认证，需要自己设置用户名和密码，下一步；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/17.png" alt="avatar"></p><p>7、下一步；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/18.png" alt="avatar"></p><p>8、打开仪表盘；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/19.png" alt="avatar"></p><p>9、主界面是这样的；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/20.png" alt="avatar"></p><p>10、点最上面的菜单栏“设置”-“常规设置”，这四个选项根据自己要求设置（博主勾了1、2、4），然后拉到下面，点保存；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/21.png" alt="avatar"></p><p>11、点最上面的菜单栏“设置”-“DNS设置”，上游DNS这栏输入（由于每个人使用的宽带不同，所以上游DNS使用哪个，请根据自己的情况填写，后面会讲）：</p><p>tls://dns.google</p><p>tls://1.1.1.1</p><p>tls://1.0.0.1</p><p>然后拉到下面点应用，会看到系统提示“上游DNS已更新”；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/22.png" alt="avatar"></p><p>12、点最上面的菜单栏“过滤器”，“添加过滤器”，名称随意设置，地址输入<a href="https://hosts.nfz.moe/127.0.0.1/full/hosts，点“添加过滤器”；" target="_blank" rel="noopener">https://hosts.nfz.moe/127.0.0.1/full/hosts，点“添加过滤器”；</a></p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/23.png" alt="avatar"></p><p>13、看到系统提示“网址添加成功”后，点打叉关掉提示；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/24.png" alt="avatar"></p><p>14、点“检查更新”；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/25.png" alt="avatar"></p><p>15、系统更新完成会提示“所有过滤器已更新到最新”；</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/26.png" alt="avatar"></p><p>三、更改网关/路由的DNS<br>由于每个人使用的网关/路由都各有不同，因此这里不做具体描述。请自行把内网的DNS主服务器IP地址设置成我们刚刚安装的AdGuardHome的内网IP地址，DNS副服务器设置为了其他公共的DNS服务器IP（拒绝使用运营商的DNS）。博主的网关是自己编译的软路由openwrt<br>X64的版本，具体的设置如下，大家借鉴一下吧。</p><p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/27.png" alt="avatar"></p><p>四、最后来看看效果如何<br><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/28.png" alt="avatar"></p><p>五、官方网站及项目地址<br>1、AdGuard官网：<a href="https://adguard.com/" target="_blank" rel="noopener">https://adguard.com/</a><br>2、AdGuardHome项目地址：<a href="https://github.com/AdguardTeam/AdGuardHome" target="_blank" rel="noopener">https://github.com/AdguardTeam/AdGuardHome</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GitHub </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> 去广告 </tag>
+            
+            <tag> AdGuard Home </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ROS主路由+OpenWrt旁路由+Adguard去广告配置教程</title>
+      <link href="/2020/02/21/ros-openwrt-adguard/"/>
+      <url>/2020/02/21/ros-openwrt-adguard/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a><a href=""></a>前言：</h2><p>最近网上流行着各种软路由搭配使用，不再单单的一个OpenWrt或者LEDE了，自己也研究了一段时间的AdguardHome所以就打算出这么一期教程)。</p><h3 id="使用系统："><a href="#使用系统：" class="headerlink" title="使用系统："></a>使用系统：</h3><ul><li><p>ROS</p></li><li><p>OpenWrt</p></li><li><p>AdgurardHome</p></li></ul><h2 id="拓扑图："><a href="#拓扑图：" class="headerlink" title="拓扑图："></a>拓扑图：</h2><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121349_43951.jpeg" alt="avatar"></p><h2 id="教程："><a href="#教程：" class="headerlink" title="教程："></a>教程：</h2><h3 id="AdguardHome"><a href="#AdguardHome" class="headerlink" title="AdguardHome"></a>AdguardHome</h3><p>可以查阅之前的安装教程</p><p><a href="https://www.imf8.cn/zb_system/cmd.php?act=ajax&amp;hk_url=aHR0cHM6Ly9ibG9nLmFmcmVlbWVuLmNvbS8yMDE5LzEyL2FkZ3VhcmRob21lJWU2JTkwJWFkJWU1JWJiJWJhJWU0JWI4JTgwJWU2JWFjJWJlJWU1JWIxJTllJWU0JWJhJThlJWU4JTg3JWFhJWU1JWI3JWIxJWU1JThlJWJiJWU1JWI5JWJmJWU1JTkxJThhZG5zJWU2JTljJThkJWU1JThhJWExJWU1JTk5JWE4Lw==" target="_blank" rel="noopener">AdguardHome搭建一款属于自己去广告DNS服务器</a></p><h3 id="ROS"><a href="#ROS" class="headerlink" title="ROS"></a>ROS</h3><h4 id="一：登陆ros后台"><a href="#一：登陆ros后台" class="headerlink" title="一：登陆ros后台"></a>一：登陆ros后台</h4><p>使用winbox登陆到ros的后台，出现的首页如下图。</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121351_12439.png" alt="avatar"></p><h4 id="二：配置DHCP-Server"><a href="#二：配置DHCP-Server" class="headerlink" title="二：配置DHCP Server"></a>二：配置DHCP Server</h4><p>省略如何配置ros拨号上网等步骤，Google下有很多教程，都很详细，就不在列举了。打开IP&gt;&gt;&gt;DHCP Server</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121352_91692.png" alt="avatar"></p><p>选择Networks</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121353_63511.png" alt="avatar"></p><p>双击打开下方列表中的内容，修改Geteway(网关)指向自己的lede旁路由、DNS<br>Servers(DNS服务器设置为本机IP，也就是ROS的IP)，修改完毕后点击保存。</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121355_41600.png" alt="avatar"></p><h4 id="三：配置DNS"><a href="#三：配置DNS" class="headerlink" title="三：配置DNS"></a>三：配置DNS</h4><p>选择IP&gt;&gt;&gt;DNS</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121356_37130.png" alt="avatar"></p><p>Servers(服务器)填入自己的AdguradHome的IP地址，并且打开Allow Remote<br>Requests，开启ROS的dns缓存，虽然AdguardHome也有缓存，就我使用下来感觉还是ROS的缓存比较好用。</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121357_31167.png" alt="avatar"></p><h4 id="四：设置定时清理DNS缓存"><a href="#四：设置定时清理DNS缓存" class="headerlink" title="四：设置定时清理DNS缓存"></a>四：设置定时清理DNS缓存</h4><p>打开System&gt;&gt;&gt;Scheduler</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121358_69194.png" alt="avatar"></p><p>选择新增一条记录。</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121358_26337.png" alt="avatar"></p><p>可以按照我这方案填写，我设置的是凌晨3点清理</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121359_48282.png" alt="avatar"></p><h3 id="OpenWrt"><a href="#OpenWrt" class="headerlink" title="OpenWrt"></a>OpenWrt</h3><h4 id="一：修改lan口"><a href="#一：修改lan口" class="headerlink" title="一：修改lan口"></a>一：修改lan口</h4><p>打开网络&gt;&gt;&gt;接口</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121401_77837.png" alt="avatar"></p><p>选择修改lan口</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121402_98443.png" alt="avatar"></p><p>只需将网关设置成ROS的IP地址，DNS服务器选择ROS的IP地址即可。</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121403_62367.png" alt="avatar"></p><h4 id="二：关闭DHCP"><a href="#二：关闭DHCP" class="headerlink" title="二：关闭DHCP"></a>二：关闭DHCP</h4><p>在刚刚修改lan口的页面往下滑，找到DHCP服务器，取消DHCP服务器的勾选</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121404_89780.png" alt="avatar"></p><h4 id="三：Turbo-ACC设置"><a href="#三：Turbo-ACC设置" class="headerlink" title="三：Turbo ACC设置"></a>三：Turbo ACC设置</h4><p>打开网络&gt;&gt;&gt;Turbo ACC，将DNS加速关闭</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121405_91826.png" alt="avatar"></p><h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>至此，整个配置就已经完成了。科学上网配置中只需要将DNS解析方式设置成为本机的5335就可以达到不论是国内还是国外全部都经过AdguradHome</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121406_15417.png" alt="avatar"></p><p>这是我的AdguradHome的截图，解析域名的时间还是蛮快的，配合上ROS的缓存，网页就是秒开</p><p><img src="https://www.imf8.cn/zb_users/upload/2019/12/remoteimage2_20191230121408_59282.png" alt="avatar"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LINUX应用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> 去广告 </tag>
+            
+            <tag> AdGuard Home </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用AdGuard Home搭建一个无广告和跟踪的公共DNS</title>
+      <link href="/2020/02/21/adguard/"/>
+      <url>/2020/02/21/adguard/</url>
+      
+        <content type="html"><![CDATA[<p>简单点说AdGuard Home就是一个公共DNS服务，如Google的公共DNS<code>8.8.8.8</code>，和DNSmasq一样AdGuard<br>Home是开源的，可以自行搭建安装后在客户端配置使用。xiaoz之前分享过一个自己写的项目<a href="https://www.xiaoz.me/archives/10555" target="_blank" rel="noopener">PHPDNS</a><br>，PHPDNS在DNSmasq的基础上开发了WEB界面，功能比较简单，不过该项目不在维护，这里推荐功能更加强大的AdGuard Home</p><p>AdGuard Home使用Golang开发，编译好了各大平台的二进制文件，因此安装非常简单，这里以CentOS 7为例，其它系统可参考官方帮助文档。</p><h3 id="AdGuard-Home主要功能"><a href="#AdGuard-Home主要功能" class="headerlink" title="AdGuard Home主要功能"></a>AdGuard Home主要功能</h3><ul><li>拦截随处可见的广告</li><li>注重隐私保护</li><li>家庭保护模式</li><li>自定义过滤</li></ul><h3 id="CentOS-7-X64安装"><a href="#CentOS-7-X64安装" class="headerlink" title="CentOS 7 X64安装"></a>CentOS 7 X64安装</h3><p>AdGuard Home二进制文件位于<a href="https://github.com/AdguardTeam/AdGuardHome/releases" target="_blank" rel="noopener">https://github.com/AdguardTeam/AdGuardHome/releases</a><br>可根据自己的平台下载最新版本。CentOS 7安装方法如下：</p><pre><code>#下载AdGuard Homewget http://soft.xiaoz.org/linux/AdGuardHome_v0.93_linux_amd64.tar.gz#解压tar -zxvf AdGuardHome_v0.93_linux_amd64.tar.gz#进入AdGuardHome目录cd AdGuardHome#放行3000端口（AdGuardHome初始化需要使用）#firewalld放行3000端口firewall-cmd --zone=public --add-port=3000/tcp --permanentfirewall-cmd --reload#iptables放行3000端口iptables -A INPUT -p tcp --dport 3000 -j ACCEPTservice iptables save#启动AdGuard Home./AdGuardHome</code></pre><p>运行AdGuardHome后，会提示打开<code>http://IP：3000</code>端口进行初始化，如下截图。</p><p><img src="https://cdn.xiaoz.me/wp-content/uploads/2019/02/Snipaste_2019-02-28_10-47-21.png" alt=""></p><p>浏览器打开<code>http://IP：3000</code>,根据提示无脑的下一步即可。首次初始化会要求设置账号、密码（请牢记），下次登录需要使用。</p><p><img src="https://cdn.xiaoz.me/wp-content/uploads/2019/02/Snipaste_2019-02-28_10-48-57.png" alt=""></p><h3 id="AdGuardHome基本设置"><a href="#AdGuardHome基本设置" class="headerlink" title="AdGuardHome基本设置"></a>AdGuardHome基本设置</h3><h4 id="设置中文"><a href="#设置中文" class="headerlink" title="设置中文"></a>设置中文</h4><p>进入AdGuardHome后台 - 网页右下方 - 可设置为繁体中文，感觉是机器翻译的，不太准确，将就用。</p><p><img src="https://cdn.xiaoz.me/wp-content/uploads/2019/02/Snipaste_2019-02-28_10-52-06.png" alt=""></p><h4 id="设置上游DNS"><a href="#设置上游DNS" class="headerlink" title="设置上游DNS"></a>设置上游DNS</h4><p>AdGuard Home默认使用Cloudflare DNS作为上游服务器，如果您服务器在国内可能请求上游DNS延迟比较高，在后台 - 设定 -<br>可以设置为国内的DNS，如腾讯的<code>119.29.29.29</code>，但坏处是不支持DNS over TLS</p><p><img src="https://cdn.xiaoz.me/wp-content/uploads/2019/02/Snipaste_2019-02-28_10-54-13.png" alt=""></p><h4 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h4><p>在后台 - 过滤器，可以看到AdGuardHome内置了部分广告过滤规则，但在中国有点水土不服，如果要想更完美的实现广告屏蔽还需要自己添加规则。</p><p><img src="https://cdn.xiaoz.me/wp-content/uploads/2019/02/Snipaste_2019-02-28_11-08-51.png" alt=""></p><p>以下是过滤规则的一些说明，更多规则可以在AdGuardHome后台查看或参考官方帮助文档。</p><ol><li><code>||example.org^</code> - 封锁example.org域及其他子域</li><li><code>@@||example.org^</code> - 解除封锁example.org域及其他子域</li><li><code>127.0.0.1 example.org</code> - 将example.org host指向到127.0.0.1（不包含其他子域）</li><li><code>!</code> - 注释符号</li><li><code>#</code> - 也是一个注释符号</li><li><code>/REGEX/</code> - 正则表达式模式</li></ol><h3 id="额外设置"><a href="#额外设置" class="headerlink" title="额外设置"></a>额外设置</h3><p>为了方便管理，可以继续输入命令<code>./AdGuardHome -s install</code>安装为服务，然后就可以使用下面的命令来进行管理了。</p><pre><code>#启动systemctl start AdGuardHome#开机自启systemctl enable AdGuardHome#重启systemctl restart AdGuardHome#停止systemctl stop AdGuardHome</code></pre><p>DNS默认使用53(TCP/UDP)端口进行通信，因此别忘记放行53端口，否则DNS无法正常使用。</p><pre><code>#firewalld放行53端口firewall-cmd --zone=public --add-port=53/tcp --permanentfirewall-cmd --zone=public --add-port=53/udp --permanentfirewall-cmd --reload#iptables放行53端口iptables -A INPUT -p tcp --dport 53 -j ACCEPTiptables -A INPUT -p udp --dport 53 -j ACCEPTservice iptables save</code></pre><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>AdGuard Home支持MacOS、Windows、Linux、树莓派等系统，提供二进制和docker安装方式，安装简单。AdGuard<br>Home还提供了直观的统计系统，使用方便。如果您打算自建一个公共DNS，AdGuard Home值得一试。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> LINUX应用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> 去广告 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>原来我不帅 Windows_Server_2016_x64_数据中心版 （20191212更新）</title>
       <link href="/2020/02/21/2016windows/"/>
       <url>/2020/02/21/2016windows/</url>
@@ -126,7 +213,7 @@
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> Linux </tag>
             
             <tag> 备忘录 </tag>
             

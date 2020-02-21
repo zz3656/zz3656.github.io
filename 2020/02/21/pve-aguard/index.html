@@ -483,10 +483,25 @@
                 
 
                 
-
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.5k
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    5 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
 
         </div>
@@ -496,7 +511,7 @@
                 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>很多人可能会问：AdGuard<br>Home是干嘛用的？假如我们把整个互联网比喻成一个城市的供水，每个地区自来水厂提供的水质和你所在管网末端位置的不同，有些家庭会明智的选择使用前置净水器，可以解决管道中的二次污染、软化水质、阻止水垢、防止锈蚀、保护净水器，当然还有太阳能和燃气热水器等等，但最终享受干净水的是人。精致的家庭还会使用厨下式厨余垃圾处理器，而很多的家庭也许都不知道什么是前置净水器、什么是厨余处理器。互联网和供水一样，有大带宽和小带宽，有管网污染的问题，有被政府监控和被黑客偷窥的问题，还有烦人的广告问题，无论是视频前和视频中的广告，所以在入户光猫之后的主路由器上安装并使用私有DNS服务器（AdGuard Home），就可以有助于“清洗流量”。根据AdGuard Home 官网介绍，AdGuard Home 是一款全网广告拦截与反跟踪软件。在您将其安装完毕后，它将保护您所有家用设备，同时您不再需要安装任何客户端软件。随着物联网与连接设备的兴起，掌控您自己的整个网络环境变得越来越重要。简单的点讲就比如Google的8.8.8.8，阿里云的223.5.5.5，114的114.114.114.114，还有Cloudflare的1.1.1.1，这些都是提供DNS服务的公共DNS服务器。而AdGuard Home在给我们提供DNS服务的同时还提供去广告的功能，这就有点意思了吧~~</p>
 <p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/0.png" alt=""></p>
 <pre><code>   博主是用PVE作为宿主机的环境，所以就在PVE系统里面安装了这个AdGuard Home，来看看怎么安装和使用吧。</code></pre><p>一、安装教程</p>
-<p>1、下载AdGuardHome_PVE-<br>LXC.tar.gz镜像文件：打开下载地址<a href="https://dl.gxnas.com，进入“Proxmox-VE（PVE虚拟平台）”文件夹，找到“AdGuardHome_PVE-LXC.tar.gz”，右键复制下载链接到迅雷下载；" target="_blank" rel="noopener">https://dl.gxnas.com，进入“Proxmox-VE（PVE虚拟平台）”文件夹，找到“AdGuardHome_PVE-LXC.tar.gz”，右键复制下载链接到迅雷下载；</a></p>
+<p>1、下载AdGuardHome_PVE-LXC.tar.gz镜像文件：打开<a href="https://dl.gxnas.com" target="_blank" rel="noopener">下载地址</a>，进入Proxmox-VE（PVE虚拟平台）文件夹，找到AdGuardHome_PVE-LXC.tar.gz，右键复制下载链接到迅雷下载；</p>
 <p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/1-1.png" alt=""></p>
 <p>2、通过SSH工具（本教程采用WinSCP），把下载的“AdGuardHome_PVE-<br>LXC.tar.gz”，上传到PVE系统下的“/var/lib/vz/template/cache”里面；</p>
 <p><img src="https://wp.qiniu.gxnas.com/wp-content/uploads/2019/09/2-1.png" alt=""></p>
@@ -1349,6 +1364,9 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">13.2k</span>&nbsp;字
             
             
             

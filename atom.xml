@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://inte8.cn/"/>
-  <updated>2020-02-21T21:28:45.991Z</updated>
+  <updated>2020-02-21T21:50:02.861Z</updated>
   <id>https://inte8.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搬瓦工</title>
+    <link href="https://inte8.cn/2020/02/22/ban-wa-gong/"/>
+    <id>https://inte8.cn/2020/02/22/ban-wa-gong/</id>
+    <published>2020-02-21T21:43:42.000Z</published>
+    <updated>2020-02-21T21:50:02.861Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;由于武汉新肝炎疫情自行隔离期间，闲来无事入了搬瓦工vps。又莫名其妙不知情情况下，买了最便宜的cn2机房。在电信环境下，实在是堪忧。&lt;a href=&quot;https://blog.inte8.cn&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>博客终于算是差不多了</title>

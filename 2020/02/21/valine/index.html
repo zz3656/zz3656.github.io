@@ -4,8 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="linux, 因特吧">
-    <meta name="description" content="锐速BBR一键安装脚本    wget “https://github.com/chiakge/Linux-NetSpeed/raw/master/tcp.sh&#34; &amp;amp;&amp;amp; chmod +x tcp.sh &amp;amp;&amp;amp; ">
+    <meta name="keywords" content="关于matery主题valine评论使用方法, 因特吧">
+    <meta name="description" content="##关于hexo-theme-matery主题使用valine评论系统##
+在主题目录_config.yml文件下大概305行的位置
+---
+valine:
+  enable: true
+  appId:
+  appKey:
+  notif">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>linux | 因特吧</title>
+    <title>关于matery主题valine评论使用方法 | 因特吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -317,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">linux</h1>
+                    <h1 class="description center-align post-title">关于matery主题valine评论使用方法</h1>
                 </div>
             </div>
         </div>
@@ -439,12 +446,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/linux/">
-                                <span class="chip bg-color">linux</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%A4%87%E5%BF%98%E5%BD%95/">
-                                <span class="chip bg-color">备忘录</span>
+                            <a href="/tags/Valine/">
+                                <span class="chip bg-color">Valine</span>
                             </a>
                         
                     </div>
@@ -455,8 +458,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
-                                操作系统
+                            <a href="/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" class="post-category">
+                                网页前端
                             </a>
                         
                     </div>
@@ -485,22 +488,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>锐速BBR一键安装脚本<br>    wget “<a href="https://github.com/chiakge/Linux-NetSpeed/raw/master/tcp.sh&quot;" target="_blank" rel="noopener">https://github.com/chiakge/Linux-NetSpeed/raw/master/tcp.sh"</a> &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</p>
-<p>debian系统更新命令</p>
-<pre><code>apt-get update -y</code></pre><p>VPS 测试脚本</p>
-<pre><code>wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash</code></pre><p>查看bbr<br>    sysctl net.ipv4.tcp_available_congestion_control<br>    lsmod | grep bbr</p>
-<p>宝塔面板安装</p>
-<p>Centos安装命令：<br>    yum install -y wget &amp;&amp; wget -O install.sh <a href="http://download.bt.cn/install/install_6.0.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install_6.0.sh</a> &amp;&amp; sh install.sh</p>
-<p>试验性Centos/Ubuntu/Debian安装命令支持ipv6，注意使用root权限执行此命令 (支持Centos8)<br>    curl -sSO <a href="http://download.bt.cn/install/new_install.sh" target="_blank" rel="noopener">http://download.bt.cn/install/new_install.sh</a> &amp;&amp; bash new_install.sh</p>
-<p>Ubuntu/Deepin安装命令：<br>    wget -O install.sh <a href="http://download.bt.cn/install/install-ubuntu_6.0.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install-ubuntu_6.0.sh</a> &amp;&amp; sudo bash install.sh<br>Debian安装命令：<br>    wget -O install.sh <a href="http://download.bt.cn/install/install-ubuntu_6.0.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install-ubuntu_6.0.sh</a> &amp;&amp; bash install.sh<br>Fedora安装命令:<br>    wget -O install.sh <a href="http://download.bt.cn/install/install_6.0.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install_6.0.sh</a> &amp;&amp; bash install.sh</p>
-<p>Linux面板7.1.0升级命令：<br>    curl <a href="http://download.bt.cn/install/update6.sh|bash" target="_blank" rel="noopener">http://download.bt.cn/install/update6.sh|bash</a></p>
-<p>开启BBR</p>
-<p>升级内核<br>开启 BBR 要求 4.10 以上版本 Linux 内核，可使用如下命令查看当前内核版本：</p>
-<pre><code>uname -r</code></pre><p>如果内核4.10以上就执行下面</p>
-<pre><code>echo 'net.core.default_qdisc=fq' | sudo tee -a /etc/sysctl.conf
-echo 'net.ipv4.tcp_congestion_control=bbr' | sudo tee -a /etc/sysctl.conf
-sudo sysctl -p</code></pre><p>完成后，分别执行如下命令来检查 BBR 是否开启成功：</p>
-<pre><code>sudo sysctl net.ipv4.tcp_available_congestion_control</code></pre><h1 id="输出应为-net-ipv4-tcp-available-congestion-control-bbr-cubic-reno"><a href="#输出应为-net-ipv4-tcp-available-congestion-control-bbr-cubic-reno" class="headerlink" title="输出应为 net.ipv4.tcp_available_congestion_control = bbr cubic reno"></a>输出应为 net.ipv4.tcp_available_congestion_control = bbr cubic reno</h1><pre><code>sudo sysctl -n net.ipv4.tcp_congestion_control</code></pre><h1 id="输出应为-bbr"><a href="#输出应为-bbr" class="headerlink" title="输出应为 bbr"></a>输出应为 bbr</h1><pre><code>lsmod | grep bbr</code></pre><h1 id="输出应类似-tcp-bbr-16384-28"><a href="#输出应类似-tcp-bbr-16384-28" class="headerlink" title="输出应类似 tcp_bbr  16384  28"></a>输出应类似 tcp_bbr  16384  28</h1><p>Cloudflare Partner：<a href="https://cdn.moeelf.com/" target="_blank" rel="noopener">https://cdn.moeelf.com/</a><br>Cloudflare节点IP列表：<a href="https://ofvps.com/201907510" target="_blank" rel="noopener">https://ofvps.com/201907510</a><br>新手建议先看保姆级套CDN教程：<a href="https://youtu.be/TWJZ30L1NRk" target="_blank" rel="noopener">https://youtu.be/TWJZ30L1NRk</a></p>
+                <p>##关于hexo-theme-matery主题使用valine评论系统##</p>
+<p>在主题目录_config.yml文件下大概305行的位置</p>
+<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">valine</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">appId</span><span class="token punctuation">:</span>
+  <span class="token key atrule">appKey</span><span class="token punctuation">:</span>
+  <span class="token key atrule">notify</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">verify</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">visitor</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">avatar</span><span class="token punctuation">:</span> <span class="token string">'mm'</span> <span class="token comment" spellcheck="true"># Gravatar style : mm/identicon/monsterid/wavatar/retro/hide</span>
+  <span class="token key atrule">pageSize</span><span class="token punctuation">:</span> <span class="token number">10</span>
+  <span class="token key atrule">placeholder</span><span class="token punctuation">:</span> <span class="token string">'本文是否帮到了您?'</span> <span class="token comment" spellcheck="true"># Comment Box placeholder</span>
+  <span class="token key atrule">background</span><span class="token punctuation">:</span> /medias/comment_bg.png
+<span class="token punctuation">---</span></code></pre>
+<p><strong>或许appid和appkey的方法请参照<a href="https://valine.js.org/quickstart.html" target="_blank" rel="noopener">valine</a></strong></p>
+<ul>
+<li><p>获取以后请填入到对应的字段 保存发布即可</p>
+</li>
+<li><p>编辑yml和md文件推荐使用<a href="https://atom.io" target="_blank" rel="noopener">atom</a>软件（对比了几个软件博主觉得这个更加实用。）</p>
+</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -544,7 +553,7 @@ sudo sysctl -p</code></pre><p>完成后，分别执行如下命令来检查 BBR 
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.inte8.cn/2020/02/21/linux/">https://blog.inte8.cn/2020/02/21/linux/</a>
+                    <a href="https://blog.inte8.cn/2020/02/21/valine/">https://blog.inte8.cn/2020/02/21/valine/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -582,12 +591,8 @@ sudo sysctl -p</code></pre><p>完成后，分别执行如下命令来检查 BBR 
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%A4%87%E5%BF%98%E5%BD%95/">
-                                    <span class="chip bg-color">备忘录</span>
+                                <a href="/tags/Valine/">
+                                    <span class="chip bg-color">Valine</span>
                                 </a>
                             
                         </div>
@@ -1020,26 +1025,19 @@ sudo sysctl -p</code></pre><p>完成后，分别执行如下命令来检查 BBR 
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/02/21/valine/">
+                <a href="/2020/02/21/netbar-windows/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="关于matery主题valine评论使用方法">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="时隔三年网吧系统届的大佬死性不改终于发布了2020年的第一个版本20fi">
                         
-                        <span class="card-title">关于matery主题valine评论使用方法</span>
+                        <span class="card-title">时隔三年网吧系统届的大佬死性不改终于发布了2020年的第一个版本20fi</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ##关于hexo-theme-matery主题使用valine评论系统##
-在主题目录_config.yml文件下大概305行的位置
----
-valine:
-  enable: true
-  appId:
-  appKey:
-  notif
+                            最新版本：20Fi　　发布日期：2020年02月09日　　版本号含义解读：20代表年份，取发布当年的后2位，例如2020年就是20，Fi=First，代表该年度首个版本。由于Win7及2008系统微软官方已经停止更新支持，因此本次更新为最终
                         
                     </div>
                     <div class="publish-info">
@@ -1050,8 +1048,8 @@ valine:
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    网页前端
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
                                 </a>
                             
                             
@@ -1061,8 +1059,12 @@ valine:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Valine/">
-                        <span class="chip bg-color">Valine</span>
+                    <a href="/tags/%E6%AD%BB%E6%80%A7%E4%B8%8D%E6%94%B9/">
+                        <span class="chip bg-color">死性不改</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">网吧系统</span>
                     </a>
                     
                 </div>
@@ -1076,19 +1078,19 @@ valine:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/21/hexo-github/">
+                <a href="/2020/02/21/linux/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hexo + Github Pages博客搭建教程（搬运）">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="linux">
                         
-                        <span class="card-title">Hexo + Github Pages博客搭建教程（搬运）</span>
+                        <span class="card-title">linux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言一直以来自己都有书写文章的习惯，不管是收集资料还是表达自己的个人见解。最开始把资料都放在印象笔记里，但是印象笔记有个不好的点就是书写不方便，而且多设备登录不友好，需要升级账户。后来就搭建了一个WordPress站点，记录自己的点滴。慢慢
+                            锐速BBR一键安装脚本    wget “https://github.com/chiakge/Linux-NetSpeed/raw/master/tcp.sh" &amp;&amp; chmod +x tcp.sh &amp;&amp; 
                         
                     </div>
                     <div class="publish-info">
@@ -1099,8 +1101,8 @@ valine:
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    网页前端
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
                                 </a>
                             
                             
@@ -1110,16 +1112,12 @@ valine:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
-                    <a href="/tags/GitHub/">
-                        <span class="chip bg-color">GitHub</span>
-                    </a>
-                    
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
+                    <a href="/tags/%E5%A4%87%E5%BF%98%E5%BD%95/">
+                        <span class="chip bg-color">备忘录</span>
                     </a>
                     
                 </div>

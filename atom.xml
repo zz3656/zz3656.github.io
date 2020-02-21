@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.inte8.cn/"/>
-  <updated>2020-02-21T11:12:41.886Z</updated>
+  <updated>2020-02-21T12:44:39.497Z</updated>
   <id>https://blog.inte8.cn/</id>
   
   <author>
@@ -17,11 +17,69 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>时隔三年网吧系统届的大佬死性不改终于发布了2020年的第一个版本20fi</title>
+    <link href="https://blog.inte8.cn/2020/02/21/netbar-windows/"/>
+    <id>https://blog.inte8.cn/2020/02/21/netbar-windows/</id>
+    <published>2020-02-21T11:51:24.000Z</published>
+    <updated>2020-02-21T12:44:39.497Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;最新版本：20Fi&quot;&gt;&lt;a href=&quot;#最新版本：20Fi&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="死性不改" scheme="https://blog.inte8.cn/tags/%E6%AD%BB%E6%80%A7%E4%B8%8D%E6%94%B9/"/>
+    
+      <category term="网吧系统" scheme="https://blog.inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于matery主题valine评论使用方法</title>
+    <link href="https://blog.inte8.cn/2020/02/21/valine/"/>
+    <id>https://blog.inte8.cn/2020/02/21/valine/</id>
+    <published>2020-02-21T11:29:17.000Z</published>
+    <updated>2020-02-21T11:52:21.478Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;##关于hexo-theme-matery主题使用valine评论系统##&lt;/p&gt;
+&lt;p&gt;在主题目录_config.yml文件下大概305行的位置&lt;/p&gt;
+&lt;pre class=&quot; language-yaml&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="网页前端" scheme="https://blog.inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Valine" scheme="https://blog.inte8.cn/tags/Valine/"/>
+    
+  </entry>
+  
+  <entry>
     <title>linux</title>
     <link href="https://blog.inte8.cn/2020/02/21/linux/"/>
     <id>https://blog.inte8.cn/2020/02/21/linux/</id>
     <published>2020-02-21T11:08:29.000Z</published>
-    <updated>2020-02-21T11:12:41.886Z</updated>
+    <updated>2020-02-21T11:20:56.819Z</updated>
     
     <summary type="html">
     

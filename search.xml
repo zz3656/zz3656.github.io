@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>原来我不帅 马蹄更新v2.1.0_Win7x64_Win10x64_无盘公包（v2020版 V4） 2020.02.10 更新</title>
+      <link href="/2020/02/21/matigengxin/"/>
+      <url>/2020/02/21/matigengxin/</url>
+      
+        <content type="html"><![CDATA[<h2 id="马蹄更新是继绿化大师以后，又一款新的无广告无盘，承诺无广告。"><a href="#马蹄更新是继绿化大师以后，又一款新的无广告无盘，承诺无广告。" class="headerlink" title="马蹄更新是继绿化大师以后，又一款新的无广告无盘，承诺无广告。"></a>马蹄更新是继绿化大师以后，又一款新的无广告无盘，承诺无广告。</h2><ul><li><p>更新说明：<br>马蹄更新v2.1.0无盘公包</p><ul><li><p>马蹄更新v2.1.0_Win7x64_Pro_Bios_无盘公包<br>文件: 马蹄更新v2.1.0_Win7x64_Pro_Bios_无盘公包（v2020版）.exe<br>大小: 2711139081 字节<br>文件版本: 2.1.0.0<br>修改时间: 2019年12月1日, 2:02:56<br>MD5: 5F71051EAFF79A5227A99754D3088FCF<br>SHA1: F83EC398511FCFF80128E21F2BAE631A6F47D689<br>CRC32: 5587D987.jpg” alt=”” /&gt;</p></li><li><p>马蹄更新v2.1.0_Win10x64_Pro_Bios_无盘公包（v2020版）<br>文件: 马蹄更新v2.1.0_Win10x64_Pro_Bios_无盘公包（v2020版）.exe<br>大小: 2751911456 字节<br>文件版本: 2.1.0.0<br>修改时间: 2019年12月1日, 12:04:55<br>MD5: 49194D6334E08A5E464FB797B265274E<br>SHA1: 3F6C640DB0E82E187CBC8C60579D6F92D2DE212D<br>CRC32: 162F221A</p></li><li><p>马蹄更新v2.1.0_Win10x64_2019LTSC_无盘公包（v2020版）</p></li></ul></li></ul><p>文件: 马蹄更新v2.1.0_Win10x64_2019LTSC_无盘公包（v2020版）.exe<br>大小: 3113263927 字节<br>文件版本: 1, 0, 0, 0<br>修改时间: 2019年12月1日, 14:56:18<br>MD5: FF532A2A955E7FE7D4ECF174AE87F65D<br>SHA1: E16DC891A0578F6484701976F35256A3AC5FEE4D<br>CRC32: 1953BCF5</p><p><strong>下载地址链接: <a href="https://pan.baidu.com/s/1xDKEgj8UvVmAYUCfQtJ97w" target="_blank" rel="noopener">https://pan.baidu.com/s/1xDKEgj8UvVmAYUCfQtJ97w</a> 提取码: 9m73</strong></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网吧系统 </tag>
+            
+            <tag> 原来我不帅 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>时隔三年网吧系统届的大佬死性不改终于发布了2020年的第一个版本20fi</title>
       <link href="/2020/02/21/netbar-windows/"/>
       <url>/2020/02/21/netbar-windows/</url>
@@ -137,19 +164,6 @@
             <tag> 使用方法 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2020/02/20/hello-world/"/>
-      <url>/2020/02/20/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
       
     </entry>
     

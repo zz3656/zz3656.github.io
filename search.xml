@@ -4,13 +4,19 @@
   
     
     <entry>
-      <title>搬瓦工</title>
+      <title>使用此博客的缘由</title>
       <link href="/2020/02/22/ban-wa-gong/"/>
       <url>/2020/02/22/ban-wa-gong/</url>
       
         <content type="html"><![CDATA[<p>由于武汉新肝炎疫情自行隔离期间，闲来无事入了搬瓦工vps。又莫名其妙不知情情况下，买了最便宜的cn2机房。在电信环境下，实在是堪忧。<a href="https://blog.inte8.cn" target="_blank" rel="noopener">测试地址</a>。本来一级域名是挂在搬瓦工上面的，奈何它的打开速度太头铁。本人又不舍得再为它买cdn。没办法，只能另寻出路。不想github+hexo，竟然响应速度超过了搬瓦工。故正式将一级域名前移到了github名下。(就是本站咯)至于搬瓦工那边使用不使用到时候再考虑了！暂时先把家安置在这里好了！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+        </tags>
       
     </entry>
     

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>linux</title>
+      <link href="/2020/02/21/linux/"/>
+      <url>/2020/02/21/linux/</url>
+      
+        <content type="html"><![CDATA[<p>锐速BBR一键安装脚本<br>    wget “<a href="https://github.com/chiakge/Linux-NetSpeed/raw/master/tcp.sh&quot;" target="_blank" rel="noopener">https://github.com/chiakge/Linux-NetSpeed/raw/master/tcp.sh"</a> &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</p><p>debian系统更新命令</p><pre><code>apt-get update -y</code></pre><p>VPS 测试脚本</p><pre><code>wget -qO- --no-check-certificate https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash</code></pre><p>查看bbr<br>    sysctl net.ipv4.tcp_available_congestion_control<br>      lsmod | grep bbr</p><p>宝塔面板安装</p><p>Centos安装命令：<br>    yum install -y wget &amp;&amp; wget -O install.sh <a href="http://download.bt.cn/install/install_6.0.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install_6.0.sh</a> &amp;&amp; sh install.sh</p><p>试验性Centos/Ubuntu/Debian安装命令支持ipv6，注意使用root权限执行此命令 (支持Centos8)<br>    curl -sSO <a href="http://download.bt.cn/install/new_install.sh" target="_blank" rel="noopener">http://download.bt.cn/install/new_install.sh</a> &amp;&amp; bash new_install.sh</p><p>Ubuntu/Deepin安装命令：<br>    wget -O install.sh <a href="http://download.bt.cn/install/install-ubuntu_6.0.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install-ubuntu_6.0.sh</a> &amp;&amp; sudo bash install.sh<br>Debian安装命令：<br>    wget -O install.sh <a href="http://download.bt.cn/install/install-ubuntu_6.0.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install-ubuntu_6.0.sh</a> &amp;&amp; bash install.sh<br>Fedora安装命令:<br>    wget -O install.sh <a href="http://download.bt.cn/install/install_6.0.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install_6.0.sh</a> &amp;&amp; bash install.sh</p><p>Linux面板7.1.0升级命令：<br>    curl <a href="http://download.bt.cn/install/update6.sh|bash" target="_blank" rel="noopener">http://download.bt.cn/install/update6.sh|bash</a></p><p>开启BBR</p><p>升级内核<br>开启 BBR 要求 4.10 以上版本 Linux 内核，可使用如下命令查看当前内核版本：</p><pre><code>uname -r</code></pre><p>如果内核4.10以上就执行下面</p><pre><code>echo 'net.core.default_qdisc=fq' | sudo tee -a /etc/sysctl.confecho 'net.ipv4.tcp_congestion_control=bbr' | sudo tee -a /etc/sysctl.confsudo sysctl -p</code></pre><p>完成后，分别执行如下命令来检查 BBR 是否开启成功：</p><pre><code>sudo sysctl net.ipv4.tcp_available_congestion_control</code></pre><h1 id="输出应为-net-ipv4-tcp-available-congestion-control-bbr-cubic-reno"><a href="#输出应为-net-ipv4-tcp-available-congestion-control-bbr-cubic-reno" class="headerlink" title="输出应为 net.ipv4.tcp_available_congestion_control = bbr cubic reno"></a>输出应为 net.ipv4.tcp_available_congestion_control = bbr cubic reno</h1><pre><code>sudo sysctl -n net.ipv4.tcp_congestion_control</code></pre><h1 id="输出应为-bbr"><a href="#输出应为-bbr" class="headerlink" title="输出应为 bbr"></a>输出应为 bbr</h1><pre><code>lsmod | grep bbr</code></pre><h1 id="输出应类似-tcp-bbr-16384-28"><a href="#输出应类似-tcp-bbr-16384-28" class="headerlink" title="输出应类似 tcp_bbr  16384  28"></a>输出应类似 tcp_bbr  16384  28</h1><p>Cloudflare Partner：<a href="https://cdn.moeelf.com/" target="_blank" rel="noopener">https://cdn.moeelf.com/</a><br>Cloudflare节点IP列表：<a href="https://ofvps.com/201907510" target="_blank" rel="noopener">https://ofvps.com/201907510</a><br>新手建议先看保姆级套CDN教程：<a href="https://youtu.be/TWJZ30L1NRk" target="_blank" rel="noopener">https://youtu.be/TWJZ30L1NRk</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> 备忘录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo + Github Pages博客搭建教程（搬运）</title>
       <link href="/2020/02/21/hexo-github/"/>
       <url>/2020/02/21/hexo-github/</url>

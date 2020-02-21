@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.inte8.cn/"/>
-  <updated>2020-02-21T10:27:32.956Z</updated>
+  <updated>2020-02-21T11:12:41.886Z</updated>
   <id>https://blog.inte8.cn/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux</title>
+    <link href="https://blog.inte8.cn/2020/02/21/linux/"/>
+    <id>https://blog.inte8.cn/2020/02/21/linux/</id>
+    <published>2020-02-21T11:08:29.000Z</published>
+    <updated>2020-02-21T11:12:41.886Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;锐速BBR一键安装脚本&lt;br&gt;    wget “&lt;a href=&quot;https://github.com/chiakge/Linux-NetSpeed/raw/master/tcp.sh&amp;quot;&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="linux" scheme="https://blog.inte8.cn/tags/linux/"/>
+    
+      <category term="备忘录" scheme="https://blog.inte8.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo + Github Pages博客搭建教程（搬运）</title>

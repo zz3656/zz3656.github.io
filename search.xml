@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>博客终于算是差不多了</title>
+      <link href="/2020/02/22/bo-ke-zhong-yu-suan-shi-chai-bu-duo-liao/"/>
+      <url>/2020/02/22/bo-ke-zhong-yu-suan-shi-chai-bu-duo-liao/</url>
+      
+        <content type="html"><![CDATA[<p>2020年2月22日04:57:36<br>博客终于算是差不多了，折腾了一整天。由于太喜欢<a href="https://blinkfox.github.io/" target="_blank" rel="noopener">闪烁之狐</a>这个主题了，实在是不忍心魔改。(当然，能力也是一方面问题)</p><p>看了N多遍的<a href="https://inte8.cn/2020/02/21/hexo-theme-matery/">模板说明文件</a>并对比<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">github</a>md说明文件</p><p>并一一对比后才有如此的结果。不能说完美，仅仅是<a href="https://blinkfox.github.io/" target="_blank" rel="noopener">闪烁之狐</a>创造了这个条件给我们。基本上本博客已把除icp备案字段部分，其他模块</p><p>全部都应用了。日后，如果再有改动也是参照主题制作者的<a href="https://inte8.cn/2020/02/21/hexo-theme-matery/">说明文件</a>进行小篇幅修改。今天就到这里吧！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+            <tag> 主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PVE下安装AdGuard Home搭建一个带广告过滤的私有DNS服务器及优化部署</title>
       <link href="/2020/02/21/pve-aguard/"/>
       <url>/2020/02/21/pve-aguard/</url>
@@ -20,11 +41,11 @@
       
         <tags>
             
-            <tag> GitHub </tag>
-            
             <tag> Linux </tag>
             
             <tag> 去广告 </tag>
+            
+            <tag> GitHub </tag>
             
             <tag> AdGuard Home </tag>
             

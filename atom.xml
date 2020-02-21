@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://blog.inte8.cn/"/>
+  <link href="https://inte8.cn/"/>
   <updated>2020-02-21T15:58:38.309Z</updated>
-  <id>https://blog.inte8.cn/</id>
+  <id>https://inte8.cn/</id>
   
   <author>
     <name>因特吧</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>PVE下安装AdGuard Home搭建一个带广告过滤的私有DNS服务器及优化部署</title>
-    <link href="https://blog.inte8.cn/2020/02/21/pve-aguard/"/>
-    <id>https://blog.inte8.cn/2020/02/21/pve-aguard/</id>
+    <link href="https://inte8.cn/2020/02/21/pve-aguard/"/>
+    <id>https://inte8.cn/2020/02/21/pve-aguard/</id>
     <published>2020-02-21T15:27:06.000Z</published>
     <updated>2020-02-21T15:58:38.309Z</updated>
     
@@ -36,23 +36,23 @@
     </summary>
     
     
-      <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="操作系统" scheme="https://inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="GitHub" scheme="https://blog.inte8.cn/tags/GitHub/"/>
+      <category term="GitHub" scheme="https://inte8.cn/tags/GitHub/"/>
     
-      <category term="Linux" scheme="https://blog.inte8.cn/tags/Linux/"/>
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
     
-      <category term="去广告" scheme="https://blog.inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+      <category term="去广告" scheme="https://inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
     
-      <category term="AdGuard Home" scheme="https://blog.inte8.cn/tags/AdGuard-Home/"/>
+      <category term="AdGuard Home" scheme="https://inte8.cn/tags/AdGuard-Home/"/>
     
   </entry>
   
   <entry>
     <title>ROS主路由+OpenWrt旁路由+Adguard去广告配置教程</title>
-    <link href="https://blog.inte8.cn/2020/02/21/ros-openwrt-adguard/"/>
-    <id>https://blog.inte8.cn/2020/02/21/ros-openwrt-adguard/</id>
+    <link href="https://inte8.cn/2020/02/21/ros-openwrt-adguard/"/>
+    <id>https://inte8.cn/2020/02/21/ros-openwrt-adguard/</id>
     <published>2020-02-21T15:03:21.000Z</published>
     <updated>2020-02-21T15:58:32.986Z</updated>
     
@@ -69,21 +69,21 @@
     </summary>
     
     
-      <category term="LINUX应用" scheme="https://blog.inte8.cn/categories/LINUX%E5%BA%94%E7%94%A8/"/>
+      <category term="LINUX应用" scheme="https://inte8.cn/categories/LINUX%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="Linux" scheme="https://blog.inte8.cn/tags/Linux/"/>
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
     
-      <category term="去广告" scheme="https://blog.inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+      <category term="去广告" scheme="https://inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
     
-      <category term="AdGuard Home" scheme="https://blog.inte8.cn/tags/AdGuard-Home/"/>
+      <category term="AdGuard Home" scheme="https://inte8.cn/tags/AdGuard-Home/"/>
     
   </entry>
   
   <entry>
     <title>使用AdGuard Home搭建一个无广告和跟踪的公共DNS</title>
-    <link href="https://blog.inte8.cn/2020/02/21/adguard/"/>
-    <id>https://blog.inte8.cn/2020/02/21/adguard/</id>
+    <link href="https://inte8.cn/2020/02/21/adguard/"/>
+    <id>https://inte8.cn/2020/02/21/adguard/</id>
     <published>2020-02-21T14:43:27.000Z</published>
     <updated>2020-02-21T15:04:21.858Z</updated>
     
@@ -100,19 +100,19 @@
     </summary>
     
     
-      <category term="LINUX应用" scheme="https://blog.inte8.cn/categories/LINUX%E5%BA%94%E7%94%A8/"/>
+      <category term="LINUX应用" scheme="https://inte8.cn/categories/LINUX%E5%BA%94%E7%94%A8/"/>
     
     
-      <category term="Linux" scheme="https://blog.inte8.cn/tags/Linux/"/>
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
     
-      <category term="去广告" scheme="https://blog.inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+      <category term="去广告" scheme="https://inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
     
   </entry>
   
   <entry>
     <title>原来我不帅 Windows_Server_2016_x64_数据中心版 （20191212更新）</title>
-    <link href="https://blog.inte8.cn/2020/02/21/2016windows/"/>
-    <id>https://blog.inte8.cn/2020/02/21/2016windows/</id>
+    <link href="https://inte8.cn/2020/02/21/2016windows/"/>
+    <id>https://inte8.cn/2020/02/21/2016windows/</id>
     <published>2020-02-21T13:19:50.000Z</published>
     <updated>2020-02-21T15:57:29.705Z</updated>
     
@@ -136,19 +136,19 @@
     </summary>
     
     
-      <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="操作系统" scheme="https://inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="原来我不帅" scheme="https://blog.inte8.cn/tags/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E5%B8%85/"/>
+      <category term="原来我不帅" scheme="https://inte8.cn/tags/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E5%B8%85/"/>
     
-      <category term="网吧系统" scheme="https://blog.inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
+      <category term="网吧系统" scheme="https://inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>原来我不帅 马蹄更新v2.1.0_Win7x64_Win10x64_无盘公包（v2020版 V4） 2020.02.10 更新</title>
-    <link href="https://blog.inte8.cn/2020/02/21/matigengxin/"/>
-    <id>https://blog.inte8.cn/2020/02/21/matigengxin/</id>
+    <link href="https://inte8.cn/2020/02/21/matigengxin/"/>
+    <id>https://inte8.cn/2020/02/21/matigengxin/</id>
     <published>2020-02-21T12:53:40.000Z</published>
     <updated>2020-02-21T13:13:08.729Z</updated>
     
@@ -165,19 +165,19 @@
     </summary>
     
     
-      <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="操作系统" scheme="https://inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="原来我不帅" scheme="https://blog.inte8.cn/tags/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E5%B8%85/"/>
+      <category term="原来我不帅" scheme="https://inte8.cn/tags/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E5%B8%85/"/>
     
-      <category term="网吧系统" scheme="https://blog.inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
+      <category term="网吧系统" scheme="https://inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>时隔三年网吧系统届的大佬死性不改终于发布了2020年的第一个版本20fi</title>
-    <link href="https://blog.inte8.cn/2020/02/21/netbar-windows/"/>
-    <id>https://blog.inte8.cn/2020/02/21/netbar-windows/</id>
+    <link href="https://inte8.cn/2020/02/21/netbar-windows/"/>
+    <id>https://inte8.cn/2020/02/21/netbar-windows/</id>
     <published>2020-02-21T11:51:24.000Z</published>
     <updated>2020-02-21T12:44:39.497Z</updated>
     
@@ -194,19 +194,19 @@
     </summary>
     
     
-      <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="操作系统" scheme="https://inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="网吧系统" scheme="https://blog.inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
+      <category term="网吧系统" scheme="https://inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="死性不改" scheme="https://blog.inte8.cn/tags/%E6%AD%BB%E6%80%A7%E4%B8%8D%E6%94%B9/"/>
+      <category term="死性不改" scheme="https://inte8.cn/tags/%E6%AD%BB%E6%80%A7%E4%B8%8D%E6%94%B9/"/>
     
   </entry>
   
   <entry>
     <title>关于matery主题valine评论使用方法</title>
-    <link href="https://blog.inte8.cn/2020/02/21/valine/"/>
-    <id>https://blog.inte8.cn/2020/02/21/valine/</id>
+    <link href="https://inte8.cn/2020/02/21/valine/"/>
+    <id>https://inte8.cn/2020/02/21/valine/</id>
     <published>2020-02-21T11:29:17.000Z</published>
     <updated>2020-02-21T11:52:21.478Z</updated>
     
@@ -225,17 +225,17 @@
     </summary>
     
     
-      <category term="网页前端" scheme="https://blog.inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
+      <category term="网页前端" scheme="https://inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Valine" scheme="https://blog.inte8.cn/tags/Valine/"/>
+      <category term="Valine" scheme="https://inte8.cn/tags/Valine/"/>
     
   </entry>
   
   <entry>
     <title>折腾vps时候翻找过的一些脚本资料</title>
-    <link href="https://blog.inte8.cn/2020/02/21/linux/"/>
-    <id>https://blog.inte8.cn/2020/02/21/linux/</id>
+    <link href="https://inte8.cn/2020/02/21/linux/"/>
+    <id>https://inte8.cn/2020/02/21/linux/</id>
     <published>2020-02-21T11:08:29.000Z</published>
     <updated>2020-02-21T16:05:44.807Z</updated>
     
@@ -252,19 +252,19 @@
     </summary>
     
     
-      <category term="操作系统" scheme="https://blog.inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="操作系统" scheme="https://inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="Linux" scheme="https://blog.inte8.cn/tags/Linux/"/>
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
     
-      <category term="备忘录" scheme="https://blog.inte8.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+      <category term="备忘录" scheme="https://inte8.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     
   </entry>
   
   <entry>
     <title>Hexo + Github Pages博客搭建教程（搬运）</title>
-    <link href="https://blog.inte8.cn/2020/02/21/hexo-github/"/>
-    <id>https://blog.inte8.cn/2020/02/21/hexo-github/</id>
+    <link href="https://inte8.cn/2020/02/21/hexo-github/"/>
+    <id>https://inte8.cn/2020/02/21/hexo-github/</id>
     <published>2020-02-21T09:47:23.000Z</published>
     <updated>2020-02-21T10:27:32.956Z</updated>
     
@@ -281,21 +281,21 @@
     </summary>
     
     
-      <category term="网页前端" scheme="https://blog.inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
+      <category term="网页前端" scheme="https://inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="hexo" scheme="https://blog.inte8.cn/tags/hexo/"/>
+      <category term="hexo" scheme="https://inte8.cn/tags/hexo/"/>
     
-      <category term="GitHub" scheme="https://blog.inte8.cn/tags/GitHub/"/>
+      <category term="GitHub" scheme="https://inte8.cn/tags/GitHub/"/>
     
-      <category term="blog" scheme="https://blog.inte8.cn/tags/blog/"/>
+      <category term="blog" scheme="https://inte8.cn/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>关于本博客主题的使用方法（纯搬运）</title>
-    <link href="https://blog.inte8.cn/2020/02/21/hexo-theme-matery/"/>
-    <id>https://blog.inte8.cn/2020/02/21/hexo-theme-matery/</id>
+    <link href="https://inte8.cn/2020/02/21/hexo-theme-matery/"/>
+    <id>https://inte8.cn/2020/02/21/hexo-theme-matery/</id>
     <published>2020-02-21T09:31:52.000Z</published>
     <updated>2020-02-21T10:29:07.499Z</updated>
     
@@ -315,16 +315,16 @@
     </summary>
     
     
-      <category term="网页前端" scheme="https://blog.inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
+      <category term="网页前端" scheme="https://inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="hexo" scheme="https://blog.inte8.cn/tags/hexo/"/>
+      <category term="hexo" scheme="https://inte8.cn/tags/hexo/"/>
     
-      <category term="blog" scheme="https://blog.inte8.cn/tags/blog/"/>
+      <category term="blog" scheme="https://inte8.cn/tags/blog/"/>
     
-      <category term="主题" scheme="https://blog.inte8.cn/tags/%E4%B8%BB%E9%A2%98/"/>
+      <category term="主题" scheme="https://inte8.cn/tags/%E4%B8%BB%E9%A2%98/"/>
     
-      <category term="使用方法" scheme="https://blog.inte8.cn/tags/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+      <category term="使用方法" scheme="https://inte8.cn/tags/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   

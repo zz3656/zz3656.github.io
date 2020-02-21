@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.inte8.cn/"/>
-  <updated>2020-02-21T09:40:17.496Z</updated>
+  <updated>2020-02-21T09:59:16.911Z</updated>
   <id>https://blog.inte8.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo + Github Pages博客搭建教程（搬运）</title>
+    <link href="https://blog.inte8.cn/2020/02/21/hexo-github/"/>
+    <id>https://blog.inte8.cn/2020/02/21/hexo-github/</id>
+    <published>2020-02-21T09:47:23.000Z</published>
+    <updated>2020-02-21T09:59:16.911Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>关于本博客主题的使用方法（纯搬运）</title>

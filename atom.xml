@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://inte8.cn/"/>
-  <updated>2020-02-21T22:10:11.571Z</updated>
+  <updated>2020-02-23T14:14:04.374Z</updated>
   <id>https://inte8.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用此博客的缘由</title>
-    <link href="https://inte8.cn/2020/02/22/ban-wa-gong/"/>
-    <id>https://inte8.cn/2020/02/22/ban-wa-gong/</id>
-    <published>2020-02-21T21:43:42.000Z</published>
-    <updated>2020-02-21T22:10:11.571Z</updated>
+    <title>屌丝网管养成记-第七章-友情危机（未完成）</title>
+    <link href="https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-qi-zhang-you-qing-wei-ji/"/>
+    <id>https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-qi-zhang-you-qing-wei-ji/</id>
+    <published>2020-02-23T14:13:36.000Z</published>
+    <updated>2020-02-23T14:14:04.374Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;p&gt;由于武汉新肝炎疫情自行隔离期间，闲来无事入了搬瓦工vps。又莫名其妙不知情情况下，买了最便宜的cn2机房。在电信环境下，实在是堪忧。&lt;a href=&quot;https://blog.inte8.cn&quot; target=&quot;_blank&quot;
+          &lt;p&gt;我下楼吃了网吧供应的晚饭后又上楼了。号也没下，闲着没事我又开始跑60了。也不知道跑了几趟最后躺沙发上睡着了…醒来的时候已经是早上了，小胡他们几个都已经到网吧了。随便打了声招呼我就下楼吃早饭去了。吃完早餐上楼崽子安排说继续跑环，我们需要把昨天没有给客户交齐的部分补上。就这样大
         
       
     
@@ -37,16 +37,16 @@
     
     
     
-      <category term="blog" scheme="https://inte8.cn/tags/blog/"/>
+      <category term="屌丝网管" scheme="https://inte8.cn/tags/%E5%B1%8C%E4%B8%9D%E7%BD%91%E7%AE%A1/"/>
     
   </entry>
   
   <entry>
-    <title>博客终于算是差不多了</title>
-    <link href="https://inte8.cn/2020/02/22/bo-ke-zhong-yu-suan-shi-chai-bu-duo-liao/"/>
-    <id>https://inte8.cn/2020/02/22/bo-ke-zhong-yu-suan-shi-chai-bu-duo-liao/</id>
-    <published>2020-02-21T20:56:58.000Z</published>
-    <updated>2020-02-21T21:28:45.991Z</updated>
+    <title>屌丝网管养成记-第六章-游戏代练</title>
+    <link href="https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-liu-zhang-you-xi-dai-lian/"/>
+    <id>https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-liu-zhang-you-xi-dai-lian/</id>
+    <published>2020-02-23T14:11:25.000Z</published>
+    <updated>2020-02-23T14:13:06.814Z</updated>
     
     <summary type="html">
     
@@ -54,7 +54,7 @@
       
         
         
-          &lt;p&gt;2020年2月22日04:57:36&lt;br&gt;博客终于算是差不多了，折腾了一整天。由于太喜欢&lt;a href=&quot;https://blinkfox.github.io/&quot; target=&quot;_blank&quot;
+          &lt;p&gt;好！我应了一声就继续玩耍了。大概玩到了凌晨两点钟我就直接在沙发上躺着睡了。（之前在网吧的时候都是这样过的，所以我也没有感觉有什么不适应。）醒来已经是早上8点多了，我是被我们一起来的哥几个喊起来的。毕竟是几个同学第一次一起出来工作！心情还是比较高兴的，顺便崽子安排大家一起吃了
         
       
     
@@ -62,18 +62,16 @@
     
     
     
-      <category term="blog" scheme="https://inte8.cn/tags/blog/"/>
-    
-      <category term="主题" scheme="https://inte8.cn/tags/%E4%B8%BB%E9%A2%98/"/>
+      <category term="屌丝网管" scheme="https://inte8.cn/tags/%E5%B1%8C%E4%B8%9D%E7%BD%91%E7%AE%A1/"/>
     
   </entry>
   
   <entry>
-    <title>PVE下安装AdGuard Home搭建一个带广告过滤的私有DNS服务器及优化部署</title>
-    <link href="https://inte8.cn/2020/02/21/pve-aguard/"/>
-    <id>https://inte8.cn/2020/02/21/pve-aguard/</id>
-    <published>2020-02-21T15:27:06.000Z</published>
-    <updated>2020-02-21T17:26:30.543Z</updated>
+    <title>屌丝网管养成记-第五章-阴差阳错</title>
+    <link href="https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-wu-zhang-yin-chai-yang-cuo/"/>
+    <id>https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-wu-zhang-yin-chai-yang-cuo/</id>
+    <published>2020-02-23T14:10:24.000Z</published>
+    <updated>2020-02-23T14:10:50.876Z</updated>
     
     <summary type="html">
     
@@ -81,32 +79,24 @@
       
         
         
-          &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;于是我就这样在家里待了几天，可这样下去不是事儿。咱不是那种吃喝靠父母的主儿，况且我家里的条件也并不宽裕。期间我一有机会就会去隔壁村开的小黑网吧里。这网吧老板也是和我年纪差不多，起初我就是过去看别人玩游戏的。到后来发现老板玩的游戏和我玩的一样，慢慢的发展成我帮他玩游戏带看门。
         
       
     
     </summary>
     
     
-      <category term="操作系统" scheme="https://inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
-    
-      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
-    
-      <category term="去广告" scheme="https://inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
-    
-      <category term="GitHub" scheme="https://inte8.cn/tags/GitHub/"/>
-    
-      <category term="AdGuard Home" scheme="https://inte8.cn/tags/AdGuard-Home/"/>
+      <category term="屌丝网管" scheme="https://inte8.cn/tags/%E5%B1%8C%E4%B8%9D%E7%BD%91%E7%AE%A1/"/>
     
   </entry>
   
   <entry>
-    <title>ROS主路由+OpenWrt旁路由+Adguard去广告配置教程</title>
-    <link href="https://inte8.cn/2020/02/21/ros-openwrt-adguard/"/>
-    <id>https://inte8.cn/2020/02/21/ros-openwrt-adguard/</id>
-    <published>2020-02-21T15:03:21.000Z</published>
-    <updated>2020-02-21T16:56:24.443Z</updated>
+    <title>屌丝网管养成记-第四章-家人为重</title>
+    <link href="https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-si-zhang-jia-ren-wei-chong/"/>
+    <id>https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-si-zhang-jia-ren-wei-chong/</id>
+    <published>2020-02-23T14:09:21.000Z</published>
+    <updated>2020-02-23T14:09:44.767Z</updated>
     
     <summary type="html">
     
@@ -114,30 +104,24 @@
       
         
         
-          &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;&lt;a
+          &lt;p&gt;怎么了？我眯着眼问。你从昨天上午回来一直睡到现在你干什么呢！我爸瞪着眼对着我吼着。这时候我才发现我们不大的小屋里其实站了很多人的，我表姑、表叔还有邻居都在一边傻傻的看着我。我赶紧起床穿衣服，这时候在看时间已经下午 6 点了。我的天，我竟然睡了 30
         
       
     
     </summary>
     
     
-      <category term="LINUX应用" scheme="https://inte8.cn/categories/LINUX%E5%BA%94%E7%94%A8/"/>
     
-    
-      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
-    
-      <category term="去广告" scheme="https://inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
-    
-      <category term="AdGuard Home" scheme="https://inte8.cn/tags/AdGuard-Home/"/>
+      <category term="屌丝网管" scheme="https://inte8.cn/tags/%E5%B1%8C%E4%B8%9D%E7%BD%91%E7%AE%A1/"/>
     
   </entry>
   
   <entry>
-    <title>使用AdGuard Home搭建一个无广告和跟踪的公共DNS</title>
-    <link href="https://inte8.cn/2020/02/21/adguard/"/>
-    <id>https://inte8.cn/2020/02/21/adguard/</id>
-    <published>2020-02-21T14:43:27.000Z</published>
-    <updated>2020-02-21T15:04:21.858Z</updated>
+    <title>屌丝网管养成记-第三章-网管晋级</title>
+    <link href="https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-san-zhang-wang-guan-jin-ji/"/>
+    <id>https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-san-zhang-wang-guan-jin-ji/</id>
+    <published>2020-02-23T14:08:33.000Z</published>
+    <updated>2020-02-23T14:08:54.825Z</updated>
     
     <summary type="html">
     
@@ -145,28 +129,24 @@
       
         
         
-          &lt;p&gt;简单点说AdGuard Home就是一个公共DNS服务，如Google的公共DNS&lt;code&gt;8.8.8.8&lt;/code&gt;，和DNSmasq一样AdGuard&lt;br&gt;Home是开源的，可以自行搭建安装后在客户端配置使用。xiaoz之前分享过一个自己写的项目&lt;a
+          &lt;p&gt;话说到这里我也没什么好讲的了，只得答应下来。我们把剩下的一点酒喝完以后就回网吧了。现在想想，当年在网吧上班我们是没有宿舍的。我每天上班和下班都是在网吧（这里有两点原因。一是因为家太远，二是因为太爱玩就是看别人玩也觉得开心|´・ω・)ノ）写到这里我想起了我当年上班的网吧名字了
         
       
     
     </summary>
     
     
-      <category term="LINUX应用" scheme="https://inte8.cn/categories/LINUX%E5%BA%94%E7%94%A8/"/>
     
-    
-      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
-    
-      <category term="去广告" scheme="https://inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+      <category term="屌丝网管" scheme="https://inte8.cn/tags/%E5%B1%8C%E4%B8%9D%E7%BD%91%E7%AE%A1/"/>
     
   </entry>
   
   <entry>
-    <title>原来我不帅 Windows_Server_2016_x64_数据中心版 （20191212更新）</title>
-    <link href="https://inte8.cn/2020/02/21/2016windows/"/>
-    <id>https://inte8.cn/2020/02/21/2016windows/</id>
-    <published>2020-02-21T13:19:50.000Z</published>
-    <updated>2020-02-21T15:57:29.705Z</updated>
+    <title>屌丝网管养成记-第二章-体验网管</title>
+    <link href="https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-er-zhang-ti-yan-wang-guan/"/>
+    <id>https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-er-zhang-ti-yan-wang-guan/</id>
+    <published>2020-02-23T14:07:32.000Z</published>
+    <updated>2020-02-23T14:08:01.116Z</updated>
     
     <summary type="html">
     
@@ -174,151 +154,24 @@
       
         
         
-          &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;系统介绍：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;1、采用微软官方原版优化制作；未做任何精简！~&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;2、补丁更新到2019年12月底，FLASH，VC组件，全部是最新版；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;3、集成服务器常用的一些
+          &lt;p&gt;接上文，中年人上来后开口就是。我是网吧的技术主管，今天晚上我们网吧升级硬盘，我把系统盘做好教你们怎么刻盘然后你们负责把硬盘刻完！当时我也不知道网吧有多少台机器，总之就是搬家搬了好久这样子。我不知道同事们怎么想的，但是我打心里是兴奋的。（这是我第一次可以学习到电脑维修相关知识
         
       
     
     </summary>
     
     
-      <category term="操作系统" scheme="https://inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
-    
-      <category term="原来我不帅" scheme="https://inte8.cn/tags/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E5%B8%85/"/>
-    
-      <category term="网吧系统" scheme="https://inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
+      <category term="屌丝网管" scheme="https://inte8.cn/tags/%E5%B1%8C%E4%B8%9D%E7%BD%91%E7%AE%A1/"/>
     
   </entry>
   
   <entry>
-    <title>原来我不帅 马蹄更新v2.1.0_Win7x64_Win10x64_无盘公包（v2020版 V4） 2020.02.10 更新</title>
-    <link href="https://inte8.cn/2020/02/21/matigengxin/"/>
-    <id>https://inte8.cn/2020/02/21/matigengxin/</id>
-    <published>2020-02-21T12:53:40.000Z</published>
-    <updated>2020-02-21T13:13:08.729Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;马蹄更新是继绿化大师以后，又一款新的无广告无盘，承诺无广告。&quot;&gt;&lt;a href=&quot;#马蹄更新是继绿化大师以后，又一款新的无广告无盘，承诺无广告。&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="操作系统" scheme="https://inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="原来我不帅" scheme="https://inte8.cn/tags/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E5%B8%85/"/>
-    
-      <category term="网吧系统" scheme="https://inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>时隔三年网吧系统届的大佬死性不改终于发布了2020年的第一个版本20fi</title>
-    <link href="https://inte8.cn/2020/02/21/netbar-windows/"/>
-    <id>https://inte8.cn/2020/02/21/netbar-windows/</id>
-    <published>2020-02-21T11:51:24.000Z</published>
-    <updated>2020-02-21T17:43:28.089Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;最新版本：20Fi&quot;&gt;&lt;a href=&quot;#最新版本：20Fi&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="操作系统" scheme="https://inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="网吧系统" scheme="https://inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
-    
-      <category term="死性不改" scheme="https://inte8.cn/tags/%E6%AD%BB%E6%80%A7%E4%B8%8D%E6%94%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于matery主题valine评论使用方法</title>
-    <link href="https://inte8.cn/2020/02/21/valine/"/>
-    <id>https://inte8.cn/2020/02/21/valine/</id>
-    <published>2020-02-21T11:29:17.000Z</published>
-    <updated>2020-02-21T17:43:33.923Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;##关于hexo-theme-matery主题使用valine评论系统##&lt;/p&gt;
-&lt;p&gt;在主题目录_config.yml文件下大概305行的位置&lt;/p&gt;
-&lt;pre class=&quot; language-yaml&quot;&gt;&lt;code
-        
-      
-    
-    </summary>
-    
-    
-      <category term="网页前端" scheme="https://inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="Valine" scheme="https://inte8.cn/tags/Valine/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>折腾vps时候翻找过的一些脚本资料</title>
-    <link href="https://inte8.cn/2020/02/21/linux/"/>
-    <id>https://inte8.cn/2020/02/21/linux/</id>
-    <published>2020-02-21T11:08:29.000Z</published>
-    <updated>2020-02-21T16:05:44.807Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;锐速BBR一键安装脚本&lt;br&gt;    wget “&lt;a href=&quot;https://github.com/chiakge/Linux-NetSpeed/raw/master/tcp.sh&amp;quot;&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="操作系统" scheme="https://inte8.cn/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
-    
-      <category term="备忘录" scheme="https://inte8.cn/tags/%E5%A4%87%E5%BF%98%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo + Github Pages博客搭建教程（搬运）</title>
-    <link href="https://inte8.cn/2020/02/21/hexo-github/"/>
-    <id>https://inte8.cn/2020/02/21/hexo-github/</id>
-    <published>2020-02-21T09:47:23.000Z</published>
-    <updated>2020-02-21T17:43:47.418Z</updated>
+    <title>屌丝网管养成记-第一章-初入社会</title>
+    <link href="https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-yi-zhang-chu-ru-she-hui/"/>
+    <id>https://inte8.cn/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-yi-zhang-chu-ru-she-hui/</id>
+    <published>2020-02-23T14:06:20.000Z</published>
+    <updated>2020-02-23T14:19:03.502Z</updated>
     
     <summary type="html">
     
@@ -333,23 +186,17 @@
     </summary>
     
     
-      <category term="网页前端" scheme="https://inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
     
-    
-      <category term="hexo" scheme="https://inte8.cn/tags/hexo/"/>
-    
-      <category term="blog" scheme="https://inte8.cn/tags/blog/"/>
-    
-      <category term="GitHub" scheme="https://inte8.cn/tags/GitHub/"/>
+      <category term="屌丝网管" scheme="https://inte8.cn/tags/%E5%B1%8C%E4%B8%9D%E7%BD%91%E7%AE%A1/"/>
     
   </entry>
   
   <entry>
-    <title>关于本博客主题的使用方法（纯搬运）</title>
-    <link href="https://inte8.cn/2020/02/21/hexo-theme-matery/"/>
-    <id>https://inte8.cn/2020/02/21/hexo-theme-matery/</id>
-    <published>2020-02-21T09:31:52.000Z</published>
-    <updated>2020-02-21T17:43:37.976Z</updated>
+    <title>WINDOWS系统下恢复群晖分区下的文件</title>
+    <link href="https://inte8.cn/2020/02/23/windows-xi-tong-xia-hui-fu-qun-hui-fen-qu-xia-de-wen-jian/"/>
+    <id>https://inte8.cn/2020/02/23/windows-xi-tong-xia-hui-fu-qun-hui-fen-qu-xia-de-wen-jian/</id>
+    <published>2020-02-23T14:04:05.000Z</published>
+    <updated>2020-02-23T14:05:34.546Z</updated>
     
     <summary type="html">
     
@@ -357,26 +204,341 @@
       
         
         
-          &lt;blockquote&gt;
-&lt;p&gt;这是一个采用 &lt;code&gt;Material Design&lt;/code&gt; 和响应式设计的 Hexo 博客主题。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;特性&quot;&gt;&lt;a href=&quot;#特性&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;玩群晖也有几年了，从万由的J1900时代就搞了台NAS。当时天天泡论坛看大家都是讲群晖，所以回来也毫不犹豫的刷的群晖。发这个帖子不是为了讲故事。起因也很简单。就是因为我把机器刷回了万由系统，所幸的是我保留了放照片的盘。想挂上去读取的时候发现是读取不了的。放到我另外一台918
         
       
     
     </summary>
     
     
-      <category term="网页前端" scheme="https://inte8.cn/categories/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
+    
+      <category term="群晖" scheme="https://inte8.cn/tags/%E7%BE%A4%E6%99%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ROS6.X 阿里云DDNS及端口映射的正确姿势</title>
+    <link href="https://inte8.cn/2020/02/23/ros6-x-a-li-yun-ddns-ji-duan-kou-ying-she-de-zheng-que-zi-shi/"/>
+    <id>https://inte8.cn/2020/02/23/ros6-x-a-li-yun-ddns-ji-duan-kou-ying-she-de-zheng-que-zi-shi/</id>
+    <published>2020-02-23T14:02:35.000Z</published>
+    <updated>2020-02-23T14:03:28.764Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;脚本用途&lt;br&gt;将ROS的DDNS更新到托管在Aliyun云解析DNS的域名，方便远程维护ROS。&lt;br&gt;使用自主注册个性化顶级域名服务。&lt;br&gt;更新格式&lt;br&gt;&lt;a
+        
+      
+    
+    </summary>
     
     
-      <category term="hexo" scheme="https://inte8.cn/tags/hexo/"/>
     
-      <category term="blog" scheme="https://inte8.cn/tags/blog/"/>
+  </entry>
+  
+  <entry>
+    <title>openwrt+阿里云DDNS搭配自己的黑群晖</title>
+    <link href="https://inte8.cn/2020/02/23/openwrt-a-li-yun-ddns-da-pei-zi-ji-de-hei-qun-hui/"/>
+    <id>https://inte8.cn/2020/02/23/openwrt-a-li-yun-ddns-da-pei-zi-ji-de-hei-qun-hui/</id>
+    <published>2020-02-23T14:01:18.000Z</published>
+    <updated>2020-02-23T14:01:45.804Z</updated>
     
-      <category term="主题" scheme="https://inte8.cn/tags/%E4%B8%BB%E9%A2%98/"/>
+    <summary type="html">
     
-      <category term="使用方法" scheme="https://inte8.cn/tags/%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+      
+      
+        
+        
+          &lt;p&gt;本文出自：&lt;a href=&quot;https://hegu.app/archives/221&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="阿里云" scheme="https://inte8.cn/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+      <category term="DDNS" scheme="https://inte8.cn/tags/DDNS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优惠购买境外服务器vultr一键快速搭建自己的ssr并开启bbr加速访问vpn教程</title>
+    <link href="https://inte8.cn/2020/02/23/you-hui-gou-mai-jing-wai-fu-wu-qi-vultr-yi-jian-kuai-su-da-jian-zi-ji-de-ssr-bing-kai-qi-bbr-jia-su-fang-wen-vpn-jiao-cheng/"/>
+    <id>https://inte8.cn/2020/02/23/you-hui-gou-mai-jing-wai-fu-wu-qi-vultr-yi-jian-kuai-su-da-jian-zi-ji-de-ssr-bing-kai-qi-bbr-jia-su-fang-wen-vpn-jiao-cheng/</id>
+    <published>2020-02-23T14:00:06.000Z</published>
+    <updated>2020-02-23T14:00:38.815Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;原文出处：&lt;a href=&quot;https://wistbean.github.io/vultr-ssr-bbr-build-quick.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
+    
+      <category term="VPS" scheme="https://inte8.cn/tags/VPS/"/>
+    
+      <category term="VPN" scheme="https://inte8.cn/tags/VPN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图片壁纸api</title>
+    <link href="https://inte8.cn/2020/02/23/tu-pian-bi-zhi-api/"/>
+    <id>https://inte8.cn/2020/02/23/tu-pian-bi-zhi-api/</id>
+    <published>2020-02-23T13:59:05.000Z</published>
+    <updated>2020-02-23T13:59:29.844Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;刷新一次页面换一次图片，可以调用到你的网站背景里面去，多炫酷啊，刷新一下本页看下效果哦。&lt;/p&gt;
+&lt;p&gt;说明：随机图片壁纸api，调用的是新浪api，速度不用担心，图片资源也很多&lt;/p&gt;
+&lt;p&gt;![01.jpg][1]&lt;/p&gt;
+&lt;p&gt;电脑动漫图片：&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="api" scheme="https://inte8.cn/tags/api/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>腾讯云服务器安装爱快软路由教程</title>
+    <link href="https://inte8.cn/2020/02/23/teng-xun-yun-fu-wu-qi-an-zhuang-ai-kuai-ruan-lu-you-jiao-cheng/"/>
+    <id>https://inte8.cn/2020/02/23/teng-xun-yun-fu-wu-qi-an-zhuang-ai-kuai-ruan-lu-you-jiao-cheng/</id>
+    <published>2020-02-23T13:57:45.000Z</published>
+    <updated>2020-02-23T13:58:26.462Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;原文出自：&lt;a href=&quot;http://www.shpcw.com/jszc/shownews146.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
+    
+      <category term="腾讯云" scheme="https://inte8.cn/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>群晖6.2最新获取root权限设置root密码方法</title>
+    <link href="https://inte8.cn/2020/02/23/qun-hui-6-2-zui-xin-huo-qu-root-quan-xian-she-zhi-root-mi-ma-fang-fa/"/>
+    <id>https://inte8.cn/2020/02/23/qun-hui-6-2-zui-xin-huo-qu-root-quan-xian-she-zhi-root-mi-ma-fang-fa/</id>
+    <published>2020-02-23T13:56:27.000Z</published>
+    <updated>2020-02-23T13:57:19.728Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;原文出自：&lt;a href=&quot;http://blog.sina.com.cn/s/blog_607dbd7b0102yr59.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
+    
+      <category term="群晖" scheme="https://inte8.cn/tags/%E7%BE%A4%E6%99%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>免费接码平台</title>
+    <link href="https://inte8.cn/2020/02/23/mian-fei-jie-ma-ping-tai/"/>
+    <id>https://inte8.cn/2020/02/23/mian-fei-jie-ma-ping-tai/</id>
+    <published>2020-02-23T13:55:31.000Z</published>
+    <updated>2020-02-23T13:55:49.399Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;国内免费接码平台&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://sms.cm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://sms.cm&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.pdflibr.com&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>绿化大师环境盖伦下载机如何修改绝地求生默认游戏特效</title>
+    <link href="https://inte8.cn/2020/02/23/lu-hua-da-shi-huan-jing-gai-lun-xia-zai-ji-ru-he-xiu-gai-jue-di-qiu-sheng-mo-ren-you-xi-te-xiao/"/>
+    <id>https://inte8.cn/2020/02/23/lu-hua-da-shi-huan-jing-gai-lun-xia-zai-ji-ru-he-xiu-gai-jue-di-qiu-sheng-mo-ren-you-xi-te-xiao/</id>
+    <published>2020-02-23T13:54:28.000Z</published>
+    <updated>2020-02-23T13:55:04.419Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;声明：本文非博主原创，方法和理论均来自网络。&lt;br&gt;&lt;strong&gt;特别提示：因左斜杠在本文不能正常显示只好以“#”代替，请大家复制代码后自行替换为左斜杠！&lt;/strong&gt;&lt;br&gt;1
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="去广告" scheme="https://inte8.cn/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+    
+      <category term="网吧系统" scheme="https://inte8.cn/tags/%E7%BD%91%E5%90%A7%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>华为旗下“鸿蒙OS操作系统”开发环境搭建</title>
+    <link href="https://inte8.cn/2020/02/23/hua-wei-qi-xia-hong-meng-os-cao-zuo-xi-tong-kai-fa-huan-jing-da-jian/"/>
+    <id>https://inte8.cn/2020/02/23/hua-wei-qi-xia-hong-meng-os-cao-zuo-xi-tong-kai-fa-huan-jing-da-jian/</id>
+    <published>2020-02-23T13:49:18.000Z</published>
+    <updated>2020-02-23T13:50:40.712Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;环境配置&quot;&gt;&lt;a href=&quot;#环境配置&quot; class=&quot;headerlink&quot; title=&quot;环境配置&quot;&gt;&lt;/a&gt;环境配置&lt;/h1&gt;&lt;h2 id=&quot;硬件推荐配置&quot;&gt;&lt;a href=&quot;#硬件推荐配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="https://inte8.cn/tags/Ubuntu/"/>
+    
+      <category term="鸿蒙OS" scheme="https://inte8.cn/tags/%E9%B8%BF%E8%92%99OS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>非Docker方法安装qBittorrent</title>
+    <link href="https://inte8.cn/2020/02/23/fei-docker-fang-fa-an-zhuang-qbittorrent/"/>
+    <id>https://inte8.cn/2020/02/23/fei-docker-fang-fa-an-zhuang-qbittorrent/</id>
+    <published>2020-02-23T13:47:42.000Z</published>
+    <updated>2020-02-23T13:50:00.244Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一、前言&lt;br&gt;1、基本上群晖想要安装qBittorrent，网上教程都是从Docker部署。对于一些人来说总感觉不爽，这个帖子就满足一下套件党的心愿吧。&lt;br&gt;2、群晖是PT利器，从最初的群晖自带的 Download Station，到
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
+    
+      <category term="群晖" scheme="https://inte8.cn/tags/%E7%BE%A4%E6%99%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阿里云aliyun主机ECS快速安装搭建配置ROS</title>
+    <link href="https://inte8.cn/2020/02/23/a-li-yun-an-zhuang-ros/"/>
+    <id>https://inte8.cn/2020/02/23/a-li-yun-an-zhuang-ros/</id>
+    <published>2020-02-23T13:46:04.000Z</published>
+    <updated>2020-02-23T13:53:10.282Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;以下内容转自&lt;a href=&quot;https://www.cnblogs.com/itfat/p/8183644.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
+    
+      <category term="阿里云" scheme="https://inte8.cn/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos快速搭建一个属于自己的ipsec/L2TP</title>
+    <link href="https://inte8.cn/2020/02/23/centos-kuai-su-da-jian-yi-ge-shu-yu-zi-ji-de-ipsec-l2tp/"/>
+    <id>https://inte8.cn/2020/02/23/centos-kuai-su-da-jian-yi-ge-shu-yu-zi-ji-de-ipsec-l2tp/</id>
+    <published>2020-02-23T13:42:36.000Z</published>
+    <updated>2020-02-23T13:44:55.096Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;使用 SSH 工具连接到服务器&lt;/strong&gt;&lt;br&gt;这里我用的是FinalShell  下载地址:&lt;a href=&quot;http://www.hostbuf.com&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
+    
+      <category term="Centos" scheme="https://inte8.cn/tags/Centos/"/>
     
   </entry>
   

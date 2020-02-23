@@ -533,6 +533,12 @@
         <content type="html"><![CDATA[<p>由于武汉新肝炎疫情自行隔离期间，闲来无事入了搬瓦工vps。又莫名其妙不知情情况下，买了最便宜的cn2机房。在电信环境下，实在是堪忧。<a href="https://blog.inte8.cn" target="_blank" rel="noopener">测试地址</a>。本来一级域名是挂在搬瓦工上面的，奈何它的打开速度太头铁。本人又不舍得再为它买cdn。没办法，只能另寻出路。不想github+hexo，竟然响应速度超过了搬瓦工。故正式将一级域名前移到了github名下。(就是本站咯)至于搬瓦工那边使用不使用到时候再考虑了！暂时先把家安置在这里好了！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 随心小记 </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -551,6 +557,12 @@
       
         <content type="html"><![CDATA[<p>2020年2月22日04:57:36<br>博客终于算是差不多了，折腾了一整天。由于太喜欢<a href="https://blinkfox.github.io/" target="_blank" rel="noopener">闪烁之狐</a>这个主题了，实在是不忍心魔改。(当然，能力也是一方面问题)看了N多遍的<a href="https://inte8.cn/2020/02/21/hexo-theme-matery/">模板说明文件</a>并对比<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">github</a>md说明文件并一一对比后才有如此的结果。不能说完美，仅仅是<a href="https://blinkfox.github.io/" target="_blank" rel="noopener">闪烁之狐</a>创造了这个条件给我们。基本上本博客已把除icp备案字段部分，其他模块全部都应用了。甚至也动用了我十多年没有用过的ps功底。。回首一想，毕业已经十多年了。然而，自己都做过什么呢？这个问题，恐怕我自己问我自己都回答不了。就且先不说把。日后，如果再有改动也是参照主题制作者的<a href="https://inte8.cn/2020/02/21/hexo-theme-matery/">说明文件</a>进行小篇幅修改。今天就到这里吧！</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
+      
+      <categories>
+          
+          <category> 随心小记 </category>
+          
+      </categories>
       
       
         <tags>

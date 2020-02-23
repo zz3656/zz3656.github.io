@@ -240,7 +240,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -269,7 +269,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -296,7 +296,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -350,7 +350,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -377,7 +377,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -456,7 +456,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -485,7 +485,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -512,7 +512,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -539,7 +539,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -618,7 +618,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -649,7 +649,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -678,7 +678,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -811,7 +811,7 @@
       
       <categories>
           
-          <category> Linux应用 </category>
+          <category> LINUX应用 </category>
           
       </categories>
       
@@ -847,9 +847,9 @@
             
             <tag> hexo </tag>
             
-            <tag> GitHub </tag>
-            
             <tag> blog </tag>
+            
+            <tag> GitHub </tag>
             
         </tags>
       

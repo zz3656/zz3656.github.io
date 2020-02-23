@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://inte8.cn/"/>
-  <updated>2020-02-23T15:00:46.166Z</updated>
+  <updated>2020-02-23T15:18:58.378Z</updated>
   <id>https://inte8.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何使用git命令上传项目到github仓库</title>
+    <link href="https://inte8.cn/2020/02/23/ru-he-shi-yong-git-ming-ling-shang-chuan-xiang-mu-dao-github-cang-ku/"/>
+    <id>https://inte8.cn/2020/02/23/ru-he-shi-yong-git-ming-ling-shang-chuan-xiang-mu-dao-github-cang-ku/</id>
+    <published>2020-02-23T15:09:02.000Z</published>
+    <updated>2020-02-23T15:18:58.378Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;利用GIt命令上传项目到GitHub指定仓库&quot;&gt;&lt;a href=&quot;#利用GIt命令上传项目到GitHub指定仓库&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随心小记" scheme="https://inte8.cn/categories/%E9%9A%8F%E5%BF%83%E5%B0%8F%E8%AE%B0/"/>
+    
+    
+      <category term="GitHub" scheme="https://inte8.cn/tags/GitHub/"/>
+    
+  </entry>
   
   <entry>
     <title>屌丝网管养成记-第七章-友情危机（未完成）</title>
@@ -558,35 +585,6 @@
       <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
     
       <category term="阿里云" scheme="https://inte8.cn/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos快速搭建一个属于自己的ipsec/L2TP</title>
-    <link href="https://inte8.cn/2020/02/23/centos-kuai-su-da-jian-yi-ge-shu-yu-zi-ji-de-ipsec-l2tp/"/>
-    <id>https://inte8.cn/2020/02/23/centos-kuai-su-da-jian-yi-ge-shu-yu-zi-ji-de-ipsec-l2tp/</id>
-    <published>2020-02-23T13:42:36.000Z</published>
-    <updated>2020-02-23T14:39:58.053Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;使用 SSH 工具连接到服务器&lt;/strong&gt;&lt;br&gt;这里我用的是FinalShell  下载地址:&lt;a href=&quot;http://www.hostbuf.com&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="LINUX应用" scheme="https://inte8.cn/categories/LINUX%E5%BA%94%E7%94%A8/"/>
-    
-    
-      <category term="Linux" scheme="https://inte8.cn/tags/Linux/"/>
-    
-      <category term="Centos" scheme="https://inte8.cn/tags/Centos/"/>
     
   </entry>
   

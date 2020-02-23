@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>如何使用git命令上传项目到github仓库</title>
+      <link href="/2020/02/23/ru-he-shi-yong-git-ming-ling-shang-chuan-xiang-mu-dao-github-cang-ku/"/>
+      <url>/2020/02/23/ru-he-shi-yong-git-ming-ling-shang-chuan-xiang-mu-dao-github-cang-ku/</url>
+      
+        <content type="html"><![CDATA[<h1 id="利用GIt命令上传项目到GitHub指定仓库"><a href="#利用GIt命令上传项目到GitHub指定仓库" class="headerlink" title="利用GIt命令上传项目到GitHub指定仓库"></a>利用GIt命令上传项目到GitHub指定仓库</h1><ul><li><p>1.建立GIt可管理的仓库 cd到本地项目根目录下，执行 git init 命令：</p><pre><code>  git init</code></pre></li><li><p>2.将项目的所有文件添加到仓库中(注意add后面有一个“ . ”)</p><pre><code>  git add .</code></pre></li><li><p>3.将上一步add的文件commit到仓库</p><pre><code>  git  commit -m "提交的说明注释"</code></pre></li><li><p>4.到GitHub官网新建一个仓库（Create repository）,并复制仓库地址</p></li></ul><ul><li><p>5.将本地仓库关联到GitHub新建的仓库上</p><pre><code>  git remote add origin https://github.com/Love-LG/Javaweb-firstcup-war  </code></pre></li><li><p>6.使用pull命令</p><pre><code>  git pull origin master</code></pre></li><li><p>7.将本地仓库的文件上传到GitHub远程仓库</p><pre><code>  git push -u origin master  </code></pre></li></ul><h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><p>在最后使用命令“git push -u origin master”将本地仓库的文件上传的远程的GitHub仓库时可能会遇到<a href="https://img2018.cnblogs.com/blog/1610916/201903/1610916-20190317173249025-13330453.jpg" target="_blank" rel="noopener">如下错误</a></p><p>提示上面错误信息的主要原因是我们在GitHub上新建仓库时一般会选择生成一个README.md的说明文档，因此我们必须使用以下命令将README.md下载到我们的本地仓库再使用<br>git push -u origin master命令就能成功将代码上传到GitHub的远程仓库。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随心小记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GitHub </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>屌丝网管养成记-第七章-友情危机（未完成）</title>
       <link href="/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-qi-zhang-you-qing-wei-ji/"/>
       <url>/2020/02/23/diao-si-wang-guan-yang-cheng-ji-di-qi-zhang-you-qing-wei-ji/</url>

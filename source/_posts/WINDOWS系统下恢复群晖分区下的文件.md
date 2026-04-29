@@ -2,7 +2,8 @@
 title: WINDOWS系统下恢复群晖分区下的文件
 date: 2020-02-22
 categories:
-  - 技术笔记
+  - 编程开发
+
 tags:
   - 群晖
 ---

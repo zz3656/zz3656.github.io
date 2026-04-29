@@ -2,7 +2,8 @@
 title: 利用Git命令上传项目到GitHub指定仓库
 date: 2020-02-22
 categories:
-  - 技术笔记
+  - 编程开发
+
 tags:
   - Git
 ---

@@ -2,7 +2,8 @@
 title: PVE安装iStoreOS手把手图文教程
 date: 2025-07-12
 categories:
-  - 工作笔记
+  - 项目测试
+
 tags:
   - PVE
   - iStoreOS

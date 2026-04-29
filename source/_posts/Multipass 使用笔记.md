@@ -2,7 +2,8 @@
 title: Multipass 使用笔记
 date: 2025-07-12
 categories:
-  - 工作笔记
+  - 编程开发
+
 tags:
   - Multipass
 ---

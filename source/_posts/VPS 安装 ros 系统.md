@@ -2,7 +2,8 @@
 title: VPS 安装 ros 系统
 date: 2025-07-12
 categories:
-  - 工作笔记
+  - 项目测试
+
 tags:
   - ros
   - VPS

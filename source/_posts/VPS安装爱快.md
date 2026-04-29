@@ -2,7 +2,8 @@
 title: VPS安装爱快
 date: 2025-07-12
 categories:
-  - 工作笔记
+  - 项目测试
+
 tags:
   - 爱快
   - VPS

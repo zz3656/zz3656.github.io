@@ -2,7 +2,8 @@
 title: 科技lion一键 脚本  Linux服务器运维工具箱
 date: 2025-07-12
 categories:
-  - 工作笔记
+  - 项目测试
+
 tags:
   - Linux
 ---

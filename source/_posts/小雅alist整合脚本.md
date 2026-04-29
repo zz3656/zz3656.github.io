@@ -2,7 +2,8 @@
 title: 小雅alist整合脚本
 date: 2025-07-12
 categories:
-  - 工作笔记
+  - 项目测试
+
 tags:
   - alist
   - 小雅

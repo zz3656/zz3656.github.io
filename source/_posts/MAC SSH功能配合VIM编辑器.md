@@ -2,7 +2,8 @@
 title: MAC SSH功能配合VIM编辑器
 date: 2025-07-12
 categories:
-  - 工作笔记
+  - 编程开发
+
 tags:
   - Mac
   - SSH

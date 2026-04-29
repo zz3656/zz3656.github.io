@@ -2,7 +2,8 @@
 title: routeros 7.X IPV6设置
 date: 2025-07-12
 categories:
-  - 工作笔记
+  - 项目测试
+
 tags:
   - ros
 ---

@@ -2,7 +2,8 @@
 title: jellyfin解决封面乱码和字幕乱码
 date: 2025-07-12
 categories:
-  - 工作笔记
+  - 项目测试
+
 tags:
   - jellyfin
 ---

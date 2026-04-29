@@ -2,7 +2,8 @@
 title: 各云盘VPS写入ROS方法
 date: 2025-07-12
 categories:
-  - 工作笔记
+  - 项目测试
+
 tags:
   - ros
 ---

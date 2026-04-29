@@ -2,7 +2,8 @@
 title: hexo 添加第三方评论模块 twikoo
 date: 2025-07-13
 categories:
-  - 工作笔记
+  - 编程开发
+
 tags:
   - hexo
   - twikoo

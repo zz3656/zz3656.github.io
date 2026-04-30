@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-04-30T19:02:35.344Z</updated>
+  <updated>2026-04-30T20:48:33.909Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="技术教程" scheme="https://zz3656.github.io/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
+    <category term="博客" scheme="https://zz3656.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="Markdown" scheme="https://zz3656.github.io/tags/Markdown/"/>
+    <category term="写作" scheme="https://zz3656.github.io/tags/%E5%86%99%E4%BD%9C/"/>
+    <id>https://zz3656.github.io/2026/05/01/markdown-wan-quan-shi-yong-zhi-nan/</id>
+    <link href="https://zz3656.github.io/2026/05/01/markdown-wan-quan-shi-yong-zhi-nan/"/>
+    <published>2026-04-30T21:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="Markdown-完全使用指南：从入门到精通"><a href="#Markdown-完全使用指南：从入门到精通" class="headerlink" title="Markdown 完全使用指南：从入门到精通"></a>Markdown]]>
+    </summary>
+    <title>Markdown 完全使用指南：从入门到精通</title>
+    <updated>2026-04-30T20:48:33.909Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>

@@ -384,38 +384,60 @@
 
     /* 一下是按钮样式 */
 
+    /* 固定友链卡片尺寸 */
+    #friends-link .card {
+        height: auto !important;
+        overflow: visible !important;
+    }
     .frind-ship {
         padding: 10px 20px;
+        min-height: 160px;
     }
-
     .frind-ship .title {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        height: 100px;
     }
-
+    .frind-ship .title img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
     .frind-ship .title div {
         color: #fff;
         padding-left: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80px;
     }
-
-    .frind-ship .title img {
-        width: 100px;
-        height: 100px;
-        flex-shrink: 0;
-    }
-
     .frind-ship .title h1 {
-        padding-bottom: 5px;
-        border-bottom: 2px solid #fff;
-        position: relative;
-        top:-15px;
-        left: 3px;
+        font-size: 1.2rem;
+        margin: 0 0 4px 0;
+        padding: 0;
+        border: none;
+        position: static;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-
+    .frind-ship .title div p {
+        position: static !important;
+        margin: 0;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
     .friend-button {
         display: flex;
         justify-content: center;
-        margin-bottom: -27px;
+        margin-top: 5px;
     }
 
     .friend-button a {
@@ -552,12 +574,6 @@
     article .card {
         overflow: visible !important;
     }
-
-    /* 修复：覆盖全局 matery.css 中 article .card 的 height:100%，防止友链卡片撑破容器 */
-    #friends-link .card {
-        height: auto !important;
-        overflow: visible !important;
-    }
 </style>
 
 <main class="content">
@@ -580,7 +596,7 @@
                                         <img src="http://image.luokangyuan.com/1_qq_27922023.jpg" alt="img">
                                         <div>
                                             <h1 class="friend-name">码酱</h1>
-                                            <p style="position: relative;top: -35px;">我不是大佬，只是在追寻大佬的脚步</p>
+                                            <p>我不是大佬，只是在追寻大佬的脚步</p>
                                         </div>
                                     </div>
                                     <div class="friend-button">
@@ -601,7 +617,7 @@
                                         <img src="http://image.luokangyuan.com/4027734.jpeg" alt="img">
                                         <div>
                                             <h1 class="friend-name">闪烁之狐</h1>
-                                            <p style="position: relative;top: -35px;">编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬</p>
+                                            <p>编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬</p>
                                         </div>
                                     </div>
                                     <div class="friend-button">
@@ -622,7 +638,7 @@
                                         <img src="http://image.luokangyuan.com/avatar.jpg" alt="img">
                                         <div>
                                             <h1 class="friend-name">ja_rome</h1>
-                                            <p style="position: relative;top: -35px;">平凡的脚步也可以走出伟大的行程</p>
+                                            <p>平凡的脚步也可以走出伟大的行程</p>
                                         </div>
                                     </div>
                                     <div class="friend-button">

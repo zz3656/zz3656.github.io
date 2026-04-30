@@ -4,9 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python 装饰器从入门到精通, blog,hexo">
-    <meta name="description" content="前言Python 装饰器是 Python 中非常强大且优雅的特性，理解装饰器对于写出高质量的 Python 代码至关重要。本文将带你从零开始，逐步掌握装饰器的各种用法。
-什么是装饰器装饰器本质上是一个函数，它接受一个函数作为参数，返回一个新">
+    <meta name="keywords" content="RouterOS v7入门到精通学习笔记, blog,hexo">
+    <meta name="description" content="RouterOS v7 入门到精通学习笔记本文整理自余松老师的《RouterOS 入门到精通 v7.4e》教程（共 192 页），系统梳理了 RouterOS v7 的核心新功能和配置要点。教程官网：www.irouteros.com
+
+一">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python 装饰器从入门到精通 | 因特吧</title>
+    <title>RouterOS v7入门到精通学习笔记 | 因特吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -316,12 +317,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python 装饰器从入门到精通</h1>
+                    <h1 class="description center-align post-title">RouterOS v7入门到精通学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -345,31 +346,22 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/RouterOS/">
+                                <span class="chip bg-color">RouterOS</span>
                             </a>
                         
-                            <a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/">
-                                <span class="chip bg-color">装饰器</span>
+                            <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
+                                <span class="chip bg-color">软路由</span>
                             </a>
                         
-                            <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/">
-                                <span class="chip bg-color">编程技巧</span>
+                            <a href="/tags/MikroTik/">
+                                <span class="chip bg-color">MikroTik</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/" class="post-category">
-                                编程开发
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -378,7 +370,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-04-29
+                    2026-04-30
                 </div>
                 
 
@@ -392,14 +384,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    529
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    10 分
                 </div>
                 
 
@@ -422,93 +414,320 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Python 装饰器是 Python 中非常强大且优雅的特性，理解装饰器对于写出高质量的 Python 代码至关重要。本文将带你从零开始，逐步掌握装饰器的各种用法。</p>
-<h2 id="什么是装饰器"><a href="#什么是装饰器" class="headerlink" title="什么是装饰器"></a>什么是装饰器</h2><p>装饰器本质上是一个函数，它接受一个函数作为参数，返回一个新的函数。它可以在不修改原函数代码的情况下，给函数增加新的功能。</p>
-<h2 id="基础装饰器"><a href="#基础装饰器" class="headerlink" title="基础装饰器"></a>基础装饰器</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">timer</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""计算函数执行时间的装饰器"""</span>
-    <span class="token keyword">import</span> time
-    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        start <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        result <span class="token operator">=</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
-        end <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>func<span class="token punctuation">.</span>__name__<span class="token punctuation">}</span></span><span class="token string"> 执行耗时: </span><span class="token interpolation"><span class="token punctuation">{</span>end <span class="token operator">-</span> start<span class="token punctuation">:</span><span class="token format-spec">.4f</span><span class="token punctuation">}</span></span><span class="token string">秒"</span></span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> result
-    <span class="token keyword">return</span> wrapper
+                <h1 id="RouterOS-v7-入门到精通学习笔记"><a href="#RouterOS-v7-入门到精通学习笔记" class="headerlink" title="RouterOS v7 入门到精通学习笔记"></a>RouterOS v7 入门到精通学习笔记</h1><p>本文整理自余松老师的《RouterOS 入门到精通 v7.4e》教程（共 192 页），系统梳理了 RouterOS v7 的核心新功能和配置要点。教程官网：<a target="_blank" rel="noopener" href="http://www.irouteros.com/">www.irouteros.com</a></p>
+<hr>
+<h2 id="一、RouterOS-v7-升级概览"><a href="#一、RouterOS-v7-升级概览" class="headerlink" title="一、RouterOS v7 升级概览"></a>一、RouterOS v7 升级概览</h2><p>RouterOS v7 相比 v6 做了重大改动，主要体现在路由性能和配置架构上，同时引入了多项新功能：</p>
+<table>
+<thead>
+<tr>
+<th>新功能</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>WireGuard</strong></td>
+<td>现代 VPN 协议，轻量高速</td>
+</tr>
+<tr>
+<td><strong>ZeroTier</strong></td>
+<td>软件定义的虚拟局域网，零配置组网</td>
+</tr>
+<tr>
+<td><strong>L2TPv3</strong></td>
+<td>二层以太网桥接隧道</td>
+</tr>
+<tr>
+<td><strong>Docker/Container</strong></td>
+<td>在路由器上运行容器化应用</td>
+</tr>
+<tr>
+<td><strong>User Manager v5</strong></td>
+<td>RADIUS 用户管理，支持 802.1x</td>
+</tr>
+<tr>
+<td><strong>GPIO</strong></td>
+<td>IoT 设备控制（继电器、传感器）</td>
+</tr>
+<tr>
+<td><strong>ROSE 存储</strong></td>
+<td>RAID、iSCSI、NFS、SMB 企业存储</td>
+</tr>
+<tr>
+<td><strong>VXLAN</strong></td>
+<td>虚拟扩展局域网</td>
+</tr>
+<tr>
+<td><strong>Device-Mode</strong></td>
+<td>设备功能安全管理</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="二、路由（第一章）"><a href="#二、路由（第一章）" class="headerlink" title="二、路由（第一章）"></a>二、路由（第一章）</h2><h3 id="2-1-路由协议多任务支持"><a href="#2-1-路由协议多任务支持" class="headerlink" title="2.1 路由协议多任务支持"></a>2.1 路由协议多任务支持</h3><p>v7 的 BGP 支持 Sub-Tasks 多任务处理，每条 BGP 连接独立运行，提升大型网络的收敛速度。</p>
+<h3 id="2-2-路由表（Routing-Tables）"><a href="#2-2-路由表（Routing-Tables）" class="headerlink" title="2.2 路由表（Routing Tables）"></a>2.2 路由表（Routing Tables）</h3><p>v7 重新设计了路由表结构，通过 <code>/routing table</code> 管理，支持更灵活的策略路由。</p>
+<p>查看路由命令：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros">/ip route print
+/routing route print<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<span class="token decorator annotation punctuation">@timer</span>
-<span class="token keyword">def</span> <span class="token function">slow_function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">import</span> time
-    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"函数执行完毕"</span><span class="token punctuation">)</span>
+<h3 id="2-3-策略路由配置"><a href="#2-3-策略路由配置" class="headerlink" title="2.3 策略路由配置"></a>2.3 策略路由配置</h3><p>v7 策略路由通过 Routing Tables + Routing Rules 配合实现：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 创建自定义路由表
+/routing table add name=isp2 fib
 
-slow_function<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token comment"># 输出: 函数执行完毕</span>
-<span class="token comment"># 输出: slow_function 执行耗时: 1.0012秒</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+# 添加路由规则
+/routing rule add src-address=192.168.1.0/24 table=isp2
 
-<h2 id="带参数的装饰器"><a href="#带参数的装饰器" class="headerlink" title="带参数的装饰器"></a>带参数的装饰器</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">retry</span><span class="token punctuation">(</span>max_attempts<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> delay<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""失败自动重试装饰器"""</span>
-    <span class="token keyword">def</span> <span class="token function">decorator</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">for</span> attempt <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>max_attempts<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">try</span><span class="token punctuation">:</span>
-                    <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
-                <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
-                    <span class="token keyword">if</span> attempt <span class="token operator">==</span> max_attempts <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">:</span>
-                        <span class="token keyword">raise</span> e
-                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"第 </span><span class="token interpolation"><span class="token punctuation">{</span>attempt <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">}</span></span><span class="token string"> 次失败，</span><span class="token interpolation"><span class="token punctuation">{</span>delay<span class="token punctuation">}</span></span><span class="token string">秒后重试..."</span></span><span class="token punctuation">)</span>
-                    <span class="token keyword">import</span> time
-                    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>delay<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> wrapper
-    <span class="token keyword">return</span> decorator
+# 在路由表中添加网关
+/ip route add gateway=10.0.0.1 routing-table=isp2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token decorator annotation punctuation">@retry</span><span class="token punctuation">(</span>max_attempts<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> delay<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
-<span class="token keyword">def</span> <span class="token function">unstable_api_call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">import</span> random
-    <span class="token keyword">if</span> random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">0.7</span><span class="token punctuation">:</span>
-        <span class="token keyword">raise</span> ConnectionError<span class="token punctuation">(</span><span class="token string">"连接失败"</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> <span class="token string">"请求成功"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-4-PCC-负载均衡"><a href="#2-4-PCC-负载均衡" class="headerlink" title="2.4 PCC 负载均衡"></a>2.4 PCC 负载均衡</h3><p>PCC（Per-Connection Classifier）是常用的多线负载均衡方案，v7 配置有改动，官方提供了新的配置模板。</p>
+<h3 id="2-5-OSPF-配置"><a href="#2-5-OSPF-配置" class="headerlink" title="2.5 OSPF 配置"></a>2.5 OSPF 配置</h3><p>v7 的 OSPF 配置更规范：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 启用 OSPF 实例
+/routing ospf instance add name=ospf1
 
-<h2 id="使用-functools-wraps-保留元信息"><a href="#使用-functools-wraps-保留元信息" class="headerlink" title="使用 functools.wraps 保留元信息"></a>使用 functools.wraps 保留元信息</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> functools <span class="token keyword">import</span> wraps
+# 定义区域
+/routing ospf area add instance=ospf1 name=backbone
 
-<span class="token keyword">def</span> <span class="token function">my_decorator</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token decorator annotation punctuation">@wraps</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span>
-    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""这是 wrapper 的文档"""</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"调用前"</span><span class="token punctuation">)</span>
-        result <span class="token operator">=</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"调用后"</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> result
-    <span class="token keyword">return</span> wrapper
+# 添加接口
+/routing ospf interface-template add area=backbone interfaces=ether1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token decorator annotation punctuation">@my_decorator</span>
-<span class="token keyword">def</span> <span class="token function">greet</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""打招呼函数"""</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"你好, </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">!"</span></span><span class="token punctuation">)</span>
+<p>支持通过 PPTP、WireGuard 等隧道建立 OSPF 邻居关系，实现多路径等价路由（ECMP）。</p>
+<h3 id="2-6-BGP-配置"><a href="#2-6-BGP-配置" class="headerlink" title="2.6 BGP 配置"></a>2.6 BGP 配置</h3><p>v7 的 BGP 做了重大改进：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 建立 BGP 连接
+/routing bgp connection add name=peer1 remote.address=10.0.0.1 remote.as=65001<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<span class="token keyword">print</span><span class="token punctuation">(</span>greet<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>   <span class="token comment"># greet（而非 wrapper）</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>greet<span class="token punctuation">.</span>__doc__<span class="token punctuation">)</span>    <span class="token comment"># 打招呼函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>支持 CPU 亲和参数，可将 BGP 任务绑定到特定 CPU 核心运行。路由过滤使用新的 Routing Filter 语法。</p>
+<hr>
+<h2 id="三、WireGuard-VPN（第二章）"><a href="#三、WireGuard-VPN（第二章）" class="headerlink" title="三、WireGuard VPN（第二章）"></a>三、WireGuard VPN（第二章）</h2><p>WireGuard 是 v7 最亮眼的新功能之一，配置简洁，性能优异。</p>
+<h3 id="3-1-基本配置"><a href="#3-1-基本配置" class="headerlink" title="3.1 基本配置"></a>3.1 基本配置</h3><pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 添加 WireGuard 接口
+/interface wireguard add name=wg1 listen-port=13231 private-key="xxx"
 
-<h2 id="类装饰器"><a href="#类装饰器" class="headerlink" title="类装饰器"></a>类装饰器</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Singleton</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""单例模式装饰器"""</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        self<span class="token punctuation">.</span>_cls <span class="token operator">=</span> cls
-        self<span class="token punctuation">.</span>_instance <span class="token operator">=</span> <span class="token boolean">None</span>
+# 添加对端
+/interface wireguard peers add interface=wg1 public-key="yyy" \
+  allowed-address=10.0.0.2/32 endpoint-address=1.2.3.4 endpoint-port=13231<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-    <span class="token keyword">def</span> <span class="token function">__call__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">if</span> self<span class="token punctuation">.</span>_instance <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-            self<span class="token punctuation">.</span>_instance <span class="token operator">=</span> self<span class="token punctuation">.</span>_cls<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> self<span class="token punctuation">.</span>_instance
+<h3 id="3-2-防火墙配置"><a href="#3-2-防火墙配置" class="headerlink" title="3.2 防火墙配置"></a>3.2 防火墙配置</h3><p>WireGuard 需要放行 UDP 端口和转发流量：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros">/ip firewall filter add chain=input protocol=udp dst-port=13231 action=accept
+/ip firewall filter add chain=forward in-interface=wg1 action=accept<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<span class="token decorator annotation punctuation">@Singleton</span>
-<span class="token keyword">class</span> <span class="token class-name">Database</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"数据库连接创建"</span><span class="token punctuation">)</span>
+<h3 id="3-3-Windows-客户端连接"><a href="#3-3-Windows-客户端连接" class="headerlink" title="3.3 Windows 客户端连接"></a>3.3 Windows 客户端连接</h3><p>在 Windows 上安装 WireGuard 客户端，导入配置文件即可连接 RouterOS 的 WireGuard 服务。</p>
+<h3 id="3-4-基于-WireGuard-的-EoIP-隧道"><a href="#3-4-基于-WireGuard-的-EoIP-隧道" class="headerlink" title="3.4 基于 WireGuard 的 EoIP 隧道"></a>3.4 基于 WireGuard 的 EoIP 隧道</h3><p>通过 WireGuard 建立 IP 连通性后，再在其上运行 EoIP 隧道，实现二层桥接：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 创建 EoIP 隧道，对端使用 WireGuard 隧道 IP
+/interface eoip add name=eoip1 remote-address=10.0.0.2 tunnel-id=100
 
-db1 <span class="token operator">=</span> Database<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 输出: 数据库连接创建</span>
-db2 <span class="token operator">=</span> Database<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 无输出，返回同一实例</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>db1 <span class="token keyword">is</span> db2<span class="token punctuation">)</span>  <span class="token comment"># True</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+# 将 EoIP 和本地网口加入同一个 bridge
+/interface bridge add name=bridge1
+/interface bridge port add bridge=bridge1 interface=eoip1
+/interface bridge port add bridge=bridge1 interface=ether2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>装饰器是 Python 中实现代码复用和功能增强的利器。掌握装饰器后，你会发现很多看似复杂的需求都可以用优雅的方式解决。记住核心原则：装饰器 = 接受函数 + 返回函数。</p>
+<h3 id="3-5-与-Ubuntu-建立-WireGuard"><a href="#3-5-与-Ubuntu-建立-WireGuard" class="headerlink" title="3.5 与 Ubuntu 建立 WireGuard"></a>3.5 与 Ubuntu 建立 WireGuard</h3><p>RouterOS 和 Linux（Ubuntu 20.04+）之间建立 WireGuard 隧道，实现异地网络互联。</p>
+<h3 id="3-6-WireGuard-多节点组网"><a href="#3-6-WireGuard-多节点组网" class="headerlink" title="3.6 WireGuard 多节点组网"></a>3.6 WireGuard 多节点组网</h3><p>多台 RouterOS 通过 WireGuard 互联，结合 OSPF 或 BGP 动态路由实现全网自动路由学习：</p>
+<ul>
+<li><strong>OSPF 方案</strong>：适合中小型网络，配置简单</li>
+<li><strong>BGP 方案</strong>：适合大规模网络，灵活性高</li>
+</ul>
+<hr>
+<h2 id="四、ZeroTier（第三章）"><a href="#四、ZeroTier（第三章）" class="headerlink" title="四、ZeroTier（第三章）"></a>四、ZeroTier（第三章）</h2><p>ZeroTier 是一个零配置的虚拟网络方案，RouterOS v7 原生支持。</p>
+<h3 id="使用建议"><a href="#使用建议" class="headerlink" title="使用建议"></a>使用建议</h3><ul>
+<li>本地网络与 ZeroTier 网络使用不同网段，避免冲突</li>
+<li>RouterOS 上配置 NAT 转发，让 ZeroTier 客户端访问本地网络</li>
+</ul>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 启用 ZeroTier
+/zerotier enable
+
+# 加入网络
+/zerotier join network=xxxxxxxxxx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h2 id="五、Container-Docker（第四章）"><a href="#五、Container-Docker（第四章）" class="headerlink" title="五、Container / Docker（第四章）"></a>五、Container / Docker（第四章）</h2><p>RouterOS v7 支持在路由器上运行 Docker 容器，扩展功能无限可能。</p>
+<h3 id="5-1-启用-Container-模式"><a href="#5-1-启用-Container-模式" class="headerlink" title="5.1 启用 Container 模式"></a>5.1 启用 Container 模式</h3><pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 需要先通过 device-mode 启用 container
+/system/device-mode/update container=yes
+# 物理重启生效<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-2-创建网络"><a href="#5-2-创建网络" class="headerlink" title="5.2 创建网络"></a>5.2 创建网络</h3><p><strong>路由模式</strong>：容器使用独立网段，通过 NAT 访问外部网络。</p>
+<p><strong>桥接模式</strong>：容器直接加入本地 bridge，获取同网段 IP。</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 创建 veth 接口
+/interface veth add name=veth1 address=172.17.0.2/24 gateway=172.17.0.1
+
+# 桥接模式：将 veth 加入 bridge
+/interface bridge port add bridge=bridge1 interface=veth1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-3-镜像管理"><a href="#5-3-镜像管理" class="headerlink" title="5.3 镜像管理"></a>5.3 镜像管理</h3><p>支持三种方式导入镜像：</p>
+<ol>
+<li>从外部仓库拉取（如 Docker Hub）</li>
+<li>从 PC 导入 tar 镜像文件</li>
+<li>在 PC 上用 docker build 创建镜像后上传</li>
+</ol>
+<h3 id="5-4-实战案例"><a href="#5-4-实战案例" class="headerlink" title="5.4 实战案例"></a>5.4 实战案例</h3><p>教程演示了在 RouterOS 上安装 <strong>nginx</strong> 和 <strong>DNSMasq</strong> 等常用服务。</p>
+<hr>
+<h2 id="六、IoT-GPIO（第五章）"><a href="#六、IoT-GPIO（第五章）" class="headerlink" title="六、IoT / GPIO（第五章）"></a>六、IoT / GPIO（第五章）</h2><p>支持 GPIO 引脚控制，可连接传感器和继电器：</p>
+<ul>
+<li><strong>analog</strong>：模拟信号读取（如温度传感器）</li>
+<li><strong>digital</strong>：数字信号输入输出</li>
+<li><strong>继电器控制</strong>：远程开关设备</li>
+<li><strong>信号监测</strong>：监测输入信号变化</li>
+</ul>
+<hr>
+<h2 id="七、User-Manager-v5（第六章）"><a href="#七、User-Manager-v5（第六章）" class="headerlink" title="七、User Manager v5（第六章）"></a>七、User Manager v5（第六章）</h2><p>RouterOS 内置的 RADIUS 用户管理系统，适用于：</p>
+<ul>
+<li>PPPoE 宽带计费</li>
+<li>HotSpot 认证</li>
+<li>WiFi 802.1x EAP 认证</li>
+<li>VPN 用户管理</li>
+</ul>
+<h3 id="WiFi-802-1x-EAP-认证配置要点"><a href="#WiFi-802-1x-EAP-认证配置要点" class="headerlink" title="WiFi 802.1x EAP 认证配置要点"></a>WiFi 802.1x EAP 认证配置要点</h3><ol>
+<li>签发证书（CA + Server 证书）</li>
+<li>配置 RADIUS 服务器</li>
+<li>配置 User Manager 添加用户</li>
+<li>在 AP 上配置 EAP 认证</li>
+<li>Windows 客户端配置 PEAP 认证</li>
+</ol>
+<hr>
+<h2 id="八、证书管理（第七章）"><a href="#八、证书管理（第七章）" class="headerlink" title="八、证书管理（第七章）"></a>八、证书管理（第七章）</h2><h3 id="8-1-自签名证书"><a href="#8-1-自签名证书" class="headerlink" title="8.1 自签名证书"></a>8.1 自签名证书</h3><pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 创建证书模板
+/certificate add name=ca-template common-name="MyCA" key-size=2048 \
+  days-valid=3650 key-usage=crl-sign,key-cert-sign
+
+# 签发 CA
+/certificate sign ca-template name=ca
+
+# 签发服务器证书
+/certificate add name=server-template common-name="server" key-size=2048
+/certificate sign server-template ca=ca name=server<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-2-Let’s-Encrypt"><a href="#8-2-Let’s-Encrypt" class="headerlink" title="8.2 Let’s Encrypt"></a>8.2 Let’s Encrypt</h3><p>RouterOS 支持 ACME 协议自动申请和续期 Let’s Encrypt 证书。</p>
+<h3 id="8-3-SSTP-VPN-证书"><a href="#8-3-SSTP-VPN-证书" class="headerlink" title="8.3 SSTP VPN 证书"></a>8.3 SSTP VPN 证书</h3><p>详细演示了生成 SSTP 服务端证书、配置 SSTP Server、导出证书到 Windows 客户端的完整流程。</p>
+<hr>
+<h2 id="九、Dot1x-以太网认证（第八章）"><a href="#九、Dot1x-以太网认证（第八章）" class="headerlink" title="九、Dot1x 以太网认证（第八章）"></a>九、Dot1x 以太网认证（第八章）</h2><p>RouterOS v7 支持 802.1x 以太网端口认证：</p>
+<ul>
+<li><strong>客户端模式</strong>：对接上游交换机认证</li>
+<li><strong>服务器模式</strong>：对下游设备进行认证</li>
+<li><strong>RADIUS 联动</strong>：配合 User Manager 或外部 RADIUS</li>
+<li><strong>动态 VLAN 分配</strong>：根据认证结果分配不同 VLAN</li>
+</ul>
+<h3 id="组网实例"><a href="#组网实例" class="headerlink" title="组网实例"></a>组网实例</h3><p>教程展示了 RB5009 + CRS326 交换机 + hAP 客户端的完整 802.1x 组网配置。</p>
+<hr>
+<h2 id="十、VXLAN（第九章）"><a href="#十、VXLAN（第九章）" class="headerlink" title="十、VXLAN（第九章）"></a>十、VXLAN（第九章）</h2><p>VXLAN 用于数据中心和跨地域二层网络扩展：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 创建 VXLAN 接口
+/interface vxlan add name=vxlan1 vni=100 port=4789
+
+# 配置转发表
+/interface vxlan vtep add interface=vxlan1 remote-ip=10.0.0.2
+
+# 加入 bridge
+/interface bridge port add bridge=bridge1 interface=vxlan1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h2 id="十一、L2TPv3（第十章）"><a href="#十一、L2TPv3（第十章）" class="headerlink" title="十一、L2TPv3（第十章）"></a>十一、L2TPv3（第十章）</h2><p>L2TPv3 可建立二层以太网桥接隧道，与 EoIP、VxLAN 功能类似但基于 L2TP 协议：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># Server 端启用 L2TP
+/interface l2tp-server/server set enabled=yes
+
+# 创建 L2TP 以太网接口
+/interface l2tp-eth add name=l2tp-ether1 circuit-id=100
+
+# Client 端连接
+/interface l2tp-eth add name=l2tp-ether1 connect-to=192.168.88.1 circuit-id=100
+
+# 两端分别加入 bridge
+/interface bridge port add bridge=bridge1 interface=l2tp-ether1
+/interface bridge port add bridge=bridge1 interface=ether2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>与 EoIP 不同的是，L2TPv3 只需一端有公网 IP 即可建立。</p>
+</blockquote>
+<hr>
+<h2 id="十二、Branding-定制（第十一章）"><a href="#十二、Branding-定制（第十一章）" class="headerlink" title="十二、Branding 定制（第十一章）"></a>十二、Branding 定制（第十一章）</h2><p>通过 MikroTik 官网的 Branding Maker 工具定制路由器外观：</p>
+<ul>
+<li><strong>ASCII Logo</strong>：命令行登录时显示的品牌标志</li>
+<li><strong>默认页面</strong>：自定义 Web 登录页 HTML</li>
+<li><strong>LCD Logo</strong>：设备液晶屏显示的 Logo（160x72px）</li>
+<li><strong>默认配置</strong>：重置后自动加载的初始配置脚本</li>
+</ul>
+<p>生成 <code>.dpk</code> 文件，上传到 RouterOS 重启生效。</p>
+<hr>
+<h2 id="十三、Device-Mode-安全（第十二章）"><a href="#十三、Device-Mode-安全（第十二章）" class="headerlink" title="十三、Device-Mode 安全（第十二章）"></a>十三、Device-Mode 安全（第十二章）</h2><p>Device-Mode 控制设备功能开关，有 <strong>enterprise</strong>（默认）和 <strong>home</strong> 两种模式。</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 查看当前模式
+/system/device-mode/print
+
+# 切换到 home 模式（需物理重启确认）
+/system/device-mode/update mode=home
+
+# 单独启用/禁用功能
+/system/device-mode/update container=yes    # 启用容器
+/system/device-mode/update sniffer=no       # 禁用抓包<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>enterprise 模式默认允许所有功能（除 container）；home 模式禁用 scheduler、proxy、hotspot 等功能。</p>
+</blockquote>
+<h3 id="Flagged-安全机制"><a href="#Flagged-安全机制" class="headerlink" title="Flagged 安全机制"></a>Flagged 安全机制</h3><p>系统启动时自动检测配置篡改。如果 flagged=yes，会限制敏感功能（bandwidth-test、sniffer、scheduler 等），需物理确认才能解除。</p>
+<hr>
+<h2 id="十四、ROSE-存储功能（第十三章）"><a href="#十四、ROSE-存储功能（第十三章）" class="headerlink" title="十四、ROSE 存储功能（第十三章）"></a>十四、ROSE 存储功能（第十三章）</h2><p>ROSE 扩展包为企业数据中心提供存储能力，需 RouterOS v7.8beta2+ 并单独安装 <code>rose-storage</code> 功能包。</p>
+<h3 id="14-1-RAID"><a href="#14-1-RAID" class="headerlink" title="14.1 RAID"></a>14.1 RAID</h3><p>支持 RAID 0/1/4/5/6/10，最多 10 盘：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros">/disk add type=raid raid-type=6 raid-device-count=10 slot=raid1
+/disk set pcie1-nvme1 raid-master=raid1 raid-role=0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="14-2-网络存储协议"><a href="#14-2-网络存储协议" class="headerlink" title="14.2 网络存储协议"></a>14.2 网络存储协议</h3><table>
+<thead>
+<tr>
+<th>协议</th>
+<th>用途</th>
+<th>模式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>iSCSI</strong></td>
+<td>IP 网络块存储</td>
+<td>Target + Initiator</td>
+</tr>
+<tr>
+<td><strong>NFS v4</strong></td>
+<td>Linux 文件共享</td>
+<td>Server + Client</td>
+</tr>
+<tr>
+<td><strong>SMB 2.1/3.0/3.1.1</strong></td>
+<td>Windows 文件共享</td>
+<td>Server + Client</td>
+</tr>
+<tr>
+<td><strong>NVMe over TCP</strong></td>
+<td>高性能网络存储</td>
+<td>Target + Initiator</td>
+</tr>
+</tbody></table>
+<h3 id="14-3-其他存储功能"><a href="#14-3-其他存储功能" class="headerlink" title="14.3 其他存储功能"></a>14.3 其他存储功能</h3><ul>
+<li><strong>RAMdisk</strong>：将内存虚拟为磁盘，重启丢失</li>
+<li><strong>数据加密</strong>：支持 SED（自加密驱动器）和 dm-crypt</li>
+<li><strong>文件同步</strong>：rsync 方式在多台 RouterOS 间同步文件</li>
+</ul>
+<hr>
+<h2 id="十五、VPS-隧道应用（应用案例）"><a href="#十五、VPS-隧道应用（应用案例）" class="headerlink" title="十五、VPS 隧道应用（应用案例）"></a>十五、VPS 隧道应用（应用案例）</h2><h3 id="15-1-弹性-IP-通过-Proxy-ARP-分配"><a href="#15-1-弹性-IP-通过-Proxy-ARP-分配" class="headerlink" title="15.1 弹性 IP 通过 Proxy-ARP 分配"></a>15.1 弹性 IP 通过 Proxy-ARP 分配</h3><p>VPS 获取弹性公网 IP 后，通过 PPTP/L2TP 隧道分配给远端 PC：</p>
+<ol>
+<li>创建 PPP Profile 和账号</li>
+<li>将账号的 remote-address 设为弹性 IP 对应的内网地址</li>
+<li>设置 ether1 的 ARP 模式为 proxy-arp</li>
+</ol>
+<h3 id="15-2-EoIP-二层隧道"><a href="#15-2-EoIP-二层隧道" class="headerlink" title="15.2 EoIP 二层隧道"></a>15.2 EoIP 二层隧道</h3><p>VPS 与远端路由器通过 EoIP 隧道建立二层桥接，远端设备直接获取 VPS 公网 IP：</p>
+<ol>
+<li>两端创建 bridge</li>
+<li>建立 EoIP 隧道（两端需公网 IP）</li>
+<li>将 ether 和 eoip 隧道加入同一个 bridge</li>
+</ol>
+<blockquote>
+<p>如果远端没有公网 IP，可先建 WireGuard 隧道，再在其上运行 EoIP。</p>
+</blockquote>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>RouterOS v7 是一次重大升级，核心变化：</p>
+<ol>
+<li><strong>路由架构重构</strong>：Routing Tables + Rules 更灵活</li>
+<li><strong>WireGuard 原生支持</strong>：VPN 配置更简洁高效</li>
+<li><strong>容器化能力</strong>：路由器上跑 Docker，扩展无限</li>
+<li><strong>企业存储</strong>：RAID/iSCSI/NFS/SMB 一应俱全</li>
+<li><strong>安全增强</strong>：Device-Mode + Flagged 双重保护</li>
+<li><strong>网络虚拟化</strong>：VXLAN、L2TPv3、ZeroTier 多方案</li>
+</ol>
+<hr>
+<blockquote>
+<p>参考资料：《RouterOS 入门到精通 v7.4e》- 余松 (<a target="_blank" rel="noopener" href="http://www.irouteros.com/">www.irouteros.com</a>)</p>
+<p>MikroTik 官方文档：<a target="_blank" rel="noopener" href="https://help.mikrotik.com/">help.mikrotik.com</a></p>
+</blockquote>
 
                 
             </div>
@@ -535,7 +754,7 @@ db2 <span class="token operator">=</span> Database<span class="token punctuation
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zz3656.github.io/2026/04/29/python-zhuang-shi-qi-cong-ru-men-dao-jing-tong/">https://zz3656.github.io/2026/04/29/python-zhuang-shi-qi-cong-ru-men-dao-jing-tong/</a>
+                    <a href="https://zz3656.github.io/2026/04/30/routeros-v7-ru-men-dao-jing-tong-xue-xi-bi-ji/">https://zz3656.github.io/2026/04/30/routeros-v7-ru-men-dao-jing-tong-xue-xi-bi-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,16 +792,16 @@ db2 <span class="token operator">=</span> Database<span class="token punctuation
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
+                                <a href="/tags/RouterOS/">
+                                    <span class="chip bg-color">RouterOS</span>
                                 </a>
                             
-                                <a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/">
-                                    <span class="chip bg-color">装饰器</span>
+                                <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
+                                    <span class="chip bg-color">软路由</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/">
-                                    <span class="chip bg-color">编程技巧</span>
+                                <a href="/tags/MikroTik/">
+                                    <span class="chip bg-color">MikroTik</span>
                                 </a>
                             
                         </div>
@@ -661,17 +880,18 @@ db2 <span class="token operator">=</span> Database<span class="token punctuation
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2026/04/29/hexo-bo-ke-xing-neng-you-hua-shi-jian/">
+                <a href="/2026/04/30/routeros-v7-ru-men-dao-jing-tong-xue-xi-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Hexo 博客性能优化实践">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="RouterOS v7入门到精通学习笔记">
                         
-                        <span class="card-title">Hexo 博客性能优化实践</span>
+                        <span class="card-title">RouterOS v7入门到精通学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -681,34 +901,31 @@ db2 <span class="token operator">=</span> Database<span class="token punctuation
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-04-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-30
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%95/" class="post-category">
-                                    项目测试
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            因特吧
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/RouterOS/">
+                        <span class="chip bg-color">RouterOS</span>
                     </a>
                     
-                    <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">性能优化</span>
+                    <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
+                        <span class="chip bg-color">软路由</span>
                     </a>
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                        <span class="chip bg-color">博客</span>
+                    <a href="/tags/MikroTik/">
+                        <span class="chip bg-color">MikroTik</span>
                     </a>
                     
                 </div>
@@ -722,13 +939,13 @@ db2 <span class="token operator">=</span> Database<span class="token punctuation
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/04/29/cong-ling-da-jian-hexo-bo-ke-bing-bu-shu-dao-github-pages-wan-zheng-ji-lu/">
+                <a href="/2026/04/30/2026-04-30-xiao-ma-xue-xi-ri-bao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="从零搭建 Hexo 博客并部署到 GitHub Pages 完整记录">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="2026-04-30 小马学习日报">
                         
-                        <span class="card-title">从零搭建 Hexo 博客并部署到 GitHub Pages 完整记录</span>
+                        <span class="card-title">2026-04-30 小马学习日报</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -739,14 +956,14 @@ db2 <span class="token operator">=</span> Database<span class="token punctuation
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/" class="post-category">
-                                    编程开发
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                             
                             
@@ -756,16 +973,16 @@ db2 <span class="token operator">=</span> Database<span class="token punctuation
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/Hermes/">
+                        <span class="chip bg-color">Hermes</span>
                     </a>
                     
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
+                    <a href="/tags/AI-Agent/">
+                        <span class="chip bg-color">AI Agent</span>
                     </a>
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">博客搭建</span>
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>

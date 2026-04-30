@@ -10,7 +10,25 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-04-30T15:13:36.286Z</updated>
+  <updated>2026-04-30T18:14:58.955Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="前沿技术" scheme="https://zz3656.github.io/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/"/>
+    <category term="AI" scheme="https://zz3656.github.io/tags/AI/"/>
+    <category term="AI-Agent" scheme="https://zz3656.github.io/tags/AI-Agent/"/>
+    <category term="智能体" scheme="https://zz3656.github.io/tags/%E6%99%BA%E8%83%BD%E4%BD%93/"/>
+    <category term="开源" scheme="https://zz3656.github.io/tags/%E5%BC%80%E6%BA%90/"/>
+    <id>https://zz3656.github.io/2026/05/01/hermes-agent-vs-openclaw-shen-du-heng-ping/</id>
+    <link href="https://zz3656.github.io/2026/05/01/hermes-agent-vs-openclaw-shen-du-heng-ping/"/>
+    <published>2026-04-30T18:10:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="Hermes-Agent-vs-OpenClaw：两款热门开源-AI-智能体深度横评"><a href="#Hermes-Agent-vs-OpenClaw：两款热门开源-AI-智能体深度横评" class="headerlink" title="Hermes]]>
+    </summary>
+    <title>Hermes Agent vs OpenClaw：两款热门开源 AI 智能体深度横评</title>
+    <updated>2026-04-30T18:14:58.955Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>
@@ -32,9 +50,9 @@
       <name>因特吧</name>
     </author>
     <category term="前沿技术" scheme="https://zz3656.github.io/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/"/>
+    <category term="开源" scheme="https://zz3656.github.io/tags/%E5%BC%80%E6%BA%90/"/>
     <category term="OpenClaw" scheme="https://zz3656.github.io/tags/OpenClaw/"/>
     <category term="AI助手" scheme="https://zz3656.github.io/tags/AI%E5%8A%A9%E6%89%8B/"/>
-    <category term="开源" scheme="https://zz3656.github.io/tags/%E5%BC%80%E6%BA%90/"/>
     <id>https://zz3656.github.io/2026/04/30/openclaw-quan-fang-wei-zhi-nan/</id>
     <link href="https://zz3656.github.io/2026/04/30/openclaw-quan-fang-wei-zhi-nan/"/>
     <published>2026-04-30T12:30:00.000Z</published>

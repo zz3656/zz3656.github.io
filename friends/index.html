@@ -553,16 +553,10 @@
         overflow: visible !important;
     }
 
-    /* 友链卡片等高：同一行的卡片高度一致 */
-    .friend-all {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .friend-div {
-        display: flex;
-    }
-    .friend-div > .card {
-        width: 100%;
+    /* 修复：覆盖全局 matery.css 中 article .card 的 height:100%，防止友链卡片撑破容器 */
+    #friends-link .card {
+        height: auto !important;
+        overflow: visible !important;
     }
 </style>
 
@@ -669,7 +663,13 @@
     </div>
 </main>
 
-
+<script>
+    $(function () {
+        $('#friends-link').masonry({
+            itemSelector: '.friend-div'
+        });
+    });
+</script>
 
 
     <footer class="page-footer bg-color">
@@ -743,7 +743,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">25.8k</span>
+                        class="white-color">25.6k</span>
             
             
             

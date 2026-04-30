@@ -1,0 +1,1372 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="爱快(iKuai)软路由安装全指南：从实体机到虚拟机再到云主机, blog,hexo">
+    <meta name="description" content="什么是爱快(iKuai)软路由？爱快(iKuai)是由全讯汇聚网络科技（北京）有限公司开发的商业级软路由系统，提供专业的网络解决方案。它支持多WAN接入、DPI流控、行为管理、VPN组网、无线AC管理等企业级功能，同时提供免费版本供个人用户">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>爱快(iKuai)软路由安装全指南：从实体机到虚拟机再到云主机 | 因特吧</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 8.1.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="因特吧" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">因特吧</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">因特吧</div>
+        <div class="logo-desc">
+            
+            因特吧的博客，分享技术与生活
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">爱快(iKuai)软路由安装全指南：从实体机到虚拟机再到云主机</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
+                                <span class="chip bg-color">软路由</span>
+                            </a>
+                        
+                            <a href="/tags/iKuai/">
+                                <span class="chip bg-color">iKuai</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" class="post-category">
+                                网络技术
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2026-04-30
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2026-05-01
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="什么是爱快-iKuai-软路由？"><a href="#什么是爱快-iKuai-软路由？" class="headerlink" title="什么是爱快(iKuai)软路由？"></a>什么是爱快(iKuai)软路由？</h2><p>爱快(iKuai)是由全讯汇聚网络科技（北京）有限公司开发的商业级软路由系统，提供专业的网络解决方案。它支持多WAN接入、DPI流控、行为管理、VPN组网、无线AC管理等企业级功能，同时提供免费版本供个人用户使用。</p>
+<p>爱快软路由的核心优势：</p>
+<ul>
+<li><strong>免费且功能强大</strong>：免费版已涵盖大部分家用和小型企业需求</li>
+<li><strong>DPI深度数据包检测</strong>：精准识别上千种应用协议，实现精细化流量管控</li>
+<li><strong>多线负载均衡</strong>：支持多条宽带线路叠加和智能切换</li>
+<li><strong>Web管理界面</strong>：直观易用的中文管理后台</li>
+<li><strong>多平台安装</strong>：支持实体机、虚拟机、云主机等多种部署方式</li>
+</ul>
+<p>官方网站：<a target="_blank" rel="noopener" href="https://www.ikuai8.com/">https://www.ikuai8.com</a></p>
+<hr>
+<h2 id="一、安装前的准备工作"><a href="#一、安装前的准备工作" class="headerlink" title="一、安装前的准备工作"></a>一、安装前的准备工作</h2><h3 id="1-固件下载"><a href="#1-固件下载" class="headerlink" title="1. 固件下载"></a>1. 固件下载</h3><p>前往爱快官网下载页面获取安装镜像：<a target="_blank" rel="noopener" href="https://www.ikuai8.com/download">https://www.ikuai8.com/download</a></p>
+<p>爱快提供以下格式的安装文件：</p>
+<table>
+<thead>
+<tr>
+<th>文件格式</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ISO</td>
+<td>光盘安装、U盘引导安装、虚拟机安装</td>
+</tr>
+<tr>
+<td>IMG</td>
+<td>写盘工具直接写入硬盘/U盘</td>
+</tr>
+<tr>
+<td>GHOST</td>
+<td>GHOST全盘恢复安装</td>
+</tr>
+</tbody></table>
+<h3 id="2-重要提示"><a href="#2-重要提示" class="headerlink" title="2. 重要提示"></a>2. 重要提示</h3><blockquote>
+<p><strong>注意：爱快系统只能安装在一块磁盘里，请确保安装机器里只有一块磁盘！</strong><br>如果有多块磁盘，安装前请暂时断开其他磁盘的数据线，避免误写。</p>
+</blockquote>
+<h3 id="3-硬件要求"><a href="#3-硬件要求" class="headerlink" title="3. 硬件要求"></a>3. 硬件要求</h3><ul>
+<li>最低配置：x86/x64处理器、512MB内存、1GB以上存储空间</li>
+<li>推荐配置：多核处理器、2GB以上内存、8GB以上SSD/电子盘</li>
+<li>至少两块网卡（一个WAN口 + 一个LAN口）</li>
+</ul>
+<hr>
+<h2 id="二、真实机安装方式"><a href="#二、真实机安装方式" class="headerlink" title="二、真实机安装方式"></a>二、真实机安装方式</h2><p>真实机安装是爱快最常见的部署方式，将系统直接安装在物理硬件上，性能损耗最小。</p>
+<h3 id="方式一：ISO-U盘引导安装（推荐）"><a href="#方式一：ISO-U盘引导安装（推荐）" class="headerlink" title="方式一：ISO U盘引导安装（推荐）"></a>方式一：ISO U盘引导安装（推荐）</h3><p>这是最常用的安装方式，操作简单，适合大部分场景。</p>
+<p><strong>所需工具</strong>：一个U盘（2GB以上）、老毛桃U盘启动制作工具、爱快ISO镜像</p>
+<p><strong>操作步骤</strong>：</p>
+<ol>
+<li>下载老毛桃U盘启动制作工具（<a target="_blank" rel="noopener" href="https://www.laomaotao.net/%EF%BC%89">https://www.laomaotao.net/）</a></li>
+<li>插入U盘，打开老毛桃，选择U盘盘符</li>
+<li>点击”一键制作成USB启动盘”，注意这会格式化U盘，请提前备份</li>
+<li>制作完成后，在U盘根目录创建一个名为 <code>LMT</code> 的文件夹</li>
+<li>将爱快ISO文件放入 <code>LMT</code> 文件夹中</li>
+<li>重启电脑，设置BIOS从U盘启动</li>
+<li>选择”自定义安装ISO/IMG”，系统会搜索LMT目录下的ISO文件</li>
+<li>选择爱快ISO文件，进入安装界面</li>
+<li>选择安装选项，输入 <code>y</code> 确认安装</li>
+<li>安装完成后自动重启，拔掉U盘</li>
+</ol>
+<blockquote>
+<p><strong>注意</strong>：不同版本老毛桃的ISO存放目录可能是 <code>ISOS</code> 而非 <code>LMT</code>，请注意区分。如果LMT文件夹不存在需要手动创建。</p>
+</blockquote>
+<h3 id="方式二：UEFI引导安装"><a href="#方式二：UEFI引导安装" class="headerlink" title="方式二：UEFI引导安装"></a>方式二：UEFI引导安装</h3><p>适用于支持UEFI启动的新硬件，安装过程更加规范。</p>
+<p><strong>操作步骤</strong>：</p>
+<ol>
+<li>准备一个普通U盘</li>
+<li>下载爱快UEFI引导文件（EFI文件），解压后找到EFI文件夹</li>
+<li>将EFI文件夹和爱快ISO镜像一起放到U盘根目录</li>
+<li>插上U盘，开机按F2进入UEFI启动页面</li>
+<li>选择 <code>BOOT Manager</code></li>
+<li>选择 <code>EFI USB Device</code>（U盘引导），进入镜像选择页面</li>
+<li>选择U盘中的系统镜像</li>
+<li>选择安装目标硬盘</li>
+<li>如果之前硬盘有安装过爱快系统，会提示是否保留配置，根据需求选择</li>
+<li>安装完成后重启，拔掉U盘即可</li>
+</ol>
+<h3 id="方式三：IMG写盘安装"><a href="#方式三：IMG写盘安装" class="headerlink" title="方式三：IMG写盘安装"></a>方式三：IMG写盘安装</h3><p>适合对Linux命令行不陌生、希望快速安装的用户。</p>
+<p><strong>操作步骤</strong>：</p>
+<ol>
+<li>从官网下载IMG版安装包和img写盘工具</li>
+<li>用RAR解压出 <code>ikuai8.img</code> 镜像文件</li>
+<li>使用PE系统或Windows下的img写盘工具对目标硬盘进行写入</li>
+<li>选择硬盘时必须选择 <code>Physical Disk</code>（物理磁盘）</li>
+<li>支持U盘、IDE硬盘、SATA硬盘、电子硬盘等介质</li>
+<li>写盘完成后重启即可</li>
+</ol>
+<blockquote>
+<p><strong>警告</strong>：写盘操作会覆盖目标磁盘上的所有数据，请务必确认选择了正确的磁盘！</p>
+</blockquote>
+<h3 id="方式四：GHOST全盘恢复安装"><a href="#方式四：GHOST全盘恢复安装" class="headerlink" title="方式四：GHOST全盘恢复安装"></a>方式四：GHOST全盘恢复安装</h3><p>适合熟悉GHOST工具的运维人员。</p>
+<p><strong>操作步骤</strong>：</p>
+<ol>
+<li>下载爱快GHOST安装版文件</li>
+<li>启动GHOST，选择 <code>Local -&gt; Disk -&gt; From Image</code></li>
+<li>选择已下载的iKuai GHOST镜像包</li>
+<li>按Tab键选择 <code>OK</code>，回车确认</li>
+<li>选择目标磁盘（Destination Drive），一般选择默认即可</li>
+<li>选择 <code>Yes</code> 确认开始恢复</li>
+<li>等待GHOST完成，选择 <code>Reset Computer</code> 重启</li>
+</ol>
+<h3 id="方式五：ISO光盘引导安装"><a href="#方式五：ISO光盘引导安装" class="headerlink" title="方式五：ISO光盘引导安装"></a>方式五：ISO光盘引导安装</h3><p>适用于有光驱的老硬件。</p>
+<p><strong>操作步骤</strong>：</p>
+<ol>
+<li>下载爱快ISO镜像文件，刻录到光盘</li>
+<li>设置电脑从光盘启动</li>
+<li>重启后出现安装界面，选择选项 <code>1</code></li>
+<li>输入 <code>y</code> 确认安装</li>
+<li>安装完成后自动重启，取出光盘</li>
+</ol>
+<hr>
+<h2 id="三、安装后的初始配置"><a href="#三、安装后的初始配置" class="headerlink" title="三、安装后的初始配置"></a>三、安装后的初始配置</h2><h3 id="1-网线连接"><a href="#1-网线连接" class="headerlink" title="1. 网线连接"></a>1. 网线连接</h3><p>安装完成后，将网线接到网卡上，在控制台按回车键：</p>
+<ul>
+<li>如果LAN口显示”已连接”，说明网线接对了</li>
+<li>检查内网是否有IP地址和爱快默认IP冲突</li>
+</ul>
+<h3 id="2-登录Web管理界面"><a href="#2-登录Web管理界面" class="headerlink" title="2. 登录Web管理界面"></a>2. 登录Web管理界面</h3><p>在浏览器地址栏输入爱快默认管理地址：</p>
+<pre class="line-numbers language-none"><code class="language-none">http://192.168.1.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>默认登录凭据：</p>
+<ul>
+<li>用户名：<code>admin</code></li>
+<li>密码：<code>admin</code></li>
+</ul>
+<blockquote>
+<p><strong>重要</strong>：首次登录后请立即修改默认密码！</p>
+</blockquote>
+<h3 id="3-U盘容量变小问题"><a href="#3-U盘容量变小问题" class="headerlink" title="3. U盘容量变小问题"></a>3. U盘容量变小问题</h3><p>安装爱快后如果发现U盘容量变小（比如16GB的U盘只剩50MB），这是正常现象，因为爱快系统重新格式化了U盘的分区结构。</p>
+<p><strong>解决方法</strong>：</p>
+<ol>
+<li>下载老毛桃工具（<a target="_blank" rel="noopener" href="https://www.laomaotao.net/%EF%BC%89">https://www.laomaotao.net/）</a></li>
+<li>选择此U盘，执行”初始化U盘”操作</li>
+<li>还原后U盘容量恢复正常</li>
+</ol>
+<hr>
+<h2 id="四、虚拟机安装"><a href="#四、虚拟机安装" class="headerlink" title="四、虚拟机安装"></a>四、虚拟机安装</h2><p>虚拟机安装适合测试、学习以及不想单独用一台物理机的场景。推荐使用VMware虚拟机。</p>
+<h3 id="4-1-虚拟机环境搭建"><a href="#4-1-虚拟机环境搭建" class="headerlink" title="4.1 虚拟机环境搭建"></a>4.1 虚拟机环境搭建</h3><p><strong>步骤</strong>：</p>
+<ol>
+<li>安装VMware虚拟机软件</li>
+<li>下载爱快ISO镜像</li>
+<li>创建新的虚拟机，选择爱快ISO镜像</li>
+<li>系统类型建议选择 <code>Ubuntu 64位</code>（重要！）</li>
+<li>按提示完成虚拟机创建</li>
+<li>开启虚拟机，选择安装选项 <code>1</code>，回车自动安装</li>
+<li>安装成功后自动重启，进入中文控制台</li>
+</ol>
+<blockquote>
+<p><strong>关键提示</strong>：个人版VMware建议系统类型选择Ubuntu 64位，否则默认网卡类型是AMD，性能很差。<br>如果已经安装好了，可以编辑虚拟机目录下的 <code>.vmx</code> 文件（关机状态），添加以下内容将网卡类型改为e1000：</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">ethernet0.virtualDev = "e1000"
+ethernet1.virtualDev = "e1000"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>重启后在”系统设置 -&gt; 硬件信息”中确认网卡是否显示为 <code>Intel Corporation 82545EM</code>。</p>
+<h3 id="4-2-场景一：虚拟机单网卡（仅本机上网）"><a href="#4-2-场景一：虚拟机单网卡（仅本机上网）" class="headerlink" title="4.2 场景一：虚拟机单网卡（仅本机上网）"></a>4.2 场景一：虚拟机单网卡（仅本机上网）</h3><p><strong>目的</strong>：让本机通过虚拟机中的爱快路由上网。</p>
+<p><strong>网卡配置</strong>：</p>
+<ul>
+<li>网卡0：桥接到真实网卡（作为WAN口）</li>
+<li>网卡1（VMnet1）：仅主机模式（作为LAN口）</li>
+</ul>
+<p><strong>配置步骤</strong>：</p>
+<ol>
+<li>虚拟机添加一块网卡，总共两块</li>
+<li>在虚拟网络编辑器中设置桥接</li>
+<li>对VMnet1设置IP：<code>192.168.1.2</code>，子网掩码 <code>255.255.255.0</code>，网关 <code>192.168.1.1</code></li>
+<li>桥接的真实网卡取消IPv4设置</li>
+<li>开机进入爱快控制台，绑定WAN口</li>
+<li>浏览器访问 <code>192.168.1.1</code> 进入管理界面</li>
+</ol>
+<h3 id="4-3-场景二：虚拟机单网卡（本机-带机上网）"><a href="#4-3-场景二：虚拟机单网卡（本机-带机上网）" class="headerlink" title="4.3 场景二：虚拟机单网卡（本机+带机上网）"></a>4.3 场景二：虚拟机单网卡（本机+带机上网）</h3><p><strong>目的</strong>：本机和局域网内其他设备都通过虚拟机中的爱快上网。</p>
+<p><strong>网卡配置</strong>：</p>
+<ul>
+<li>网卡0（VMnet0）：桥接真实网卡（作为WAN口/LAN2口）</li>
+<li>网卡1（VMnet8）：NAT模式（本机上网）</li>
+<li>网卡8（VMnet8）：仅主机模式（作为LAN口）</li>
+</ul>
+<p><strong>额外步骤</strong>：</p>
+<ol>
+<li>登录Web界面，绑定WAN口并配置外网接入方式</li>
+<li>绑定LAN2口用于带机上网，LAN2的IP设为不同网段（如 <code>192.168.10.1</code>）</li>
+<li>由于只有一个真实网口，需要外接二层交换机，将外网线和终端设备都接在交换机上</li>
+</ol>
+<h3 id="4-4-场景三：虚拟机多网卡（本机-带机上网）"><a href="#4-4-场景三：虚拟机多网卡（本机-带机上网）" class="headerlink" title="4.4 场景三：虚拟机多网卡（本机+带机上网）"></a>4.4 场景三：虚拟机多网卡（本机+带机上网）</h3><p><strong>目的</strong>：有多个真实网卡时，通过虚拟机带其他设备上网，实现更灵活的流量管控。</p>
+<p><strong>网卡配置</strong>：</p>
+<ul>
+<li>网卡0：桥接第一个真实网卡</li>
+<li>网卡1：桥接第二个真实网卡</li>
+<li>网卡8（VMnet8）：仅主机模式（管理用）</li>
+</ul>
+<p><strong>配置要点</strong>：</p>
+<ol>
+<li>虚拟机总共需要三块网卡</li>
+<li>仅主机模式的网卡用于本机管理，设置同网段IP</li>
+<li>两块桥接网卡分别作为WAN口和LAN口</li>
+<li>桥接的真实网卡取消IPv4设置</li>
+</ol>
+<blockquote>
+<p><strong>建议</strong>：不熟悉虚拟机的用户不建议使用虚拟机方式，推荐直接使用物理机安装，或请有虚拟机经验的网络维护人员协助。</p>
+</blockquote>
+<hr>
+<h2 id="五、云主机安装"><a href="#五、云主机安装" class="headerlink" title="五、云主机安装"></a>五、云主机安装</h2><p>爱快支持在阿里云、腾讯云等云主机上安装，主要用于SD-WAN组网场景。</p>
+<h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><p><strong>前提</strong>：先在云主机上安装一个Ubuntu系统。</p>
+<p><strong>操作命令</strong>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 步骤1：下载ISO安装包</span>
+<span class="token comment"># 32位系统：</span>
+<span class="token function">wget</span> https://www.ikuai8.com/download.php?n<span class="token operator">=</span>/3.x/iso/iKuai8_x32_3.5.11_Build202112031159.iso <span class="token parameter variable">-O</span> ikuai8.iso
+
+<span class="token comment"># 64位系统：</span>
+<span class="token function">wget</span> https://www.ikuai8.com/download.php?n<span class="token operator">=</span>/3.x/iso/iKuai8_x64_3.5.11_Build202112031159.iso <span class="token parameter variable">-O</span> ikuai8.iso
+
+<span class="token comment"># 步骤2：挂载ISO镜像</span>
+<span class="token function">sudo</span> <span class="token function">mount</span> ikuai8.iso /mnt
+
+<span class="token comment"># 步骤3：复制ISO镜像启动文件</span>
+<span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-rpf</span> /mnt/boot /
+
+<span class="token comment"># 步骤4：重启系统</span>
+<span class="token function">sudo</span> <span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>重启后操作</strong>：</p>
+<ol>
+<li>在腾讯云/阿里云控制台打开VNC界面（登录 -&gt; 远程登录 -&gt; VNC登录）</li>
+<li>在VNC中正常进行ISO安装爱快系统</li>
+<li>安装完成后进入控制台，选择”其他选项” -&gt; “开启外网访问WEB”</li>
+<li>通过外网IP访问爱快Web管理界面</li>
+</ol>
+<hr>
+<h2 id="六、安装方式对比总结"><a href="#六、安装方式对比总结" class="headerlink" title="六、安装方式对比总结"></a>六、安装方式对比总结</h2><table>
+<thead>
+<tr>
+<th>安装方式</th>
+<th>适用场景</th>
+<th>难度</th>
+<th>性能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ISO U盘引导</td>
+<td>实体机安装（最常用）</td>
+<td>简单</td>
+<td>最优</td>
+</tr>
+<tr>
+<td>UEFI引导</td>
+<td>新硬件实体机</td>
+<td>简单</td>
+<td>最优</td>
+</tr>
+<tr>
+<td>IMG写盘</td>
+<td>快速部署</td>
+<td>中等</td>
+<td>最优</td>
+</tr>
+<tr>
+<td>GHOST恢复</td>
+<td>运维人员批量部署</td>
+<td>中等</td>
+<td>最优</td>
+</tr>
+<tr>
+<td>ISO光盘</td>
+<td>老硬件</td>
+<td>简单</td>
+<td>最优</td>
+</tr>
+<tr>
+<td>VMware虚拟机</td>
+<td>测试学习/单机多功能</td>
+<td>较高</td>
+<td>较好</td>
+</tr>
+<tr>
+<td>云主机</td>
+<td>SD-WAN组网</td>
+<td>中等</td>
+<td>取决于云配置</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="七、常见问题"><a href="#七、常见问题" class="headerlink" title="七、常见问题"></a>七、常见问题</h2><h3 id="Q1：安装后找不到管理界面？"><a href="#Q1：安装后找不到管理界面？" class="headerlink" title="Q1：安装后找不到管理界面？"></a>Q1：安装后找不到管理界面？</h3><p>确认电脑IP和爱快LAN口在同一网段。爱快默认LAN口地址是 <code>192.168.1.1</code>，将电脑设置为 <code>192.168.1.x</code> 网段即可访问。</p>
+<h3 id="Q2：多块硬盘怎么办？"><a href="#Q2：多块硬盘怎么办？" class="headerlink" title="Q2：多块硬盘怎么办？"></a>Q2：多块硬盘怎么办？</h3><p>爱快只能安装在单块磁盘上，安装前请断开其他磁盘，或确认安装目标正确。</p>
+<h3 id="Q3：虚拟机网卡性能差？"><a href="#Q3：虚拟机网卡性能差？" class="headerlink" title="Q3：虚拟机网卡性能差？"></a>Q3：虚拟机网卡性能差？</h3><p>VMware默认可能使用AMD网卡类型，建议修改为e1000类型（编辑.vmx文件）。</p>
+<h3 id="Q4：忘记Web管理密码怎么办？"><a href="#Q4：忘记Web管理密码怎么办？" class="headerlink" title="Q4：忘记Web管理密码怎么办？"></a>Q4：忘记Web管理密码怎么办？</h3><p>可以通过连接显示器键盘进入控制台，选择重置密码选项。</p>
+<h3 id="Q5：官方技术支持"><a href="#Q5：官方技术支持" class="headerlink" title="Q5：官方技术支持"></a>Q5：官方技术支持</h3><ul>
+<li>客服热线：400-877-3227（全年9:00-21:00，法定节假日除外）</li>
+<li>官方论坛：爱快社区</li>
+<li>官方微信/APP：搜索”爱快”</li>
+</ul>
+<hr>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li>爱快官方网站：<a target="_blank" rel="noopener" href="https://www.ikuai8.com/">https://www.ikuai8.com</a></li>
+<li>固件下载：<a target="_blank" rel="noopener" href="https://www.ikuai8.com/download">https://www.ikuai8.com/download</a></li>
+<li>快速安装文档：<a target="_blank" rel="noopener" href="https://www.ikuai8.com/support/install/zsj.html">https://www.ikuai8.com/support/install/zsj.html</a></li>
+<li>常见问题：<a target="_blank" rel="noopener" href="https://www.ikuai8.com/support/cjwt/xs.html">https://www.ikuai8.com/support/cjwt/xs.html</a></li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">因特吧</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://zz3656.github.io/2026/04/30/ai-kuai-ikuai-ruan-lu-you-an-zhuang-quan-zhi-nan/">https://zz3656.github.io/2026/04/30/ai-kuai-ikuai-ruan-lu-you-an-zhuang-quan-zhi-nan/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">因特吧</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
+                                    <span class="chip bg-color">软路由</span>
+                                </a>
+                            
+                                <a href="/tags/iKuai/">
+                                    <span class="chip bg-color">iKuai</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2026/04/30/2026-04-30-xiao-ma-xue-xi-ri-bao/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="2026-04-30 小马学习日报">
+                        
+                        <span class="card-title">2026-04-30 小马学习日报</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2026-04-30
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hermes/">
+                        <span class="chip bg-color">Hermes</span>
+                    </a>
+                    
+                    <a href="/tags/AI-Agent/">
+                        <span class="chip bg-color">AI Agent</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2026/04/30/hermes-agent-zi-wo-jin-hua-ai-zhi-neng-ti-wan-quan-zhi-nan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Hermes Agent：能自我进化的AI智能体完全指南">
+                        
+                        <span class="card-title">Hermes Agent：能自我进化的AI智能体完全指南</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-04-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/" class="post-category">
+                                    编程开发
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hermes/">
+                        <span class="chip bg-color">Hermes</span>
+                    </a>
+                    
+                    <a href="/tags/AI/">
+                        <span class="chip bg-color">AI</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/">
+                        <span class="chip bg-color">智能体</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2026</span>
+            
+            <a href="/about" target="_blank">因特吧</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">29k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://www.github.com/zz3656" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:uuuuf@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=155166660" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 155166660" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

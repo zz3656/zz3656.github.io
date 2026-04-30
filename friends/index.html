@@ -552,6 +552,65 @@
     article .card {
         overflow: visible !important;
     }
+
+    /* 友链卡片统一大小 */
+    .friend-div .card {
+        height: 100% !important;
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .friend-div .card .frind-ship {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 15px 20px;
+    }
+
+    .friend-div .card .frind-ship .title {
+        flex: 1;
+        align-items: flex-start !important;
+    }
+
+    .friend-div .card .frind-ship .title img {
+        width: 64px;
+        height: 64px;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .friend-div .card .frind-ship .title div {
+        overflow: hidden;
+        padding-left: 12px;
+    }
+
+    .friend-div .card .frind-ship .title h1 {
+        font-size: 1.2rem;
+        padding-bottom: 4px;
+        border-bottom: 2px solid rgba(255,255,255,0.5);
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 180px;
+    }
+
+    .friend-div .card .frind-ship .title p {
+        position: static !important;
+        margin-top: 6px;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .friend-div .card .friend-button {
+        margin-top: auto;
+    }
 </style>
 
 <main class="content">

@@ -373,31 +373,6 @@
     
     
     <entry>
-      <title>Typora + PicGo-Core + Github 实现图片上传到Github</title>
-      <link href="/2025/07/12/typora-picgo-core-github-shi-xian-tu-pian-shang-chuan-dao-github/"/>
-      <url>/2025/07/12/typora-picgo-core-github-shi-xian-tu-pian-shang-chuan-dao-github/</url>
-      
-        <content type="html"><![CDATA[<h2 id="下载PicGo-Core"><a href="#下载PicGo-Core" class="headerlink" title="下载PicGo-Core"></a>下载PicGo-Core</h2><p>由于我的电脑有<code>nodejs</code>环境，所以我使用的是<code>npm</code>命令安装<code>picgo</code>, 命令如下：</p><p>1<br>npm install picgo -g</p><p>安装完成后，检查命令行输出, 记录下红色框内的路径。</p><p><a href="https://cdn.jsdelivr.net/gh/jxiaow/cdn-images@latest/blog-images/image-20201105201730919.png"><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/15/e6298d432fc318cd2de3f9b741d73dee-image-20201105201730919-3dc062.png" alt="img"></a></p><p>输入命令查看版本，如果有输出则添加成功。</p><p>1<br>picgo -``v</p><h2 id="安装github-plus"><a href="#安装github-plus" class="headerlink" title="安装github-plus"></a>安装github-plus</h2><p>官方提供的github上传图库不好用，安装一款新的上传插件<code>github-plus</code>, 命令行执行：</p><p>1<br>picgo install github-plus</p><p><a href="https://cdn.jsdelivr.net/gh/jxiaow/cdn-images@latest/blog-images/image-20201105223054898.png"><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/15/dba85b9fb03c7c2ce576ba97dcbaf1a8-image-20201105223054898-a8d7a4.png" alt="img"></a></p><p>安装成功后会有提示。</p><h2 id="Typora图像设置"><a href="#Typora图像设置" class="headerlink" title="Typora图像设置"></a>Typora图像设置</h2><p>在<code>Typora</code>中配置图像上传信息。</p><h3 id="设置PicGo的配置信息"><a href="#设置PicGo的配置信息" class="headerlink" title="设置PicGo的配置信息"></a>设置PicGo的配置信息</h3><p><a href="https://cdn.jsdelivr.net/gh/jxiaow/cdn-images@latest/blog-images/image-20201105223720354.png"><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/15/7a48bd7fb3fe1888cce9d8ac1ad583a8-image-20201105223720354-868070.png" alt="img"></a></p><p>如上图所示，分为2个步骤：</p><p><a href="https://cdn.jsdelivr.net/gh/jxiaow/cdn-images@latest/blog-images/image-20201105225415181.png"><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/15/2a5c7d4e49ceff95bbf86687bc4ca86d-image-20201105225415181-9a13e3.png" alt="img"></a></p><h2 id="图片上传"><a href="#图片上传" class="headerlink" title="图片上传"></a>图片上传</h2><p>将图片拖入Typora中，然后在图片单击右键，图片上传即可。</p><h2 id="安装文件重命名插件-picgo-plugin-rename-file"><a href="#安装文件重命名插件-picgo-plugin-rename-file" class="headerlink" title="安装文件重命名插件 picgo-plugin-rename-file"></a>安装文件重命名插件 <a href="https://github.com/liuwave/picgo-plugin-rename-file">picgo-plugin-rename-file</a></h2><p><code>picgo-plugin-rename-file</code> 插件可以帮我们安装一定的规则将文件进行重命名，具体设置请看github。</p><p>输入一下命令安装:</p><p>1<br>picgo install rename-file</p><p>安装完成后，打开<code>picgo</code>的配置文件<code>C:\Users\xxx\.picgo\config.json</code>末尾最后一个大括号前添加一下信息即可。</p><p>1<br>2<br>3<br>4<br>,<br>“picgo-plugin-rename-file”: {<br>    “format”: “{y}/{m}/{d}/{hash}-{origin}-{rand:6}”<br>}</p><h2 id="添加水印"><a href="#添加水印" class="headerlink" title="添加水印"></a>添加水印</h2><p><em><strong>注意：此插件目前会导致文件上传重命名插件不生效</strong></em></p><p>插件地址: <a href="https://github.com/Dec-F/picgo-plugin-watermark">picgo-plugin-watermark</a> ，<code>watermark</code>插件可以帮我们在上传图片的时候添加水印。</p><p>安装命令：</p><p>1<br>picgo install watermark</p><p>安装成功后，<code>C:\Users\xxx\.picgo\config.json</code>末尾最后一个大括号前添加一下信息即可。</p><p>1<br>2<br>3<br>4<br>5<br>6<br>,<br>“picgo-plugin-watermark”: { // 以下配置信息参考插件地址说明<br>    “text”: “jxiaow”, // 水印名称<br>    “fontSize”: 18, // 水印字体大小<br>    “position”:”rm” // 水印位置<br>},</p><p>**注意：**由于这个插件安装过程中需要下载字体，会导致下载特别慢，尽可能使用代理。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 编程开发 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> PicGo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>阿里云/腾讯云安装爱快系统步骤</title>
       <link href="/2025/07/11/a-li-yun-teng-xun-yun-an-zhuang-ai-kuai-xi-tong-bu-zou/"/>
       <url>/2025/07/11/a-li-yun-teng-xun-yun-an-zhuang-ai-kuai-xi-tong-bu-zou/</url>

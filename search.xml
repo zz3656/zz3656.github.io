@@ -14,11 +14,9 @@
       
         <tags>
             
-            <tag> HermesAgent </tag>
+            <tag> Hermes </tag>
             
             <tag> AI学习 </tag>
-            
-            <tag> 技术笔记 </tag>
             
         </tags>
       
@@ -43,9 +41,9 @@
       
         <tags>
             
-            <tag> Markdown </tag>
-            
             <tag> 博客 </tag>
+            
+            <tag> Markdown </tag>
             
             <tag> 写作 </tag>
             
@@ -157,9 +155,9 @@
       
         <tags>
             
-            <tag> 软路由 </tag>
-            
             <tag> RouterOS </tag>
+            
+            <tag> 软路由 </tag>
             
             <tag> MikroTik </tag>
             
@@ -340,6 +338,35 @@
     
     
     <entry>
+      <title>Hexo 博客性能优化实践</title>
+      <link href="/2026/04/29/hexo-bo-ke-xing-neng-you-hua-shi-jian/"/>
+      <url>/2026/04/29/hexo-bo-ke-xing-neng-you-hua-shi-jian/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>搭建好 Hexo 博客之后，性能优化是提升用户体验的重要一环。本文记录了我在优化博客加载速度过程中的实践和心得。</p><h2 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h2><p>首先使用工具分析当前博客的性能瓶颈：</p><ul><li><strong>Google PageSpeed Insights</strong>：综合评分工具</li><li><strong>Lighthouse</strong>：Chrome 内置的性能审计工具</li><li><strong>WebPageTest</strong>：详细的加载瀑布图分析</li></ul><h2 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h2><p>图片通常是网页中最大的资源，优化效果立竿见影：</p><ol><li>使用 WebP 格式替代 PNG/JPG，体积减少 30%-50%</li><li>添加图片懒加载（Lazy Load），首屏外的图片延迟加载</li><li>压缩封面图片，控制在 200KB 以内</li></ol><h2 id="静态资源优化"><a href="#静态资源优化" class="headerlink" title="静态资源优化"></a>静态资源优化</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 开启 Gzip 压缩</span><span class="token comment"># 在 GitHub Pages 上默认已开启</span><span class="token comment"># 合并 CSS/JS 文件减少请求数</span><span class="token comment"># 使用 CDN 加速静态资源加载</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h2><p>合理设置缓存策略可以大幅提升回访速度：</p><ul><li>HTML 文件：短期缓存，确保内容及时更新</li><li>CSS/JS/图片：长期缓存，通过文件名哈希实现版本控制</li><li>字体文件：设置较长的缓存时间</li></ul><h2 id="优化效果"><a href="#优化效果" class="headerlink" title="优化效果"></a>优化效果</h2><p>经过一系列优化后：</p><table><thead><tr><th>指标</th><th>优化前</th><th>优化后</th></tr></thead><tbody><tr><td>首屏加载</td><td>4.2s</td><td>1.8s</td></tr><tr><td>PageSpeed 评分</td><td>62</td><td>91</td></tr><tr><td>请求数</td><td>48</td><td>32</td></tr></tbody></table><p>性能优化是一个持续的过程，后续还会继续探索更多优化手段。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 性能优化 </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python 装饰器从入门到精通</title>
       <link href="/2026/04/29/python-zhuang-shi-qi-cong-ru-men-dao-jing-tong/"/>
       <url>/2026/04/29/python-zhuang-shi-qi-cong-ru-men-dao-jing-tong/</url>
@@ -361,35 +388,6 @@
             <tag> 装饰器 </tag>
             
             <tag> 编程技巧 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo 博客性能优化实践</title>
-      <link href="/2026/04/29/hexo-bo-ke-xing-neng-you-hua-shi-jian/"/>
-      <url>/2026/04/29/hexo-bo-ke-xing-neng-you-hua-shi-jian/</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>搭建好 Hexo 博客之后，性能优化是提升用户体验的重要一环。本文记录了我在优化博客加载速度过程中的实践和心得。</p><h2 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h2><p>首先使用工具分析当前博客的性能瓶颈：</p><ul><li><strong>Google PageSpeed Insights</strong>：综合评分工具</li><li><strong>Lighthouse</strong>：Chrome 内置的性能审计工具</li><li><strong>WebPageTest</strong>：详细的加载瀑布图分析</li></ul><h2 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h2><p>图片通常是网页中最大的资源，优化效果立竿见影：</p><ol><li>使用 WebP 格式替代 PNG/JPG，体积减少 30%-50%</li><li>添加图片懒加载（Lazy Load），首屏外的图片延迟加载</li><li>压缩封面图片，控制在 200KB 以内</li></ol><h2 id="静态资源优化"><a href="#静态资源优化" class="headerlink" title="静态资源优化"></a>静态资源优化</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 开启 Gzip 压缩</span><span class="token comment"># 在 GitHub Pages 上默认已开启</span><span class="token comment"># 合并 CSS/JS 文件减少请求数</span><span class="token comment"># 使用 CDN 加速静态资源加载</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h2><p>合理设置缓存策略可以大幅提升回访速度：</p><ul><li>HTML 文件：短期缓存，确保内容及时更新</li><li>CSS/JS/图片：长期缓存，通过文件名哈希实现版本控制</li><li>字体文件：设置较长的缓存时间</li></ul><h2 id="优化效果"><a href="#优化效果" class="headerlink" title="优化效果"></a>优化效果</h2><p>经过一系列优化后：</p><table><thead><tr><th>指标</th><th>优化前</th><th>优化后</th></tr></thead><tbody><tr><td>首屏加载</td><td>4.2s</td><td>1.8s</td></tr><tr><td>PageSpeed 评分</td><td>62</td><td>91</td></tr><tr><td>请求数</td><td>48</td><td>32</td></tr></tbody></table><p>性能优化是一个持续的过程，后续还会继续探索更多优化手段。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 项目测试 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 博客 </tag>
-            
-            <tag> hexo </tag>
-            
-            <tag> 性能优化 </tag>
             
         </tags>
       

@@ -10,34 +10,20 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-05-01T20:19:08.997Z</updated>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="测试" scheme="https://zz3656.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    <id>https://zz3656.github.io/2026/05/02/jia-mi-ce-shi/</id>
-    <link href="https://zz3656.github.io/2026/05/02/jia-mi-ce-shi/"/>
-    <published>2026-05-02T14:00:00.000Z</published>
-    <summary>这是一篇加密测试文章，请输入密码查看。</summary>
-    <title>加密测试文章</title>
-    <updated>2026-05-01T20:19:08.997Z</updated>
-  </entry>
+  <updated>2026-05-01T22:49:45.610Z</updated>
   <entry>
     <author>
       <name>因特吧</name>
     </author>
     <category term="生活随笔" scheme="https://zz3656.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
-    <category term="自传" scheme="https://zz3656.github.io/tags/%E8%87%AA%E4%BC%A0/"/>
+    <category term="我的一生" scheme="https://zz3656.github.io/tags/%E6%88%91%E7%9A%84%E4%B8%80%E7%94%9F/"/>
     <category term="童年" scheme="https://zz3656.github.io/tags/%E7%AB%A5%E5%B9%B4/"/>
-    <id>https://zz3656.github.io/2026/05/02/zi-chuan-01-tong-nian-yu-liu-ji/</id>
-    <link href="https://zz3656.github.io/2026/05/02/zi-chuan-01-tong-nian-yu-liu-ji/"/>
+    <id>https://zz3656.github.io/2026/05/02/wo-de-yi-sheng-01-tong-nian-yu-liu-ji/</id>
+    <link href="https://zz3656.github.io/2026/05/02/wo-de-yi-sheng-01-tong-nian-yu-liu-ji/"/>
     <published>2026-05-01T21:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p>1987年，我出生在一个普通的农村家庭。作为父亲同辈兄弟姐妹里第一个出生的男孩，爷爷对我抱有很大期望，我的名字也是由他亲自取的。爷爷是家里唯一的知识分子，一位小学教师。也许正因为他是老师，从我牙牙学语开始，他就教我背古诗——尽管他教的是数学。儿时没什么杂念，爷爷教什么，我就]]>
-    </summary>
-    <title>自传（一）童年与留级</title>
-    <updated>2026-05-01T22:43:14.111Z</updated>
+    <summary>Here's something encrypted, password is required to continue reading.</summary>
+    <title>我的一生（一）童年与留级</title>
+    <updated>2026-05-01T22:49:45.610Z</updated>
   </entry>
   <entry>
     <author>
@@ -126,8 +112,8 @@
       <name>因特吧</name>
     </author>
     <category term="网络技术" scheme="https://zz3656.github.io/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    <category term="软路由" scheme="https://zz3656.github.io/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
     <category term="RouterOS" scheme="https://zz3656.github.io/tags/RouterOS/"/>
+    <category term="软路由" scheme="https://zz3656.github.io/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
     <category term="MikroTik" scheme="https://zz3656.github.io/tags/MikroTik/"/>
     <id>https://zz3656.github.io/2026/04/30/routeros-v7-ru-men-dao-jing-tong-xue-xi-bi-ji/</id>
     <link href="https://zz3656.github.io/2026/04/30/routeros-v7-ru-men-dao-jing-tong-xue-xi-bi-ji/"/>
@@ -290,23 +276,6 @@
     </summary>
     <title>从零搭建 Hexo 博客并部署到 GitHub Pages 完整记录</title>
     <updated>2026-04-30T16:17:13.186Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="编程开发" scheme="https://zz3656.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    <category term="代码" scheme="https://zz3656.github.io/tags/%E4%BB%A3%E7%A0%81/"/>
-    <category term="测试" scheme="https://zz3656.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    <id>https://zz3656.github.io/2026/04/29/dai-ma-gao-liang-ce-shi/</id>
-    <link href="https://zz3656.github.io/2026/04/29/dai-ma-gao-liang-ce-shi/"/>
-    <published>2026-04-29T14:00:00.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="代码高亮测试"><a href="#代码高亮测试" class="headerlink" title="代码高亮测试"></a>代码高亮测试</h2><p>本文用于测试 Matery 主题的 PrismJS 代码高亮功能。</p>
-<h3]]>
-    </summary>
-    <title>代码高亮测试</title>
-    <updated>2026-04-29T18:05:49.900Z</updated>
   </entry>
   <entry>
     <author>

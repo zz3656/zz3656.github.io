@@ -1,7 +1,7 @@
 ---
 title: Hexo 博客性能优化实践
 date: 2026-04-29 23:40:00
-tags: [hexo, 性能优化, 博客, 前端]
+tags: [hexo, 性能优化, 博客]
 categories: 项目测试
 cover: /medias/featureimages/5.jpg
 ---

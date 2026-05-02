@@ -1,7 +1,7 @@
 ---
 title: AI 大模型最新进展盘点
 date: 2026-04-29 23:40:00
-tags: [AI, 大模型, GPT, LLM]
+tags: [AI, 大模型, GPT]
 categories: 前沿技术
 cover: /medias/featureimages/2.jpg
 ---

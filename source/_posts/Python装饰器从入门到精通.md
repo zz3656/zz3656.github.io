@@ -1,7 +1,7 @@
 ---
 title: Python 装饰器从入门到精通
 date: 2026-04-29 23:40:00
-tags: [Python, 装饰器, 编程技巧, 函数式编程]
+tags: [Python, 装饰器, 编程技巧]
 categories: 编程开发
 cover: /medias/featureimages/11.jpg
 ---

@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-05-02T17:40:04.882Z</updated>
+  <updated>2026-05-03T00:36:41.034Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="前沿技术" scheme="https://zz3656.github.io/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/"/>
+    <category term="exo" scheme="https://zz3656.github.io/tags/exo/"/>
+    <category term="AI集群" scheme="https://zz3656.github.io/tags/AI%E9%9B%86%E7%BE%A4/"/>
+    <category term="分布式推理" scheme="https://zz3656.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%8E%A8%E7%90%86/"/>
+    <id>https://zz3656.github.io/2026/05/03/exo-jiang-duo-tai-she-bei-zu-cheng-ai-tui-li-ji-qun-de-wan-zheng-zhi-nan/</id>
+    <link href="https://zz3656.github.io/2026/05/03/exo-jiang-duo-tai-she-bei-zu-cheng-ai-tui-li-ji-qun-de-wan-zheng-zhi-nan/"/>
+    <published>2026-05-02T21:35:00.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="什么是-exo？"><a href="#什么是-exo？" class="headerlink" title="什么是 exo？"></a>什么是 exo？</h2><p>exo 是一个由 <a href="https://x.com/exolabs">exo]]>
+    </summary>
+    <title>exo：将多台设备组成AI推理集群的完整指南</title>
+    <updated>2026-05-03T00:36:41.034Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>
@@ -331,22 +348,5 @@
     </summary>
     <title>Hexo 博客性能优化实践</title>
     <updated>2026-04-29T19:11:32.805Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="编程开发" scheme="https://zz3656.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    <category term="Python" scheme="https://zz3656.github.io/tags/Python/"/>
-    <category term="装饰器" scheme="https://zz3656.github.io/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
-    <category term="编程技巧" scheme="https://zz3656.github.io/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/"/>
-    <id>https://zz3656.github.io/2026/04/29/python-zhuang-shi-qi-cong-ru-men-dao-jing-tong/</id>
-    <link href="https://zz3656.github.io/2026/04/29/python-zhuang-shi-qi-cong-ru-men-dao-jing-tong/"/>
-    <published>2026-04-29T15:40:00.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Python 装饰器是 Python 中非常强大且优雅的特性，理解装饰器对于写出高质量的 Python]]>
-    </summary>
-    <title>Python 装饰器从入门到精通</title>
-    <updated>2026-04-29T19:11:32.809Z</updated>
   </entry>
 </feed>

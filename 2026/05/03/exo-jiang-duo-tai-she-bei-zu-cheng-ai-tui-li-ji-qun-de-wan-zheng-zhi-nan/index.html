@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hermes Agent Windows 安装指南：从零到一完整教程, blog,hexo">
-    <meta name="description" content="前言Hermes Agent 是一个强大的 AI 助手框架，但官方明确表示不支持原生 Windows 环境。本文记录了一套在 Windows 10/11 上成功安装的完整流程，所有步骤都已实际验证。
-适用系统：Windows 10 (版本 ">
+    <meta name="keywords" content="exo：将多台设备组成AI推理集群的完整指南, blog,hexo">
+    <meta name="description" content="什么是 exo？exo 是一个由 exo labs 维护的开源项目（Apache 2.0 协议），它的核心理念非常简单但强大：把你所有的设备连接起来，组成一个统一的 AI 推理集群。
+不管你手上有 MacBook、Linux 服务器、还是其">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hermes Agent Windows 安装指南：从零到一完整教程 | 因特吧</title>
+    <title>exo：将多台设备组成AI推理集群的完整指南 | 因特吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -316,12 +316,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hermes Agent Windows 安装指南：从零到一完整教程</h1>
+                    <h1 class="description center-align post-title">exo：将多台设备组成AI推理集群的完整指南</h1>
                 </div>
             </div>
         </div>
@@ -345,12 +345,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hermes/">
-                                <span class="chip bg-color">Hermes</span>
+                            <a href="/tags/exo/">
+                                <span class="chip bg-color">exo</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%99%E7%A8%8B/">
-                                <span class="chip bg-color">教程</span>
+                            <a href="/tags/AI%E9%9B%86%E7%BE%A4/">
+                                <span class="chip bg-color">AI集群</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%8E%A8%E7%90%86/">
+                                <span class="chip bg-color">分布式推理</span>
                             </a>
                         
                     </div>
@@ -361,8 +365,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" class="post-category">
-                                技术教程
+                            <a href="/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/" class="post-category">
+                                前沿技术
                             </a>
                         
                     </div>
@@ -388,14 +392,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    8 分
                 </div>
                 
 
@@ -418,190 +422,297 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hermes Agent 是一个强大的 AI 助手框架，但官方明确表示不支持原生 Windows 环境。本文记录了一套在 Windows 10/11 上成功安装的完整流程，所有步骤都已实际验证。</p>
-<p><strong>适用系统</strong>：Windows 10 (版本 1809+) / Windows 11<br><strong>预计耗时</strong>：20-30 分钟（取决于网络速度）</p>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li>安装前准备</li>
-<li>安装 WSL 核心组件</li>
-<li>安装 Ubuntu 发行版</li>
-<li>安装 Hermes Agent</li>
-<li>配置 API Key</li>
-<li>常见问题与解决方案</li>
-</ul>
-<hr>
-<h2 id="一、安装前准备"><a href="#一、安装前准备" class="headerlink" title="一、安装前准备"></a>一、安装前准备</h2><h3 id="1-1-系统要求检查"><a href="#1-1-系统要求检查" class="headerlink" title="1.1 系统要求检查"></a>1.1 系统要求检查</h3><p>以管理员身份打开 PowerShell，执行以下命令查看系统版本：</p>
-<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">winver<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>确保版本号不低于 <strong>Windows 10 版本 2004（内部版本 19041）</strong>。</p>
-<h3 id="1-2-开启必要的-Windows-功能"><a href="#1-2-开启必要的-Windows-功能" class="headerlink" title="1.2 开启必要的 Windows 功能"></a>1.2 开启必要的 Windows 功能</h3><p>在管理员 PowerShell 中按顺序执行：</p>
-<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token comment"># 开启 Windows 子系统 Linux</span>
-dism<span class="token punctuation">.</span>exe <span class="token operator">/</span>online <span class="token operator">/</span><span class="token function">enable-feature</span> <span class="token operator">/</span>featurename:Microsoft-Windows-Subsystem-Linux <span class="token operator">/</span>all <span class="token operator">/</span>norestart
-
-<span class="token comment"># 开启虚拟机平台</span>
-dism<span class="token punctuation">.</span>exe <span class="token operator">/</span>online <span class="token operator">/</span><span class="token function">enable-feature</span> <span class="token operator">/</span>featurename:VirtualMachinePlatform <span class="token operator">/</span>all <span class="token operator">/</span>norestart<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>执行后<strong>重启电脑</strong>。</p>
-<hr>
-<h2 id="二、安装-WSL-核心组件"><a href="#二、安装-WSL-核心组件" class="headerlink" title="二、安装 WSL 核心组件"></a>二、安装 WSL 核心组件</h2><h3 id="方法一：自动安装（推荐）"><a href="#方法一：自动安装（推荐）" class="headerlink" title="方法一：自动安装（推荐）"></a>方法一：自动安装（推荐）</h3><p>重启后，以管理员身份打开 PowerShell：</p>
-<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">wsl <span class="token operator">--</span>install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="方法二：手动安装（如果方法一失败）"><a href="#方法二：手动安装（如果方法一失败）" class="headerlink" title="方法二：手动安装（如果方法一失败）"></a>方法二：手动安装（如果方法一失败）</h3><p>如果提示”用法”错误，说明系统版本较旧，采用手动方式：</p>
-<ol>
-<li>访问 WSL GitHub 发布页面：<a target="_blank" rel="noopener" href="https://github.com/microsoft/WSL/releases">https://github.com/microsoft/WSL/releases</a></li>
-<li>下载最新的 <code>wsl.x.x.x.x64.msi</code> 安装包</li>
-<li>双击运行，按提示完成安装</li>
-</ol>
-<h3 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h3><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">wsl <span class="token operator">--</span>version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>正常输出应显示 WSL 版本信息，如 <code>WSL 版本： 2.x.x.x</code>。</p>
-<hr>
-<h2 id="三、安装-Ubuntu-发行版"><a href="#三、安装-Ubuntu-发行版" class="headerlink" title="三、安装 Ubuntu 发行版"></a>三、安装 Ubuntu 发行版</h2><h3 id="方法一：命令行安装"><a href="#方法一：命令行安装" class="headerlink" title="方法一：命令行安装"></a>方法一：命令行安装</h3><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">wsl <span class="token operator">--</span>install <span class="token operator">-</span>d Ubuntu<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>如果遇到超时错误（<code>Wsl/InstallDistro/WININET_E_TIMEOUT</code>），说明网络请求 GitHub 超时，请使用方法二或三。</p>
-<h3 id="方法二：Microsoft-Store-安装"><a href="#方法二：Microsoft-Store-安装" class="headerlink" title="方法二：Microsoft Store 安装"></a>方法二：Microsoft Store 安装</h3><ol>
-<li>打开 Microsoft Store</li>
-<li>搜索 <strong>Ubuntu</strong></li>
-<li>选择 Ubuntu 22.04 LTS 或 Ubuntu 24.04 LTS</li>
-<li>点击”安装”</li>
-</ol>
-<p><strong>如果 Store 打不开或一直转圈</strong>：</p>
+                <h2 id="什么是-exo？"><a href="#什么是-exo？" class="headerlink" title="什么是 exo？"></a>什么是 exo？</h2><p>exo 是一个由 <a target="_blank" rel="noopener" href="https://x.com/exolabs">exo labs</a> 维护的开源项目（Apache 2.0 协议），它的核心理念非常简单但强大：<strong>把你所有的设备连接起来，组成一个统一的 AI 推理集群</strong>。</p>
+<p>不管你手上有 MacBook、Linux 服务器、还是其他设备，只要装上 exo，它们就能自动发现彼此，协同运行大语言模型。这意味着你可以运行单个设备放不下的大模型——比如用 4 台 Mac Studio 跑 671B 参数的 DeepSeek v3.1。</p>
+<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/exo-explore/exo">https://github.com/exo-explore/exo</a></p>
+<h2 id="核心特性"><a href="#核心特性" class="headerlink" title="核心特性"></a>核心特性</h2><h3 id="1-自动设备发现"><a href="#1-自动设备发现" class="headerlink" title="1. 自动设备发现"></a>1. 自动设备发现</h3><p>运行 exo 的设备会自动在局域网内发现彼此，无需任何手动配置。你不需要写配置文件，不需要指定 IP 地址，启动就能用。</p>
+<h3 id="2-Thunderbolt-RDMA-支持"><a href="#2-Thunderbolt-RDMA-支持" class="headerlink" title="2. Thunderbolt RDMA 支持"></a>2. Thunderbolt RDMA 支持</h3><p>exo 是首个支持 Thunderbolt 5 RDMA（远程直接内存访问）的 AI 推理框架。通过 Thunderbolt 5 连接设备，可以将设备间延迟降低 99%。这意味着添加更多设备不仅增加了显存，还真正加快了推理速度。</p>
+<h3 id="3-拓扑感知的自动并行"><a href="#3-拓扑感知的自动并行" class="headerlink" title="3. 拓扑感知的自动并行"></a>3. 拓扑感知的自动并行</h3><p>exo 会实时分析你的设备拓扑——每台设备的算力、内存，以及设备间的网络延迟和带宽——然后自动决定如何最优地拆分模型。你不需要手动配置流水线并行还是张量并行，exo 帮你搞定。</p>
+<h3 id="4-张量并行（Tensor-Parallelism）"><a href="#4-张量并行（Tensor-Parallelism）" class="headerlink" title="4. 张量并行（Tensor Parallelism）"></a>4. 张量并行（Tensor Parallelism）</h3><p>支持将模型张量切分到多台设备上并行计算。实测效果：</p>
 <ul>
-<li>按 <code>Win + R</code>，输入 <code>wsreset.exe</code> 并回车，等待自动完成</li>
-<li>在 PowerShell 中执行：<code>Get-AppxPackage *store* | Reset-AppxPackage</code></li>
+<li>2 台设备：最高 1.8 倍加速</li>
+<li>4 台设备：最高 3.2 倍加速</li>
 </ul>
-<h3 id="方法三：离线包安装（最稳定）"><a href="#方法三：离线包安装（最稳定）" class="headerlink" title="方法三：离线包安装（最稳定）"></a>方法三：离线包安装（最稳定）</h3><ol>
-<li>访问 Ubuntu 官方发布页面：<a target="_blank" rel="noopener" href="https://releases.ubuntu.com/noble/">https://releases.ubuntu.com/noble/</a></li>
-<li>下载后缀为 <code>.wsl</code> 的文件（如 <code>ubuntu-24.04.3-wsl-amd64.wsl</code>）</li>
-<li>直接双击该文件，WSL 会自动完成安装</li>
-</ol>
-<h3 id="初始化-Ubuntu"><a href="#初始化-Ubuntu" class="headerlink" title="初始化 Ubuntu"></a>初始化 Ubuntu</h3><p>安装完成后，Ubuntu 终端会自动打开。按提示设置：</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">Enter new UNIX username: hermes
-New password: [输入密码，屏幕不显示]
-Retype new password: [再次输入]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>注意：Linux 下输入密码时不会显示任何字符，这是正常的安全特性。</p>
-</blockquote>
-<p>设置成功后，你会看到 <code>hermes@your-pc:~$</code> 的提示符。</p>
-<hr>
-<h2 id="四、安装-Hermes-Agent"><a href="#四、安装-Hermes-Agent" class="headerlink" title="四、安装 Hermes Agent"></a>四、安装 Hermes Agent</h2><h3 id="步骤-1：更新-Ubuntu-软件源"><a href="#步骤-1：更新-Ubuntu-软件源" class="headerlink" title="步骤 1：更新 Ubuntu 软件源"></a>步骤 1：更新 Ubuntu 软件源</h3><p>在 Ubuntu 终端中执行：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
-<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> python3 python3-pip <span class="token function">curl</span> <span class="token function">wget</span> <span class="token function">git</span> <span class="token parameter variable">-y</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="步骤-2：运行官方安装脚本"><a href="#步骤-2：运行官方安装脚本" class="headerlink" title="步骤 2：运行官方安装脚本"></a>步骤 2：运行官方安装脚本</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh <span class="token operator">|</span> <span class="token function">bash</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="步骤-3：加载环境变量"><a href="#步骤-3：加载环境变量" class="headerlink" title="步骤 3：加载环境变量"></a>步骤 3：加载环境变量</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="步骤-4：验证安装"><a href="#步骤-4：验证安装" class="headerlink" title="步骤 4：验证安装"></a>步骤 4：验证安装</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hermes doctor<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>正常输出应显示各项依赖检查通过：</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">✓ Python 3.11.9
-✓ pip 24.0
-✓ Node.js v20.x
-...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>如果提示”未检测到 API Key”，这是正常的，下一步配置即可。</p>
-<hr>
-<h2 id="五、配置-API-Key"><a href="#五、配置-API-Key" class="headerlink" title="五、配置 API Key"></a>五、配置 API Key</h2><h3 id="运行配置向导"><a href="#运行配置向导" class="headerlink" title="运行配置向导"></a>运行配置向导</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hermes setup<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="选择模型提供商"><a href="#选择模型提供商" class="headerlink" title="选择模型提供商"></a>选择模型提供商</h3><p>配置向导会询问你选择哪个模型供应商（Provider）：</p>
+<h3 id="5-多种-API-兼容"><a href="#5-多种-API-兼容" class="headerlink" title="5. 多种 API 兼容"></a>5. 多种 API 兼容</h3><p>exo 同时兼容以下 API 格式，可以直接对接你现有的工具：</p>
+<ul>
+<li>OpenAI Chat Completions API</li>
+<li>Claude Messages API</li>
+<li>OpenAI Responses API</li>
+<li>Ollama API</li>
+</ul>
+<h3 id="6-内置-Web-仪表盘"><a href="#6-内置-Web-仪表盘" class="headerlink" title="6. 内置 Web 仪表盘"></a>6. 内置 Web 仪表盘</h3><p>提供图形化的集群管理界面，可以查看集群状态、加载模型、进行对话测试。</p>
+<h2 id="实测性能"><a href="#实测性能" class="headerlink" title="实测性能"></a>实测性能</h2><p>以下是 Jeff Geerling 使用 4 台 M3 Ultra Mac Studio（每台 512GB 统一内存）的测试结果：</p>
 <table>
 <thead>
 <tr>
-<th>选项</th>
-<th>说明</th>
-<th>适合人群</th>
+<th>模型</th>
+<th>精度</th>
+<th>总参数</th>
+<th>配置</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>OpenRouter</td>
-<td>聚合平台，一个 Key 可用多种模型</td>
-<td>推荐新手</td>
+<td>Qwen3-235B</td>
+<td>8-bit</td>
+<td>235B</td>
+<td>4×M3 Ultra + RDMA</td>
 </tr>
 <tr>
-<td>DeepSeek</td>
-<td>国产模型，性价比高</td>
-<td>国内用户</td>
+<td>DeepSeek v3.1</td>
+<td>8-bit</td>
+<td>671B</td>
+<td>4×M3 Ultra + RDMA</td>
 </tr>
 <tr>
-<td>OpenAI</td>
-<td>GPT 系列</td>
-<td>有直接订阅的用户</td>
-</tr>
-<tr>
-<td>Anthropic</td>
-<td>Claude 系列</td>
-<td>有直接订阅的用户</td>
-</tr>
-<tr>
-<td>Ollama</td>
-<td>本地运行，无需 API Key</td>
-<td>有 GPU、注重隐私的用户</td>
+<td>Kimi K2 Thinking</td>
+<td>4-bit</td>
+<td>-</td>
+<td>4×M3 Ultra + RDMA</td>
 </tr>
 </tbody></table>
-<h3 id="获取-API-Key"><a href="#获取-API-Key" class="headerlink" title="获取 API Key"></a>获取 API Key</h3><p><strong>使用 DeepSeek（推荐国内用户）</strong></p>
+<p>4 台 Mac Studio 总计拥有约 2TB 的统一内存，足以加载和运行这些超大模型。</p>
+<h2 id="安装部署"><a href="#安装部署" class="headerlink" title="安装部署"></a>安装部署</h2><h3 id="macOS-安装（从源码）"><a href="#macOS-安装（从源码）" class="headerlink" title="macOS 安装（从源码）"></a>macOS 安装（从源码）</h3><p><strong>前置条件：</strong></p>
 <ol>
-<li>访问 <a target="_blank" rel="noopener" href="https://platform.deepseek.com/">https://platform.deepseek.com/</a></li>
-<li>注册账号</li>
-<li>进入”API Keys”页面</li>
-<li>点击”创建 API Key”</li>
-<li>复制保存</li>
+<li>安装 Xcode（提供 MLX 编译所需的 Metal 工具链）</li>
+<li>安装 Homebrew：</li>
 </ol>
-<p><strong>使用 OpenRouter（推荐尝鲜多模型）</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/bin/bash <span class="token parameter variable">-c</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="3">
+<li>安装 uv 和 Node.js：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew <span class="token function">install</span> uv <span class="token function">node</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="4">
+<li>安装 Rust nightly：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">--proto</span> <span class="token string">'=https'</span> <span class="token parameter variable">--tlsv1.2</span> <span class="token parameter variable">-sSf</span> https://sh.rustup.rs <span class="token operator">|</span> <span class="token function">sh</span>
+rustup toolchain <span class="token function">install</span> nightly<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ol start="5">
+<li>安装 macmon（Apple Silicon 硬件监控）：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cargo</span> <span class="token function">install</span> <span class="token parameter variable">--git</span> https://github.com/vladkens/macmon <span class="token punctuation">\</span>
+  <span class="token parameter variable">--rev</span> a1cd06b6cc0d5e61db24fd8832e74cd992097a7d <span class="token punctuation">\</span>
+  macmon <span class="token parameter variable">--force</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>克隆并运行：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/exo-explore/exo
+<span class="token builtin class-name">cd</span> exo/dashboard <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> run build <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>
+uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>启动后访问 <code>http://localhost:52415/</code> 即可打开仪表盘。</p>
+<blockquote>
+<p>如果你使用 Nix，可以直接运行 <code>nix run .#exo</code>，跳过大部分安装步骤。</p>
+</blockquote>
+<h3 id="macOS-App-方式"><a href="#macOS-App-方式" class="headerlink" title="macOS App 方式"></a>macOS App 方式</h3><p>如果你不想折腾命令行，exo 还提供了 macOS 桌面应用，会在后台运行。</p>
+<ul>
+<li>下载地址：<a target="_blank" rel="noopener" href="https://assets.exolabs.net/EXO-latest.dmg">EXO-latest.dmg</a></li>
+<li>系统要求：macOS Tahoe 26.2 或更高版本</li>
+<li>首次运行会请求系统权限和网络配置</li>
+</ul>
+<p>卸载方法：点击菜单栏图标 → Advanced → Uninstall。</p>
+<h3 id="Linux-安装"><a href="#Linux-安装" class="headerlink" title="Linux 安装"></a>Linux 安装</h3><p><strong>前置条件：</strong></p>
+<ul>
+<li>uv（Python 依赖管理）</li>
+<li>Node.js 18+（构建仪表盘）</li>
+<li>Rust nightly（编译 Rust 绑定）</li>
+</ul>
+<p><strong>Ubuntu/Debian 安装依赖：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> nodejs <span class="token function">npm</span>
+
+<span class="token comment"># 安装 uv</span>
+<span class="token function">curl</span> <span class="token parameter variable">-LsSf</span> https://astral.sh/uv/install.sh <span class="token operator">|</span> <span class="token function">sh</span>
+
+<span class="token comment"># 安装 Rust</span>
+<span class="token function">curl</span> <span class="token parameter variable">--proto</span> <span class="token string">'=https'</span> <span class="token parameter variable">--tlsv1.2</span> <span class="token parameter variable">-sSf</span> https://sh.rustup.rs <span class="token operator">|</span> <span class="token function">sh</span>
+rustup toolchain <span class="token function">install</span> nightly<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>克隆并运行：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/exo-explore/exo
+<span class="token builtin class-name">cd</span> exo/dashboard <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> run build <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>
+uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>重要提示：</strong> 目前 exo 在 Linux 上仅支持 CPU 推理，GPU 支持正在开发中。</p>
+<p>Linux 上的文件存放位置遵循 XDG 规范：</p>
+<ul>
+<li>配置文件：<code>~/.config/exo/</code></li>
+<li>数据文件：<code>~/.local/share/exo/</code></li>
+<li>缓存文件：<code>~/.cache/exo/</code></li>
+<li>日志文件：<code>~/.cache/exo/exo_log/</code></li>
+</ul>
+<h2 id="启用-RDMA（Thunderbolt-5）"><a href="#启用-RDMA（Thunderbolt-5）" class="headerlink" title="启用 RDMA（Thunderbolt 5）"></a>启用 RDMA（Thunderbolt 5）</h2><p>RDMA 是 exo 的杀手级特性，但需要在 macOS 中手动开启。操作步骤：</p>
 <ol>
-<li>访问 <a target="_blank" rel="noopener" href="https://openrouter.ai/">https://openrouter.ai/</a></li>
-<li>注册账号</li>
-<li>进入”Keys”页面</li>
-<li>点击”Create Key”</li>
-<li>充值少量金额即可使用</li>
+<li>关机</li>
+<li>长按电源键 10 秒，进入启动菜单</li>
+<li>选择 “Options” 进入恢复模式</li>
+<li>在恢复模式的终端中执行：</li>
 </ol>
-<h3 id="完成配置"><a href="#完成配置" class="headerlink" title="完成配置"></a>完成配置</h3><p>在 <code>hermes setup</code> 向导中：</p>
+<pre class="line-numbers language-none"><code class="language-none">rdma_ctl enable<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="5">
+<li>重启</li>
+</ol>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li>RDMA 集群中的每台设备都必须与所有其他设备直连</li>
+<li>必须使用支持 Thunderbolt 5 的线缆</li>
+<li>Mac Studio 上不能使用网口旁边的 Thunderbolt 5 端口</li>
+<li>从源码运行时，使用 <code>tmp/set_rdma_network_config.sh</code> 配置网络</li>
+<li>所有设备的 macOS 版本必须完全一致（包括 beta 版本号）</li>
+</ul>
+<h2 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h2><p>exo 支持通过环境变量进行灵活配置：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>EXO_DEFAULT_MODELS_DIR</code></td>
+<td>模型下载和缓存的默认目录</td>
+<td><code>~/.local/share/exo/models</code>（Linux）<br><code>~/.exo/models</code>（macOS）</td>
+</tr>
+<tr>
+<td><code>EXO_MODELS_DIRS</code></td>
+<td>额外的可写模型目录（冒号分隔）</td>
+<td>无</td>
+</tr>
+<tr>
+<td><code>EXO_MODELS_READ_ONLY_DIRS</code></td>
+<td>只读模型目录（如 NFS 挂载）</td>
+<td>无</td>
+</tr>
+<tr>
+<td><code>EXO_OFFLINE</code></td>
+<td>离线模式，仅使用本地模型</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>EXO_ENABLE_IMAGE_MODELS</code></td>
+<td>启用图像模型支持</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>EXO_LIBP2P_NAMESPACE</code></td>
+<td>自定义集群命名空间（用于隔离）</td>
+<td>无</td>
+</tr>
+<tr>
+<td><code>EXO_FAST_SYNCH</code></td>
+<td>控制 MLX_METAL_FAST_SYNCH 行为</td>
+<td>自动</td>
+</tr>
+</tbody></table>
+<p><strong>使用示例：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 使用 NFS 上的预下载模型（只读）</span>
+<span class="token assign-left variable">EXO_MODELS_READ_ONLY_DIRS</span><span class="token operator">=</span>/mnt/nfs/models:/opt/ai-models uv run exo
+
+<span class="token comment"># 下载模型到外置 SSD</span>
+<span class="token assign-left variable">EXO_MODELS_DIRS</span><span class="token operator">=</span>/Volumes/ExternalSSD/exo-models uv run exo
+
+<span class="token comment"># 离线模式</span>
+<span class="token assign-left variable">EXO_OFFLINE</span><span class="token operator">=</span>true uv run exo
+
+<span class="token comment"># 启用图像模型</span>
+<span class="token assign-left variable">EXO_ENABLE_IMAGE_MODELS</span><span class="token operator">=</span>true uv run exo
+
+<span class="token comment"># 使用自定义命名空间隔离集群</span>
+<span class="token assign-left variable">EXO_LIBP2P_NAMESPACE</span><span class="token operator">=</span>my-dev-cluster uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="API-使用方法"><a href="#API-使用方法" class="headerlink" title="API 使用方法"></a>API 使用方法</h2><p>exo 启动后在 <code>http://localhost:52415</code> 提供服务。以下是完整的使用流程：</p>
+<h3 id="第一步：预览模型部署方案"><a href="#第一步：预览模型部署方案" class="headerlink" title="第一步：预览模型部署方案"></a>第一步：预览模型部署方案</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token string">"http://localhost:52415/instance/previews?model_id=llama-3.2-1b"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>返回所有可行的部署方案，包括分片策略、所需内存等：</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"previews"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"model_id"</span><span class="token operator">:</span> <span class="token string">"mlx-community/Llama-3.2-1B-Instruct-4bit"</span><span class="token punctuation">,</span>
+      <span class="token property">"sharding"</span><span class="token operator">:</span> <span class="token string">"Pipeline"</span><span class="token punctuation">,</span>
+      <span class="token property">"instance_meta"</span><span class="token operator">:</span> <span class="token string">"MlxRing"</span><span class="token punctuation">,</span>
+      <span class="token property">"memory_delta_by_node"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token property">"local"</span><span class="token operator">:</span> <span class="token number">729808896</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="第二步：创建模型实例"><a href="#第二步：创建模型实例" class="headerlink" title="第二步：创建模型实例"></a>第二步：创建模型实例</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-X</span> POST http://localhost:52415/instance <span class="token punctuation">\</span>
+  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">-d</span> <span class="token string">'{"instance": {...}}'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="第三步：发送推理请求"><a href="#第三步：发送推理请求" class="headerlink" title="第三步：发送推理请求"></a>第三步：发送推理请求</h3><p><strong>OpenAI 格式：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-N</span> <span class="token parameter variable">-X</span> POST http://localhost:52415/v1/chat/completions <span class="token punctuation">\</span>
+  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">-d</span> <span class="token string">'{
+    "model": "mlx-community/Llama-3.2-1B-Instruct-4bit",
+    "messages": [
+      {"role": "user", "content": "什么是 Llama 3.2 1B？"}
+    ],
+    "stream": true
+  }'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Claude 格式：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-N</span> <span class="token parameter variable">-X</span> POST http://localhost:52415/v1/messages <span class="token punctuation">\</span>
+  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">-d</span> <span class="token string">'{
+    "model": "mlx-community/Llama-3.2-1B-Instruct-4bit",
+    "messages": [
+      {"role": "user", "content": "你好"}
+    ],
+    "max_tokens": 1024,
+    "stream": true
+  }'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Ollama 格式（兼容 OpenWebUI 等工具）：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-X</span> POST http://localhost:52415/ollama/api/chat <span class="token punctuation">\</span>
+  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">-d</span> <span class="token string">'{
+    "model": "mlx-community/Llama-3.2-1B-Instruct-4bit",
+    "messages": [
+      {"role": "user", "content": "你好"}
+    ],
+    "stream": false
+  }'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="第四步：删除模型实例"><a href="#第四步：删除模型实例" class="headerlink" title="第四步：删除模型实例"></a>第四步：删除模型实例</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-X</span> DELETE http://localhost:52415/instance/YOUR_INSTANCE_ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="加载自定义模型"><a href="#加载自定义模型" class="headerlink" title="加载自定义模型"></a>加载自定义模型</h3><p>支持从 HuggingFace 加载任意模型：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-X</span> POST http://localhost:52415/models/add <span class="token punctuation">\</span>
+  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">-d</span> <span class="token string">'{"model_id": "mlx-community/my-custom-model"}'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="其他有用的-API-端点"><a href="#其他有用的-API-端点" class="headerlink" title="其他有用的 API 端点"></a>其他有用的 API 端点</h3><ul>
+<li>列出所有模型：<code>curl http://localhost:52415/models</code></li>
+<li>仅列出已下载模型：<code>curl http://localhost:52415/models?status=downloaded</code></li>
+<li>搜索 HuggingFace：<code>curl "http://localhost:52415/models/search?query=llama&amp;limit=10"</code></li>
+<li>查看实例状态：<code>curl http://localhost:52415/state</code></li>
+</ul>
+<h2 id="性能基准测试"><a href="#性能基准测试" class="headerlink" title="性能基准测试"></a>性能基准测试</h2><p>exo 内置了 <code>exo-bench</code> 工具用于性能测试：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">uv run bench/exo_bench.py <span class="token punctuation">\</span>
+  <span class="token parameter variable">--model</span> Llama-3.2-1B-Instruct-4bit <span class="token punctuation">\</span>
+  <span class="token parameter variable">--pp</span> <span class="token number">128,256</span>,512 <span class="token punctuation">\</span>
+  <span class="token parameter variable">--tg</span> <span class="token number">128,256</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>主要参数：</strong></p>
+<ul>
+<li><code>--model</code>：要测试的模型</li>
+<li><code>--pp</code>：Prompt 长度提示（逗号分隔）</li>
+<li><code>--tg</code>：生成长度（逗号分隔）</li>
+<li><code>--max-nodes</code>：限制使用节点数（默认 4）</li>
+<li><code>--sharding</code>：分片方式过滤（<code>pipeline</code>/<code>tensor</code>/<code>both</code>）</li>
+<li><code>--repeat</code>：每个配置重复次数（默认 1）</li>
+</ul>
+<p>输出包括 Prompt Tokens/s、生成 Tokens/s 和峰值内存使用量。</p>
+<h2 id="典型使用场景"><a href="#典型使用场景" class="headerlink" title="典型使用场景"></a>典型使用场景</h2><p><strong>场景一：个人开发者</strong><br>一台 MacBook Pro + 一台 Mac Mini，通过 Thunderbolt 连接，可以运行 70B 级别的量化模型，速度比单机快近一倍。</p>
+<p><strong>场景二：小型团队</strong><br>4 台 Mac Studio 组成集群，拥有 2TB 统一内存，足以运行 DeepSeek v3.1（671B）等超大模型，完全本地化，无需云服务费用。</p>
+<p><strong>场景三：混合环境</strong><br>几台不同型号的 Mac/Linux 机器在同一网络中，exo 自动发现并合理分配模型分片，充分利用每台设备的算力。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>exo 的出现让”家庭/小团队 AI 集群”成为现实。它的核心优势在于：</p>
 <ol>
-<li>选择对应的 Provider</li>
-<li>粘贴 API Key</li>
-<li>选择默认模型（如 <code>deepseek-chat</code> 或 <code>gpt-3.5-turbo</code>）</li>
+<li><strong>零配置</strong>：设备自动发现，开箱即用</li>
+<li><strong>高性能</strong>：Thunderbolt RDMA 将设备间延迟降到微秒级</li>
+<li><strong>智能调度</strong>：自动分析拓扑，选择最优并行策略</li>
+<li><strong>广泛兼容</strong>：支持 OpenAI/Claude/Ollama 等多种 API</li>
+<li><strong>完全开源</strong>：Apache 2.0 协议，可自由使用和修改</li>
 </ol>
-<h3 id="启动-Hermes"><a href="#启动-Hermes" class="headerlink" title="启动 Hermes"></a>启动 Hermes</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hermes<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>看到欢迎界面，说明安装成功！</p>
-<hr>
-<h2 id="六、常见问题与解决方案"><a href="#六、常见问题与解决方案" class="headerlink" title="六、常见问题与解决方案"></a>六、常见问题与解决方案</h2><h3 id="Q1-wsl-install-只显示帮助信息，不安装"><a href="#Q1-wsl-install-只显示帮助信息，不安装" class="headerlink" title="Q1: wsl --install 只显示帮助信息，不安装"></a>Q1: <code>wsl --install</code> 只显示帮助信息，不安装</h3><p><strong>原因</strong>：Windows 版本过旧，不支持该简化命令。</p>
-<p><strong>解决</strong>：下载 GitHub 上的 <code>.msi</code> 安装包手动安装，或使用离线 <code>.wsl</code> 文件方式。</p>
-<h3 id="Q2-安装-Ubuntu-时提示-WININET-E-TIMEOUT"><a href="#Q2-安装-Ubuntu-时提示-WININET-E-TIMEOUT" class="headerlink" title="Q2: 安装 Ubuntu 时提示 WININET_E_TIMEOUT"></a>Q2: 安装 Ubuntu 时提示 WININET_E_TIMEOUT</h3><p><strong>原因</strong>：国内网络访问 <code>raw.githubusercontent.com</code> 超时。</p>
-<p><strong>解决</strong>：改用 Microsoft Store 或离线 <code>.wsl</code> 文件安装。</p>
-<h3 id="Q3-Microsoft-Store-打开一直转圈"><a href="#Q3-Microsoft-Store-打开一直转圈" class="headerlink" title="Q3: Microsoft Store 打开一直转圈"></a>Q3: Microsoft Store 打开一直转圈</h3><p><strong>解决步骤</strong>：</p>
-<ol>
-<li>按 <code>Win + R</code>，输入 <code>wsreset.exe</code>，回车等待</li>
-<li>打开”Internet 选项” → “高级” → 确保 TLS 1.0/1.1/1.2/1.3 全部勾选</li>
-<li>设置 → 应用 → Microsoft Store → 高级选项 → 点击”修复”</li>
-</ol>
-<h3 id="Q4-Ubuntu-终端打开后是黑屏或无响应"><a href="#Q4-Ubuntu-终端打开后是黑屏或无响应" class="headerlink" title="Q4: Ubuntu 终端打开后是黑屏或无响应"></a>Q4: Ubuntu 终端打开后是黑屏或无响应</h3><p><strong>解决</strong>：</p>
-<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token comment"># 在 PowerShell 中执行</span>
-wsl <span class="token operator">--</span>shutdown
-wsl<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="Q5-hermes-命令找不到"><a href="#Q5-hermes-命令找不到" class="headerlink" title="Q5: hermes 命令找不到"></a>Q5: <code>hermes</code> 命令找不到</h3><p><strong>解决</strong>：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 重新加载环境变量</span>
-<span class="token builtin class-name">source</span> ~/.bashrc
-
-<span class="token comment"># 或手动添加 PATH</span>
-<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">"<span class="token environment constant">$PATH</span>:~/.local/bin"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="Q6-模型名称显示为空"><a href="#Q6-模型名称显示为空" class="headerlink" title="Q6: 模型名称显示为空"></a>Q6: 模型名称显示为空</h3><p><strong>解决</strong>：在 Hermes 对话界面中输入 <code>/model</code> 命令，手动选择或输入模型名称。</p>
-<h3 id="Q7-Docker-方案安装慢"><a href="#Q7-Docker-方案安装慢" class="headerlink" title="Q7: Docker 方案安装慢"></a>Q7: Docker 方案安装慢</h3><p><strong>加速方法</strong>：配置 Docker 镜像加速器，或使用国内镜像地址：</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">docker.xuanyuan.run/nousresearch/hermes-agent<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<hr>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>以上就是 Hermes Agent 在 Windows 上的完整安装流程。虽然步骤稍多，但按文档操作应该能顺利完成。</p>
-<p>如果遇到本文未覆盖的问题，欢迎在评论区留言交流。</p>
-<h3 id="快速命令汇总（复制可用）"><a href="#快速命令汇总（复制可用）" class="headerlink" title="快速命令汇总（复制可用）"></a>快速命令汇总（复制可用）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Ubuntu 终端中执行</span>
-<span class="token function">sudo</span> <span class="token function">apt</span> update <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> python3 python3-pip <span class="token function">curl</span> <span class="token function">wget</span> <span class="token function">git</span> <span class="token parameter variable">-y</span>
-<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh <span class="token operator">|</span> <span class="token function">bash</span>
-<span class="token builtin class-name">source</span> ~/.bashrc
-hermes setup
-hermes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>祝你使用愉快！</p>
+<p>如果你手边有多台 Mac 或 Linux 机器，强烈推荐尝试 exo——几行命令就能将它们变成一个强大的 AI 推理集群。</p>
 
                 
             </div>
@@ -628,7 +739,7 @@ hermes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zz3656.github.io/2026/05/03/hermes-agent-windows-an-zhuang-zhi-nan-cong-ling-dao-yi-wan-zheng-jiao-cheng/">https://zz3656.github.io/2026/05/03/hermes-agent-windows-an-zhuang-zhi-nan-cong-ling-dao-yi-wan-zheng-jiao-cheng/</a>
+                    <a href="https://zz3656.github.io/2026/05/03/exo-jiang-duo-tai-she-bei-zu-cheng-ai-tui-li-ji-qun-de-wan-zheng-zhi-nan/">https://zz3656.github.io/2026/05/03/exo-jiang-duo-tai-she-bei-zu-cheng-ai-tui-li-ji-qun-de-wan-zheng-zhi-nan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -666,12 +777,16 @@ hermes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hermes/">
-                                    <span class="chip bg-color">Hermes</span>
+                                <a href="/tags/exo/">
+                                    <span class="chip bg-color">exo</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%99%E7%A8%8B/">
-                                    <span class="chip bg-color">教程</span>
+                                <a href="/tags/AI%E9%9B%86%E7%BE%A4/">
+                                    <span class="chip bg-color">AI集群</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%8E%A8%E7%90%86/">
+                                    <span class="chip bg-color">分布式推理</span>
                                 </a>
                             
                         </div>
@@ -750,9 +865,10 @@ hermes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2026/05/03/exo-jiang-duo-tai-she-bei-zu-cheng-ai-tui-li-ji-qun-de-wan-zheng-zhi-nan/">
                     <div class="card-image">
@@ -770,9 +886,9 @@ hermes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -785,6 +901,7 @@ hermes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -811,13 +928,13 @@ hermes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/05/02/wo-de-yi-sheng-04-chang-qiao-zhen-yi-zhong/">
+                <a href="/2026/05/03/hermes-agent-windows-an-zhuang-zhi-nan-cong-ling-dao-yi-wan-zheng-jiao-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="我的一生（四）长桥镇一中">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Hermes Agent Windows 安装指南：从零到一完整教程">
                         
-                        <span class="card-title">我的一生（四）长桥镇一中</span>
+                        <span class="card-title">Hermes Agent Windows 安装指南：从零到一完整教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -828,14 +945,14 @@ hermes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
+                            <a href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" class="post-category">
+                                    技术教程
                                 </a>
                             
                             
@@ -845,16 +962,12 @@ hermes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%80%E7%94%9F/">
-                        <span class="chip bg-color">我的一生</span>
+                    <a href="/tags/Hermes/">
+                        <span class="chip bg-color">Hermes</span>
                     </a>
                     
-                    <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/">
-                        <span class="chip bg-color">回忆录</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%88%9D%E4%B8%AD%E7%AF%87/">
-                        <span class="chip bg-color">初中篇</span>
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
                     </a>
                     
                 </div>

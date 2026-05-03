@@ -10,25 +10,24 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-05-03T15:03:17.957Z</updated>
+  <updated>2026-05-03T18:07:46.471Z</updated>
   <entry>
     <author>
       <name>因特吧</name>
     </author>
-    <category term="前沿技术" scheme="https://zz3656.github.io/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/"/>
-    <category term="GitHub" scheme="https://zz3656.github.io/tags/GitHub/"/>
+    <category term="技术分享" scheme="https://zz3656.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     <category term="开源" scheme="https://zz3656.github.io/tags/%E5%BC%80%E6%BA%90/"/>
-    <category term="热门项目" scheme="https://zz3656.github.io/tags/%E7%83%AD%E9%97%A8%E9%A1%B9%E7%9B%AE/"/>
-    <id>https://zz3656.github.io/2026/05/03/github-mei-ri-re-men-kai-yuan-xiang-mu-su-bao-2026-nian-05-yue-03-ri/</id>
-    <link href="https://zz3656.github.io/2026/05/03/github-mei-ri-re-men-kai-yuan-xiang-mu-su-bao-2026-nian-05-yue-03-ri/"/>
-    <published>2026-05-03T15:00:00.000Z</published>
+    <category term="GitHub" scheme="https://zz3656.github.io/tags/GitHub/"/>
+    <category term="trending" scheme="https://zz3656.github.io/tags/trending/"/>
+    <id>https://zz3656.github.io/2026/05/04/github-weekly-top10-2026-05-04/</id>
+    <link href="https://zz3656.github.io/2026/05/04/github-weekly-top10-2026-05-04/"/>
+    <published>2026-05-04T15:00:00.000Z</published>
     <summary>
-      <![CDATA[<p>每天为你精选 GitHub 上最值得关注的开源项目，今天带来两个榜单：<strong>综合热度 Top 10</strong> 和 <strong>星标飙升最快 Top 10</strong>。</p>
-<hr>
-<h2 id="榜单一：综合热度-Top-10"><a]]>
+      <![CDATA[<p>本周 GitHub 开源圈火力全开：AI 编码工具持续爆发，设计类项目异军突起，安全研究也引发广泛关注。以下是本周两个榜单的 TOP 10。</p>
+<h2 id="🔥-榜单一：本周热门新项目-TOP-10"><a]]>
     </summary>
-    <title>GitHub 每日热门开源项目速报（2026年05月03日）</title>
-    <updated>2026-05-03T15:03:17.957Z</updated>
+    <title>GitHub 每周热门开源项目 TOP 10（2026年05月04日）</title>
+    <updated>2026-05-03T18:07:46.471Z</updated>
   </entry>
   <entry>
     <author>
@@ -204,9 +203,9 @@
       <name>因特吧</name>
     </author>
     <category term="前沿技术" scheme="https://zz3656.github.io/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/"/>
-    <category term="开源" scheme="https://zz3656.github.io/tags/%E5%BC%80%E6%BA%90/"/>
     <category term="AI-Agent" scheme="https://zz3656.github.io/tags/AI-Agent/"/>
     <category term="智能体" scheme="https://zz3656.github.io/tags/%E6%99%BA%E8%83%BD%E4%BD%93/"/>
+    <category term="开源" scheme="https://zz3656.github.io/tags/%E5%BC%80%E6%BA%90/"/>
     <id>https://zz3656.github.io/2026/05/01/hermes-agent-vs-openclaw-shen-du-heng-ping/</id>
     <link href="https://zz3656.github.io/2026/05/01/hermes-agent-vs-openclaw-shen-du-heng-ping/"/>
     <published>2026-04-30T18:10:00.000Z</published>

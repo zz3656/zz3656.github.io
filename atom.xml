@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-05-03T01:18:12.033Z</updated>
+  <updated>2026-05-03T13:02:54.613Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="Hermes" scheme="https://zz3656.github.io/tags/Hermes/"/>
+    <category term="AI学习" scheme="https://zz3656.github.io/tags/AI%E5%AD%A6%E4%B9%A0/"/>
+    <category term="Agent" scheme="https://zz3656.github.io/tags/Agent/"/>
+    <id>https://zz3656.github.io/2026/05/03/xiao-ma-xue-xi-bao-gao-2026-05-03/</id>
+    <link href="https://zz3656.github.io/2026/05/03/xiao-ma-xue-xi-bao-gao-2026-05-03/"/>
+    <published>2026-05-03T13:02:18.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="🐴-小马的全天学习报告"><a href="#🐴-小马的全天学习报告" class="headerlink" title="🐴 小马的全天学习报告"></a>🐴 小马的全天学习报告</h1><blockquote>
+<p>今日一句话总结：从”装上]]>
+    </summary>
+    <title>小马学习报告 2026-05-03</title>
+    <updated>2026-05-03T13:02:54.613Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>
@@ -331,23 +348,5 @@
     </summary>
     <title>千问3.6生成前后对比</title>
     <updated>2026-04-29T23:48:04.897Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="前沿技术" scheme="https://zz3656.github.io/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/"/>
-    <category term="AI" scheme="https://zz3656.github.io/tags/AI/"/>
-    <category term="大模型" scheme="https://zz3656.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    <category term="GPT" scheme="https://zz3656.github.io/tags/GPT/"/>
-    <id>https://zz3656.github.io/2026/04/29/ai-da-mo-xing-zui-xin-jin-zhan-pan-dian/</id>
-    <link href="https://zz3656.github.io/2026/04/29/ai-da-mo-xing-zui-xin-jin-zhan-pan-dian/"/>
-    <published>2026-04-29T15:40:00.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>人工智能领域在近两年迎来了爆发式增长，大语言模型（LLM）技术日新月异。本文将盘点当前 AI 大模型的最新进展与趋势。</p>
-<h2]]>
-    </summary>
-    <title>AI 大模型最新进展盘点</title>
-    <updated>2026-04-29T19:11:32.805Z</updated>
   </entry>
 </feed>

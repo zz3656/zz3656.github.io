@@ -10,7 +10,23 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-05-03T18:18:42.961Z</updated>
+  <updated>2026-05-04T22:54:05.236Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="Cloudflare" scheme="https://zz3656.github.io/tags/Cloudflare/"/>
+    <category term="邮箱服务" scheme="https://zz3656.github.io/tags/%E9%82%AE%E7%AE%B1%E6%9C%8D%E5%8A%A1/"/>
+    <category term="教程" scheme="https://zz3656.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    <id>https://zz3656.github.io/2026/05/05/cloud-mail-ji-yu-cloudflare-de-mian-fei-you-xiang-fu-wu-bu-shu-zhi-nan/</id>
+    <link href="https://zz3656.github.io/2026/05/05/cloud-mail-ji-yu-cloudflare-de-mian-fei-you-xiang-fu-wu-bu-shu-zhi-nan/"/>
+    <published>2026-05-04T20:10:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="📧-Cloud-Mail：基于-Cloudflare-的免费邮箱服务部署指南"><a href="#📧-Cloud-Mail：基于-Cloudflare-的免费邮箱服务部署指南" class="headerlink" title="📧 Cloud]]>
+    </summary>
+    <title>Cloud Mail基于Cloudflare的免费邮箱服务部署指南</title>
+    <updated>2026-05-04T22:54:05.236Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>
@@ -329,22 +345,5 @@
     </summary>
     <title>Hermes Agent：能自我进化的AI智能体完全指南</title>
     <updated>2026-04-30T16:17:11.762Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="技术教程" scheme="https://zz3656.github.io/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
-    <category term="Multipass" scheme="https://zz3656.github.io/tags/Multipass/"/>
-    <category term="Ubuntu" scheme="https://zz3656.github.io/tags/Ubuntu/"/>
-    <category term="虚拟机" scheme="https://zz3656.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    <id>https://zz3656.github.io/2026/04/30/multipass-ru-men-zhi-nan/</id>
-    <link href="https://zz3656.github.io/2026/04/30/multipass-ru-men-zhi-nan/"/>
-    <published>2026-04-29T21:30:00.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="什么是-Multipass"><a href="#什么是-Multipass" class="headerlink" title="什么是 Multipass"></a>什么是 Multipass</h2><p>Multipass 是由]]>
-    </summary>
-    <title>Multipass 使用完全指南：本地 Ubuntu 虚拟化管理利器</title>
-    <updated>2026-04-29T21:14:39.607Z</updated>
   </entry>
 </feed>

@@ -4,9 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="exo：将多台设备组成AI推理集群的完整指南, blog,hexo">
-    <meta name="description" content="什么是 exo？exo 是一个由 exo labs 维护的开源项目（Apache 2.0 协议），它的核心理念非常简单但强大：把你所有的设备连接起来，组成一个统一的 AI 推理集群。
-不管你手上有 MacBook、Linux 服务器、还是其">
+    <meta name="keywords" content="Cloud Mail基于Cloudflare的免费邮箱服务部署指南, blog,hexo">
+    <meta name="description" content="📧 Cloud Mail：基于 Cloudflare 的免费邮箱服务部署指南
+只需要一个域名，就能搭建自己的邮箱平台，支持多用户、多邮箱、收发附件，部署在 Cloudflare Workers 上几乎零成本。
+
+
+一、项目简介Cloud ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>exo：将多台设备组成AI推理集群的完整指南 | 因特吧</title>
+    <title>Cloud Mail基于Cloudflare的免费邮箱服务部署指南 | 因特吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -316,12 +319,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">exo：将多台设备组成AI推理集群的完整指南</h1>
+                    <h1 class="description center-align post-title">Cloud Mail基于Cloudflare的免费邮箱服务部署指南</h1>
                 </div>
             </div>
         </div>
@@ -345,31 +348,22 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/exo/">
-                                <span class="chip bg-color">exo</span>
+                            <a href="/tags/Cloudflare/">
+                                <span class="chip bg-color">Cloudflare</span>
                             </a>
                         
-                            <a href="/tags/AI%E9%9B%86%E7%BE%A4/">
-                                <span class="chip bg-color">AI集群</span>
+                            <a href="/tags/%E9%82%AE%E7%AE%B1%E6%9C%8D%E5%8A%A1/">
+                                <span class="chip bg-color">邮箱服务</span>
                             </a>
                         
-                            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%8E%A8%E7%90%86/">
-                                <span class="chip bg-color">分布式推理</span>
+                            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                <span class="chip bg-color">教程</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/" class="post-category">
-                                前沿技术
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -378,21 +372,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-05-03
+                    2026-05-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-05-03
+                    2026-05-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.2k
                 </div>
                 
 
@@ -422,297 +416,428 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="什么是-exo？"><a href="#什么是-exo？" class="headerlink" title="什么是 exo？"></a>什么是 exo？</h2><p>exo 是一个由 <a target="_blank" rel="noopener" href="https://x.com/exolabs">exo labs</a> 维护的开源项目（Apache 2.0 协议），它的核心理念非常简单但强大：<strong>把你所有的设备连接起来，组成一个统一的 AI 推理集群</strong>。</p>
-<p>不管你手上有 MacBook、Linux 服务器、还是其他设备，只要装上 exo，它们就能自动发现彼此，协同运行大语言模型。这意味着你可以运行单个设备放不下的大模型——比如用 4 台 Mac Studio 跑 671B 参数的 DeepSeek v3.1。</p>
-<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/exo-explore/exo">https://github.com/exo-explore/exo</a></p>
-<h2 id="核心特性"><a href="#核心特性" class="headerlink" title="核心特性"></a>核心特性</h2><h3 id="1-自动设备发现"><a href="#1-自动设备发现" class="headerlink" title="1. 自动设备发现"></a>1. 自动设备发现</h3><p>运行 exo 的设备会自动在局域网内发现彼此，无需任何手动配置。你不需要写配置文件，不需要指定 IP 地址，启动就能用。</p>
-<h3 id="2-Thunderbolt-RDMA-支持"><a href="#2-Thunderbolt-RDMA-支持" class="headerlink" title="2. Thunderbolt RDMA 支持"></a>2. Thunderbolt RDMA 支持</h3><p>exo 是首个支持 Thunderbolt 5 RDMA（远程直接内存访问）的 AI 推理框架。通过 Thunderbolt 5 连接设备，可以将设备间延迟降低 99%。这意味着添加更多设备不仅增加了显存，还真正加快了推理速度。</p>
-<h3 id="3-拓扑感知的自动并行"><a href="#3-拓扑感知的自动并行" class="headerlink" title="3. 拓扑感知的自动并行"></a>3. 拓扑感知的自动并行</h3><p>exo 会实时分析你的设备拓扑——每台设备的算力、内存，以及设备间的网络延迟和带宽——然后自动决定如何最优地拆分模型。你不需要手动配置流水线并行还是张量并行，exo 帮你搞定。</p>
-<h3 id="4-张量并行（Tensor-Parallelism）"><a href="#4-张量并行（Tensor-Parallelism）" class="headerlink" title="4. 张量并行（Tensor Parallelism）"></a>4. 张量并行（Tensor Parallelism）</h3><p>支持将模型张量切分到多台设备上并行计算。实测效果：</p>
-<ul>
-<li>2 台设备：最高 1.8 倍加速</li>
-<li>4 台设备：最高 3.2 倍加速</li>
-</ul>
-<h3 id="5-多种-API-兼容"><a href="#5-多种-API-兼容" class="headerlink" title="5. 多种 API 兼容"></a>5. 多种 API 兼容</h3><p>exo 同时兼容以下 API 格式，可以直接对接你现有的工具：</p>
-<ul>
-<li>OpenAI Chat Completions API</li>
-<li>Claude Messages API</li>
-<li>OpenAI Responses API</li>
-<li>Ollama API</li>
-</ul>
-<h3 id="6-内置-Web-仪表盘"><a href="#6-内置-Web-仪表盘" class="headerlink" title="6. 内置 Web 仪表盘"></a>6. 内置 Web 仪表盘</h3><p>提供图形化的集群管理界面，可以查看集群状态、加载模型、进行对话测试。</p>
-<h2 id="实测性能"><a href="#实测性能" class="headerlink" title="实测性能"></a>实测性能</h2><p>以下是 Jeff Geerling 使用 4 台 M3 Ultra Mac Studio（每台 512GB 统一内存）的测试结果：</p>
-<table>
-<thead>
-<tr>
-<th>模型</th>
-<th>精度</th>
-<th>总参数</th>
-<th>配置</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Qwen3-235B</td>
-<td>8-bit</td>
-<td>235B</td>
-<td>4×M3 Ultra + RDMA</td>
-</tr>
-<tr>
-<td>DeepSeek v3.1</td>
-<td>8-bit</td>
-<td>671B</td>
-<td>4×M3 Ultra + RDMA</td>
-</tr>
-<tr>
-<td>Kimi K2 Thinking</td>
-<td>4-bit</td>
-<td>-</td>
-<td>4×M3 Ultra + RDMA</td>
-</tr>
-</tbody></table>
-<p>4 台 Mac Studio 总计拥有约 2TB 的统一内存，足以加载和运行这些超大模型。</p>
-<h2 id="安装部署"><a href="#安装部署" class="headerlink" title="安装部署"></a>安装部署</h2><h3 id="macOS-安装（从源码）"><a href="#macOS-安装（从源码）" class="headerlink" title="macOS 安装（从源码）"></a>macOS 安装（从源码）</h3><p><strong>前置条件：</strong></p>
-<ol>
-<li>安装 Xcode（提供 MLX 编译所需的 Metal 工具链）</li>
-<li>安装 Homebrew：</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/bin/bash <span class="token parameter variable">-c</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="3">
-<li>安装 uv 和 Node.js：</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew <span class="token function">install</span> uv <span class="token function">node</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="4">
-<li>安装 Rust nightly：</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">--proto</span> <span class="token string">'=https'</span> <span class="token parameter variable">--tlsv1.2</span> <span class="token parameter variable">-sSf</span> https://sh.rustup.rs <span class="token operator">|</span> <span class="token function">sh</span>
-rustup toolchain <span class="token function">install</span> nightly<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<ol start="5">
-<li>安装 macmon（Apple Silicon 硬件监控）：</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cargo</span> <span class="token function">install</span> <span class="token parameter variable">--git</span> https://github.com/vladkens/macmon <span class="token punctuation">\</span>
-  <span class="token parameter variable">--rev</span> a1cd06b6cc0d5e61db24fd8832e74cd992097a7d <span class="token punctuation">\</span>
-  macmon <span class="token parameter variable">--force</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>克隆并运行：</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/exo-explore/exo
-<span class="token builtin class-name">cd</span> exo/dashboard <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> run build <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>
-uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>启动后访问 <code>http://localhost:52415/</code> 即可打开仪表盘。</p>
-<blockquote>
-<p>如果你使用 Nix，可以直接运行 <code>nix run .#exo</code>，跳过大部分安装步骤。</p>
+                <h1 id="📧-Cloud-Mail：基于-Cloudflare-的免费邮箱服务部署指南"><a href="#📧-Cloud-Mail：基于-Cloudflare-的免费邮箱服务部署指南" class="headerlink" title="📧 Cloud Mail：基于 Cloudflare 的免费邮箱服务部署指南"></a>📧 Cloud Mail：基于 Cloudflare 的免费邮箱服务部署指南</h1><blockquote>
+<p>只需要一个域名，就能搭建自己的邮箱平台，支持多用户、多邮箱、收发附件，部署在 Cloudflare Workers 上几乎零成本。</p>
 </blockquote>
-<h3 id="macOS-App-方式"><a href="#macOS-App-方式" class="headerlink" title="macOS App 方式"></a>macOS App 方式</h3><p>如果你不想折腾命令行，exo 还提供了 macOS 桌面应用，会在后台运行。</p>
+<hr>
+<h2 id="一、项目简介"><a href="#一、项目简介" class="headerlink" title="一、项目简介"></a>一、项目简介</h2><p><strong>Cloud Mail</strong> 是一个开源的邮箱服务系统，部署在 Cloudflare Workers 上，核心特点：</p>
 <ul>
-<li>下载地址：<a target="_blank" rel="noopener" href="https://assets.exolabs.net/EXO-latest.dmg">EXO-latest.dmg</a></li>
-<li>系统要求：macOS Tahoe 26.2 或更高版本</li>
-<li>首次运行会请求系统权限和网络配置</li>
+<li>💰 <strong>低成本</strong> — 基于 Cloudflare Workers，免费额度基本够用</li>
+<li>📧 <strong>邮件收发</strong> — 接收邮件通过 Cloudflare Email Routing，发送邮件通过 Resend</li>
+<li>📦 <strong>附件支持</strong> — 使用 R2 对象存储保存和下载附件</li>
+<li>🛡️ <strong>管理后台</strong> — 用户管理、邮件管理、RBAC 权限控制</li>
+<li>🔀 <strong>多号模式</strong> — 一个用户可以添加多个邮箱地址</li>
+<li>🎨 <strong>个性化</strong> — 自定义网站标题、登录背景、透明度</li>
+<li>🤖 <strong>人机验证</strong> — 集成 Turnstile 防止批量注册</li>
 </ul>
-<p>卸载方法：点击菜单栏图标 → Advanced → Uninstall。</p>
-<h3 id="Linux-安装"><a href="#Linux-安装" class="headerlink" title="Linux 安装"></a>Linux 安装</h3><p><strong>前置条件：</strong></p>
-<ul>
-<li>uv（Python 依赖管理）</li>
-<li>Node.js 18+（构建仪表盘）</li>
-<li>Rust nightly（编译 Rust 绑定）</li>
-</ul>
-<p><strong>Ubuntu/Debian 安装依赖：</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
-<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> nodejs <span class="token function">npm</span>
-
-<span class="token comment"># 安装 uv</span>
-<span class="token function">curl</span> <span class="token parameter variable">-LsSf</span> https://astral.sh/uv/install.sh <span class="token operator">|</span> <span class="token function">sh</span>
-
-<span class="token comment"># 安装 Rust</span>
-<span class="token function">curl</span> <span class="token parameter variable">--proto</span> <span class="token string">'=https'</span> <span class="token parameter variable">--tlsv1.2</span> <span class="token parameter variable">-sSf</span> https://sh.rustup.rs <span class="token operator">|</span> <span class="token function">sh</span>
-rustup toolchain <span class="token function">install</span> nightly<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>克隆并运行：</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/exo-explore/exo
-<span class="token builtin class-name">cd</span> exo/dashboard <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> run build <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>
-uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>重要提示：</strong> 目前 exo 在 Linux 上仅支持 CPU 推理，GPU 支持正在开发中。</p>
-<p>Linux 上的文件存放位置遵循 XDG 规范：</p>
-<ul>
-<li>配置文件：<code>~/.config/exo/</code></li>
-<li>数据文件：<code>~/.local/share/exo/</code></li>
-<li>缓存文件：<code>~/.cache/exo/</code></li>
-<li>日志文件：<code>~/.cache/exo/exo_log/</code></li>
-</ul>
-<h2 id="启用-RDMA（Thunderbolt-5）"><a href="#启用-RDMA（Thunderbolt-5）" class="headerlink" title="启用 RDMA（Thunderbolt 5）"></a>启用 RDMA（Thunderbolt 5）</h2><p>RDMA 是 exo 的杀手级特性，但需要在 macOS 中手动开启。操作步骤：</p>
-<ol>
-<li>关机</li>
-<li>长按电源键 10 秒，进入启动菜单</li>
-<li>选择 “Options” 进入恢复模式</li>
-<li>在恢复模式的终端中执行：</li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">rdma_ctl enable<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="5">
-<li>重启</li>
-</ol>
-<p><strong>注意事项：</strong></p>
-<ul>
-<li>RDMA 集群中的每台设备都必须与所有其他设备直连</li>
-<li>必须使用支持 Thunderbolt 5 的线缆</li>
-<li>Mac Studio 上不能使用网口旁边的 Thunderbolt 5 端口</li>
-<li>从源码运行时，使用 <code>tmp/set_rdma_network_config.sh</code> 配置网络</li>
-<li>所有设备的 macOS 版本必须完全一致（包括 beta 版本号）</li>
-</ul>
-<h2 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h2><p>exo 支持通过环境变量进行灵活配置：</p>
-<table>
+<p><strong>GitHub 仓库</strong>：<a target="_blank" rel="noopener" href="https://github.com/maillab/cloud-mail">https://github.com/maillab/cloud-mail</a></p>
+<p><strong>在线文档</strong>：<a target="_blank" rel="noopener" href="https://doc.skymail.ink/">https://doc.skymail.ink/</a></p>
+<hr>
+<h2 id="二、前提条件"><a href="#二、前提条件" class="headerlink" title="二、前提条件"></a>二、前提条件</h2><table>
 <thead>
 <tr>
-<th>变量</th>
+<th>条件</th>
 <th>说明</th>
-<th>默认值</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>EXO_DEFAULT_MODELS_DIR</code></td>
-<td>模型下载和缓存的默认目录</td>
-<td><code>~/.local/share/exo/models</code>（Linux）<br><code>~/.exo/models</code>（macOS）</td>
+<td>一个域名</td>
+<td>已接入 Cloudflare（NS 托管）</td>
 </tr>
 <tr>
-<td><code>EXO_MODELS_DIRS</code></td>
-<td>额外的可写模型目录（冒号分隔）</td>
-<td>无</td>
+<td>Cloudflare 账号</td>
+<td>免费账号即可</td>
 </tr>
 <tr>
-<td><code>EXO_MODELS_READ_ONLY_DIRS</code></td>
-<td>只读模型目录（如 NFS 挂载）</td>
-<td>无</td>
-</tr>
-<tr>
-<td><code>EXO_OFFLINE</code></td>
-<td>离线模式，仅使用本地模型</td>
-<td><code>false</code></td>
-</tr>
-<tr>
-<td><code>EXO_ENABLE_IMAGE_MODELS</code></td>
-<td>启用图像模型支持</td>
-<td><code>false</code></td>
-</tr>
-<tr>
-<td><code>EXO_LIBP2P_NAMESPACE</code></td>
-<td>自定义集群命名空间（用于隔离）</td>
-<td>无</td>
-</tr>
-<tr>
-<td><code>EXO_FAST_SYNCH</code></td>
-<td>控制 MLX_METAL_FAST_SYNCH 行为</td>
-<td>自动</td>
+<td>（可选）GitHub 账号</td>
+<td>用于 Fork 仓库和 Actions 部署</td>
 </tr>
 </tbody></table>
-<p><strong>使用示例：</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 使用 NFS 上的预下载模型（只读）</span>
-<span class="token assign-left variable">EXO_MODELS_READ_ONLY_DIRS</span><span class="token operator">=</span>/mnt/nfs/models:/opt/ai-models uv run exo
+<hr>
+<h2 id="三、三种部署方式对比"><a href="#三、三种部署方式对比" class="headerlink" title="三、三种部署方式对比"></a>三、三种部署方式对比</h2><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>难度</th>
+<th>自动更新</th>
+<th>适合人群</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>界面部署</strong></td>
+<td>⭐ 最简单</td>
+<td>✅ 同步后自动</td>
+<td>新手推荐</td>
+</tr>
+<tr>
+<td><strong>Action 部署</strong></td>
+<td>⭐⭐ 中等</td>
+<td>✅ 同步后自动</td>
+<td>想全自动管理</td>
+</tr>
+<tr>
+<td><strong>命令部署</strong></td>
+<td>⭐⭐⭐ 较难</td>
+<td>❌ 手动</td>
+<td>开发者</td>
+</tr>
+</tbody></table>
+<p>下面分别介绍三种方式。</p>
+<hr>
+<h2 id="四、方式一：界面部署（推荐新手）"><a href="#四、方式一：界面部署（推荐新手）" class="headerlink" title="四、方式一：界面部署（推荐新手）"></a>四、方式一：界面部署（推荐新手）</h2><h3 id="Step-1：Fork-仓库"><a href="#Step-1：Fork-仓库" class="headerlink" title="Step 1：Fork 仓库"></a>Step 1：Fork 仓库</h3><p>在 GitHub 上 Fork 项目仓库：</p>
+<pre class="line-numbers language-none"><code class="language-none">https://github.com/maillab/cloud-mail<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<span class="token comment"># 下载模型到外置 SSD</span>
-<span class="token assign-left variable">EXO_MODELS_DIRS</span><span class="token operator">=</span>/Volumes/ExternalSSD/exo-models uv run exo
-
-<span class="token comment"># 离线模式</span>
-<span class="token assign-left variable">EXO_OFFLINE</span><span class="token operator">=</span>true uv run exo
-
-<span class="token comment"># 启用图像模型</span>
-<span class="token assign-left variable">EXO_ENABLE_IMAGE_MODELS</span><span class="token operator">=</span>true uv run exo
-
-<span class="token comment"># 使用自定义命名空间隔离集群</span>
-<span class="token assign-left variable">EXO_LIBP2P_NAMESPACE</span><span class="token operator">=</span>my-dev-cluster uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="API-使用方法"><a href="#API-使用方法" class="headerlink" title="API 使用方法"></a>API 使用方法</h2><p>exo 启动后在 <code>http://localhost:52415</code> 提供服务。以下是完整的使用流程：</p>
-<h3 id="第一步：预览模型部署方案"><a href="#第一步：预览模型部署方案" class="headerlink" title="第一步：预览模型部署方案"></a>第一步：预览模型部署方案</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token string">"http://localhost:52415/instance/previews?model_id=llama-3.2-1b"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>返回所有可行的部署方案，包括分片策略、所需内存等：</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
-  <span class="token property">"previews"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-      <span class="token property">"model_id"</span><span class="token operator">:</span> <span class="token string">"mlx-community/Llama-3.2-1B-Instruct-4bit"</span><span class="token punctuation">,</span>
-      <span class="token property">"sharding"</span><span class="token operator">:</span> <span class="token string">"Pipeline"</span><span class="token punctuation">,</span>
-      <span class="token property">"instance_meta"</span><span class="token operator">:</span> <span class="token string">"MlxRing"</span><span class="token punctuation">,</span>
-      <span class="token property">"memory_delta_by_node"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token property">"local"</span><span class="token operator">:</span> <span class="token number">729808896</span><span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">]</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="第二步：创建模型实例"><a href="#第二步：创建模型实例" class="headerlink" title="第二步：创建模型实例"></a>第二步：创建模型实例</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-X</span> POST http://localhost:52415/instance <span class="token punctuation">\</span>
-  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
-  <span class="token parameter variable">-d</span> <span class="token string">'{"instance": {...}}'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="第三步：发送推理请求"><a href="#第三步：发送推理请求" class="headerlink" title="第三步：发送推理请求"></a>第三步：发送推理请求</h3><p><strong>OpenAI 格式：</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-N</span> <span class="token parameter variable">-X</span> POST http://localhost:52415/v1/chat/completions <span class="token punctuation">\</span>
-  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
-  <span class="token parameter variable">-d</span> <span class="token string">'{
-    "model": "mlx-community/Llama-3.2-1B-Instruct-4bit",
-    "messages": [
-      {"role": "user", "content": "什么是 Llama 3.2 1B？"}
-    ],
-    "stream": true
-  }'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>Claude 格式：</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-N</span> <span class="token parameter variable">-X</span> POST http://localhost:52415/v1/messages <span class="token punctuation">\</span>
-  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
-  <span class="token parameter variable">-d</span> <span class="token string">'{
-    "model": "mlx-community/Llama-3.2-1B-Instruct-4bit",
-    "messages": [
-      {"role": "user", "content": "你好"}
-    ],
-    "max_tokens": 1024,
-    "stream": true
-  }'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>Ollama 格式（兼容 OpenWebUI 等工具）：</strong></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-X</span> POST http://localhost:52415/ollama/api/chat <span class="token punctuation">\</span>
-  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
-  <span class="token parameter variable">-d</span> <span class="token string">'{
-    "model": "mlx-community/Llama-3.2-1B-Instruct-4bit",
-    "messages": [
-      {"role": "user", "content": "你好"}
-    ],
-    "stream": false
-  }'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="第四步：删除模型实例"><a href="#第四步：删除模型实例" class="headerlink" title="第四步：删除模型实例"></a>第四步：删除模型实例</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-X</span> DELETE http://localhost:52415/instance/YOUR_INSTANCE_ID<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="加载自定义模型"><a href="#加载自定义模型" class="headerlink" title="加载自定义模型"></a>加载自定义模型</h3><p>支持从 HuggingFace 加载任意模型：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-X</span> POST http://localhost:52415/models/add <span class="token punctuation">\</span>
-  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
-  <span class="token parameter variable">-d</span> <span class="token string">'{"model_id": "mlx-community/my-custom-model"}'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="其他有用的-API-端点"><a href="#其他有用的-API-端点" class="headerlink" title="其他有用的 API 端点"></a>其他有用的 API 端点</h3><ul>
-<li>列出所有模型：<code>curl http://localhost:52415/models</code></li>
-<li>仅列出已下载模型：<code>curl http://localhost:52415/models?status=downloaded</code></li>
-<li>搜索 HuggingFace：<code>curl "http://localhost:52415/models/search?query=llama&amp;limit=10"</code></li>
-<li>查看实例状态：<code>curl http://localhost:52415/state</code></li>
-</ul>
-<h2 id="性能基准测试"><a href="#性能基准测试" class="headerlink" title="性能基准测试"></a>性能基准测试</h2><p>exo 内置了 <code>exo-bench</code> 工具用于性能测试：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">uv run bench/exo_bench.py <span class="token punctuation">\</span>
-  <span class="token parameter variable">--model</span> Llama-3.2-1B-Instruct-4bit <span class="token punctuation">\</span>
-  <span class="token parameter variable">--pp</span> <span class="token number">128,256</span>,512 <span class="token punctuation">\</span>
-  <span class="token parameter variable">--tg</span> <span class="token number">128,256</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>主要参数：</strong></p>
-<ul>
-<li><code>--model</code>：要测试的模型</li>
-<li><code>--pp</code>：Prompt 长度提示（逗号分隔）</li>
-<li><code>--tg</code>：生成长度（逗号分隔）</li>
-<li><code>--max-nodes</code>：限制使用节点数（默认 4）</li>
-<li><code>--sharding</code>：分片方式过滤（<code>pipeline</code>/<code>tensor</code>/<code>both</code>）</li>
-<li><code>--repeat</code>：每个配置重复次数（默认 1）</li>
-</ul>
-<p>输出包括 Prompt Tokens/s、生成 Tokens/s 和峰值内存使用量。</p>
-<h2 id="典型使用场景"><a href="#典型使用场景" class="headerlink" title="典型使用场景"></a>典型使用场景</h2><p><strong>场景一：个人开发者</strong><br>一台 MacBook Pro + 一台 Mac Mini，通过 Thunderbolt 连接，可以运行 70B 级别的量化模型，速度比单机快近一倍。</p>
-<p><strong>场景二：小型团队</strong><br>4 台 Mac Studio 组成集群，拥有 2TB 统一内存，足以运行 DeepSeek v3.1（671B）等超大模型，完全本地化，无需云服务费用。</p>
-<p><strong>场景三：混合环境</strong><br>几台不同型号的 Mac/Linux 机器在同一网络中，exo 自动发现并合理分配模型分片，充分利用每台设备的算力。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>exo 的出现让”家庭/小团队 AI 集群”成为现实。它的核心优势在于：</p>
-<ol>
-<li><strong>零配置</strong>：设备自动发现，开箱即用</li>
-<li><strong>高性能</strong>：Thunderbolt RDMA 将设备间延迟降到微秒级</li>
-<li><strong>智能调度</strong>：自动分析拓扑，选择最优并行策略</li>
-<li><strong>广泛兼容</strong>：支持 OpenAI/Claude/Ollama 等多种 API</li>
-<li><strong>完全开源</strong>：Apache 2.0 协议，可自由使用和修改</li>
+<h3 id="Step-2：创建-Worker-项目"><a href="#Step-2：创建-Worker-项目" class="headerlink" title="Step 2：创建 Worker 项目"></a>Step 2：创建 Worker 项目</h3><ol>
+<li>登录 <a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">Cloudflare Dashboard</a></li>
+<li>进入 <strong>Workers &amp; Pages</strong> → <strong>创建</strong></li>
+<li>选择 <strong>连接到 Git</strong></li>
+<li>选择你 Fork 的 <code>cloud-mail</code> 仓库</li>
+<li><strong>设置目录</strong>为 <code>mail-worker</code>（重要！）</li>
+<li>点击 <strong>保存并部署</strong></li>
 </ol>
-<p>如果你手边有多台 Mac 或 Linux 机器，强烈推荐尝试 exo——几行命令就能将它们变成一个强大的 AI 推理集群。</p>
+<h3 id="Step-3：设置环境变量"><a href="#Step-3：设置环境变量" class="headerlink" title="Step 3：设置环境变量"></a>Step 3：设置环境变量</h3><p>在 Worker → <strong>设置</strong> → <strong>变量和机密</strong> 中添加：</p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>必需</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>domain</code></td>
+<td>✅</td>
+<td>邮箱域名，多域名用 JSON 数组</td>
+<td><code>["inte8.top"]</code></td>
+</tr>
+<tr>
+<td><code>admin</code></td>
+<td>✅</td>
+<td>管理员邮箱地址</td>
+<td><code>admin@inte8.top</code></td>
+</tr>
+<tr>
+<td><code>jwt_secret</code></td>
+<td>✅</td>
+<td>JWT 密钥（随机字符串，不要特殊字符）</td>
+<td><code>mys3cr3tk3y2026</code></td>
+</tr>
+<tr>
+<td><code>project_link</code></td>
+<td>❌</td>
+<td>是否显示项目链接</td>
+<td><code>true</code> 或 <code>false</code></td>
+</tr>
+</tbody></table>
+<h3 id="Step-4：绑定数据库"><a href="#Step-4：绑定数据库" class="headerlink" title="Step 4：绑定数据库"></a>Step 4：绑定数据库</h3><ol>
+<li>在 Cloudflare 控制台创建 <strong>KV</strong> 命名空间</li>
+<li>创建 <strong>D1</strong> 数据库</li>
+<li>回到 Worker → <strong>设置</strong> → <strong>绑定</strong>，添加：<ul>
+<li><strong>D1 绑定</strong>：变量名 <code>db</code>（必须是这个名字）</li>
+<li><strong>KV 绑定</strong>：变量名 <code>kv</code>（必须是这个名字）</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>⚠️ 绑定变量名必须是 <code>db</code> 和 <code>kv</code>，不能改成其他名字，否则 Worker 无法运行。</p>
+</blockquote>
+<h3 id="Step-5：设置自定义域名"><a href="#Step-5：设置自定义域名" class="headerlink" title="Step 5：设置自定义域名"></a>Step 5：设置自定义域名</h3><p>在 Worker → <strong>设置</strong> → <strong>域和路由</strong> → <strong>自定义域</strong> 中绑定你的域名（如 <code>mail.inte8.top</code>）。</p>
+<h3 id="Step-6：初始化数据库"><a href="#Step-6：初始化数据库" class="headerlink" title="Step 6：初始化数据库"></a>Step 6：初始化数据库</h3><p>浏览器访问以下地址初始化数据库：</p>
+<pre class="line-numbers language-none"><code class="language-none">https://你的Worker自定义域/api/init/你的jwt_secret<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">https://mail.inte8.top/api/init/mys3cr3tk3y2026<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>看到成功提示即可。</p>
+<h3 id="Step-7：设置邮件路由（关键步骤）"><a href="#Step-7：设置邮件路由（关键步骤）" class="headerlink" title="Step 7：设置邮件路由（关键步骤）"></a>Step 7：设置邮件路由（关键步骤）</h3><p>这是让邮箱能收到邮件的核心配置。</p>
+<ol>
+<li>Cloudflare Dashboard → <strong>你的域名</strong> → <strong>Email</strong> → <strong>Email Routing</strong></li>
+<li>如果首次使用，点击 <strong>Get started</strong> 启用 Email Routing（会自动添加 MX 和 TXT 记录）</li>
+<li>进入 <strong>Routing rules</strong> 页面</li>
+<li>页面底部找到 <strong>Catch-all address</strong> 区域</li>
+<li>点击 <strong>Edit</strong>（编辑）</li>
+<li><strong>Action</strong> 选择 <strong>Send to a Worker</strong>（发送到 Worker）</li>
+<li><strong>Destination</strong> 下拉选择你的 <code>cloud-mail</code> Worker</li>
+<li>点击 <strong>Save</strong></li>
+</ol>
+<blockquote>
+<p>💡 Catch-all 的作用是将 <code>*@你的域名.com</code>（任意前缀）的邮件全部转发给 Worker 处理，这样每个用户注册的不同邮箱地址都能收到邮件。</p>
+</blockquote>
+<p><strong>如果找不到 Catch-all 编辑入口</strong>，替代方式：</p>
+<ol>
+<li>在 Email Routing 页面 → <strong>Email Workers</strong> tab</li>
+<li>找到你的 <code>cloud-mail</code> Worker</li>
+<li>点击 Worker 卡片上的 <strong>route</strong> 字段展开</li>
+<li>点 <strong>Create route</strong>（创建路由）</li>
+<li>路由地址填 <code>*@你的域名.com</code>（如 <code>*@inte8.top</code>）</li>
+<li>Destination 选 cloud-mail Worker</li>
+<li>保存</li>
+</ol>
+<h3 id="Step-8：注册管理员"><a href="#Step-8：注册管理员" class="headerlink" title="Step 8：注册管理员"></a>Step 8：注册管理员</h3><p>浏览器访问你的自定义域名（如 <code>https://mail.inte8.top</code>），用 <code>admin@你的域名</code> 注册账号，登录即可 🎉</p>
+<hr>
+<h2 id="五、方式二：GitHub-Actions-部署"><a href="#五、方式二：GitHub-Actions-部署" class="headerlink" title="五、方式二：GitHub Actions 部署"></a>五、方式二：GitHub Actions 部署</h2><p>适合想全自动化管理的用户，代码更新后自动重新部署。</p>
+<h3 id="Step-1：创建-Cloudflare-API-令牌"><a href="#Step-1：创建-Cloudflare-API-令牌" class="headerlink" title="Step 1：创建 Cloudflare API 令牌"></a>Step 1：创建 Cloudflare API 令牌</h3><ol>
+<li>Cloudflare → <strong>我的个人资料</strong> → <strong>API 令牌</strong> → <strong>创建令牌</strong></li>
+<li>选择 <strong>Custom token</strong> 或使用模板，确保有以下权限：<ul>
+<li><code>Account - Workers Scripts - Edit</code></li>
+<li><code>Account - D1 - Edit</code></li>
+<li><code>Account - Workers KV Storage - Edit</code></li>
+<li><code>Zone - Workers Routes - Edit</code></li>
+</ul>
+</li>
+<li>复制 <strong>API 令牌</strong></li>
+<li>复制 <strong>账户 ID</strong>（在 Cloudflare 首页右侧栏）</li>
+</ol>
+<h3 id="Step-2：Fork-仓库并配置-Secrets"><a href="#Step-2：Fork-仓库并配置-Secrets" class="headerlink" title="Step 2：Fork 仓库并配置 Secrets"></a>Step 2：Fork 仓库并配置 Secrets</h3><p>Fork <a target="_blank" rel="noopener" href="https://github.com/maillab/cloud-mail">https://github.com/maillab/cloud-mail</a></p>
+<p>在 GitHub 仓库 → <strong>Settings</strong> → <strong>Secrets and variables</strong> → <strong>Actions</strong> 中添加：</p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>必需</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>CLOUDFLARE_API_TOKEN</code></td>
+<td>✅</td>
+<td>Cloudflare API 令牌</td>
+</tr>
+<tr>
+<td><code>CLOUDFLARE_ACCOUNT_ID</code></td>
+<td>✅</td>
+<td>Cloudflare 账户 ID</td>
+</tr>
+<tr>
+<td><code>CUSTOM_DOMAIN</code></td>
+<td>✅</td>
+<td>访问网站的域名，如 <code>mail.inte8.top</code></td>
+</tr>
+<tr>
+<td><code>DOMAIN</code></td>
+<td>✅</td>
+<td>邮箱域名，如 <code>["inte8.top"]</code></td>
+</tr>
+<tr>
+<td><code>ADMIN</code></td>
+<td>✅</td>
+<td>管理员邮箱，如 <code>admin@inte8.top</code></td>
+</tr>
+<tr>
+<td><code>JWT_SECRET</code></td>
+<td>✅</td>
+<td>JWT 密钥字符串</td>
+</tr>
+<tr>
+<td><code>NAME</code></td>
+<td>❌</td>
+<td>Worker 项目名，默认 <code>cloud-mail</code></td>
+</tr>
+<tr>
+<td><code>D1_DATABASE_ID</code></td>
+<td>❌</td>
+<td>已有的 D1 数据库 ID</td>
+</tr>
+<tr>
+<td><code>KV_NAMESPACE_ID</code></td>
+<td>❌</td>
+<td>已有的 KV 命名空间 ID</td>
+</tr>
+<tr>
+<td><code>PROJECT_LINK</code></td>
+<td>❌</td>
+<td><code>true</code> 或 <code>false</code></td>
+</tr>
+</tbody></table>
+<h3 id="Step-3：运行工作流"><a href="#Step-3：运行工作流" class="headerlink" title="Step 3：运行工作流"></a>Step 3：运行工作流</h3><ol>
+<li>进入 GitHub 仓库 → <strong>Actions</strong> 页面</li>
+<li>选择部署工作流，点击 <strong>Run workflow</strong></li>
+<li>等待运行完成</li>
+</ol>
+<h3 id="Step-4：设置邮件路由"><a href="#Step-4：设置邮件路由" class="headerlink" title="Step 4：设置邮件路由"></a>Step 4：设置邮件路由</h3><p>同界面部署的 Step 7（Email Routing → Catch-all → Send to Worker）</p>
+<h3 id="Step-5：注册管理员"><a href="#Step-5：注册管理员" class="headerlink" title="Step 5：注册管理员"></a>Step 5：注册管理员</h3><p>访问自定义域名，注册管理员账号 🎉</p>
+<blockquote>
+<p>💡 后续更新只需同步 Fork 到最新代码，GitHub Action 自动重新部署。</p>
+</blockquote>
+<hr>
+<h2 id="六、方式三：命令行部署"><a href="#六、方式三：命令行部署" class="headerlink" title="六、方式三：命令行部署"></a>六、方式三：命令行部署</h2><p>适合开发者，完全本地控制。</p>
+<h3 id="Step-1：克隆项目"><a href="#Step-1：克隆项目" class="headerlink" title="Step 1：克隆项目"></a>Step 1：克隆项目</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/maillab/cloud-mail
+<span class="token builtin class-name">cd</span> cloud-mail/mail-worker
+<span class="token function">pnpm</span> i<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>需要 Node.js v20+ 和 pnpm。</p>
+</blockquote>
+<h3 id="Step-2：在-Cloudflare-创建资源"><a href="#Step-2：在-Cloudflare-创建资源" class="headerlink" title="Step 2：在 Cloudflare 创建资源"></a>Step 2：在 Cloudflare 创建资源</h3><p>在 Cloudflare 控制台分别创建：</p>
+<ul>
+<li><strong>KV</strong> 命名空间</li>
+<li><strong>D1</strong> 数据库</li>
+<li>（可选）<strong>R2</strong> 存储桶（用于附件存储）</li>
+</ul>
+<p>记录各自的 ID。</p>
+<h3 id="Step-3：编辑-wrangler-toml"><a href="#Step-3：编辑-wrangler-toml" class="headerlink" title="Step 3：编辑 wrangler.toml"></a>Step 3：编辑 <code>wrangler.toml</code></h3><p>编辑 <code>mail-worker/wrangler.toml</code>：</p>
+<pre class="line-numbers language-toml" data-language="toml"><code class="language-toml"><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token table class-name">d1_databases</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token key property">binding</span> <span class="token punctuation">=</span> <span class="token string">"db"</span>              <span class="token comment"># 不可修改</span>
+<span class="token key property">database_name</span> <span class="token punctuation">=</span> <span class="token string">"你的D1名字"</span>
+<span class="token key property">database_id</span> <span class="token punctuation">=</span> <span class="token string">"你的D1数据库ID"</span>
+
+<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token table class-name">kv_namespaces</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token key property">binding</span> <span class="token punctuation">=</span> <span class="token string">"kv"</span>              <span class="token comment"># 不可修改</span>
+<span class="token key property">id</span> <span class="token punctuation">=</span> <span class="token string">"你的KV命名空间ID"</span>
+
+<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token table class-name">r2_buckets</span><span class="token punctuation">]</span><span class="token punctuation">]</span>              <span class="token comment"># 可选，附件存储</span>
+<span class="token key property">binding</span> <span class="token punctuation">=</span> <span class="token string">"r2"</span>              <span class="token comment"># 不可修改</span>
+<span class="token key property">bucket_name</span> <span class="token punctuation">=</span> <span class="token string">"你的R2桶名"</span>
+
+<span class="token punctuation">[</span><span class="token table class-name">assets</span><span class="token punctuation">]</span>
+<span class="token key property">binding</span> <span class="token punctuation">=</span> <span class="token string">"assets"</span>          <span class="token comment"># 不可修改</span>
+<span class="token key property">directory</span> <span class="token punctuation">=</span> <span class="token string">"./dist"</span>
+
+<span class="token punctuation">[</span><span class="token table class-name">triggers</span><span class="token punctuation">]</span>
+<span class="token key property">crons</span> <span class="token punctuation">=</span> <span class="token punctuation">[</span><span class="token string">"0 16 * * *"</span><span class="token punctuation">]</span>     <span class="token comment"># 定时任务（UTC时间）</span>
+
+<span class="token punctuation">[</span><span class="token table class-name">vars</span><span class="token punctuation">]</span>
+<span class="token key property">orm_log</span> <span class="token punctuation">=</span> <span class="token boolean">false</span>
+<span class="token key property">domain</span> <span class="token punctuation">=</span> <span class="token punctuation">[</span><span class="token string">"inte8.top"</span><span class="token punctuation">]</span>     <span class="token comment"># 邮箱域名</span>
+<span class="token key property">admin</span> <span class="token punctuation">=</span> <span class="token string">"admin@inte8.top"</span>  <span class="token comment"># 管理员邮箱</span>
+<span class="token key property">jwt_secret</span> <span class="token punctuation">=</span> <span class="token string">"你的密钥字符串"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Step-4：部署"><a href="#Step-4：部署" class="headerlink" title="Step 4：部署"></a>Step 4：部署</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">pnpm</span> run deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="Step-5：设置邮件路由-初始化数据库"><a href="#Step-5：设置邮件路由-初始化数据库" class="headerlink" title="Step 5：设置邮件路由 + 初始化数据库"></a>Step 5：设置邮件路由 + 初始化数据库</h3><p>同前两种方式的对应步骤。</p>
+<hr>
+<h2 id="七、可选增强功能"><a href="#七、可选增强功能" class="headerlink" title="七、可选增强功能"></a>七、可选增强功能</h2><h3 id="7-1-邮件发送（Resend）"><a href="#7-1-邮件发送（Resend）" class="headerlink" title="7.1 邮件发送（Resend）"></a>7.1 邮件发送（Resend）</h3><blockquote>
+<p>⚠️ Cloudflare 封禁了 25 端口，不支持直接发件，需要用第三方服务。</p>
+</blockquote>
+<ol>
+<li>注册 <a target="_blank" rel="noopener" href="https://resend.com/">Resend</a>，添加你的域名并完成 DNS 验证</li>
+<li>创建 API Key 并复制</li>
+<li>设置发送状态回调地址：<code>https://你的Worker域/api/webhooks</code></li>
+<li>在 Cloud Mail 后台 → <strong>系统设置</strong> 中填入 Resend API Key</li>
+</ol>
+<p>Resend 免费额度：每天 100 封，个人使用足够。</p>
+<h3 id="7-2-对象存储（R2）"><a href="#7-2-对象存储（R2）" class="headerlink" title="7.2 对象存储（R2）"></a>7.2 对象存储（R2）</h3><p>默认附件用 KV 存储，可切换为 R2（免费 10GB）：</p>
+<ol>
+<li>Cloudflare → <strong>R2</strong> → 创建存储桶</li>
+<li>设置自定义域名</li>
+<li>Action 部署添加 Secret <code>R2_BUCKET_NAME</code></li>
+<li>后台系统设置切换存储方式</li>
+</ol>
+<h3 id="7-3-人机验证（Turnstile）"><a href="#7-3-人机验证（Turnstile）" class="headerlink" title="7.3 人机验证（Turnstile）"></a>7.3 人机验证（Turnstile）</h3><p>防止机器人批量注册：</p>
+<ol>
+<li>Cloudflare → <strong>Turnstile</strong> → 创建组件</li>
+<li>获取 Site Key 和 Secret Key</li>
+<li>后台系统设置填入</li>
+</ol>
+<h3 id="7-4-邮件转发到-Telegram"><a href="#7-4-邮件转发到-Telegram" class="headerlink" title="7.4 邮件转发到 Telegram"></a>7.4 邮件转发到 Telegram</h3><p>收到邮件时自动通知到 TG：</p>
+<ol>
+<li>找 @BotFather 创建 Bot，复制 Token</li>
+<li>给 Bot 发一条消息</li>
+<li>浏览器访问获取 chat_id：<pre class="line-numbers language-none"><code class="language-none">https://api.telegram.org/bot你的Token/getUpdates<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>后台系统设置填入 Token 和 chat_id</li>
+</ol>
+<h3 id="7-5-LinuxDo-第三方登录"><a href="#7-5-LinuxDo-第三方登录" class="headerlink" title="7.5 LinuxDo 第三方登录"></a>7.5 LinuxDo 第三方登录</h3><p>在 Worker 变量或 Action Secrets 中添加：</p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>linuxdo_client_id</code></td>
+<td>LinuxDo Client ID</td>
+</tr>
+<tr>
+<td><code>linuxdo_client_secret</code></td>
+<td>LinuxDo Client Secret</td>
+</tr>
+<tr>
+<td><code>linuxdo_callback_url</code></td>
+<td>回调地址：<code>https://你的域名/login</code></td>
+</tr>
+<tr>
+<td><code>linuxdo_switch</code></td>
+<td><code>true</code> 开启，<code>false</code> 关闭</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="八、项目更新"><a href="#八、项目更新" class="headerlink" title="八、项目更新"></a>八、项目更新</h2><table>
+<thead>
+<tr>
+<th>部署方式</th>
+<th>更新方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Action 部署</strong></td>
+<td>同步 Fork 代码到最新，Action 自动部署</td>
+</tr>
+<tr>
+<td><strong>界面部署</strong></td>
+<td>同步代码后 Worker 自动更新，但<strong>需要重新绑定 D1 和 KV</strong></td>
+</tr>
+<tr>
+<td><strong>命令部署</strong></td>
+<td><code>git pull</code> + <code>pnpm run deploy</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>⚠️ 所有更新后都要执行一次初始化地址来更新数据库结构（不会覆盖已有数据）：</p>
+<pre class="line-numbers language-none"><code class="language-none">https://你的Worker域/api/init/你的jwt_secret<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></blockquote>
+<hr>
+<h2 id="九、费用估算"><a href="#九、费用估算" class="headerlink" title="九、费用估算"></a>九、费用估算</h2><table>
+<thead>
+<tr>
+<th>资源</th>
+<th>Cloudflare 免费额度</th>
+<th>超出价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Workers</td>
+<td>10 万次请求/天</td>
+<td>$0.50/百万次</td>
+</tr>
+<tr>
+<td>D1 数据库</td>
+<td>5GB 存储 + 500 万读/天</td>
+<td>按量计费</td>
+</tr>
+<tr>
+<td>KV 存储</td>
+<td>10 万读/天 + 1GB</td>
+<td>按量计费</td>
+</tr>
+<tr>
+<td>R2 存储</td>
+<td>10GB 存储 + 100 万写/月</td>
+<td>$0.015/GB/月</td>
+</tr>
+<tr>
+<td>Resend 发件</td>
+<td>100 封/天（免费）</td>
+<td>按量计费</td>
+</tr>
+</tbody></table>
+<p><strong>个人使用基本零成本</strong> 🎉</p>
+<hr>
+<h2 id="十、常见问题"><a href="#十、常见问题" class="headerlink" title="十、常见问题"></a>十、常见问题</h2><p><strong>Q：Cloudflare 不支持发件怎么办？</strong></p>
+<p>A：Cloudflare 封禁了 25 端口，发件只能走第三方。推荐 Resend（免费 100 封/天），在后台系统设置中配置 API Key 即可。</p>
+<p><strong>Q：收不到邮件？</strong></p>
+<p>A：检查以下几点：</p>
+<ol>
+<li>域名的 MX 记录是否正确指向 Cloudflare（Email Routing 启用后自动添加）</li>
+<li>Catch-all 路由是否指向了你的 Worker</li>
+<li>Worker 是否正常运行（检查 Dashboard 中的日志）</li>
+</ol>
+<p><strong>Q：多域名怎么配置？</strong></p>
+<p>A：<code>domain</code> 变量支持 JSON 数组：<code>["domain1.com", "domain2.com"]</code>，每个域名都需要在 Cloudflare 中配置 Email Routing。</p>
+<p><strong>Q：D1 和 KV 的绑定名能改吗？</strong></p>
+<p>A：不能。D1 必须绑定为 <code>db</code>，KV 必须绑定为 <code>kv</code>，这是代码中硬编码的。</p>
+<hr>
+<p><em>参考文档：<a target="_blank" rel="noopener" href="https://doc.skymail.ink/">Cloud Mail 官方文档</a> · <a target="_blank" rel="noopener" href="https://github.com/maillab/cloud-mail">GitHub 仓库</a></em></p>
 
                 
             </div>
@@ -739,7 +864,7 @@ uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zz3656.github.io/2026/05/03/exo-jiang-duo-tai-she-bei-zu-cheng-ai-tui-li-ji-qun-de-wan-zheng-zhi-nan/">https://zz3656.github.io/2026/05/03/exo-jiang-duo-tai-she-bei-zu-cheng-ai-tui-li-ji-qun-de-wan-zheng-zhi-nan/</a>
+                    <a href="https://zz3656.github.io/2026/05/05/cloud-mail-ji-yu-cloudflare-de-mian-fei-you-xiang-fu-wu-bu-shu-zhi-nan/">https://zz3656.github.io/2026/05/05/cloud-mail-ji-yu-cloudflare-de-mian-fei-you-xiang-fu-wu-bu-shu-zhi-nan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -777,16 +902,16 @@ uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/exo/">
-                                    <span class="chip bg-color">exo</span>
+                                <a href="/tags/Cloudflare/">
+                                    <span class="chip bg-color">Cloudflare</span>
                                 </a>
                             
-                                <a href="/tags/AI%E9%9B%86%E7%BE%A4/">
-                                    <span class="chip bg-color">AI集群</span>
+                                <a href="/tags/%E9%82%AE%E7%AE%B1%E6%9C%8D%E5%8A%A1/">
+                                    <span class="chip bg-color">邮箱服务</span>
                                 </a>
                             
-                                <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%8E%A8%E7%90%86/">
-                                    <span class="chip bg-color">分布式推理</span>
+                                <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                    <span class="chip bg-color">教程</span>
                                 </a>
                             
                         </div>
@@ -865,17 +990,18 @@ uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2026/05/03/xiao-ma-xue-xi-bao-gao-2026-05-03/">
+                <a href="/2026/05/05/cloud-mail-ji-yu-cloudflare-de-mian-fei-you-xiang-fu-wu-bu-shu-zhi-nan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="小马学习报告 2026-05-03">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Cloud Mail基于Cloudflare的免费邮箱服务部署指南">
                         
-                        <span class="card-title">小马学习报告 2026-05-03</span>
+                        <span class="card-title">Cloud Mail基于Cloudflare的免费邮箱服务部署指南</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -885,9 +1011,9 @@ uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -896,19 +1022,20 @@ uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hermes/">
-                        <span class="chip bg-color">Hermes</span>
+                    <a href="/tags/Cloudflare/">
+                        <span class="chip bg-color">Cloudflare</span>
                     </a>
                     
-                    <a href="/tags/AI%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">AI学习</span>
+                    <a href="/tags/%E9%82%AE%E7%AE%B1%E6%9C%8D%E5%8A%A1/">
+                        <span class="chip bg-color">邮箱服务</span>
                     </a>
                     
-                    <a href="/tags/Agent/">
-                        <span class="chip bg-color">Agent</span>
+                    <a href="/tags/%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">教程</span>
                     </a>
                     
                 </div>
@@ -922,13 +1049,13 @@ uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/05/03/hermes-agent-windows-an-zhuang-zhi-nan-cong-ling-dao-yi-wan-zheng-jiao-cheng/">
+                <a href="/2026/05/04/github-weekly-top10-2026-05-04/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Hermes Agent Windows 安装指南：从零到一完整教程">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="GitHub 每周热门开源项目 TOP 10（2026年05月04日）">
                         
-                        <span class="card-title">Hermes Agent Windows 安装指南：从零到一完整教程</span>
+                        <span class="card-title">GitHub 每周热门开源项目 TOP 10（2026年05月04日）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -939,14 +1066,14 @@ uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" class="post-category">
-                                    技术教程
+                            <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" class="post-category">
+                                    技术分享
                                 </a>
                             
                             
@@ -956,12 +1083,16 @@ uv run exo<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hermes/">
-                        <span class="chip bg-color">Hermes</span>
+                    <a href="/tags/%E5%BC%80%E6%BA%90/">
+                        <span class="chip bg-color">开源</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">教程</span>
+                    <a href="/tags/GitHub/">
+                        <span class="chip bg-color">GitHub</span>
+                    </a>
+                    
+                    <a href="/tags/trending/">
+                        <span class="chip bg-color">trending</span>
                     </a>
                     
                 </div>

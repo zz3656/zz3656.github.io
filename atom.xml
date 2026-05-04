@@ -35,6 +35,22 @@
     </author>
     <category term="Hermes" scheme="https://zz3656.github.io/tags/Hermes/"/>
     <category term="AI学习" scheme="https://zz3656.github.io/tags/AI%E5%AD%A6%E4%B9%A0/"/>
+    <category term="安全防护" scheme="https://zz3656.github.io/tags/%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4/"/>
+    <id>https://zz3656.github.io/2026/05/04/xiao-ma-xue-xi-bao-gao-2026-05-04/</id>
+    <link href="https://zz3656.github.io/2026/05/04/xiao-ma-xue-xi-bao-gao-2026-05-04/"/>
+    <published>2026-05-04T13:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="🐴-小马的全天学习报告"><a href="#🐴-小马的全天学习报告" class="headerlink" title="🐴 小马的全天学习报告"></a>🐴]]>
+    </summary>
+    <title>小马学习报告 2026-05-04</title>
+    <updated>2026-05-04T13:04:56.990Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="Hermes" scheme="https://zz3656.github.io/tags/Hermes/"/>
+    <category term="AI学习" scheme="https://zz3656.github.io/tags/AI%E5%AD%A6%E4%B9%A0/"/>
     <category term="Agent" scheme="https://zz3656.github.io/tags/Agent/"/>
     <id>https://zz3656.github.io/2026/05/03/xiao-ma-xue-xi-bao-gao-2026-05-03/</id>
     <link href="https://zz3656.github.io/2026/05/03/xiao-ma-xue-xi-bao-gao-2026-05-03/"/>
@@ -302,8 +318,8 @@
       <name>因特吧</name>
     </author>
     <category term="编程开发" scheme="https://zz3656.github.io/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    <category term="Hermes" scheme="https://zz3656.github.io/tags/Hermes/"/>
     <category term="AI" scheme="https://zz3656.github.io/tags/AI/"/>
+    <category term="Hermes" scheme="https://zz3656.github.io/tags/Hermes/"/>
     <category term="智能体" scheme="https://zz3656.github.io/tags/%E6%99%BA%E8%83%BD%E4%BD%93/"/>
     <id>https://zz3656.github.io/2026/04/30/hermes-agent-zi-wo-jin-hua-ai-zhi-neng-ti-wan-quan-zhi-nan/</id>
     <link href="https://zz3656.github.io/2026/04/30/hermes-agent-zi-wo-jin-hua-ai-zhi-neng-ti-wan-quan-zhi-nan/"/>
@@ -330,22 +346,5 @@
     </summary>
     <title>Multipass 使用完全指南：本地 Ubuntu 虚拟化管理利器</title>
     <updated>2026-04-29T21:14:39.607Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="前沿技术" scheme="https://zz3656.github.io/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/"/>
-    <category term="AI" scheme="https://zz3656.github.io/tags/AI/"/>
-    <category term="大模型" scheme="https://zz3656.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    <category term="写作" scheme="https://zz3656.github.io/tags/%E5%86%99%E4%BD%9C/"/>
-    <id>https://zz3656.github.io/2026/04/29/qian-wen-3.6-sheng-cheng-qian-hou-dui-bi/</id>
-    <link href="https://zz3656.github.io/2026/04/29/qian-wen-3.6-sheng-cheng-qian-hou-dui-bi/"/>
-    <published>2026-04-29T15:48:04.000Z</published>
-    <summary>
-      <![CDATA[<h1 id="从家族档案到生命叙事：一篇AI重写的回忆录第一章，到底强在哪？"><a href="#从家族档案到生命叙事：一篇AI重写的回忆录第一章，到底强在哪？" class="headerlink"]]>
-    </summary>
-    <title>千问3.6生成前后对比</title>
-    <updated>2026-04-29T23:48:04.897Z</updated>
   </entry>
 </feed>

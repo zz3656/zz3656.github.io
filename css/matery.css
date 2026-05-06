@@ -751,9 +751,9 @@ header .go-back i {
         padding: 20px 20px;
     }
 }
-
-.recommend .row .col {
-    padding: 0 1.25rem;
+/* recommended posts */
+.recommend {
+    margin-top: 60px;
 }
 
 .recommend .title {
@@ -763,6 +763,41 @@ header .go-back i {
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.8rem;
+}
+
+/* 强制所有推荐卡片等高、等宽，不受内容影响 */
+.recommend .row {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+}
+.recommend .row > .col {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+}
+
+/* 强制每个卡片内部等高 */
+.recommend .post-card {
+    height: 300px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+.recommend .post-card .post-body {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+.recommend .post-card .post-description {
+    flex: 1 !important;
+    overflow: hidden !important;
+}
+
+/* 奇数篇文章时，第一张占满整行 */
+.recommend .row > .col:first-child:nth-last-child(odd) {
+    grid-column: 1 / -1 !important;
 }
 
 .recommend .post-card:before {

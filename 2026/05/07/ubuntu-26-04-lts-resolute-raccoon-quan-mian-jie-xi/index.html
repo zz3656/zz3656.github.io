@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="阿里云/腾讯云安装爱快系统步骤, blog,hexo">
-    <meta name="description" content="阿里云/腾讯云 安装爱快软路由系统在阿里云或腾讯云上安装爱快（iKuai）软路由系统，可以将云服务器变成功能强大的路由器，实现多线负载均衡、行为管理、流量控制等功能。整个过程分为六个步骤。
-前提条件
-已购买阿里云或腾讯云服务器
-操作系统选择">
+    <meta name="keywords" content="Ubuntu 26.04 LTS「Resolute Raccoon」全面解析：开源操作系统的革新之作, blog,hexo">
+    <meta name="description" content="前言2026年4月23日，Canonical 正式发布了 Ubuntu 26.04 LTS（长期支持版），代号 “Resolute Raccoon”（坚定的浣熊）。这是 Ubuntu 第 11 个 LTS 版本，也是近年来变化最大、功能最为">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>阿里云/腾讯云安装爱快系统步骤 | 因特吧</title>
+    <title>Ubuntu 26.04 LTS「Resolute Raccoon」全面解析：开源操作系统的革新之作 | 因特吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -340,12 +337,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">阿里云/腾讯云安装爱快系统步骤</h1>
+                    <h1 class="description center-align post-title">Ubuntu 26.04 LTS「Resolute Raccoon」全面解析：开源操作系统的革新之作</h1>
                 </div>
             </div>
         </div>
@@ -369,12 +366,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
-                                <span class="chip bg-color">软路由</span>
+                            <a href="/tags/Ubuntu/">
+                                <span class="chip bg-color">Ubuntu</span>
                             </a>
                         
-                            <a href="/tags/%E7%88%B1%E5%BF%AB/">
-                                <span class="chip bg-color">爱快</span>
+                            <a href="/tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
                             </a>
                         
                     </div>
@@ -385,8 +386,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%95/" class="post-category">
-                                项目测试
+                            <a href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" class="post-category">
+                                技术教程
                             </a>
                         
                     </div>
@@ -398,28 +399,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2025-07-11
+                    2026-05-07
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-04-30
+                    2026-05-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    9 分
                 </div>
                 
 
@@ -442,105 +443,268 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="阿里云-腾讯云-安装爱快软路由系统"><a href="#阿里云-腾讯云-安装爱快软路由系统" class="headerlink" title="阿里云/腾讯云 安装爱快软路由系统"></a>阿里云/腾讯云 安装爱快软路由系统</h1><p>在阿里云或腾讯云上安装爱快（iKuai）软路由系统，可以将云服务器变成功能强大的路由器，实现多线负载均衡、行为管理、流量控制等功能。整个过程分为六个步骤。</p>
-<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
-<li>已购买阿里云或腾讯云服务器</li>
-<li>操作系统选择 <strong>Ubuntu</strong>（版本任意，推荐 20.04/22.04）</li>
-<li>能通过控制台使用 VNC 远程登录</li>
-</ul>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2026年4月23日，Canonical 正式发布了 Ubuntu 26.04 LTS（长期支持版），代号 <strong>“Resolute Raccoon”（坚定的浣熊）</strong>。这是 Ubuntu 第 11 个 LTS 版本，也是近年来变化最大、功能最为全面的长期支持版本之一。</p>
+<p>作为面向桌面、服务器、云和边缘的全场景操作系统，Ubuntu 26.04 LTS 在<strong>芯片级优化</strong>、<strong>安全架构</strong>和<strong>AI/ML 生态</strong>三个维度同时发力，被 Canonical 称为”有史以来安全设计最扎实的 LTS 版本”。</p>
+<p>本文基于 Ubuntu 官方发布博客和安全更新公告，为你梳理这次更新的核心亮点，并与上一个 LTS 版本 Ubuntu 24.04（Noble Numbat）进行对比分析。</p>
 <hr>
-<h2 id="第一步：设置交换机-子网（关键）"><a href="#第一步：设置交换机-子网（关键）" class="headerlink" title="第一步：设置交换机/子网（关键）"></a>第一步：设置交换机/子网（关键）</h2><p>这一步非常重要！云厂商默认分配的私有地址段过大（如 /16 或 /20），而爱快在设置 WAN 口时无法指定子网掩码，必须先缩小地址段。</p>
-<h3 id="阿里云操作"><a href="#阿里云操作" class="headerlink" title="阿里云操作"></a>阿里云操作</h3><ol>
-<li>进入控制台 → 点击 ECS 实例 → 左下角 <strong>专有网络 VPC</strong></li>
-<li>新建交换机，设置合适的子网，例如 <code>172.18.1.0/24</code></li>
-<li><strong>停止实例</strong>（必须先停机）</li>
-<li>点击实例 → 修改私有 IP → 选择刚创建的交换机 → 指定 IP（如 <code>172.18.1.1</code>）</li>
-<li>启动实例</li>
-</ol>
+<h2 id="一、Ubuntu-26-04-LTS-核心升级内容"><a href="#一、Ubuntu-26-04-LTS-核心升级内容" class="headerlink" title="一、Ubuntu 26.04 LTS 核心升级内容"></a>一、Ubuntu 26.04 LTS 核心升级内容</h2><h3 id="1-桌面环境：Wayland-正式完全切换"><a href="#1-桌面环境：Wayland-正式完全切换" class="headerlink" title="1. 桌面环境：Wayland 正式完全切换"></a>1. 桌面环境：Wayland 正式完全切换</h3><p>Ubuntu 26.04 LTS 完成了从 X.org 到 <strong>Wayland</strong> 的上游迁移。</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>逐显示器缩放</td>
+<td>每个外接显示器可独立设置 DPI，解决多屏用户痛点</td>
+</tr>
+<tr>
+<td>触摸/手势原生支持</td>
+<td>触控板手势、触摸屏压感不再依赖第三方驱动</td>
+</tr>
+<tr>
+<td>画面撕裂消除</td>
+<td>Wayland 合成器从底层解决游戏/视频帧率撕裂问题</td>
+</tr>
+<tr>
+<td>NVIDIA 生产驱动</td>
+<td>全面支持最新版 NVIDIA 专有驱动，与 Wayland 深度整合</td>
+</tr>
+</tbody></table>
 <blockquote>
-<p>如果一次修改不成功，可能需要多次保存重试。</p>
+<p>背景：Ubuntu 自 22.04 起就在推进 Wayland 迁移，但 X.org 始终作为默认选项存在。26.04 彻底完成了这一里程碑切换。</p>
 </blockquote>
-<h3 id="腾讯云操作"><a href="#腾讯云操作" class="headerlink" title="腾讯云操作"></a>腾讯云操作</h3><ol>
-<li>进入控制台 → 云产品 → <strong>私有网络</strong></li>
-<li>点击 <strong>子网</strong> → 新建子网，例如 <code>172.16.16.0/24</code></li>
-<li>点击实例名 → 进入 <strong>弹性网卡</strong> 设置 → 点击主网卡名</li>
-<li>修改私网 IP 为新子网内的地址（如 <code>172.16.16.3</code>）</li>
-</ol>
-<h2 id="第二步：记录-IP-地址和网关"><a href="#第二步：记录-IP-地址和网关" class="headerlink" title="第二步：记录 IP 地址和网关"></a>第二步：记录 IP 地址和网关</h2><p>启动 Ubuntu 系统后，登录并查看网络信息，<strong>抄下来备用</strong>。</p>
-<h3 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h3><p>用 root 账号登录：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ip</span> addr    <span class="token comment"># 查看 IP 地址</span>
-<span class="token function">ip</span> route   <span class="token comment"># 查看网关</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>例如查到：IP <code>172.18.1.1</code>，网关 <code>172.18.1.253</code>。</p>
-<h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><p>用 ubuntu 账号登录，再切换 root：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">su</span> -
-<span class="token function">ip</span> addr
-<span class="token function">ip</span> route<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>例如查到：IP <code>172.16.16.3</code>，网关 <code>172.16.16.1</code>。</p>
-<blockquote>
-<p>腾讯云建议全程使用 VNC 方式操作。</p>
-</blockquote>
-<h2 id="第三步：设置安全组"><a href="#第三步：设置安全组" class="headerlink" title="第三步：设置安全组"></a>第三步：设置安全组</h2><p>在云控制台配置安全组，放行以下端口：</p>
+<hr>
+<h3 id="2-内核升级：Linux-7-0"><a href="#2-内核升级：Linux-7-0" class="headerlink" title="2. 内核升级：Linux 7.0"></a>2. 内核升级：Linux 7.0</h3><p>Ubuntu 26.04 LTS 内核从 24.04 的 <strong>6.8</strong> 直接跨越到 <strong>7.0</strong>，带来大量硬件支持更新：</p>
+<p><strong>新增硬件支持：</strong></p>
 <ul>
-<li><strong>80/443</strong>：爱快 Web 管理界面</li>
-<li><strong>其他端口</strong>：根据实际需求放行（如 VPN 端口等）</li>
+<li><strong>Intel Core Ultra Series 3（代号 Panther Lake）</strong>：集成 Xe3 显卡和 NPU（神经网络处理器），Ubuntu 26.04 是首个在开源生态中完整支持该芯片 NPU 的主流发行版</li>
+<li><strong>工业以太网</strong>：将 IgH EtherCAT Master 模块和 Generic Ethernet 驱动纳入主线内核，支持微秒级实时工业通信，适用于工厂自动化、机器人控制系统</li>
 </ul>
-<h2 id="第四步：下载爱快-ISO"><a href="#第四步：下载爱快-ISO" class="headerlink" title="第四步：下载爱快 ISO"></a>第四步：下载爱快 ISO</h2><p>登录 Ubuntu 系统，下载爱快安装镜像。</p>
-<p><strong>32 位版本</strong>（云主机配置有限时推荐）：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> https://www.ikuai8.com/download.php?n<span class="token operator">=</span>/3.x/iso/iKuai8_x32_3.7.14_Build202408011011.iso <span class="token parameter variable">-O</span> ik.iso<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>64 位版本</strong>：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> https://www.ikuai8.com/download.php?n<span class="token operator">=</span>/3.x/iso/iKuai8_x64_3.7.14_Build202408011011.iso <span class="token parameter variable">-O</span> ik.iso<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<hr>
+<h3 id="3-AI-ML-生态：CUDA-和-ROCm-进入官方软件源"><a href="#3-AI-ML-生态：CUDA-和-ROCm-进入官方软件源" class="headerlink" title="3. AI/ML 生态：CUDA 和 ROCm 进入官方软件源"></a>3. AI/ML 生态：CUDA 和 ROCm 进入官方软件源</h3><p>这是 Ubuntu 26.04 LTS 最具里程碑意义的变更之一：</p>
+<p><strong>NVIDIA CUDA</strong></p>
+<ul>
+<li>Ubuntu 26.04 <strong>首次将 NVIDIA CUDA 直接分发</strong>到官方 apt 软件仓库</li>
+<li>同时提供 NVIDIA DOCA-OFED（高性能网络驱动），通过官方 PPA 安装</li>
+<li>覆盖数据中心 GPU 和桌面级 RTX 系列</li>
+</ul>
+<p><strong>AMD ROCm</strong></p>
+<ul>
+<li>AMD ROCm 软件平台现已进入 Ubuntu 官方仓库</li>
+<li>支持 AMD Instinct 数据中心 GPU、AMD Radeon 桌面/笔记本 GPU、AMD Ryzen AI PC</li>
+<li>所有组件经过 Canonical 验证，提供与 CUDA 同等的 LTS 级支持体验</li>
+</ul>
 <blockquote>
-<p>可前往 <a target="_blank" rel="noopener" href="https://www.ikuai8.com/download.php">爱快官网</a> 获取最新版本链接。</p>
+<p>AMD ROCm 副总裁 Andrej Zdravkovic 表示：”AMD ROCm 通过 Ubuntu 官方包供应链交付，安装和更新简单、可靠、完全经过交叉验证。”</p>
 </blockquote>
-<h2 id="第五步：挂载-ISO-并引导安装"><a href="#第五步：挂载-ISO-并引导安装" class="headerlink" title="第五步：挂载 ISO 并引导安装"></a>第五步：挂载 ISO 并引导安装</h2><h3 id="方法一：挂载启动文件（推荐）"><a href="#方法一：挂载启动文件（推荐）" class="headerlink" title="方法一：挂载启动文件（推荐）"></a>方法一：挂载启动文件（推荐）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 挂载 ISO</span>
-<span class="token function">sudo</span> <span class="token function">mount</span> ik.iso /mnt
-
-<span class="token comment"># 复制启动文件到 boot 分区</span>
-<span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-rpf</span> /mnt/boot /
-
-<span class="token comment"># 重启</span>
-<span class="token function">sudo</span> <span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>重启后系统会自动进入爱快安装界面。</p>
-<h3 id="方法二：进入-GRUB-手动引导"><a href="#方法二：进入-GRUB-手动引导" class="headerlink" title="方法二：进入 GRUB 手动引导"></a>方法二：进入 GRUB 手动引导</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 下载完成后重启</span>
-<span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><strong>阿里云</strong>：重启时按住 ESC 键，直到进入 GRUB 界面，按 <code>c</code> 进入命令行模式。</p>
-<p><strong>腾讯云</strong>：VNC 不太好操作 GRUB，建议提前删除 GRUB 配置文件强制停留：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> /boot/grub/grub.cfg
-<span class="token function">sudo</span> <span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>进入 GRUB 命令行后，输入引导命令启动安装程序。</p>
+<hr>
+<h3 id="4-机密计算：Intel-TDX-AMD-SEV-SNP-全栈支持"><a href="#4-机密计算：Intel-TDX-AMD-SEV-SNP-全栈支持" class="headerlink" title="4. 机密计算：Intel TDX + AMD SEV-SNP 全栈支持"></a>4. 机密计算：Intel TDX + AMD SEV-SNP 全栈支持</h3><p>Ubuntu 26.04 LTS 在<strong>来宾（Guest）和宿主（Host）两侧</strong>均提供对 Intel TDX 和 AMD SEV-SNP 的完整集成支持。</p>
+<p>这意味着可以在同一套 Ubuntu 镜像上，运行由 CPU 硬件加密保护的虚拟机，支持跨 Intel / AMD / NVIDIA 硬件的统一机密计算部署，适用于：</p>
+<ul>
+<li>公有云上的隐私 AI 推理</li>
+<li>金融/医疗数据合规场景</li>
+<li>企业内部敏感代码保护</li>
+</ul>
+<hr>
+<h3 id="5-内存安全：Rust-重写核心系统组件"><a href="#5-内存安全：Rust-重写核心系统组件" class="headerlink" title="5. 内存安全：Rust 重写核心系统组件"></a>5. 内存安全：Rust 重写核心系统组件</h3><p>Ubuntu 26.04 LTS 是首个<strong>大规模引入 Rust 重写系统组件</strong>的 LTS 版本：</p>
+<table>
+<thead>
+<tr>
+<th>组件</th>
+<th>语言</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>rust-coreutils</code></td>
+<td>Rust</td>
+<td>核心工具集（<code>ls</code>、<code>cp</code>、<code>mv</code> 等）替代 GNU coreutils</td>
+</tr>
+<tr>
+<td><code>sudo-rs</code></td>
+<td>Rust</td>
+<td>sudo 权限管理器的 Rust 重写版，成为<strong>默认版本</strong></td>
+</tr>
+<tr>
+<td>内核驱动</td>
+<td>Rust</td>
+<td>新增 Rust 编写的内核模块和子系统</td>
+</tr>
+</tbody></table>
+<p>Rust 基金会 CEO Dr. Rebecca Rumbul 表示：”Ubuntu 26.04 LTS 展示了当一个主流 Linux 发行版对内存安全做出严肃且持续承诺时会发生什么。”</p>
 <blockquote>
-<p>安装过程中如果出现报错，可以忽略，不影响最终安装。</p>
+<p>GNU coreutils 和传统 sudo 仍作为兼容备份保留。</p>
 </blockquote>
-<h2 id="第六步：配置爱快网络"><a href="#第六步：配置爱快网络" class="headerlink" title="第六步：配置爱快网络"></a>第六步：配置爱快网络</h2><p>安装完成后进入爱快控制台：</p>
+<hr>
+<h3 id="6-TPM-全盘加密：正式量产就绪"><a href="#6-TPM-全盘加密：正式量产就绪" class="headerlink" title="6. TPM 全盘加密：正式量产就绪"></a>6. TPM 全盘加密：正式量产就绪</h3><p>TPM 绑定的全盘加密（FDE）从 24.04 的实验性功能升级为 <strong>26.04 的正式 GA（General Availability）版本</strong>：</p>
+<ul>
+<li>加密密钥绑定到 TPM 芯片物理硬件，物理访问攻击门槛大幅提高</li>
+<li>固件更新期间的恢复密钥处理流程得到优化，减小了更新导致启动失败的风险</li>
+<li>与 Absolute/Computrace 等第三方 BIOS 层的兼容性信息已完整文档化</li>
+</ul>
+<p>同时引入了 <strong>Security Center（安全中心）控制面板</strong>，将加密状态、Secure Boot 状态、磁盘保护等安全配置从”安装时一次性设置”变为<strong>部署后可随时检查和管理的生命周期任务</strong>。</p>
+<hr>
+<h3 id="7-密码学升级：后量子密钥交换默认启用"><a href="#7-密码学升级：后量子密钥交换默认启用" class="headerlink" title="7. 密码学升级：后量子密钥交换默认启用"></a>7. 密码学升级：后量子密钥交换默认启用</h3><p>Ubuntu 26.04 LTS 默认启用<strong>混合后量子密钥交换</strong>（mlkem768x25519-sha256），OpenSSH 升级至 10.2：</p>
+<ul>
+<li>DSA 支��彻底移除（不再生成 DSA 主机密钥）</li>
+<li>SSH 服务端不再读取 <code>~/.pam_environment</code>，减少环境注入风险</li>
+<li>所有现代化特性均为<strong>默认启用</strong>，无需手动配置开关</li>
+</ul>
+<hr>
+<h3 id="8-身份服务安全加固"><a href="#8-身份服务安全加固" class="headerlink" title="8. 身份服务安全加固"></a>8. 身份服务安全加固</h3><table>
+<thead>
+<tr>
+<th>变更</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SSSD 以 <code>sssd</code> 用户运行</td>
+<td>不再以 root 身份运行，减小权限攻击面</td>
+</tr>
+<tr>
+<td>OpenLDAP 运行在 AppArmor enforce 模式</td>
+<td>进程级强制访问控制</td>
+</tr>
+<tr>
+<td>OpenLDAP 密码哈希改进</td>
+<td>PBKDF2 迭代次数可调，提升暴力破解抵御能力</td>
+</tr>
+<tr>
+<td>Authd 认证框架</td>
+<td>支持 OpenID Connect 云身份提供商集成，包含 MFA（多因素认证）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="9-ARM64-Livepatch：里程碑意义的支持扩展"><a href="#9-ARM64-Livepatch：里程碑意义的支持扩展" class="headerlink" title="9. ARM64 Livepatch：里程碑意义的支持扩展"></a>9. ARM64 Livepatch：里程碑意义的支持扩展</h3><p>Ubuntu 26.04 LTS 将 <strong>Canonical Livepatch</strong>（无需重启的内核热补丁）能力首次扩展到 <strong>ARM64 架构</strong>。</p>
+<p>这对运行在 ARM 服务器和边缘设备上的 Ubuntu 系统意义重大——在 AI 推理和常驻工作负载进入生产环境的当下，系统无法承受因内核补丁导致的服务中断。Arm 云计算生态系统开发总监 Bhumik Patel 表示：”Ubuntu 26.04 LTS 实现了内核更新可在系统完全运行状态下实时修复关键漏洞。”</p>
+<hr>
+<h3 id="10-RISC-V-支持：RVA23-基线标准"><a href="#10-RISC-V-支持：RVA23-基线标准" class="headerlink" title="10. RISC-V 支持：RVA23 基线标准"></a>10. RISC-V 支持：RVA23 基线标准</h3><p>Ubuntu 26.04 LTS 完整支持 <strong>RVA23</strong>（RISC-V 应用程序处理器基线标准），确保在 RISC-V 芯片上运行的 Ubuntu 可充分利用平台能力，包括在混合架构环境中的正常工作。</p>
+<hr>
+<h3 id="11-软件管理：App-Center-统一体验"><a href="#11-软件管理：App-Center-统一体验" class="headerlink" title="11. 软件管理：App Center 统一体验"></a>11. 软件管理：App Center 统一体验</h3><p>Ubuntu 26.04 带来了重新设计的 <strong>App Center</strong>，提供跨 Debian 包（<code>.deb</code>）的统一管理界面，并增强了对传统 Debian 包的安装体验。</p>
+<p>同时保留了完整的语言工具链和编译器更新，确保开发者无需添加第三方仓库即可构建现代应用。</p>
+<hr>
+<h2 id="二、Ubuntu-26-04-vs-Ubuntu-24-04-LTS-对比"><a href="#二、Ubuntu-26-04-vs-Ubuntu-24-04-LTS-对比" class="headerlink" title="二、Ubuntu 26.04 vs Ubuntu 24.04 LTS 对比"></a>二、Ubuntu 26.04 vs Ubuntu 24.04 LTS 对比</h2><blockquote>
+<p>Ubuntu 24.04 LTS 代号 <strong>Noble Numbat</strong>（高贵的袋食蚁兽），发布于 2024 年 4 月。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>Ubuntu 24.04 LTS</th>
+<th>Ubuntu 26.04 LTS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>代号</strong></td>
+<td>Noble Numbat</td>
+<td>Resolute Raccoon</td>
+</tr>
+<tr>
+<td><strong>内核</strong></td>
+<td>Linux 6.8</td>
+<td>Linux 7.0</td>
+</tr>
+<tr>
+<td><strong>桌面默认</strong></td>
+<td>X.org + GNOME</td>
+<td>Wayland + GNOME（完成迁移）</td>
+</tr>
+<tr>
+<td><strong>NVIDIA CUDA</strong></td>
+<td>需手动添加 CUDA 仓库</td>
+<td><strong>官方软件源原生支持</strong></td>
+</tr>
+<tr>
+<td><strong>AMD ROCm</strong></td>
+<td>社区 PPA 安装</td>
+<td><strong>官方软件源原生支持</strong></td>
+</tr>
+<tr>
+<td><strong>机密计算</strong></td>
+<td>基础支持</td>
+<td><strong>Intel TDX + AMD SEV-SNP 来宾/宿主全支持</strong></td>
+</tr>
+<tr>
+<td><strong>TPM FDE</strong></td>
+<td>实验性</td>
+<td><strong>GA 正式版 + Security Center</strong></td>
+</tr>
+<tr>
+<td><strong>Rust 组件</strong></td>
+<td>少量探索</td>
+<td><strong>rust-coreutils + sudo-rs 设为默认</strong></td>
+</tr>
+<tr>
+<td><strong>ARM64 Livepatch</strong></td>
+<td>不支持</td>
+<td><strong>支持</strong></td>
+</tr>
+<tr>
+<td><strong>RISC-V</strong></td>
+<td>基础支持</td>
+<td><strong>RVA23 完整支持</strong></td>
+</tr>
+<tr>
+<td><strong>OpenSSH</strong></td>
+<td>9.x</td>
+<td>10.2 + 后量子密钥交换默认启用</td>
+</tr>
+<tr>
+<td><strong>DSA 支持</strong></td>
+<td>已废弃</td>
+<td><strong>完全移除</strong></td>
+</tr>
+<tr>
+<td><strong>SSSD 运行用户</strong></td>
+<td>root</td>
+<td>专用 sssd 用户</td>
+</tr>
+<tr>
+<td><strong>工业协议</strong></td>
+<td>第三方模块</td>
+<td>IgH EtherCAT 主线内核支持</td>
+</tr>
+<tr>
+<td><strong>NPU 支持</strong></td>
+<td>有限</td>
+<td>Intel Panther Lake NPU 完整支持</td>
+</tr>
+<tr>
+<td><strong>安全中心</strong></td>
+<td>无</td>
+<td>Security Center 可视化控制面板</td>
+</tr>
+</tbody></table>
+<h3 id="核心趋势总结"><a href="#核心趋势总结" class="headerlink" title="核心趋势总结"></a>核心趋势总结</h3><p>从 24.04 到 26.04，Ubuntu 的演进围绕三条主线：</p>
 <ol>
-<li>选择 <code>1</code> 进入网络接口设置</li>
-<li><code>del lan1</code> — 删除默认的 LAN 口（云服务器只有一个网口，用不到 LAN）</li>
-<li>将唯一的网口设为 WAN：<code>set wan1 eth0</code></li>
-<li>选择 <code>2</code> → <code>1</code>，设置 WAN 口地址，填入 <strong>第二步记录的 IP 和网关</strong></li>
-<li>选择 <code>o</code>（其他选项）→ <code>2</code>，<strong>开启外网 Web 访问</strong></li>
+<li><strong>AI-First Infrastructure</strong>：CUDA/ROcm 官方源化意味着 Ubuntu 正式成为 AI 开发的首选开源平台</li>
+<li><strong>Memory Safety as Default</strong>：Rust 从内核到用户态工具的全面渗透，代表了开源安全范式的转变</li>
+<li><strong>Zero-Trust Security</strong>：从”安装时配好”到”全生命周期可视化管理”，安全不再是一次性配置</li>
 </ol>
-<p>完成！现在可以通过浏览器访问爱快管理界面了：</p>
-<pre class="line-numbers language-none"><code class="language-none">http://你的公网IP<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>默认账号：<code>admin</code>，默认密码：<code>admin</code></p>
 <hr>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="Q-安装时报错怎么办？"><a href="#Q-安装时报错怎么办？" class="headerlink" title="Q: 安装时报错怎么办？"></a>Q: 安装时报错怎么办？</h3><p>安装界面出现一些红色报错是正常的，忽略即可，不影响使用。</p>
-<h3 id="Q-修改私有-IP-时提示失败？"><a href="#Q-修改私有-IP-时提示失败？" class="headerlink" title="Q: 修改私有 IP 时提示失败？"></a>Q: 修改私有 IP 时提示失败？</h3><p>可能需要多次尝试保存，或者确认实例已完全停止。</p>
-<h3 id="Q-重启后进不去爱快？"><a href="#Q-重启后进不去爱快？" class="headerlink" title="Q: 重启后进不去爱快？"></a>Q: 重启后进不去爱快？</h3><p>检查启动文件是否正确复制到了 <code>/boot</code> 目录，或者尝试通过 VNC 手动进入 GRUB 引导。</p>
-<h3 id="Q-忘记了内网-IP-怎么办？"><a href="#Q-忘记了内网-IP-怎么办？" class="headerlink" title="Q: 忘记了内网 IP 怎么办？"></a>Q: 忘记了内网 IP 怎么办？</h3><p>通过云控制台的 VNC 登录爱快终端，查看 WAN 口配置。</p>
-<hr>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.ikuai8.com/">爱快官网</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.ikuai8.com/download.php">爱快下载页面</a></li>
-<li>原始教程来源：<a target="_blank" rel="noopener" href="http://www.lflflf.net/">lflflf.net</a></li>
+<h2 id="三、适用场景与升级建议"><a href="#三、适用场景与升级建议" class="headerlink" title="三、适用场景与升级建议"></a>三、适用场景与升级建议</h2><h3 id="推荐升级的人群"><a href="#推荐升级的人群" class="headerlink" title="推荐升级的人群"></a>推荐升级的人群</h3><ul>
+<li>AI/ML 研究者和工程师（CUDA/ROcm 官方支持，NPU 加速）</li>
+<li>企业级服务器管理员（机密计算、Livepatch、TPM FDE 生产可用）</li>
+<li>工业自动化从业者（EtherCAT 原生支持）</li>
+<li>安全敏感型行业（金融、医疗、政府——后量子密码学默认启用）</li>
+<li>开发者和 DevOps（统一 App Center、现代化编译工具链）</li>
 </ul>
+<h3 id="建议谨慎的场景"><a href="#建议谨慎的场景" class="headerlink" title="建议谨慎的场景"></a>建议谨慎的场景</h3><ul>
+<li>依赖特定 X.org 驱动或配置的用户（需确认 Wayland 兼容性）</li>
+<li>使用较旧 NVIDIA 显卡且依赖老旧闭源驱动的用户</li>
+<li>生产环境建议等待第一个修订版本（.1）发布后再大规模部署</li>
+</ul>
+<hr>
+<h2 id="四、结语"><a href="#四、结语" class="headerlink" title="四、结语"></a>四、结语</h2><p>Ubuntu 26.04 LTS “Resolute Raccoon” 是一次真正意义上的<strong>跨越式的 LTS 更新</strong>。它不只是版本号的递增，而是在 AI 基础设施、内存安全、机密计算三条技术主线上同时实现突破。</p>
+<p>对于一个 LTS 版本来说，这意味着未来五年的企业部署将建立在更安全、更有前瞻性的底层架构之上。无论你是在桌面环境工作、在数据中心运行服务器，还是在边缘设备上部署 AI 推理负载，Ubuntu 26.04 都值得认真关注。</p>
+<blockquote>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://ubuntu.com/download">https://ubuntu.com/download</a><br>官方公告：<a target="_blank" rel="noopener" href="https://ubuntu.com/blog/canonical-releases-ubuntu-26-04-lts-resolute-raccoon">https://ubuntu.com/blog/canonical-releases-ubuntu-26-04-lts-resolute-raccoon</a></p>
+</blockquote>
+<hr>
+<p><em>本文参考 Ubuntu 官方博客（2026年4月发布）及 Ubuntu Security Team 公告编写。</em></p>
 
                 
             </div>
@@ -567,7 +731,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zz3656.github.io/2025/07/11/a-li-yun-teng-xun-yun-an-zhuang-ai-kuai-xi-tong-bu-zou/">https://zz3656.github.io/2025/07/11/a-li-yun-teng-xun-yun-an-zhuang-ai-kuai-xi-tong-bu-zou/</a>
+                    <a href="https://zz3656.github.io/2026/05/07/ubuntu-26-04-lts-resolute-raccoon-quan-mian-jie-xi/">https://zz3656.github.io/2026/05/07/ubuntu-26-04-lts-resolute-raccoon-quan-mian-jie-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -605,12 +769,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
-                                    <span class="chip bg-color">软路由</span>
+                                <a href="/tags/Ubuntu/">
+                                    <span class="chip bg-color">Ubuntu</span>
                                 </a>
                             
-                                <a href="/tags/%E7%88%B1%E5%BF%AB/">
-                                    <span class="chip bg-color">爱快</span>
+                                <a href="/tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
                                 </a>
                             
                         </div>
@@ -689,74 +857,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2026/04/29/cong-ling-da-jian-hexo-bo-ke-bing-bu-shu-dao-github-pages-wan-zheng-ji-lu/">
+                <a href="/2026/05/07/ubuntu-26-04-lts-resolute-raccoon-quan-mian-jie-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="从零搭建 Hexo 博客并部署到 GitHub Pages 完整记录">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Ubuntu 26.04 LTS「Resolute Raccoon」全面解析：开源操作系统的革新之作">
                         
-                        <span class="card-title">从零搭建 Hexo 博客并部署到 GitHub Pages 完整记录</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-04-29
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/" class="post-category">
-                                    编程开发
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">博客搭建</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2025/07/11/a-li-yun-teng-xun-yun-an-zhuang-ai-kuai-xi-tong-bu-zou/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="阿里云/腾讯云安装爱快系统步骤">
-                        
-                        <span class="card-title">阿里云/腾讯云安装爱快系统步骤</span>
+                        <span class="card-title">Ubuntu 26.04 LTS「Resolute Raccoon」全面解析：开源操作系统的革新之作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -767,14 +879,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-07-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%95/" class="post-category">
-                                    项目测试
+                            <a href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" class="post-category">
+                                    技术教程
                                 </a>
                             
                             
@@ -785,12 +897,69 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
-                        <span class="chip bg-color">软路由</span>
+                    <a href="/tags/Ubuntu/">
+                        <span class="chip bg-color">Ubuntu</span>
                     </a>
                     
-                    <a href="/tags/%E7%88%B1%E5%BF%AB/">
-                        <span class="chip bg-color">爱快</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">操作系统</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2026/05/06/xiao-ma-xue-xi-bao-gao-2026-05-06/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="小马学习报告 2026-05-06">
+                        
+                        <span class="card-title">小马学习报告 2026-05-06</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hermes/">
+                        <span class="chip bg-color">Hermes</span>
+                    </a>
+                    
+                    <a href="/tags/AI%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">AI学习</span>
                     </a>
                     
                 </div>

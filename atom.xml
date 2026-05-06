@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-05-06T18:37:16.279Z</updated>
+  <updated>2026-05-06T19:06:53.088Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="技术教程" scheme="https://zz3656.github.io/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
+    <category term="Ubuntu" scheme="https://zz3656.github.io/tags/Ubuntu/"/>
+    <category term="Linux" scheme="https://zz3656.github.io/tags/Linux/"/>
+    <category term="操作系统" scheme="https://zz3656.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://zz3656.github.io/2026/05/07/ubuntu-26-04-lts-resolute-raccoon-quan-mian-jie-xi/</id>
+    <link href="https://zz3656.github.io/2026/05/07/ubuntu-26-04-lts-resolute-raccoon-quan-mian-jie-xi/"/>
+    <published>2026-05-06T19:15:00.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2026年4月23日，Canonical 正式发布了 Ubuntu 26.04 LTS（长期支持版），代号]]>
+    </summary>
+    <title>Ubuntu 26.04 LTS「Resolute Raccoon」全面解析：开源操作系统的革新之作</title>
+    <updated>2026-05-06T19:06:53.088Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>
@@ -330,21 +347,5 @@
     </summary>
     <title>2026-04-30 小马学习日报</title>
     <updated>2026-04-30T15:13:36.342Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="网络技术" scheme="https://zz3656.github.io/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    <category term="软路由" scheme="https://zz3656.github.io/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
-    <category term="iKuai" scheme="https://zz3656.github.io/tags/iKuai/"/>
-    <id>https://zz3656.github.io/2026/04/30/ai-kuai-ikuai-ruan-lu-you-an-zhuang-quan-zhi-nan/</id>
-    <link href="https://zz3656.github.io/2026/04/30/ai-kuai-ikuai-ruan-lu-you-an-zhuang-quan-zhi-nan/"/>
-    <published>2026-04-29T23:20:00.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="什么是爱快-iKuai-软路由？"><a href="#什么是爱快-iKuai-软路由？" class="headerlink"]]>
-    </summary>
-    <title>爱快(iKuai)软路由安装全指南：从实体机到虚拟机再到云主机</title>
-    <updated>2026-04-30T16:17:16.178Z</updated>
   </entry>
 </feed>

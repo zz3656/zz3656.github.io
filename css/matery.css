@@ -788,7 +788,7 @@ header .go-back i {
     flex: 1 !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
+    justify-content: space-between !important;
 }
 .recommend .post-card .post-description {
     flex: 1 !important;

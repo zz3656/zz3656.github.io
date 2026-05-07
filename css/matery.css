@@ -788,7 +788,6 @@ header .go-back i {
     flex: 1 !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
 }
 .recommend .post-card .post-description {
     flex: 1 !important;
@@ -868,7 +867,7 @@ header .go-back i {
 
 .recommend .post-card .read-more {
     height: 40px;
-    margin: 1rem auto 5px !important;
+    margin: auto auto 5px !important;
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 40px;

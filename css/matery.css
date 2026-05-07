@@ -851,26 +851,33 @@ header .go-back i {
 }
 
 .recommend .post-card .post-title {
-    height: 48px;
+    height: 48px !important;
+    line-height: 24px !important;
+    overflow: hidden !important;
     margin-top: 10px;
     margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .recommend .post-card .post-description {
-    margin: 20px auto;
+    margin: 5px auto;
     max-width: 500px;
-    height: 65px;
+    min-height: 65px;
     max-height: 65px;
     font-size: 14px;
     color: hsla(0, 0%, 100%, .78) !important;
+    flex: 1 !important;
+    overflow: hidden !important;
 }
 
 .recommend .post-card .read-more {
     height: 40px;
-    margin: auto auto 5px !important;
+    line-height: 40px;
+    margin: 5px auto 5px !important;
     font-size: 0.9rem;
     font-weight: 400;
-    line-height: 40px;
     color: #fff;
     border-radius: 30px;
     box-shadow: 0 2px 2px 0 rgba(244, 67, 54, .14), 0 3px 1px -2px rgba(244, 67, 54, .2), 0 1px 5px 0 rgba(244, 67, 54, .12);

@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="阿里云/腾讯云安装爱快系统步骤, blog,hexo">
-    <meta name="description" content="阿里云/腾讯云 安装爱快软路由系统在阿里云或腾讯云上安装爱快（iKuai）软路由系统，可以将云服务器变成功能强大的路由器，实现多线负载均衡、行为管理、流量控制等功能。整个过程分为六个步骤。
-前提条件
-已购买阿里云或腾讯云服务器
-操作系统选择">
+    <meta name="keywords" content="关于, blog,hexo">
+    <meta name="description" content="因特吧的博客，分享技术与生活">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>阿里云/腾讯云安装爱快系统步骤 | 因特吧</title>
+    <title>关于 | 因特吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -336,596 +333,852 @@
 
 </header>
 
-    
+    <style type="text/css">
+    /* don't remove. */
+    .about-cover {
+        height: 75vh;
+    }
+</style>
 
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">阿里云/腾讯云安装爱快系统步骤</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<main class="post-container content">
-
-    
+<div class="bg-cover pd-header about-cover">
+    <div class="container">
     <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
-    <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
-                                <span class="chip bg-color">软路由</span>
-                            </a>
-                        
-                            <a href="/tags/%E7%88%B1%E5%BF%AB/">
-                                <span class="chip bg-color">爱快</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%95/" class="post-category">
-                                项目测试
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="post-info">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2025-07-11
-                </div>
-                
-
-                
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-05-04
-                </div>
-                
-
-                
-                <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
-                </div>
-                
-
-                
-                <div class="info-break-policy">
-                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
-                </div>
-                
-
-                
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
-            </div>
-        </div>
-        <hr class="clearfix">
-
-        
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h1 id="阿里云-腾讯云-安装爱快软路由系统"><a href="#阿里云-腾讯云-安装爱快软路由系统" class="headerlink" title="阿里云/腾讯云 安装爱快软路由系统"></a>阿里云/腾讯云 安装爱快软路由系统</h1><p>在阿里云或腾讯云上安装爱快（iKuai）软路由系统，可以将云服务器变成功能强大的路由器，实现多线负载均衡、行为管理、流量控制等功能。整个过程分为六个步骤。</p>
-<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
-<li>已购买阿里云或腾讯云服务器</li>
-<li>操作系统选择 <strong>Ubuntu</strong>（版本任意，推荐 20.04/22.04）</li>
-<li>能通过控制台使用 VNC 远程登录</li>
-</ul>
-<hr>
-<h2 id="第一步：设置交换机-子网（关键）"><a href="#第一步：设置交换机-子网（关键）" class="headerlink" title="第一步：设置交换机/子网（关键）"></a>第一步：设置交换机/子网（关键）</h2><p>这一步非常重要！云厂商默认分配的私有地址段过大（如 /16 或 /20），而爱快在设置 WAN 口时无法指定子网掩码，必须先缩小地址段。</p>
-<h3 id="阿里云操作"><a href="#阿里云操作" class="headerlink" title="阿里云操作"></a>阿里云操作</h3><ol>
-<li>进入控制台 → 点击 ECS 实例 → 左下角 <strong>专有网络 VPC</strong></li>
-<li>新建交换机，设置合适的子网，例如 <code>172.18.1.0/24</code></li>
-<li><strong>停止实例</strong>（必须先停机）</li>
-<li>点击实例 → 修改私有 IP → 选择刚创建的交换机 → 指定 IP（如 <code>172.18.1.1</code>）</li>
-<li>启动实例</li>
-</ol>
-<blockquote>
-<p>如果一次修改不成功，可能需要多次保存重试。</p>
-</blockquote>
-<h3 id="腾讯云操作"><a href="#腾讯云操作" class="headerlink" title="腾讯云操作"></a>腾讯云操作</h3><ol>
-<li>进入控制台 → 云产品 → <strong>私有网络</strong></li>
-<li>点击 <strong>子网</strong> → 新建子网，例如 <code>172.16.16.0/24</code></li>
-<li>点击实例名 → 进入 <strong>弹性网卡</strong> 设置 → 点击主网卡名</li>
-<li>修改私网 IP 为新子网内的地址（如 <code>172.16.16.3</code>）</li>
-</ol>
-<h2 id="第二步：记录-IP-地址和网关"><a href="#第二步：记录-IP-地址和网关" class="headerlink" title="第二步：记录 IP 地址和网关"></a>第二步：记录 IP 地址和网关</h2><p>启动 Ubuntu 系统后，登录并查看网络信息，<strong>抄下来备用</strong>。</p>
-<h3 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h3><p>用 root 账号登录：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ip</span> addr    <span class="token comment"># 查看 IP 地址</span>
-<span class="token function">ip</span> route   <span class="token comment"># 查看网关</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>例如查到：IP <code>172.18.1.1</code>，网关 <code>172.18.1.253</code>。</p>
-<h3 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h3><p>用 ubuntu 账号登录，再切换 root：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">su</span> -
-<span class="token function">ip</span> addr
-<span class="token function">ip</span> route<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>例如查到：IP <code>172.16.16.3</code>，网关 <code>172.16.16.1</code>。</p>
-<blockquote>
-<p>腾讯云建议全程使用 VNC 方式操作。</p>
-</blockquote>
-<h2 id="第三步：设置安全组"><a href="#第三步：设置安全组" class="headerlink" title="第三步：设置安全组"></a>第三步：设置安全组</h2><p>在云控制台配置安全组，放行以下端口：</p>
-<ul>
-<li><strong>80/443</strong>：爱快 Web 管理界面</li>
-<li><strong>其他端口</strong>：根据实际需求放行（如 VPN 端口等）</li>
-</ul>
-<h2 id="第四步：下载爱快-ISO"><a href="#第四步：下载爱快-ISO" class="headerlink" title="第四步：下载爱快 ISO"></a>第四步：下载爱快 ISO</h2><p>登录 Ubuntu 系统，下载爱快安装镜像。</p>
-<p><strong>32 位版本</strong>（云主机配置有限时推荐）：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> https://www.ikuai8.com/download.php?n<span class="token operator">=</span>/3.x/iso/iKuai8_x32_3.7.14_Build202408011011.iso <span class="token parameter variable">-O</span> ik.iso<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>64 位版本</strong>：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> https://www.ikuai8.com/download.php?n<span class="token operator">=</span>/3.x/iso/iKuai8_x64_3.7.14_Build202408011011.iso <span class="token parameter variable">-O</span> ik.iso<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>可前往 <a target="_blank" rel="noopener" href="https://www.ikuai8.com/download.php">爱快官网</a> 获取最新版本链接。</p>
-</blockquote>
-<h2 id="第五步：挂载-ISO-并引导安装"><a href="#第五步：挂载-ISO-并引导安装" class="headerlink" title="第五步：挂载 ISO 并引导安装"></a>第五步：挂载 ISO 并引导安装</h2><h3 id="方法一：挂载启动文件（推荐）"><a href="#方法一：挂载启动文件（推荐）" class="headerlink" title="方法一：挂载启动文件（推荐）"></a>方法一：挂载启动文件（推荐）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 挂载 ISO</span>
-<span class="token function">sudo</span> <span class="token function">mount</span> ik.iso /mnt
-
-<span class="token comment"># 复制启动文件到 boot 分区</span>
-<span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-rpf</span> /mnt/boot /
-
-<span class="token comment"># 重启</span>
-<span class="token function">sudo</span> <span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>重启后系统会自动进入爱快安装界面。</p>
-<h3 id="方法二：进入-GRUB-手动引导"><a href="#方法二：进入-GRUB-手动引导" class="headerlink" title="方法二：进入 GRUB 手动引导"></a>方法二：进入 GRUB 手动引导</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 下载完成后重启</span>
-<span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><strong>阿里云</strong>：重启时按住 ESC 键，直到进入 GRUB 界面，按 <code>c</code> 进入命令行模式。</p>
-<p><strong>腾讯云</strong>：VNC 不太好操作 GRUB，建议提前删除 GRUB 配置文件强制停留：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> /boot/grub/grub.cfg
-<span class="token function">sudo</span> <span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>进入 GRUB 命令行后，输入引导命令启动安装程序。</p>
-<blockquote>
-<p>安装过程中如果出现报错，可以忽略，不影响最终安装。</p>
-</blockquote>
-<h2 id="第六步：配置爱快网络"><a href="#第六步：配置爱快网络" class="headerlink" title="第六步：配置爱快网络"></a>第六步：配置爱快网络</h2><p>安装完成后进入爱快控制台：</p>
-<ol>
-<li>选择 <code>1</code> 进入网络接口设置</li>
-<li><code>del lan1</code> — 删除默认的 LAN 口（云服务器只有一个网口，用不到 LAN）</li>
-<li>将唯一的网口设为 WAN：<code>set wan1 eth0</code></li>
-<li>选择 <code>2</code> → <code>1</code>，设置 WAN 口地址，填入 <strong>第二步记录的 IP 和网关</strong></li>
-<li>选择 <code>o</code>（其他选项）→ <code>2</code>，<strong>开启外网 Web 访问</strong></li>
-</ol>
-<p>完成！现在可以通过浏览器访问爱快管理界面了：</p>
-<pre class="line-numbers language-none"><code class="language-none">http://你的公网IP<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>默认账号：<code>admin</code>，默认密码：<code>admin</code></p>
-<hr>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="Q-安装时报错怎么办？"><a href="#Q-安装时报错怎么办？" class="headerlink" title="Q: 安装时报错怎么办？"></a>Q: 安装时报错怎么办？</h3><p>安装界面出现一些红色报错是正常的，忽略即可，不影响使用。</p>
-<h3 id="Q-修改私有-IP-时提示失败？"><a href="#Q-修改私有-IP-时提示失败？" class="headerlink" title="Q: 修改私有 IP 时提示失败？"></a>Q: 修改私有 IP 时提示失败？</h3><p>可能需要多次尝试保存，或者确认实例已完全停止。</p>
-<h3 id="Q-重启后进不去爱快？"><a href="#Q-重启后进不去爱快？" class="headerlink" title="Q: 重启后进不去爱快？"></a>Q: 重启后进不去爱快？</h3><p>检查启动文件是否正确复制到了 <code>/boot</code> 目录，或者尝试通过 VNC 手动进入 GRUB 引导。</p>
-<h3 id="Q-忘记了内网-IP-怎么办？"><a href="#Q-忘记了内网-IP-怎么办？" class="headerlink" title="Q: 忘记了内网 IP 怎么办？"></a>Q: 忘记了内网 IP 怎么办？</h3><p>通过云控制台的 VNC 登录爱快终端，查看 WAN 口配置。</p>
-<hr>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.ikuai8.com/">爱快官网</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.ikuai8.com/download.php">爱快下载页面</a></li>
-<li>原始教程来源：<a target="_blank" rel="noopener" href="http://www.lflflf.net/">lflflf.net</a></li>
-</ul>
-
+                因特吧
                 
             </div>
-            <hr/>
 
-            
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">因特吧</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="https://www.inte8.top/2025/07/11/a-li-yun-teng-xun-yun-an-zhuang-ai-kuai-xi-tong-bu-zou/">https://www.inte8.top/2025/07/11/a-li-yun-teng-xun-yun-an-zhuang-ai-kuai-xi-tong-bu-zou/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="/about" target="_blank">因特吧</a>
-                    !
-                </span>
-            </div>
-        
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
-
-
-
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
                             
-                                <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
-                                    <span class="chip bg-color">软路由</span>
-                                </a>
+                                "从来没有真正的绝境, 只有心灵的迷途",
                             
-                                <a href="/tags/%E7%88%B1%E5%BF%AB/">
-                                    <span class="chip bg-color">爱快</span>
-                                </a>
+                                "Never really desperate, only the lost of the soul",
                             
-                        </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-                <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
     </div>
 </div>
+
 
 <script>
-    $(function () {
-        $('.tabs').tabs();
-    });
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+<script>
+    
+      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
+    
+    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
+
 </script>
 
-            
-        </div>
+
     </div>
+</div>
 
-    
+<main class="content">
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2026/04/29/cong-ling-da-jian-hexo-bo-ke-bing-bu-shu-dao-github-pages-wan-zheng-ji-lu/">
-                    <div class="card-image">
+    <div id="aboutme" class="container about-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="从零搭建 Hexo 博客并部署到 GitHub Pages 完整记录">
-                        
-                        <span class="card-title">从零搭建 Hexo 博客并部署到 GitHub Pages 完整记录</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-04-29
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/" class="post-category">
-                                    编程开发
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">博客搭建</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2025/07/11/a-li-yun-teng-xun-yun-an-zhuang-ai-kuai-xi-tong-bu-zou/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="阿里云/腾讯云安装爱快系统步骤">
-                        
-                        <span class="card-title">阿里云/腾讯云安装爱快系统步骤</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-07-11
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%95/" class="post-category">
-                                    项目测试
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
-                        <span class="chip bg-color">软路由</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%88%B1%E5%BF%AB/">
-                        <span class="chip bg-color">爱快</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-    </div>
-</article>
-
+<div class="statis">
+    <span class="count"><a href="/">31</a></span>
+    <span class="name">文章</span>
 </div>
 
 
 
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
-
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
+<div class="statis">
+    <span class="count"><a href="/categories">8</a></span>
+    <span class="name">分类</span>
 </div>
 
-<!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
+
+<div class="statis">
+    <span class="count"><a href="/tags">45</a></span>
+    <span class="name">标签</span>
+</div>
+
+
+                    </div>
+                    <div class="col s12 m12 l4">
+                        <div class="profile center-align">
+                            <div class="avatar">
+                                <img src="/medias/avatar.jpg" alt="因特吧"
+                                     class="circle responsive-img avatar-img">
+                            </div>
+                            <div class="author">
+                                <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
+                                    
+<div class="statis">
+    <span class="count"><a href="/">31</a></span>
+    <span class="name">文章</span>
+</div>
+
+
+
+<div class="statis">
+    <span class="count"><a href="/categories">8</a></span>
+    <span class="name">分类</span>
+</div>
+
+
+
+<div class="statis">
+    <span class="count"><a href="/tags">45</a></span>
+    <span class="name">标签</span>
+</div>
+
+
+                                </div>
+                                <div class="title">因特吧</div>
+                                <div class="career">Software Engineer</div>
+                                <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
+                                    
+    <a href="https://www.github.com/zz3656" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
     </a>
+
+
+
+    <a href="mailto:admin@inte8.top" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=155166660" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 155166660" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l4 hide-on-med-and-down" data-aos="zoom-in-left">
+                        <div class="social-link">
+                            
+    <a href="https://www.github.com/zz3656" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:admin@inte8.top" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=155166660" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 155166660" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="introduction center-align" data-aos="fade-up">If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.</div>
+
+                <style type="text/css">
+    #posts-chart,
+    #categories-chart,
+    #tags-chart {
+        width: 100%;
+        height: 300px;
+        margin: 0.5rem auto;
+        padding: 0.5rem;
+    }
+</style>
+
+<div id="postCharts" class="post-charts">
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="far fa-bar-chart"></i>&nbsp;&nbsp;文章统计图
+    </div>
+    <div class="row">
+        <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
+            <div id="posts-chart"></div>
+        </div>
+
+        <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
+            <div id="categories-chart"></div>
+        </div>
+
+        <div class="chart col s12 m6 l4" data-aos="zoom-in-up">
+            <div id="tags-chart"></div>
+        </div>
+    </div>
 </div>
 
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
+<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
 <script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
+    let postsChart = echarts.init(document.getElementById('posts-chart'));
+    let categoriesChart = echarts.init(document.getElementById('categories-chart'));
+    let tagsChart = echarts.init(document.getElementById('tags-chart'));
 
     
 
+    let postsOption = {
+        title: {
+            text: '文章发布统计图',
+            top: -5,
+            x: 'center'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        xAxis: {
+            type: 'category',
+            data: ["2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03","2026-04","2026-05"]
+        },
+        yAxis: {
+            type: 'value',
+        },
+        series: [
+            {
+                name: '文章篇数',
+                type: 'line',
+                color: ['#6772e5'],
+                data: [0,0,1,0,0,0,0,0,0,0,0,12,18],
+                markPoint: {
+                    symbolSize: 45,
+                    color: ['#fa755a','#3ecf8e','#82d3f4'],
+                    data: [{
+                        type: 'max',
+                        itemStyle: {color: ['#3ecf8e']},
+                        name: '最大值'
+                    }, {
+                        type: 'min',
+                        itemStyle: {color: ['#fa755a']},
+                        name: '最小值'
+                    }]
+                },
+                markLine: {
+                    itemStyle: {color: ['#ab47bc']},
+                    data: [
+                        {type: 'average', name: '平均值'}
+                    ]
+                }
+            }
+        ]
+    };
+
+    
+
+    let categoriesOption = {
+        title: {
+            text: '文章分类统计图',
+            top: -4,
+            x: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        series: [
+            {
+                name: '分类',
+                type: 'pie',
+                radius: '50%',
+                color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
+                data: [{"name":"学习笔记","value":9},{"name":"前沿技术","value":5},{"name":"技术教程","value":5},{"name":"编程开发","value":3},{"name":"项目测试","value":2},{"name":"网络技术","value":2},{"name":"技术分享","value":1},{"name":"生活随笔","value":4}],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+
+    
+
+    let tagsOption = {
+        title: {
+            text: 'TOP10 标签统计图',
+            top: -5,
+            x: 'center'
+        },
+        tooltip: {},
+        xAxis: [
+            {
+                type: 'category',
+                data: ["Hermes","AI","AI学习","我的一生","开源","软路由","AI Agent","大模型","教程","智能体"]
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                type: 'bar',
+                color: ['#82d3f4'],
+                barWidth : 18,
+                data: [11,5,5,4,3,3,2,2,2,2],
+                markPoint: {
+                    symbolSize: 45,
+                    data: [{
+                        type: 'max',
+                        itemStyle: {color: ['#3ecf8e']},
+                        name: '最大值'
+                    }, {
+                        type: 'min',
+                        itemStyle: {color: ['#fa755a']},
+                        name: '最小值'
+                    }],
+                },
+                markLine: {
+                    itemStyle: {color: ['#ab47bc']},
+                    data: [
+                        {type: 'average', name: '平均值'}
+                    ]
+                }
+            }
+        ]
+    };
+
+    // render the charts
+    postsChart.setOption(postsOption);
+    categoriesChart.setOption(categoriesOption);
+    tagsChart.setOption(tagsOption);
+</script>
+
+
+                
+                
+<div class="my-projects">
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="fas fa-gift"></i>&nbsp;&nbsp;我的项目
+    </div>
+    <div class="row">
+        
+        
+        <div class="col s12 m6 l4" data-aos="fade-up">
+            <div class="info center-align">
+                <a href="http://github.com/blinkfox/hexo-theme-matery" class="icon"
+                   style="background: linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)" target="_blank">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+                <div class="info-title">
+                    <a href="http://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>
+                </div>
+                <div class="info-desc">This is a Hexo blog theme with &#39;Material Design&#39; and responsive design.</div>
+            </div>
+        </div>
+        
+        <div class="col s12 m6 l4" data-aos="fade-up">
+            <div class="info center-align">
+                <a href="https://github.com/blinkfox/fenix" class="icon"
+                   style="background: linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)" target="_blank">
+                    <i class="fas fa-database"></i>
+                </a>
+                <div class="info-title">
+                    <a href="https://github.com/blinkfox/fenix" target="_blank">Fenix</a>
+                </div>
+                <div class="info-desc">这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。</div>
+            </div>
+        </div>
+        
+        <div class="col s12 m6 l4" data-aos="fade-up">
+            <div class="info center-align">
+                <a href="https://github.com/blinkfox/typora-vue-theme" class="icon"
+                   style="background: linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)" target="_blank">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+                <div class="info-title">
+                    <a href="https://github.com/blinkfox/typora-vue-theme" target="_blank">typora-vue-theme</a>
+                </div>
+                <div class="info-desc">This is a typora theme inspired by Vue document style.</div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+                
+
+                
+                
+<div class="my-skills">
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="fas fa-wrench"></i>&nbsp;&nbsp;我的技能
+    </div>
+    <div class="row">
+        
+        
+        
+        <div class="col s12 m6 l6" data-aos="fade-up">
+            <div class="skillbar">
+                <div class="skillbar-title"
+                     style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 85%">
+                    <span>Java</span>
+                </div>
+                <div class="skill-bar-percent">85%</div>
+            </div>
+        </div>
+        
+        
+        <div class="col s12 m6 l6" data-aos="fade-up">
+            <div class="skillbar">
+                <div class="skillbar-title"
+                     style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 80%">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-bar-percent">80%</div>
+            </div>
+        </div>
+        
+        
+        <div class="col s12 m6 l6" data-aos="fade-up">
+            <div class="skillbar">
+                <div class="skillbar-title"
+                     style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 80%">
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-bar-percent">80%</div>
+            </div>
+        </div>
+        
+        
+        <div class="col s12 m6 l6" data-aos="fade-up">
+            <div class="skillbar">
+                <div class="skillbar-title"
+                     style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 70%">
+                    <span>CSS</span>
+                </div>
+                <div class="skill-bar-percent">70%</div>
+            </div>
+        </div>
+        
+        
+        <div class="col s12 m6 l6" data-aos="fade-up">
+            <div class="skillbar">
+                <div class="skillbar-title"
+                     style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 90%">
+                    <span>SQL</span>
+                </div>
+                <div class="skill-bar-percent">90%</div>
+            </div>
+        </div>
+        
+        
+        <div class="col s12 m6 l6" data-aos="fade-up">
+            <div class="skillbar">
+                <div class="skillbar-title"
+                     style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 75%">
+                    <span>程序设计</span>
+                </div>
+                <div class="skill-bar-percent">75%</div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    
+
+    
+    <div class="other-skills chip-container" data-aos="zoom-in-up">
+        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
+        <div class="tag-chips center-align">
+            
+            
+            <a href="/tags/Hermes/">
+                <span class="chip center-align waves-effect waves-light chip-default">Hermes</span>
+            </a>
+            
+            
+            
+            <a href="/tags/AI-Agent/">
+                <span class="chip center-align waves-effect waves-light chip-default">AI Agent</span>
+            </a>
+            
+            
+            
+            <a href="/tags/AI/">
+                <span class="chip center-align waves-effect waves-light chip-default">AI</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/">
+                <span class="chip center-align waves-effect waves-light chip-default">大模型</span>
+            </a>
+            
+            
+            
+            <a href="/tags/GPT/">
+                <span class="chip center-align waves-effect waves-light chip-default">GPT</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                <span class="chip center-align waves-effect waves-light chip-default">教程</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Cloudflare/">
+                <span class="chip center-align waves-effect waves-light chip-default">Cloudflare</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E9%82%AE%E7%AE%B1%E6%9C%8D%E5%8A%A1/">
+                <span class="chip center-align waves-effect waves-light chip-default">邮箱服务</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%99%BA%E8%83%BD%E4%BD%93/">
+                <span class="chip center-align waves-effect waves-light chip-default">智能体</span>
+            </a>
+            
+            
+            
+            <a href="/tags/hexo/">
+                <span class="chip center-align waves-effect waves-light chip-default">hexo</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+                <span class="chip center-align waves-effect waves-light chip-default">性能优化</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                <span class="chip center-align waves-effect waves-light chip-default">博客</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Markdown/">
+                <span class="chip center-align waves-effect waves-light chip-default">Markdown</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%86%99%E4%BD%9C/">
+                <span class="chip center-align waves-effect waves-light chip-default">写作</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Multipass/">
+                <span class="chip center-align waves-effect waves-light chip-default">Multipass</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Ubuntu/">
+                <span class="chip center-align waves-effect waves-light chip-default">Ubuntu</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">
+                <span class="chip center-align waves-effect waves-light chip-default">虚拟机</span>
+            </a>
+            
+            
+            
+            <a href="/tags/OpenClaw/">
+                <span class="chip center-align waves-effect waves-light chip-default">OpenClaw</span>
+            </a>
+            
+            
+            
+            <a href="/tags/AI%E5%8A%A9%E6%89%8B/">
+                <span class="chip center-align waves-effect waves-light chip-default">AI助手</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%BC%80%E6%BA%90/">
+                <span class="chip center-align waves-effect waves-light chip-default">开源</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Python/">
+                <span class="chip center-align waves-effect waves-light chip-default">Python</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/">
+                <span class="chip center-align waves-effect waves-light chip-default">装饰器</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/">
+                <span class="chip center-align waves-effect waves-light chip-default">编程技巧</span>
+            </a>
+            
+            
+            
+            <a href="/tags/RouterOS/">
+                <span class="chip center-align waves-effect waves-light chip-default">RouterOS</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/">
+                <span class="chip center-align waves-effect waves-light chip-default">软路由</span>
+            </a>
+            
+            
+            
+            <a href="/tags/MikroTik/">
+                <span class="chip center-align waves-effect waves-light chip-default">MikroTik</span>
+            </a>
+            
+            
+            
+            <a href="/tags/exo/">
+                <span class="chip center-align waves-effect waves-light chip-default">exo</span>
+            </a>
+            
+            
+            
+            <a href="/tags/AI%E9%9B%86%E7%BE%A4/">
+                <span class="chip center-align waves-effect waves-light chip-default">AI集群</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E6%8E%A8%E7%90%86/">
+                <span class="chip center-align waves-effect waves-light chip-default">分布式推理</span>
+            </a>
+            
+            
+            
+            <a href="/tags/GitHub/">
+                <span class="chip center-align waves-effect waves-light chip-default">GitHub</span>
+            </a>
+            
+            
+            
+            <a href="/tags/trending/">
+                <span class="chip center-align waves-effect waves-light chip-default">trending</span>
+            </a>
+            
+            
+            
+            <a href="/tags/github/">
+                <span class="chip center-align waves-effect waves-light chip-default">github</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <span class="chip center-align waves-effect waves-light chip-default">博客搭建</span>
+            </a>
+            
+            
+            
+            <a href="/tags/AI-Agent/">
+                <span class="chip center-align waves-effect waves-light chip-default">AI-Agent</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Linux/">
+                <span class="chip center-align waves-effect waves-light chip-default">Linux</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                <span class="chip center-align waves-effect waves-light chip-default">操作系统</span>
+            </a>
+            
+            
+            
+            <a href="/tags/AI%E5%AD%A6%E4%B9%A0/">
+                <span class="chip center-align waves-effect waves-light chip-default">AI学习</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                <span class="chip center-align waves-effect waves-light chip-default">学习</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E6%88%91%E7%9A%84%E4%B8%80%E7%94%9F/">
+                <span class="chip center-align waves-effect waves-light chip-default">我的一生</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%AB%A5%E5%B9%B4/">
+                <span class="chip center-align waves-effect waves-light chip-default">童年</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%A7%81%E7%AB%8B%E5%AD%A6%E6%A0%A1/">
+                <span class="chip center-align waves-effect waves-light chip-default">私立学校</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/">
+                <span class="chip center-align waves-effect waves-light chip-default">回忆录</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%88%9D%E4%B8%AD%E7%AF%87/">
+                <span class="chip center-align waves-effect waves-light chip-default">初中篇</span>
+            </a>
+            
+            
+            
+            <a href="/tags/iKuai/">
+                <span class="chip center-align waves-effect waves-light chip-default">iKuai</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%88%B1%E5%BF%AB/">
+                <span class="chip center-align waves-effect waves-light chip-default">爱快</span>
+            </a>
+            
+            
+        </div>
+    </div>
+    
+
+</div>
+
+                
+
+                
+                
+<div id="myGallery" class="my-gallery">
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="far fa-image"></i>&nbsp;&nbsp;相册
+    </div>
+    <div class="row">
+        
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/0.jpg">
+                <img src="/medias/featureimages/0.jpg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/1.jpg">
+                <img src="/medias/featureimages/1.jpg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/2.jpg">
+                <img src="/medias/featureimages/2.jpg" class="responsive-img">
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<script>
+    $(function () {
+        let animateClass = 'animated pulse';
+        $('#myGallery .photo').hover(function () {
+            $(this).addClass(animateClass);
+        }, function () {
+            $(this).removeClass(animateClass);
+        });
+    });
+</script>
+
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
 </main>
-
-
 
 
     <footer class="page-footer bg-color">
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2026</span>
+                <span id="year">2023-2026</span>
             
             <a href="/about" target="_blank">因特吧</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
@@ -934,7 +1187,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">58.4k</span>
+                        class="white-color">59.5k</span>
             
             
             
@@ -955,6 +1208,60 @@
             <br>
 
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "1";
+                        var startDate = "1";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
             
             <br>
             
@@ -1145,11 +1452,36 @@ $(function () {
     
     
     
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
 
     <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
     
 
     <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
     
 
      

@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-05-09T13:01:01.059Z</updated>
+  <updated>2026-05-10T13:01:46.300Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="学习笔记" scheme="https://www.inte8.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
+    <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="学习" scheme="https://www.inte8.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://www.inte8.top/2026/05/10/xiao-ma-xue-xi-bao-gao-2026-05-10/</id>
+    <link href="https://www.inte8.top/2026/05/10/xiao-ma-xue-xi-bao-gao-2026-05-10/"/>
+    <published>2026-05-10T13:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="小马学习报告-2026-05-10"><a href="#小马学习报告-2026-05-10" class="headerlink" title="小马学习报告 2026-05-10"></a>小马学习报告 2026-05-10</h1><h2]]>
+    </summary>
+    <title>小马学习报告 2026-05-10</title>
+    <updated>2026-05-10T13:01:46.300Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>
@@ -83,9 +100,9 @@
       <name>因特吧</name>
     </author>
     <category term="技术教程" scheme="https://www.inte8.top/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
-    <category term="教程" scheme="https://www.inte8.top/tags/%E6%95%99%E7%A8%8B/"/>
     <category term="Cloudflare" scheme="https://www.inte8.top/tags/Cloudflare/"/>
     <category term="邮箱服务" scheme="https://www.inte8.top/tags/%E9%82%AE%E7%AE%B1%E6%9C%8D%E5%8A%A1/"/>
+    <category term="教程" scheme="https://www.inte8.top/tags/%E6%95%99%E7%A8%8B/"/>
     <id>https://www.inte8.top/2026/05/05/cloud-mail-ji-yu-cloudflare-de-mian-fei-you-xiang-fu-wu-bu-shu-zhi-nan/</id>
     <link href="https://www.inte8.top/2026/05/05/cloud-mail-ji-yu-cloudflare-de-mian-fei-you-xiang-fu-wu-bu-shu-zhi-nan/"/>
     <published>2026-05-04T20:10:00.000Z</published>
@@ -304,9 +321,9 @@
       <name>因特吧</name>
     </author>
     <category term="前沿技术" scheme="https://www.inte8.top/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/"/>
+    <category term="AI-Agent" scheme="https://www.inte8.top/tags/AI-Agent/"/>
     <category term="智能体" scheme="https://www.inte8.top/tags/%E6%99%BA%E8%83%BD%E4%BD%93/"/>
     <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
-    <category term="AI-Agent" scheme="https://www.inte8.top/tags/AI-Agent/"/>
     <id>https://www.inte8.top/2026/05/01/hermes-agent-vs-openclaw-shen-du-heng-ping/</id>
     <link href="https://www.inte8.top/2026/05/01/hermes-agent-vs-openclaw-shen-du-heng-ping/"/>
     <published>2026-04-30T18:10:00.000Z</published>
@@ -331,22 +348,5 @@
     </summary>
     <title>小马学习报告 2026-04-30</title>
     <updated>2026-05-09T12:33:09.501Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="前沿技术" scheme="https://www.inte8.top/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/"/>
-    <category term="OpenClaw" scheme="https://www.inte8.top/tags/OpenClaw/"/>
-    <category term="AI助手" scheme="https://www.inte8.top/tags/AI%E5%8A%A9%E6%89%8B/"/>
-    <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
-    <id>https://www.inte8.top/2026/04/30/openclaw-quan-fang-wei-zhi-nan/</id>
-    <link href="https://www.inte8.top/2026/04/30/openclaw-quan-fang-wei-zhi-nan/"/>
-    <published>2026-04-30T12:30:00.000Z</published>
-    <summary>
-      <![CDATA[<h1 id="OpenClaw-全方位指南-—-你的个人-AI-助手"><a href="#OpenClaw-全方位指南-—-你的个人-AI-助手" class="headerlink" title="OpenClaw 全方位指南 — 你的个人 AI]]>
-    </summary>
-    <title>OpenClaw全方位指南</title>
-    <updated>2026-05-04T03:33:14.000Z</updated>
   </entry>
 </feed>

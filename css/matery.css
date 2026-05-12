@@ -857,8 +857,16 @@ header .go-back i {
     margin-bottom: 5px;
 }
 
+.recommend .post-card .post-body {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
 .recommend .post-card .post-description {
-    margin: 20px auto;
+    flex: 1 !important;
+    overflow: hidden !important;
+    margin: 0 auto;
     max-width: 500px;
     height: 65px;
     max-height: 65px;
@@ -868,7 +876,7 @@ header .go-back i {
 
 .recommend .post-card .read-more {
     height: 40px;
-    margin: .6rem auto 0;
+    margin: auto 0 0 !important;
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 40px;
@@ -879,6 +887,7 @@ header .go-back i {
     align-items: center;
     justify-content: center;
     width: 160px;
+    align-self: center;
 }
 
 .recommend .post-card .read-more .icon {

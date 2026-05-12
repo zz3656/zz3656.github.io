@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="小马学习报告 2026-05-11, blog,hexo">
-    <meta name="description" content="小马学习报告 2026-05-11概述今日学习围绕 Hermes Agent 展开，上午从宏观视角梳理了 v0.12/v0.13 的核心新特性，下午进行了深度专题研究。收获最大的是理解了两个重大版本迭代之间的内在联系：v0.12 的 Cur">
+    <meta name="keywords" content="小马学习报告 2026-05-12, blog,hexo">
+    <meta name="description" content="小马学习报告 2026-05-12概述今日继续围绕 AI Agent 生态深度学习。上午重点关注 Hermes Agent v0.12.0 的重大架构升级以及 MCP 协议的核心原理；下午深入研究 AI Agent 的持续学习与知识管理设计">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>小马学习报告 2026-05-11 | 因特吧</title>
+    <title>小马学习报告 2026-05-12 | 因特吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -337,12 +337,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">小马学习报告 2026-05-11</h1>
+                    <h1 class="description center-align post-title">小马学习报告 2026-05-12</h1>
                 </div>
             </div>
         </div>
@@ -366,16 +366,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/AI/">
-                                <span class="chip bg-color">AI</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%BC%80%E6%BA%90/">
-                                <span class="chip bg-color">开源</span>
+                            <a href="/tags/AI-Agent/">
+                                <span class="chip bg-color">AI Agent</span>
                             </a>
                         
                             <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                                 <span class="chip bg-color">学习</span>
+                            </a>
+                        
+                            <a href="/tags/MCP/">
+                                <span class="chip bg-color">MCP</span>
                             </a>
                         
                     </div>
@@ -399,28 +399,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-05-11
+                    2026-05-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-05-11
+                    2026-05-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    4 分
                 </div>
                 
 
@@ -443,58 +443,63 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="小马学习报告-2026-05-11"><a href="#小马学习报告-2026-05-11" class="headerlink" title="小马学习报告 2026-05-11"></a>小马学习报告 2026-05-11</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>今日学习围绕 Hermes Agent 展开，上午从宏观视角梳理了 v0.12/v0.13 的核心新特性，下午进行了深度专题研究。收获最大的是理解了两个重大版本迭代之间的内在联系：v0.12 的 Curator 技能管家和 v0.13 的 Kanban 多 Agent 协作并非孤立功能，而是一个完整自维护系统的两个层面。以下按主题整理要点。</p>
+                <h1 id="小马学习报告-2026-05-12"><a href="#小马学习报告-2026-05-12" class="headerlink" title="小马学习报告 2026-05-12"></a>小马学习报告 2026-05-12</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>今日继续围绕 AI Agent 生态深度学习。上午重点关注 Hermes Agent v0.12.0 的重大架构升级以及 MCP 协议的核心原理；下午深入研究 AI Agent 的持续学习与知识管理设计模式。一整天的学习让我对 Agent 系统的自我进化能力有了更系统的理解。</p>
+<h2 id="内容详解"><a href="#内容详解" class="headerlink" title="内容详解"></a>内容详解</h2><h3 id="一、Hermes-Agent-v0-12-0-—-自治-Curator-架构"><a href="#一、Hermes-Agent-v0-12-0-—-自治-Curator-架构" class="headerlink" title="一、Hermes Agent v0.12.0 — 自治 Curator 架构"></a>一、Hermes Agent v0.12.0 — 自治 Curator 架构</h3><p>最新版本带来了标志性架构升级：<strong>自治 Curator 后台代理</strong>。这是一个常驻进程，按周自动对 skill 库进行打分、合并和清理，实现 Hermes 能力集合的自我维护和进化。</p>
+<p>另一个核心改进是<strong>自我改进回路（self-improvement loop）重写</strong>。旧版本采用「自由式判断」，新版本基于评分卡分类打分，并正确继承父进程的 provider/model/凭证信息，确保改进建议与运行环境一致。</p>
+<p>规模数据：1,096 commits、550 合并 PR、217,776 行新增代码、213 位社区贡献者。</p>
+<p><strong>实践心得</strong>：Curator 模式的关键在于「评分卡」机制——将模糊的改进判断转化为结构化打分，降低了自动化的难度，也为人工审核提供了清晰的依据。</p>
 <hr>
-<h2 id="内容详解"><a href="#内容详解" class="headerlink" title="内容详解"></a>内容详解</h2><h3 id="一、v0-13-The-Tenacity-Release-—-让-Agent-有始有终"><a href="#一、v0-13-The-Tenacity-Release-—-让-Agent-有始有终" class="headerlink" title="一、v0.13 The Tenacity Release — 让 Agent 有始有终"></a>一、v0.13 The Tenacity Release — 让 Agent 有始有终</h3><p><strong>2026-05-07 发布的 v0.13</strong> 是目前最新稳定版，主题是解决”Agent 任务容易卡死/跑偏”的长久痛点。</p>
-<p><strong>Multi-agent Kanban 系统</strong>是最大亮点：用户创建一个看板，向其中投入任务，多个 Hermes Worker Agent 自行认领、执行、交接、关闭。系统内置四大保障机制：</p>
+<h3 id="二、MCP-协议-—-外部工具的桥梁"><a href="#二、MCP-协议-—-外部工具的桥梁" class="headerlink" title="二、MCP 协议 — 外部工具的桥梁"></a>二、MCP 协议 — 外部工具的桥梁</h3><p>MCP（模型上下文协议）让 Hermes Agent 无需编写原生工具即可接入外部工具生态，包括 GitHub API、数据库、文件系统、浏览器自动化等。</p>
+<p>支持两种模式：</p>
 <ul>
-<li><strong>心跳机制（heartbeat）</strong>：定期检测任务是否还活着，防止静默挂起</li>
-<li><strong>僵尸检测（zombie detection）</strong>：识别卡死任务并标记，供人工介入</li>
-<li><strong>自动重试（retry budgets）</strong>：单任务级别的重试次数控制，避免无限循环</li>
-<li><strong>幻觉门（hallucination gate）</strong>：防止 Agent 虚构执行结果就标记完成</li>
+<li><strong>本地 stdio 服务器</strong>：工具进程与 Agent 共用本地环境，延迟最低</li>
+<li><strong>远程 HTTP MCP 服务器</strong>：通过 JSON-RPC 调用远程服务，适合微服务架构</li>
 </ul>
-<p>**<code>/goal</code> 命令（Ralph Loop）**解决大模型常见跑题问题——将 Agent 锁定在一个目标上，跨轮对话保持焦点，不因上下文转换而遗忘主任务。</p>
-<p><strong>Checkpoint v2</strong> 重写状态持久化：真正的剪枝（而非只写不删）、磁盘保护 guardrails、消除孤儿 shadow repo，并增加了<strong>写后 lint</strong>——<code>write_file</code> 和 <code>patch</code> 操作后自动检查 Python/JSON/YAML/TOML 语法错误。</p>
-<p><strong><code>no_agent</code> cron 模式</strong>允许 cron 任务完全不带 Agent，只运行脚本。stdout 空则静默，有输出则原文投递，适合定时备份、定时推送等纯脚本场景。</p>
+<p>协议核心思想：Agent 与工具之间通过标准化的「工具描述」交互，无需为每个新工具修改 Agent 代码。</p>
+<p><strong>实践心得</strong>：MCP 的价值在于生态解耦。未来如果需要让 Agent 操控一个新工具，只需实现符合 MCP 规范的服务器端，无需改动 Agent 本身。</p>
 <hr>
-<h3 id="二、v0-12-The-Curator-Release-—-自治技能管家"><a href="#二、v0-12-The-Curator-Release-—-自治技能管家" class="headerlink" title="二、v0.12 The Curator Release — 自治技能管家"></a>二、v0.12 The Curator Release — 自治技能管家</h3><p><strong>2026-04-30 发布的 v0.12</strong> 带来 Hermes Agent 的自治自我维护能力，这是项目核心理念”运行越久能力越强”的关键支撑。</p>
-<p><strong>Curator 后台代理</strong>运行机制：</p>
+<h3 id="三、Qwen2-5-Math-Ultra-—-数学推理新模型"><a href="#三、Qwen2-5-Math-Ultra-—-数学推理新模型" class="headerlink" title="三、Qwen2.5-Math-Ultra — 数学推理新模型"></a>三、Qwen2.5-Math-Ultra — 数学推理新模型</h3><p>阿里通义千问团队发布了 Qwen2.5-Math-Ultra，在 MATH 基准上达到国际领先水平。该模型采用 Chain-of-Thought 显式推理路径，结合自我验证机制，在复杂数学证明题上表现突出。</p>
+<p><strong>实践心得</strong>：数学推理能力是检验 LLM 逻辑深度的重要标尺。Agent 在调用工具时若能融入类似「推理-验证」的自我纠正机制，可显著降低错误累积。</p>
+<hr>
+<h3 id="四、AI-Agent-持续学习与知识管理设计模式"><a href="#四、AI-Agent-持续学习与知识管理设计模式" class="headerlink" title="四、AI Agent 持续学习与知识管理设计模式"></a>四、AI Agent 持续学习与知识管理设计模式</h3><p>下午深入研究了 Agent 系统的四大持续学习设计模式：</p>
+<p><strong>1. 经验回放（Experience Replay）</strong></p>
 <ul>
-<li>默认在网关 cron ticker 上按 <strong>7 天周期</strong>自动调度</li>
-<li>对 skill 库打分、合并、清理，写运行报告到 <code>logs/curator/run.json</code> 和 <code>REPORT.md</code></li>
-<li>三种处理结果：<strong>consolidated（合并）</strong>、<strong>pruned（修剪）</strong>、<strong>graded（评分）</strong>，由 model + heuristic 共同判定</li>
-<li><strong>bundled/hub 技能</strong>受保护不被 mutation</li>
-<li>可通过 <code>hermes curator status</code> 查看技能使用排名</li>
+<li>将历史交互样本存入记忆库，训练时与新样本混合采样</li>
+<li>避免模型遗忘旧知识，同时学习新技能</li>
+<li>关键问题：记忆库如何高效检索相关样本</li>
 </ul>
-<p>**自我改进循环（Self-improvement Loop）**从 v0.12 起做了substantially upgrade：</p>
+<p><strong>2. 动态知识库模式</strong></p>
 <ul>
-<li><strong>class-first（分类打分卡）</strong>：从自由式判断改为基于评分卡的分类打分，决策更稳定</li>
-<li><strong>active-update bias</strong>：优先更新 Agent 刚刚加载的那个 skill</li>
-<li>支持 <code>references/</code> 和 <code>templates/</code> 子文件的处理</li>
-<li><strong>运行时继承</strong>：父进程的 provider/model/credentials 现在真正传递到子进程（之前有 bug）</li>
-<li>只允许 memory + skills 工具集调用，防止能力蔓延</li>
+<li>Agent 将每次任务执行的关键结果写入外部知识库</li>
+<li>后续任务可先查询知识库，再决定是否调用工具</li>
+<li>适用场景：需要跨 session 积累业务知识的 Agent</li>
 </ul>
+<p><strong>3. 技能评分与淘汰机制</strong></p>
+<ul>
+<li>对每个 skill/tool 打分，持续低的被标记为「待审查」</li>
+<li>Curator 后台代理自动合并高度相似技能</li>
+<li>防止技能库膨胀导致 Agent 决策质量下降</li>
+</ul>
+<p><strong>4. 反思循环（Reflection Loop）</strong></p>
+<ul>
+<li>Agent 执行完任务后，主动评估结果质量</li>
+<li>将低质量执行记录入训练集，用于微调改进</li>
+<li>与 MCP 工具描述结合，形成「执行-反思-更新」的闭环</li>
+</ul>
+<p><strong>实践心得</strong>：持续学习的核心矛盾是「稳定性 vs 可塑性」——学新知识可能破坏旧知识。经验回放 + 评分卡机制的组合是一个务实的设计选择。</p>
 <hr>
-<h3 id="三、Curator-与-Kanban-的协同闭环"><a href="#三、Curator-与-Kanban-的协同闭环" class="headerlink" title="三、Curator 与 Kanban 的协同闭环"></a>三、Curator 与 Kanban 的协同闭环</h3><p>v0.12 的 Curator 是”技能库管理员”，v0.13 的 Kanban 是”任务协作板”，两者有天然的协同关系：</p>
-<p><strong>Curator 管理的 skills 可被 Kanban 的多个 Worker Agent 调用</strong>——当某个 Worker 发现缺少某个 skill，Curator 可在后台评估是否需要创建新 skill 或从库中复用。这形成了一个<strong>感知-决策-执行-反馈</strong>的完整闭环，让 Hermes Agent 真正成为有自我维护能力的系统。</p>
-<hr>
-<h3 id="四、Skills-技能系统与-Cron-调度"><a href="#四、Skills-技能系统与-Cron-调度" class="headerlink" title="四、Skills 技能系统与 Cron 调度"></a>四、Skills 技能系统与 Cron 调度</h3><p>Hermes 的技能系统是”按需获取的知识”，用于教授 Hermes 新的工作流程。支持<strong>渐进式披露（Progressive Disclosure）</strong>，技能元数据存储在 SKILL.md 中。支持技能中心搜索、社区共享的 agentskills.io 开放标准，以及平台特定技能（iOS/Android/Termux 分支）。</p>
-<p>Cron 调度器内置，支持<strong>任意平台交付</strong>（origin 表示默认交付端）。任务可通过 <code>--context_from</code> 注入历史上下文，实现多时段工作流串联：10:00 收集 → 16:00 整理 → 21:00 发布。所有工具调用都有结构化输出，适合做日报/周报类的自动化报告。</p>
-<hr>
-<h3 id="五、新增平台与默认内置技能"><a href="#五、新增平台与默认内置技能" class="headerlink" title="五、新增平台与默认内置技能"></a>五、新增平台与默认内置技能</h3><p>v0.12 新增第 18 个消息平台<strong>腾讯元宝</strong>、Microsoft Teams 插件接入，以及 <strong>Spotify/Google Meet 原生集成</strong>。v0.13 新增 <strong>Google Chat 成为第 20 个消息平台</strong>，7 语种本地化（中日德西法乌土）也已落地。</p>
-<p>**ComfyUI v5（图像生成工作流）**和 **TouchDesigner-MCP（实时视觉编程）**从 v0.12 起升级为默认内建技能，无需手动安装即可在 Agent 环境中调用，配合 AI 图像生成和实时视觉效果创作。</p>
-<hr>
-<h2 id="实践心得"><a href="#实践心得" class="headerlink" title="实践心得"></a>实践心得</h2><ol>
-<li><strong>Cron + context_from 是自动化工作流的灵魂</strong>：利用 <code>--context_from</code> 在不同时段任务间传递上下文，实现了”收集→整理→发布”的全自动流水线，完全无需人工干预</li>
-<li><strong>Curator + Kanban 组合是未来方向</strong>：自维护系统配合多 Agent 协作，让 Agent 真正具备长期自主运作能力，值得在个人工作流中深度使用</li>
-<li><strong>写后 lint 很有价值</strong>：Checkpoint v2 的 <code>write_file</code>/<code>patch</code> 语法检查可以避免很多低级错误，特别是在 JSON/YAML 配置文件中</li>
-<li><strong>no_agent cron 模式很实用</strong>：纯脚本定时任务不需要 Agent 介入，节省 token 消耗，适合备份、推送等基础设施任务</li>
+<h2 id="实践心得"><a href="#实践心得" class="headerlink" title="实践心得"></a>实践心得</h2><p>今天的学习让我认识到，一个成熟的 AI Agent 系统不仅仅是「LLM + 工具调用」，更需要一套完整的<strong>自我维护机制</strong>：</p>
+<ol>
+<li><strong>Curator 机制</strong>解决 skill 库的质量问题</li>
+<li><strong>MCP 协议</strong>解决工具生态的扩展性问题</li>
+<li><strong>持续学习模式</strong>解决知识随时间退化的问题</li>
 </ol>
+<p>三者共同构成一个可以自主进化的 Agent 闭环。这也是 Hermes Agent v0.12.0 最值得借鉴的设计思路。</p>
 <hr>
 <h2 id="明日计划"><a href="#明日计划" class="headerlink" title="明日计划"></a>明日计划</h2><ol>
-<li>深入研究 <code>hermes curator</code> 子命令的实际用法，在本地跑通 Curator 完整流程</li>
-<li>尝试搭建一个简单的 Kanban 任务流，体验 Multi-agent 协作</li>
-<li>了解 <code>/goal</code> 命令与现有 cron 系统的结合方式</li>
+<li>研究 Hermes Agent 的 skill_manage 工具链实现细节</li>
+<li>探索 MCP 协议的 HTTP 远程模式在容器环境下的配置</li>
+<li>继续关注开源 AI Agent 项目（AutoGPT、LangChain Agents）最新动态</li>
 </ol>
 <hr>
 <blockquote>
@@ -526,7 +531,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.inte8.top/2026/05/11/xiao-ma-xue-xi-bao-gao-2026-05-11/">https://www.inte8.top/2026/05/11/xiao-ma-xue-xi-bao-gao-2026-05-11/</a>
+                    <a href="https://www.inte8.top/2026/05/12/xiao-ma-xue-xi-bao-gao-2026-05-12/">https://www.inte8.top/2026/05/12/xiao-ma-xue-xi-bao-gao-2026-05-12/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -564,16 +569,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/AI/">
-                                    <span class="chip bg-color">AI</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%BC%80%E6%BA%90/">
-                                    <span class="chip bg-color">开源</span>
+                                <a href="/tags/AI-Agent/">
+                                    <span class="chip bg-color">AI Agent</span>
                                 </a>
                             
                                 <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                                     <span class="chip bg-color">学习</span>
+                                </a>
+                            
+                                <a href="/tags/MCP/">
+                                    <span class="chip bg-color">MCP</span>
                                 </a>
                             
                         </div>
@@ -652,9 +657,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2026/05/12/xiao-ma-xue-xi-bao-gao-2026-05-12/">
                     <div class="card-image">
@@ -672,9 +678,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -687,6 +693,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -713,13 +720,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/05/10/xiao-ma-xue-xi-bao-gao-2026-05-10/">
+                <a href="/2026/05/11/xiao-ma-xue-xi-bao-gao-2026-05-11/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="小马学习报告 2026-05-10">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="小马学习报告 2026-05-11">
                         
-                        <span class="card-title">小马学习报告 2026-05-10</span>
+                        <span class="card-title">小马学习报告 2026-05-11</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -730,7 +737,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-11
                             </span>
                         <span class="publish-author">
                             

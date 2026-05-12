@@ -857,8 +857,16 @@ header .go-back i {
     margin-bottom: 5px;
 }
 
+.recommend .post-card .post-body {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
 .recommend .post-card .post-description {
-    margin: 20px auto;
+    flex: 1 !important;
+    overflow: hidden !important;
+    margin: 0 auto;
     max-width: 500px;
     height: 65px;
     max-height: 65px;
@@ -868,18 +876,23 @@ header .go-back i {
 
 .recommend .post-card .read-more {
     height: 40px;
-    margin: .6rem 1px;
+    margin: auto 0 0 !important;
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 40px;
     color: #fff;
     border-radius: 30px;
     box-shadow: 0 2px 2px 0 rgba(244, 67, 54, .14), 0 3px 1px -2px rgba(244, 67, 54, .2), 0 1px 5px 0 rgba(244, 67, 54, .12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    align-self: center;
 }
 
 .recommend .post-card .read-more .icon {
     font-size: 1.05rem;
-    padding-right: 10px;
+    margin-right: 8px;
 }
 
 .archive-calendar {

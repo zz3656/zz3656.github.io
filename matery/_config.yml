@@ -244,7 +244,7 @@ mouseStar:
 
   # 是否激活页面飘雪效果, 只在桌面版网页启用特效
 snowdown:
-  enable: true
+  enable: false
 
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
@@ -371,16 +371,16 @@ tcaptcha:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: false
-  appId:  # 必填
-  appKey: # 必填
-  serverURLs: # 必填 https://你的api
+  enable: true
+  appId: uK8SiUM6omRsG4I3yzsm2Vka-gzGzoHsz
+  appKey: c8cyDnjxWlCjJ2JG2QUydhrM
+  serverURLs: https://uK8SiUM6.leanapp.cn
   notify: false
   verify: false
   visitor: true
-  avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  avatar: 'mm'
   pageSize: 10
-  placeholder: 'just go go' # Comment Box placeholder
+  placeholder: '写下你的评论吧...'
   background: /medias/comment_bg.png
   coolpushkey: 
 

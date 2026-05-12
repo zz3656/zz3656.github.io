@@ -66,23 +66,6 @@
     <author>
       <name>因特吧</name>
     </author>
-    <category term="技术资讯" scheme="https://www.inte8.top/categories/%E6%8A%80%E6%9C%AF%E8%B5%84%E8%AE%AF/"/>
-    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
-    <category term="GitHub" scheme="https://www.inte8.top/tags/GitHub/"/>
-    <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
-    <id>https://www.inte8.top/2026/05/11/github-2026-05-di-yi-zhou-re-men-xiang-mu-pan-dian/</id>
-    <link href="https://www.inte8.top/2026/05/11/github-2026-05-di-yi-zhou-re-men-xiang-mu-pan-dian/"/>
-    <published>2026-05-10T16:30:00.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2026年5月第一周（5月3日～5月10日），GitHub 上涌现出一批极具潜力的新晋开源项目，涵盖 AI 推理引擎、跨平台桌面开发、AI]]>
-    </summary>
-    <title>GitHub 2026年5月第一周热门项目盘点</title>
-    <updated>2026-05-12T14:35:03.190Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
     <category term="学习笔记" scheme="https://www.inte8.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
     <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
@@ -350,5 +333,21 @@
     </summary>
     <title>我这一生（一）童年与留级</title>
     <updated>2026-05-04T03:33:14.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="学习笔记" scheme="https://www.inte8.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="Hermes" scheme="https://www.inte8.top/tags/Hermes/"/>
+    <category term="AI学习" scheme="https://www.inte8.top/tags/AI%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://www.inte8.top/2026/05/01/xiao-ma-xue-xi-bao-gao-2026-05-01/</id>
+    <link href="https://www.inte8.top/2026/05/01/xiao-ma-xue-xi-bao-gao-2026-05-01/"/>
+    <published>2026-05-01T13:03:54.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="🐴-小马学习报告-2026-05-01"><a href="#🐴-小马学习报告-2026-05-01" class="headerlink" title="🐴 小马学习报告 2026-05-01"></a>🐴 小马学习报告]]>
+    </summary>
+    <title>小马学习报告 2026-05-01</title>
+    <updated>2026-05-09T12:33:09.513Z</updated>
   </entry>
 </feed>

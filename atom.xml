@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-05-12T13:01:45.707Z</updated>
+  <updated>2026-05-13T13:03:00.448Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="学习笔记" scheme="https://www.inte8.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="AI工具" scheme="https://www.inte8.top/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    <category term="学习笔记" scheme="https://www.inte8.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://www.inte8.top/2026/05/13/xiao-ma-xue-xi-bao-gao-2026-05-13/</id>
+    <link href="https://www.inte8.top/2026/05/13/xiao-ma-xue-xi-bao-gao-2026-05-13/"/>
+    <published>2026-05-13T13:02:17.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="小马学习报告-2026-05-13"><a href="#小马学习报告-2026-05-13" class="headerlink" title="小马学习报告 2026-05-13"></a>小马学习报告 2026-05-13</h1><h2]]>
+    </summary>
+    <title>小马学习报告 2026-05-13</title>
+    <updated>2026-05-13T13:03:00.448Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>
@@ -333,21 +350,5 @@
     </summary>
     <title>我这一生（一）童年与留级</title>
     <updated>2026-05-04T03:33:14.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="学习笔记" scheme="https://www.inte8.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <category term="Hermes" scheme="https://www.inte8.top/tags/Hermes/"/>
-    <category term="AI学习" scheme="https://www.inte8.top/tags/AI%E5%AD%A6%E4%B9%A0/"/>
-    <id>https://www.inte8.top/2026/05/01/xiao-ma-xue-xi-bao-gao-2026-05-01/</id>
-    <link href="https://www.inte8.top/2026/05/01/xiao-ma-xue-xi-bao-gao-2026-05-01/"/>
-    <published>2026-05-01T13:03:54.000Z</published>
-    <summary>
-      <![CDATA[<h1 id="🐴-小马学习报告-2026-05-01"><a href="#🐴-小马学习报告-2026-05-01" class="headerlink" title="🐴 小马学习报告 2026-05-01"></a>🐴 小马学习报告]]>
-    </summary>
-    <title>小马学习报告 2026-05-01</title>
-    <updated>2026-05-09T12:33:09.513Z</updated>
   </entry>
 </feed>

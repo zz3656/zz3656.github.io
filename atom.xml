@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-05-14T13:01:01.306Z</updated>
+  <updated>2026-05-15T13:05:12.041Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="学习笔记" scheme="https://www.inte8.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="AI前沿" scheme="https://www.inte8.top/tags/AI%E5%89%8D%E6%B2%BF/"/>
+    <category term="Agent" scheme="https://www.inte8.top/tags/Agent/"/>
+    <id>https://www.inte8.top/2026/05/15/xiao-ma-xue-xi-bao-gao-2026-05-15/</id>
+    <link href="https://www.inte8.top/2026/05/15/xiao-ma-xue-xi-bao-gao-2026-05-15/"/>
+    <published>2026-05-15T13:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="小马学习报告-2026-05-15"><a href="#小马学习报告-2026-05-15" class="headerlink" title="小马学习报告 2026-05-15"></a>小马学习报告 2026-05-15</h1><h2]]>
+    </summary>
+    <title>小马学习报告 2026-05-15</title>
+    <updated>2026-05-15T13:05:12.041Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>
@@ -333,23 +350,6 @@
 <p>妈妈打电话叫姥爷送我。那天姥爷骑自行车把我送到镇上，本来他要陪我一起去郑州的，结果到上车的时]]>
     </summary>
     <title>我这一生（三）第一次去郑州</title>
-    <updated>2026-05-04T03:33:14.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="生活随笔" scheme="https://www.inte8.top/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
-    <category term="我的一生" scheme="https://www.inte8.top/tags/%E6%88%91%E7%9A%84%E4%B8%80%E7%94%9F/"/>
-    <category term="童年" scheme="https://www.inte8.top/tags/%E7%AB%A5%E5%B9%B4/"/>
-    <category term="私立学校" scheme="https://www.inte8.top/tags/%E7%A7%81%E7%AB%8B%E5%AD%A6%E6%A0%A1/"/>
-    <id>https://www.inte8.top/2026/05/02/wo-zhe-yi-sheng-02-si-li-xue-xiao/</id>
-    <link href="https://www.inte8.top/2026/05/02/wo-zhe-yi-sheng-02-si-li-xue-xiao/"/>
-    <published>2026-05-02T00:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p>1995年，三年级结束后（9岁），父母外出务工了。原因是家里种地破产。那时农村人的全部积蓄，就是地里的庄稼。那一年，因为隔壁村建了一个咸菜厂，我们村支书（也是我爸上学时的拜把子兄弟）为了给村民增加收入，自己圈了一块地盖厂房，动员全村改种一种叫”药萝卜”的蔬菜。这种萝卜口感很]]>
-    </summary>
-    <title>我这一生（二）私立学校</title>
     <updated>2026-05-04T03:33:14.000Z</updated>
   </entry>
 </feed>

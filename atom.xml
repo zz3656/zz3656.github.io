@@ -117,6 +117,23 @@
     <author>
       <name>因特吧</name>
     </author>
+    <category term="技术资讯" scheme="https://www.inte8.top/categories/%E6%8A%80%E6%9C%AF%E8%B5%84%E8%AE%AF/"/>
+    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
+    <category term="GitHub" scheme="https://www.inte8.top/tags/GitHub/"/>
+    <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
+    <id>https://www.inte8.top/2026/05/18/github-2026-05-di-san-zhou-re-men-xin-xiang-mu-top10/</id>
+    <link href="https://www.inte8.top/2026/05/18/github-2026-05-di-san-zhou-re-men-xin-xiang-mu-top10/"/>
+    <published>2026-05-17T16:05:00.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2026年5月第三周（5月16日～5月23日），GitHub 新建仓库中 <strong>AI Coding Agent</strong>]]>
+    </summary>
+    <title>GitHub 2026年5月第三周热门新项目 Top10</title>
+    <updated>2026-05-23T23:09:11.281Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
     <category term="GitHub" scheme="https://www.inte8.top/tags/GitHub/"/>
     <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
     <category term="编程" scheme="https://www.inte8.top/tags/%E7%BC%96%E7%A8%8B/"/>
@@ -330,22 +347,5 @@
     </summary>
     <title>小马学习报告 2026-05-06</title>
     <updated>2026-05-09T12:33:09.553Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="技术教程" scheme="https://www.inte8.top/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
-    <category term="Cloudflare" scheme="https://www.inte8.top/tags/Cloudflare/"/>
-    <category term="邮箱服务" scheme="https://www.inte8.top/tags/%E9%82%AE%E7%AE%B1%E6%9C%8D%E5%8A%A1/"/>
-    <category term="教程" scheme="https://www.inte8.top/tags/%E6%95%99%E7%A8%8B/"/>
-    <id>https://www.inte8.top/2026/05/05/cloud-mail-ji-yu-cloudflare-de-mian-fei-you-xiang-fu-wu-bu-shu-zhi-nan/</id>
-    <link href="https://www.inte8.top/2026/05/05/cloud-mail-ji-yu-cloudflare-de-mian-fei-you-xiang-fu-wu-bu-shu-zhi-nan/"/>
-    <published>2026-05-04T20:10:00.000Z</published>
-    <summary>
-      <![CDATA[<h1 id="📧-Cloud-Mail：基于-Cloudflare-的免费邮箱服务部署指南"><a href="#📧-Cloud-Mail：基于-Cloudflare-的免费邮箱服务部署指南" class="headerlink" title="📧 Cloud]]>
-    </summary>
-    <title>Cloud Mail基于Cloudflare的免费邮箱服务部署指南</title>
-    <updated>2026-05-07T00:02:58.000Z</updated>
   </entry>
 </feed>

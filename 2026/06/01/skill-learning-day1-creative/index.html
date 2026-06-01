@@ -4,12 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="小马学习报告 2026-05-04, blog,hexo">
-    <meta name="description" content="🐴 小马的全天学习报告
-今日一句话总结：从「安全模型」到「工具集体系」再到「最佳实践」，今天补齐了 Hermes Agent 安全、工具配置和高效使用三大拼图。
+    <meta name="keywords" content="Hermes Agent 技能学习笔记 - 第1天：Creative 分类详解, blog,hexo">
+    <meta name="description" content="Hermes Agent 技能学习笔记 - 第1天：Creative 分类详解
+计划：6月1日-6月5日学完全部92个技能，每天发布学习报告。本文是第1天，涵盖 Creative 分类下全部20个技能。
 
-
-一、今日学习概述今天上午、下午、晚间三个时段，小马 🐴 通过访问中国社">
+1. architecture-d">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>小马学习报告 2026-05-04 | 因特吧</title>
+    <title>Hermes Agent 技能学习笔记 - 第1天：Creative 分类详解 | 因特吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -341,12 +340,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">小马学习报告 2026-05-04</h1>
+                    <h1 class="description center-align post-title">Hermes Agent 技能学习笔记 - 第1天：Creative 分类详解</h1>
                 </div>
             </div>
         </div>
@@ -374,8 +373,16 @@
                                 <span class="chip bg-color">Hermes</span>
                             </a>
                         
-                            <a href="/tags/AI%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">AI学习</span>
+                            <a href="/tags/AI/">
+                                <span class="chip bg-color">AI</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%8A%80%E8%83%BD%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">技能学习</span>
+                            </a>
+                        
+                            <a href="/tags/Creative/">
+                                <span class="chip bg-color">Creative</span>
                             </a>
                         
                     </div>
@@ -399,28 +406,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-05-04
+                    2026-06-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-05-26
+                    2026-06-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.2k
+                    3.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    15 分
                 </div>
                 
 
@@ -443,242 +450,548 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="🐴-小马的全天学习报告"><a href="#🐴-小马的全天学习报告" class="headerlink" title="🐴 小马的全天学习报告"></a>🐴 小马的全天学习报告</h1><blockquote>
-<p>今日一句话总结：从「安全模型」到「工具集体系」再到「最佳实践」，今天补齐了 Hermes Agent 安全、工具配置和高效使用三大拼图。</p>
+                <h1 id="Hermes-Agent-技能学习笔记-第1天：Creative-分类详解"><a href="#Hermes-Agent-技能学习笔记-第1天：Creative-分类详解" class="headerlink" title="Hermes Agent 技能学习笔记 - 第1天：Creative 分类详解"></a>Hermes Agent 技能学习笔记 - 第1天：Creative 分类详解</h1><blockquote>
+<p>计划：6月1日-6月5日学完全部92个技能，每天发布学习报告。本文是第1天，涵盖 Creative 分类下全部20个技能。</p>
 </blockquote>
+<h2 id="1-architecture-diagram（架构图生成）"><a href="#1-architecture-diagram（架构图生成）" class="headerlink" title="1. architecture-diagram（架构图生成）"></a>1. architecture-diagram（架构图生成）</h2><p><strong>用途</strong>：生成深色主题的 SVG 架构/云/基础设施图，输出为独立的 HTML 文件。</p>
+<p><strong>核心特点</strong>：</p>
+<ul>
+<li>无需外部工具、API密钥或渲染库</li>
+<li>支持前端、后端、数据库、云服务、安全组件等多种图标类型</li>
+<li>每个组件类型有固定的颜色编码（如前端=青色，后端=绿色，数据库=紫色）</li>
+<li>使用 JetBrains Mono 等宽字体，40px网格背景</li>
+</ul>
+<p><strong>输出</strong>：一个自包含的 <code>.html</code> 文件，双击即可在浏览器中打开，离线可用。</p>
 <hr>
-<h2 id="一、今日学习概述"><a href="#一、今日学习概述" class="headerlink" title="一、今日学习概述"></a>一、今日学习概述</h2><p>今天上午、下午、晚间三个时段，小马 🐴 通过访问中国社区官网（hermesagent.org.cn）、官方文档（hermes-agent.nousresearch.com/docs）和社区 MCP 中文文档服务（113 篇），系统学习了 Hermes Agent 的核心功能图谱。上午打基础（定位、安装、记忆、技能、MCP、Cron、迁移），下午深入架构（语音模式、上下文文件、RL 训练、内部架构、人格系统、版本演进），晚间补充了<strong>安全模型、工具集体系、检查点回滚、FAQ 故障排除和最佳实践</strong>等关键板块。全天共计覆盖 <strong>30+ 知识点</strong>，从「怎么装」到「怎么用好」到「怎么拆开看」全部打通。</p>
-<hr>
-<h2 id="二、学习内容详解"><a href="#二、学习内容详解" class="headerlink" title="二、学习内容详解"></a>二、学习内容详解</h2><h3 id="🟢-基础篇（上午）"><a href="#🟢-基础篇（上午）" class="headerlink" title="🟢 基础篇（上午）"></a>🟢 基础篇（上午）</h3><p><strong>1. Hermes Agent 核心定位</strong></p>
-<ul>
-<li>由 Nous Research 开发的开源、自托管 AI Agent，MIT 许可</li>
-<li>内置学习闭环：从经验中创建技能、使用中自我改进、跨会话持久记忆、Honcho 方言式用户建模</li>
-<li>多平台消息网关支持 15+ 平台（微信、飞书、钉钉、QQ、Discord、Telegram、WhatsApp 等）</li>
-<li>兼容国内外模型：Deepseek、Qwen、GLM、Kimi、MiniMax、Claude、Gemini，以及 Ollama/LM Studio 本地部署</li>
-</ul>
-<p><strong>2. 安装与配置</strong></p>
-<ul>
-<li>国内加速安装：<code>curl -fsSL https://res1.hermesagent.org.cn/install.sh | bash</code>（Linux/macOS/WSL2）</li>
-<li>Windows PowerShell：<code>irm https://res1.hermesagent.org.cn/install.ps1 | iex</code></li>
-<li>安装后三步走：<code>hermes setup</code> → <code>hermes model</code> → <code>hermes tools</code> → <code>hermes</code></li>
-</ul>
-<p><strong>3. 持久记忆系统</strong></p>
-<ul>
-<li>双文件架构：<code>MEMORY.md</code>（<del>2,200字符）+ <code>USER.md</code>（</del>1,375字符）</li>
-<li>冻结快照设计：会话开始时注入系统提示，期间不变更，保留 LLM 前缀缓存以提升性能</li>
-<li>操作工具：add、replace、remove，通过子字符串匹配定位条目</li>
-</ul>
-<p><strong>4. 技能系统（Skills）</strong></p>
-<ul>
-<li>渐进式披露加载：Level 0 列表（~3k token）→ Level 1 全文 → Level 2 参考文件</li>
-<li>兼容 agentskills.io 开放标准，自动成为斜杠命令（如 <code>/plan</code>、<code>/github-pr-workflow</code>）</li>
-<li>SKILL.md 格式：frontmatter（name、description、version）+ 正文（何时用、操作步骤、常见陷阱、验证方式）</li>
-</ul>
-<p><strong>5. MCP 基础集成</strong></p>
-<ul>
-<li>两种 MCP 服务器类型：Stdio（本地子进程）和 HTTP（远程端点）</li>
-<li>配置位置：<code>~/.hermes/config.yaml</code> 的 <code>mcp_servers</code> 节</li>
-<li>工具命名规则：<code>mcp_&lt;server_name&gt;_&lt;tool_name&gt;</code>，加前缀避免与内置工具冲突</li>
-<li>社区 MCP 文档服务：<code>https://mcp.hermesagent.org.cn/v1</code>，提供 <code>search_docs</code>、<code>get_doc</code>、<code>list_recent_releases</code> 三个工具</li>
-</ul>
-<p><strong>6. Cron 自动化</strong></p>
-<ul>
-<li>支持自然语言和标准 Cron 表达式，可暂停/恢复/编辑/删除</li>
-<li>五大实用模式：网站监控、每周报告、GitHub 仓库监视、数据收集流水线、多技能工作流</li>
-<li>安全限制：Cron 执行期间禁用 Cron 管理工具，防止无限调度循环</li>
-</ul>
-<p><strong>7. 从 OpenClaw 迁移</strong></p>
-<ul>
-<li>一条命令：<code>hermes claw migrate</code>，支持 <code>--dry-run</code> 预览、<code>--preset full</code> 含密钥迁移</li>
-<li>迁移范围：人格设定、长期记忆、用户档案、技能、Cron 任务等</li>
-</ul>
-<hr>
-<h3 id="🟡-进阶篇（下午）"><a href="#🟡-进阶篇（下午）" class="headerlink" title="🟡 进阶篇（下午）"></a>🟡 进阶篇（下午）</h3><p><strong>8. 语音模式（Voice Mode）</strong></p>
-<ul>
-<li>三种交互方式：<ul>
-<li><strong>CLI 交互式麦克风循环</strong>：Ctrl+B 录音，Agent 自动检测静音并回应</li>
-<li><strong>消息平台语音回复</strong>：发送文本的同时发送语音音频</li>
-<li><strong>Discord 语音频道</strong>：Bot 加入 VC，实时监听并语音回复</li>
-</ul>
-</li>
-<li>技术特性：静音检测、流式 TTS（边生成边播放）、幻觉过滤器</li>
-<li>支持 ElevenLabs TTS、本地 NeuTTS、Edge TTS 等多种 TTS 方案</li>
-</ul>
-<p><strong>9. 上下文文件（Context Files）</strong></p>
-<ul>
-<li>六种类型：<code>.hermes.md</code>、<code>AGENTS.md</code>、<code>CLAUDE.md</code>、<code>SOUL.md</code>、<code>.cursorrules</code>、<code>.cursor/rules/*.mdc</code></li>
-<li>优先级：<code>.hermes.md</code> → <code>AGENTS.md</code> → <code>CLAUDE.md</code> → <code>.cursorrules</code>（首个匹配项胜出）</li>
-<li>SOUL.md 始终独立加载，作为 Agent 身份的槽位 #1</li>
-<li><code>AGENTS.md</code> 逐级子目录发现（工具调用时懒加载），<code>.hermes.md</code> 向上遍历至 Git 仓库根目录</li>
-</ul>
-<p><strong>10. RL 训练流水线</strong></p>
-<ul>
-<li>基于 Tinker-Atropos 的 GRPO + LoRA 训练流水线</li>
-<li>三大组件：Atropos（轨迹 API 服务器）、Tinker（训练服务）、Environment（任务环境）</li>
-<li>10 个 <code>rl_*</code> 工具覆盖从环境发现到训练监控的全流程</li>
-</ul>
-<p><strong>11. 内部架构</strong></p>
-<ul>
-<li>6 个入口点：CLI、Gateway、ACP 适配器、Batch Runner、API Server、Python Library</li>
-<li>Agent 核心循环（<code>run_agent.py</code> ~9,200 行）：Prompt Builder + Provider Resolution + Tool Dispatch</li>
-<li>Session 存储：SQLite + FTS5 全文搜索</li>
-<li>工具后端：6 种终端、5 种浏览器、4 种 Web、动态 MCP 连接</li>
-<li>消息网关：15 个平台适配器</li>
-</ul>
-<p><strong>12. 人格与 SOUL.md</strong></p>
-<ul>
-<li>SOUL.md 存在于 <code>$HERMES_HOME/SOUL.md</code>，作为系统提示的第一个槽位注入</li>
-<li><code>/personality</code> 命令提供会话级别的人格覆盖，使用内置预设或自定义人格</li>
-</ul>
-<p><strong>13. 版本更新脉络</strong></p>
-<ul>
-<li>v0.11.0（2026-04-23）「The Interface」：React/Ink 重写 TUI、可插拔传输层、原生 AWS Bedrock、Codex OAuth、QQBot</li>
-<li>v0.10.0：Nous Tool Gateway（订阅直连搜索/图像/TTS/浏览器，无需额外 API Key）</li>
-<li>v0.9.0：本地 Web Dashboard、Fast Mode、微信/企业微信、Termux/Android</li>
-<li>v0.8.0：后台任务通知、<code>/model</code> 动态切换、Gemini 原生、MCP OAuth 2.1</li>
-<li>v0.7.0：可插拔记忆提供者、密钥池、Camofox 浏览器、Inline Diff</li>
-</ul>
-<hr>
-<h3 id="🔴-深入篇（晚间补充）"><a href="#🔴-深入篇（晚间补充）" class="headerlink" title="🔴 深入篇（晚间补充）"></a>🔴 深入篇（晚间补充）</h3><p><strong>14. 安全模型 — 7 层纵深防御</strong> 🛡️<br>Hermes 采用 defense-in-depth 安全模型，包含七道防线：</p>
+<h2 id="2-ascii-art（ASCII艺术生成）"><a href="#2-ascii-art（ASCII艺术生成）" class="headerlink" title="2. ascii-art（ASCII艺术生成）"></a>2. ascii-art（ASCII艺术生成）</h2><p><strong>用途</strong>：在终端和文档中生成字符艺术。</p>
+<p><strong>工具集</strong>：</p>
 <table>
 <thead>
 <tr>
-<th>层级</th>
-<th>防线</th>
+<th>工具</th>
+<th>功能</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pyfiglet</td>
+<td>文字大banner，571种字体</td>
+<td><code>python3 -m pyfiglet "HELLO" -f slant</code></td>
+</tr>
+<tr>
+<td>cowsay</td>
+<td>气泡消息框+ASCII角色</td>
+<td><code>cowsay -f tux "Linux"</code></td>
+</tr>
+<tr>
+<td>boxes</td>
+<td>装饰性边框框架</td>
+<td><code>echo "Hi" | boxes -d stone</code></td>
+</tr>
+<tr>
+<td>toilet</td>
+<td>彩色文字艺术</td>
+<td><code>toilet --gay "Rainbow"</code></td>
+</tr>
+<tr>
+<td>ascii-image-converter</td>
+<td>图片转ASCII字符画</td>
+<td><code>ascii-image-converter photo.png -C</code></td>
+</tr>
+</tbody></table>
+<p><strong>特殊技巧</strong>：可以用 <code>curl -s "qrenco.de/URL"</code> 生成二维码的ASCII形式，或 <code>curl -s "wttr.in/London"</code> 显示天气ASCII图。</p>
+<hr>
+<h2 id="3-ascii-video（ASCII视频制作）"><a href="#3-ascii-video（ASCII视频制作）" class="headerlink" title="3. ascii-video（ASCII视频制作）"></a>3. ascii-video（ASCII视频制作）</h2><p><strong>用途</strong>：将视频/音频转换为彩色ASCII字符视频（MP4/GIF格式）。</p>
+<p><strong>核心能力</strong>：</p>
+<ul>
+<li>视频转ASCII：还原视频内容的字符画版本</li>
+<li>音频驱动：基于音频特征（FFT、节拍）生成可视化动画</li>
+<li>程序生成：通过数学效果（波纹、粒子、分形）创作ASCII动画</li>
+<li>混音模式：视频+音频驱动叠加</li>
+</ul>
+<p><strong>技术栈</strong>：Python 3.10+、NumPy、SciPy、Pillow、ffmpeg</p>
+<p><strong>关键概念</strong>：使用自适应色调映射（percentile-based adaptive brightness normalization），而非简单的乘法来保持ASCII字符的可见性。</p>
+<hr>
+<h2 id="4-baoyu-article-illustrator（文章配图生成）"><a href="#4-baoyu-article-illustrator（文章配图生成）" class="headerlink" title="4. baoyu-article-illustrator（文章配图生成）"></a>4. baoyu-article-illustrator（文章配图生成）</h2><p><strong>用途</strong>：为文章自动生成配图，保持类型×风格×调色板的一致性。</p>
+<p><strong>三个维度</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>选项</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>1</td>
-<td>用户授权</td>
-<td>白名单、DM 配对码控制谁能与 Agent 通信</td>
+<td><strong>Type（类型）</strong></td>
+<td>infographic, scene, flowchart, comparison, framework, timeline</td>
+<td>信息结构</td>
 </tr>
 <tr>
-<td>2</td>
-<td>危险命令审批</td>
-<td>破坏性操作（rm -rf、DROP TABLE、curl|sh 等）需人工确认</td>
+<td><strong>Style（风格）</strong></td>
+<td>notion, warm, minimal, blueprint, watercolor, elegant</td>
+<td>渲染方式</td>
 </tr>
 <tr>
-<td>3</td>
-<td>容器隔离</td>
-<td>Docker/Singularity/Modal 沙箱化，配置强化</td>
-</tr>
-<tr>
-<td>4</td>
-<td>MCP 凭据过滤</td>
-<td>MCP 子进程的环境变量隔离</td>
-</tr>
-<tr>
-<td>5</td>
-<td>上下文文件扫描</td>
-<td>项目文件中的 Prompt 注入检测</td>
-</tr>
-<tr>
-<td>6</td>
-<td>跨会话隔离</td>
-<td>会话间无法互访数据，Cron 路径防遍历</td>
-</tr>
-<tr>
-<td>7</td>
-<td>输入净化</td>
-<td>终端工作目录参数白名单校验，防 shell 注入</td>
+<td><strong>Palette（调色板）</strong></td>
+<td>macaron, warm, neon</td>
+<td>颜色方案（可选）</td>
 </tr>
 </tbody></table>
-<p><strong>15. 危险命令审批详解</strong></p>
+<p><strong>工作流程</strong>：分析文章内容 → 确认配图方案 → 生成大纲 → 生成提示词 → 生成图片 → 插入文章</p>
+<hr>
+<h2 id="5-baoyu-comic（知识漫画创作）"><a href="#5-baoyu-comic（知识漫画创作）" class="headerlink" title="5. baoyu-comic（知识漫画创作）"></a>5. baoyu-comic（知识漫画创作）</h2><p><strong>用途</strong>：创建知识漫画（教育漫画、传记漫画、教程漫画）。</p>
+<p><strong>艺术风格选项</strong>：ligne-claire（默认）、manga、realistic、ink-brush、chalk、minimalist</p>
+<p><strong>色调选项</strong>：neutral（默认）、warm、dramatic、romantic、energetic、vintage、action</p>
+<p><strong>预设主题</strong>：</p>
 <ul>
-<li>三种审批模式：<ul>
-<li><strong>manual</strong>（默认）：所有危险命令始终提示用户确认</li>
-<li><strong>smart</strong>：辅助 LLM 评估风险，低风险自动批准，高风险自动拒绝，不确定的升级为人工</li>
-<li><strong>off</strong>：禁用审批（仅限可信环境）</li>
+<li><code>ohmsha</code>：日式漫画风格，视觉隐喻丰富</li>
+<li><code>wuxia</code>：武侠风格，墨刷+动作</li>
+<li><code>shoujo</code>：少女漫画风格，装饰性元素多</li>
+<li><code>four-panel</code>：四格漫画，起承转合结构</li>
 </ul>
-</li>
-<li>CLI 审批选项：<code>[o]nce</code>（仅本次）/ <code>[s]ession</code>（当前会话）/ <code>[a]lways</code>（永久允许）/ <code>[d]eny</code>（拒绝）</li>
-<li>YOLO 模式：<code>hermes --yolo</code> 或 <code>/yolo</code> 切换，跳过所有审批</li>
-<li>容器后端（Docker/Singularity/Modal/Daytona）自动跳过审批——容器本身即是安全边界</li>
-</ul>
-<p><strong>16. 私信配对系统</strong></p>
+<p><strong>注意</strong>：<code>image_generate</code> 是纯提示词工具（输入prompt+宽高比，返回图片URL），不支持参考图片输入。需要用户通过文本描述来提取风格特征。</p>
+<hr>
+<h2 id="6-baoyu-infographic（信息图生成）"><a href="#6-baoyu-infographic（信息图生成）" class="headerlink" title="6. baoyu-infographic（信息图生成）"></a>6. baoyu-infographic（信息图生成）</h2><p><strong>用途</strong>：21种布局 × 21种风格的高密度信息可视化图。</p>
+<p><strong>21种布局</strong>：</p>
 <ul>
-<li>未知用户向 Bot 发消息后收到 8 位一次性配对码</li>
-<li>管理员通过 <code>hermes pairing approve &lt;platform&gt; &lt;code&gt;</code> 批准</li>
-<li>安全特性：密码学安全随机数、1 小时过期、速率限制（每 10 分钟 1 次）、5 次失败锁定 1 小时</li>
-<li>所有配对数据文件设置 <code>chmod 0600</code>，配对码从不记录到 stdout</li>
+<li>线性时间线（linear-progression）、二元对比（binary-comparison）、层级金字塔（hierarchical-layers）、中心辐射（hub-spoke）、漏斗转化（funnel）、仪表盘（dashboard）、周期表（periodic-table）…</li>
 </ul>
-<p><strong>17. Docker 容器安全加固</strong></p>
+<p><strong>21种风格</strong>：</p>
 <ul>
-<li>安全标志：<code>--cap-drop ALL</code> + 最小能力添加 + <code>no-new-privileges</code> + PID 限制</li>
-<li><code>/tmp</code> 和 <code>/var/tmp</code> 使用 tmpfs 并限制大小，<code>/run</code> 设为 noexec</li>
-<li>资源限制：可配置 CPU 核心数、内存（默认 5GB）、磁盘（默认 50GB）</li>
-<li>持久模式绑定挂载 <code>/workspace</code> 和 <code>/root</code>，临时模式使用 tmpfs</li>
+<li>手工艺感（craft-handmade）、黏土动画（claymation）、赛博朋克霓虹（cyberpunk-neon）、企业孟菲斯（corporate-memphis）、技术蓝图（technical-schematic）、乐高积木（lego-brick）、宜家说明书（ikea-manual）…</li>
 </ul>
-<p><strong>18. 检查点与 <code>/rollback</code></strong> 📸</p>
+<p><strong>推荐组合</strong>：</p>
 <ul>
-<li>自动在破坏性操作前快照：<code>write_file</code>、<code>patch</code>、<code>rm</code>、<code>sed -i</code>、<code>git reset</code> 等触发</li>
-<li>影子 Git 仓库：独立存放在 <code>~/.hermes/checkpoints/</code>，不触及项目实际 <code>.git</code></li>
-<li>每轮对话每个目录最多一个检查点，防止频繁快照</li>
-<li>四个回滚命令：<ul>
-<li><code>/rollback</code> — 列出所有检查点</li>
-<li><code>/rollback &lt;N&gt;</code> — 恢复到第 N 个检查点（同时撤销上一轮对话）</li>
-<li><code>/rollback diff &lt;N&gt;</code> — 预览差异</li>
-<li><code>/rollback &lt;N&gt; &lt;file&gt;</code> — 仅恢复单个文件</li>
-</ul>
-</li>
-<li>安全保护：Git 可用性检查、目录范围限制（跳过 <code>/</code> 和 <code>$HOME</code>）、50,000 文件上限、无变更跳过</li>
-</ul>
-<p><strong>19. 工具集（Toolsets）体系</strong> 🔧</p>
-<ul>
-<li>工具集是命名的工具捆绑包，控制 Agent 可用的操作</li>
-<li>三种类型：<ul>
-<li><strong>核心工具集</strong>：逻辑上相关的工具组（如 <code>file</code> 包含 read/write/patch/search）</li>
-<li><strong>复合工具集</strong>：多核心组合（如 <code>debugging</code> = file + terminal + web）</li>
-<li><strong>平台工具集</strong>：部署目标完整配置（如 <code>hermes-cli</code> 包含全部 38 个工具）</li>
-</ul>
-</li>
-<li>核心工具集一览（19 个）：browser、clarify、code_execution、cronjob、delegation、file、homeassistant、image_gen、memory、messaging、moa、rl、search、session_search、skills、terminal、todo、tts、vision、web</li>
-<li>复合工具集：<code>debugging</code>（文件+终端+网络）、<code>safe</code>（只读研究+媒体生成，不支持写入和执行）</li>
-<li>平台工具集：hermes-cli（完整）、hermes-acp（IDE 精简版）、hermes-api-server（无交互）</li>
-<li>动态工具集：MCP 服务器自动生成 <code>mcp-&lt;server&gt;</code> 工具集、插件注册自定义工具集</li>
-<li>自定义工具集：在 config.yaml 中定义项目专属工具组合</li>
-<li>配置方式：<code>hermes chat --toolsets "web,file,terminal"</code> 或 config.yaml 按平台设置</li>
-</ul>
-<p><strong>20. FAQ 关键问答</strong></p>
-<ul>
-<li><strong>支持哪些模型</strong>：任何 OpenAI API 兼容端点，含 OpenRouter、Nous Portal、本地 Ollama 等</li>
-<li><strong>Windows 支持</strong>：WSL2（推荐）+ 原生 PowerShell 双路径</li>
-<li><strong>Android/Termux 支持</strong>：有，但语音功能受限（ctranslate2 无 Android 轮子）</li>
-<li><strong>数据去向</strong>：仅发送至配置的 LLM 提供商，无遥测，对话/记忆/技能全部本地存储</li>
-<li><strong>离线使用</strong>：可以，连接本地 Ollama/vLLM 即可</li>
-<li><strong>多用户共享</strong>：通过白名单 + DM 配对控制访问</li>
-<li><strong>Python 集成</strong>：<code>from run_agent import AIAgent</code> 即可在项目中使用</li>
-<li><strong>常见故障</strong>：<code>hermes: command not found</code>（重载 shell）、Python &lt; 3.11（升级）、API Key 不匹配、上下文过长（<code>/compress</code>）</li>
-</ul>
-<p><strong>21. 最佳实践精要</strong> 💡</p>
-<ul>
-<li><strong>获得最佳结果</strong>：明确表达需求、提前提供上下文、利用上下文文件处理重复指令</li>
-<li><strong>CLI 技巧</strong>：<code>Alt+Enter</code> 多行输入、<code>Ctrl+C</code> 中断重定向、<code>hermes -c</code> 恢复会话、<code>Ctrl+V</code> 图像粘贴、<code>/</code> + Tab 补全</li>
-<li><strong>记忆 vs 技能</strong>：记忆存事实（「是什么」），技能存流程（「怎么做」）</li>
-<li><strong>性能优化</strong>：不要破坏提示缓存（保持系统提示稳定）、在达到限制前使用 <code>/compress</code>、用 <code>delegate_task</code> 并行工作、用 <code>execute_code</code> 批量操作</li>
-<li><strong>消息提示</strong>：<code>/sethome</code> 设主频道、<code>/title</code> 命名会话、私信配对实现团队访问</li>
-<li><strong>安全建议</strong>：不受信代码用 Docker 后端、选择”始终”前仔细审查、为消息 Bot 使用白名单</li>
+<li>教程类：<code>linear-progression</code> + <code>ikea-manual</code></li>
+<li>技术文档：<code>structural-breakdown</code> + <code>technical-schematic</code></li>
+<li>高密度信息：<code>dense-modules</code> + <code>pop-laboratory</code></li>
 </ul>
 <hr>
-<h2 id="三、实践心得"><a href="#三、实践心得" class="headerlink" title="三、实践心得"></a>三、实践心得</h2><h3 id="🛡️-安全不是可选项，是基础设施"><a href="#🛡️-安全不是可选项，是基础设施" class="headerlink" title="🛡️ 安全不是可选项，是基础设施"></a>🛡️ 安全不是可选项，是基础设施</h3><p>今天最大的收获是理解了 Hermes 的 7 层纵深防御体系。让我印象最深的是两个设计细节：</p>
+<h2 id="7-claude-design（HTML设计原型）"><a href="#7-claude-design（HTML设计原型）" class="headerlink" title="7. claude-design（HTML设计原型）"></a>7. claude-design（HTML设计原型）</h2><p><strong>用途</strong>：设计一次性的HTML产物（着陆页、原型、演示文稿、组件库）。</p>
+<p><strong>与 popular-web-designs 的区别</strong>：</p>
+<ul>
+<li>claude-design：设计流程和审美判断——如何根据简报生成变体、验证本地HTML产物、避免AI设计垃圾</li>
+<li>popular-web-designs：54个现成的设计系统（Stripe、Linear、Vercel等）的精确CSS/颜色值</li>
+</ul>
+<p><strong>核心原则</strong>：</p>
 <ol>
-<li><strong>容器后端自动跳过审批</strong>：不是”忘了审批”，而是”容器本身就是安全边界”。这说明安全设计是分层的——你在容器里，就不需要额外审批，因为破坏范围被物理隔离了。</li>
-<li><strong>smart 模式的辅助 LLM</strong>：不是简单的正则匹配，而是用另一个 LLM 来评估命令风险。低风险自动通过，高风险自动拒绝，不确定的才升级给人工。这比”一刀切全部审批”聪明得多。</li>
+<li>从上下文出发，不凭直觉——先阅读现有的设计文件、品牌文档、截图</li>
+<li>设计系统先行——颜色、字体、间距、圆角、阴影、动效</li>
+<li>至少三个变体：保守型、最佳匹配型、突破型</li>
+<li>避免填充内容（虚假指标、装饰性SVG、无意义的图表）</li>
 </ol>
-<h3 id="🔧-工具集是「能力管理」的钥匙"><a href="#🔧-工具集是「能力管理」的钥匙" class="headerlink" title="🔧 工具集是「能力管理」的钥匙"></a>🔧 工具集是「能力管理」的钥匙</h3><p>19 个核心工具集 + 复合/平台/动态三层体系，本质上是一个<strong>最小权限</strong>管理系统。<code>safe</code> 工具集只允许只读操作和媒体生成，<code>debugging</code> 组合了文件+终端+网络但不带浏览器——每个工具集都是为特定场景精心设计的「能力包」。这让我意识到，<strong>配置好工具集比选择模型更重要</strong>——模型决定 Agent 的智能水平，工具集决定 Agent 的安全边界。</p>
-<h3 id="📸-检查点-无痛试错"><a href="#📸-检查点-无痛试错" class="headerlink" title="📸 检查点 = 无痛试错"></a>📸 检查点 = 无痛试错</h3><p><code>/rollback</code> 的设计哲学很棒：影子 Git 仓库独立于项目的 <code>.git</code>，每次破坏性操作前自动快照，而且恢复时会同时撤销对话历史（避免 Agent「记住」已回滚的变更）。单文件恢复更是实用——Agent 改了 5 个文件但只有 1 个改坏了？<code>/rollback 3 src/broken.py</code> 精准修复。</p>
-<h3 id="💡-最佳实践是最被低估的知识"><a href="#💡-最佳实践是最被低估的知识" class="headerlink" title="💡 最佳实践是最被低估的知识"></a>💡 最佳实践是最被低估的知识</h3><p>晚间学习的「技巧与最佳实践」页面，每一条都是社区实战经验的浓缩。尤其是「记忆存事实、技能存流程」这八个字——之前我一直把两者混为一谈，现在明白了它们在 Hermes 设计中是完全不同的抽象层级。</p>
+<p><strong>输出</strong>：自包含HTML文件，可直接双击在浏览器打开。</p>
 <hr>
-<h2 id="四、明日计划"><a href="#四、明日计划" class="headerlink" title="四、明日计划"></a>四、明日计划</h2><ol>
-<li><strong>安全配置实战</strong>：在自己的 Hermes 实例上配置 Docker 后端 + smart 审批模式，体验容器隔离的安全效果</li>
-<li><strong>工具集定制</strong>：为不同场景（日常开发、代码审查、博客写作）创建自定义工具集配置</li>
-<li><strong>检查点恢复演练</strong>：故意让 Agent 做一次破坏性修改，然后用 <code>/rollback diff</code> 和 <code>/rollback</code> 恢复，体验完整流程</li>
-<li><strong>FAQ 文档建设</strong>：基于今天学到的 FAQ，整理一份面向中国用户的常见问题速查表</li>
-<li><strong>最佳实践 Skill 沉淀</strong>：把今天的「最佳实践精要」提炼成一个可复用的 Skill，方便日常调用</li>
-</ol>
+<h2 id="8-comfyui（AI图像-视频-音频生成）"><a href="#8-comfyui（AI图像-视频-音频生成）" class="headerlink" title="8. comfyui（AI图像/视频/音频生成）"></a>8. comfyui（AI图像/视频/音频生成）</h2><p><strong>用途</strong>：通过 ComfyUI 生成图片、视频、音频和3D内容。</p>
+<p><strong>两层架构</strong>：</p>
+<pre class="line-numbers language-none"><code class="language-none">Layer 1: comfy-cli（官方生命周期工具）
+  → 安装、启动、停止、自定义节点管理、模型下载
+
+Layer 2: REST/WebSocket API + skill scripts
+  → 工作流执行、参数注入、进度监控、输出下载<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>本地 vs 云端选择</strong>：</p>
+<ul>
+<li>Comfy Cloud：托管服务，RTX 6000 Pro GPU，零安装，但免费账户无法通过API运行</li>
+<li>本地安装：免费，需要NVIDIA GPU ≥6GB VRAM（SDXL需≥8GB，Flux/video需≥12GB）</li>
+</ul>
+<p><strong>核心脚本</strong>：</p>
+<ul>
+<li><code>hardware_check.py</code>：探测GPU/VRAM/磁盘，建议本地或云端</li>
+<li><code>run_workflow.py</code>：注入参数、提交任务、监控、下载结果</li>
+<li><code>check_deps.py</code>：检查工作流的节点/模型依赖是否满足</li>
+</ul>
+<p><strong>注意</strong>：工作流必须使用API格式（每个节点有<code>class_type</code>），而非编辑器格式（顶级<code>nodes</code>和<code>links</code>数组）。</p>
 <hr>
-<p><em>小马 🐴 · 2026年5月4日 晚间总结</em></p>
+<h2 id="9-creative-ideation（创意构思）"><a href="#9-creative-ideation（创意构思）" class="headerlink" title="9. creative-ideation（创意构思）"></a>9. creative-ideation（创意构思）</h2><p><strong>用途</strong>：通过创意约束生成项目灵感。</p>
+<p><strong>核心规则</strong>：约束 + 方向 = 创造力。没有约束就没有创造力。</p>
+<p><strong>约束库示例</strong>：</p>
+<p>开发者专用：</p>
+<ul>
+<li>“解决自己的痛点”：构建你本周希望存在的工具，50行以内，今天发布</li>
+<li>“自动化烦人的事”：找到工作流中最繁琐的部分，写脚本解决</li>
+<li>“应该存在的CLI工具”：<code>git undo-that-thing</code>、<code>docker why-is-this-broken</code></li>
+</ul>
+<p>艺术家专用：</p>
+<ul>
+<li>“复制某个东西”：挑选你崇拜的作品，从头重建，学习藏在差距里的东西</li>
+<li>“一百万个某物”：一百万是很多也很少——探索规模效应</li>
+</ul>
+<p>任何人：</p>
+<ul>
+<li>“敌意UI”：故意让人痛苦地使用的东西</li>
+<li>“从爆点开始”：想一个有趣的句子，倒推让它成真</li>
+</ul>
+<hr>
+<h2 id="10-design-md（设计令牌规范）"><a href="#10-design-md（设计令牌规范）" class="headerlink" title="10. design-md（设计令牌规范）"></a>10. design-md（设计令牌规范）</h2><p><strong>用途</strong>：编写、验证、导出 Google DESIGN.md 格式的设计令牌规范文件。</p>
+<p><strong>文件结构</strong>：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">version</span><span class="token punctuation">:</span> alpha
+<span class="token key atrule">name</span><span class="token punctuation">:</span> 品牌名称
+<span class="token key atrule">description</span><span class="token punctuation">:</span> 设计理念描述
+<span class="token key atrule">colors</span><span class="token punctuation">:</span>
+  <span class="token key atrule">primary</span><span class="token punctuation">:</span> <span class="token string">"#1A1C1E"</span>
+  <span class="token key atrule">secondary</span><span class="token punctuation">:</span> <span class="token string">"#6C7278"</span>
+<span class="token key atrule">typography</span><span class="token punctuation">:</span>
+  <span class="token key atrule">h1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">fontFamily</span><span class="token punctuation">:</span> Public Sans
+    <span class="token key atrule">fontSize</span><span class="token punctuation">:</span> 3rem
+    <span class="token key atrule">fontWeight</span><span class="token punctuation">:</span> <span class="token number">700</span>
+<span class="token key atrule">components</span><span class="token punctuation">:</span>
+  <span class="token key atrule">button-primary</span><span class="token punctuation">:</span>
+    <span class="token key atrule">backgroundColor</span><span class="token punctuation">:</span> <span class="token string">"{colors.tertiary}"</span>
+    <span class="token key atrule">textColor</span><span class="token punctuation">:</span> <span class="token string">"#FFFFFF"</span>
+<span class="token punctuation">---</span>
+<span class="token comment">## Overview（正文说明）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>工具</strong>：<code>npx @google/design.md lint DESIGN.md</code> 验证结构和WCAG对比度，<code>export --format tailwind</code> 导出为Tailwind主题。</p>
+<p><strong>核心原则</strong>：</p>
+<ul>
+<li>不要嵌套组件变体：<code>button-primary.hover</code> 是错的，<code>button-primary-hover</code> 是对的</li>
+<li>十六进制颜色必须加引号：<code>"#1A1C1E"</code> 而非 <code>#1A1C1E</code></li>
+<li>令牌引用用点分隔路径：<code>{colors.primary}</code> 而非 <code>{primary}</code></li>
+</ul>
+<hr>
+<h2 id="11-excalidraw（手绘风格图表）"><a href="#11-excalidraw（手绘风格图表）" class="headerlink" title="11. excalidraw（手绘风格图表）"></a>11. excalidraw（手绘风格图表）</h2><p><strong>用途</strong>：创建手绘风格的 Excalidraw JSON 图表文件，可拖放到 excalidraw.com 打开编辑。</p>
+<p><strong>核心特点</strong>：</p>
+<ul>
+<li>无账号、无API密钥、无渲染库，只需要JSON</li>
+<li>生成 <code>.excalidraw</code> 文件，双击即可在excalidraw.com查看和编辑</li>
+</ul>
+<p><strong>元素类型</strong>：矩形、椭圆、菱形、文本、箭头、绑定箭头</p>
+<p><strong>关键技巧</strong>：</p>
+<ul>
+<li>标签必须使用容器绑定方法：形状有<code>boundElements</code>列出文本，文本有<code>containerId</code>指回形状</li>
+<li>绝对不要在形状上用 <code>"label": {...}</code> ——这不是有效属性会被静默忽略</li>
+<li>字体最小16px（正文标签）、20px（标题）、14px（次要注释）</li>
+</ul>
+<p><strong>颜色编码</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>填充色</th>
+<th>十六进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主要/输入</td>
+<td>浅蓝</td>
+<td><code>#a5d8ff</code></td>
+</tr>
+<tr>
+<td>成功/输出</td>
+<td>浅绿</td>
+<td><code>#b2f2bb</code></td>
+</tr>
+<tr>
+<td>警告/外部</td>
+<td>浅橙</td>
+<td><code>#ffd8a8</code></td>
+</tr>
+<tr>
+<td>处理/特殊</td>
+<td>浅紫</td>
+<td><code>#d0bfff</code></td>
+</tr>
+<tr>
+<td>错误/关键</td>
+<td>浅红</td>
+<td><code>#ffc9c9</code></td>
+</tr>
+<tr>
+<td>存储/数据</td>
+<td>浅青</td>
+<td><code>#c3fae8</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="12-humanizer（去除AI写作痕迹）"><a href="#12-humanizer（去除AI写作痕迹）" class="headerlink" title="12. humanizer（去除AI写作痕迹）"></a>12. humanizer（去除AI写作痕迹）</h2><p><strong>用途</strong>：识别并去除AI生成文本的29种特征模式，使文字听起来自然、有人情味。</p>
+<p><strong>五大类AI特征</strong>：</p>
+<p><strong>内容模式</strong>：</p>
+<ul>
+<li>无端强调重要性/legacy/趋势（”是一个重要的里程碑”）</li>
+<li>无端强调知名度和媒体覆盖</li>
+<li>表面分析性的-ing形式（”强调、确保、反映”）</li>
+<li>促销/广告式语言（”令人惊叹的”、”鲜艳的”、”位于核心位置”）</li>
+<li>模糊归属和措辞（”专家认为”、”行业报告称”）</li>
+</ul>
+<p><strong>语言/语法模式</strong>：</p>
+<ul>
+<li>过度使用的”AI词汇”（actually, crucial, pivotal, showcase, underscore…）</li>
+<li>避免使用”是/是”（”作为…的载体”而非”是”）</li>
+<li>负面平行结构和尾随否定</li>
+<li>三分法滥用（总是把想法分成三组）</li>
+<li>优雅变体（同义词循环）</li>
+</ul>
+<p><strong>风格模式</strong>：</p>
+<ul>
+<li>过度使用破折号</li>
+<li>过度使用粗体</li>
+<li>标题中的标题大小写</li>
+<li>表情符号装饰</li>
+</ul>
+<p><strong>沟通模式</strong>：</p>
+<ul>
+<li>协作沟通伪影（”希望这有帮助”、”当然！”）</li>
+<li>知识截止免责声明（”截至我的最后训练更新…”）</li>
+<li>谄媚/卑屈的语气</li>
+</ul>
+<p><strong>填充词和 hedge</strong>：</p>
+<ul>
+<li>填充短语（”为了实现这一目标”、”由于…的事实”）</li>
+<li>过度hedge（”可能潜在地争论该政策可能有一些影响”）</li>
+<li>通用正面结论（”未来是光明的”、”令人兴奋的时代就在前面”）</li>
+</ul>
+<p><strong>添加灵魂的技巧</strong>：</p>
+<ul>
+<li>有观点——不要只报道事实，要反应</li>
+<li>变化节奏——短促有力的句子，然后是悠长的句子</li>
+<li>承认复杂性——真实的人有复杂感受</li>
+</ul>
+<hr>
+<h2 id="13-manim-video（3Blue1Brown数学动画）"><a href="#13-manim-video（3Blue1Brown数学动画）" class="headerlink" title="13. manim-video（3Blue1Brown数学动画）"></a>13. manim-video（3Blue1Brown数学动画）</h2><p><strong>用途</strong>：使用 Manim Community Edition 创建3Blue1Brown风格的数学/算法动画视频。</p>
+<p><strong>模式</strong>：</p>
+<ul>
+<li>概念解释器、方程推导、算法可视化、数据故事、架构图、论文解释器、3D可视化</li>
+</ul>
+<p><strong>技术栈</strong>：Python 3.10+、Manim CE v0.20+、LaTeX（公式渲染）、ffmpeg（视频合成）</p>
+<p><strong>核心原则</strong>：</p>
+<ul>
+<li>在写代码之前先构思叙事弧线——这个视频要纠正什么误解？”aha moment”是什么？</li>
+<li>先展示形状，再展示方程——几何在代数之前</li>
+<li>不透明度分层引导注意力：主要元素1.0，背景元素0.4，结构元素0.15</li>
+</ul>
+<p><strong>关键实现注意</strong>：</p>
+<ul>
+<li>LaTeX必须用原始字符串：<code>MathTex(r"\frac{1}{2}")</code> 而非 <code>MathTex("\frac{1}{2}")</code></li>
+<li>边缘文本的buff必须&gt;=0.5</li>
+<li>替换文本前必须FadeOut</li>
+<li>永远不要动画未添加的mobjects</li>
+</ul>
+<hr>
+<h2 id="14-p5js（创意编程-生成艺术）"><a href="#14-p5js（创意编程-生成艺术）" class="headerlink" title="14. p5js（创意编程/生成艺术）"></a>14. p5js（创意编程/生成艺术）</h2><p><strong>用途</strong>：在浏览器中创建交互式和程序生成的视觉艺术，输出为HTML/PNG/GIF/MP4/SVG。</p>
+<p><strong>模式</strong>：生成艺术、数据可视化、交互体验、动画/运动图形、3D场景、图像处理、音频驱动</p>
+<p><strong>关键原则</strong>：</p>
+<ul>
+<li>禁用FES（Friendly Error System）：<code>p5.disableFriendlyErrors = true</code> — 提升性能</li>
+<li>始终使用种子化随机：<code>randomSeed()</code> + <code>noiseSeed()</code> 确保可重复性</li>
+<li>使用HSB颜色模式而非RGB</li>
+<li>使用 <code>createGraphics()</code> 进行分层合成——单程渲染看起来很平</li>
+</ul>
+<p><strong>性能目标</strong>：</p>
+<ul>
+<li>交互式：60fps</li>
+<li>粒子数（P2D形状）：5,000-10,000 at 60fps</li>
+<li>粒子数（像素缓冲区）：50,000-100,000 at 60fps</li>
+</ul>
+<hr>
+<h2 id="15-pixel-art（像素艺术生成）"><a href="#15-pixel-art（像素艺术生成）" class="headerlink" title="15. pixel-art（像素艺术生成）"></a>15. pixel-art（像素艺术生成）</h2><p><strong>用途</strong>：将任何图片转换为复古像素艺术，并可选择动画为带时代感特效的短视频。</p>
+<p><strong>预设风格</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>预设</th>
+<th>时代</th>
+<th>调色板</th>
+<th>块大小</th>
+<th>最佳用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>arcade</td>
+<td>80年代街机</td>
+<td>自适应16色</td>
+<td>8px</td>
+<td>粗犷海报</td>
+</tr>
+<tr>
+<td>snes</td>
+<td>16位</td>
+<td>自适应32色</td>
+<td>4px</td>
+<td>角色、精细场景</td>
+</tr>
+<tr>
+<td>nes</td>
+<td>8位</td>
+<td>NES (54色)</td>
+<td>8px</td>
+<td>真实NES外观</td>
+</tr>
+<tr>
+<td>gameboy</td>
+<td>DMG掌机</td>
+<td>4级绿色</td>
+<td>8px</td>
+<td>单色Game Boy</td>
+</tr>
+<tr>
+<td>pico8</td>
+<td>PICO-8</td>
+<td>16固定</td>
+<td>6px</td>
+<td>幻想主机外观</td>
+</tr>
+<tr>
+<td>c64</td>
+<td>Commodore 64</td>
+<td>16固定</td>
+<td>8px</td>
+<td>8位家用电脑</td>
+</tr>
+</tbody></table>
+<p><strong>动画场景</strong>：night（星星+萤火虫+落叶）、urban（雨+霓虹）、snow（雪花）、fire（余烬）、underwater（气泡）等</p>
+<hr>
+<h2 id="16-popular-web-designs（54个设计系统）"><a href="#16-popular-web-designs（54个设计系统）" class="headerlink" title="16. popular-web-designs（54个设计系统）"></a>16. popular-web-designs（54个设计系统）</h2><p><strong>用途</strong>：当用户想要”做成Stripe的样子”、”做成Linear的样子”时，提供精确的CSS/颜色值。</p>
+<p><strong>54个设计模板</strong>，分类：</p>
+<ul>
+<li>AI/机器学习：Claude、Cohere、ElevenLabs、Minimax、Mistral、Ollama、OpenCode、Replicate、RunwayML、Together AI、VoltAgent、xAI</li>
+<li>开发者工具：Cursor、Expo、Linear、Lovable、Mintlify、PostHog、Raycast、Resend、Sentry、Supabase、Superhuman、Vercel、Warp、Zapier</li>
+<li>基础设施/云：ClickHouse、Composio、HashiCorp、MongoDB、Sanity、Stripe</li>
+<li>设计/生产力：Airtable、Cal、Clay、Figma、Framer、Intercom、Miro、Notion、Pinterest、Webflow</li>
+<li>金融科技：Coinbase、Kraken、Revolut、Wise</li>
+<li>企业/消费：Airbnb、Apple、BMW、IBM、NVIDIA、SpaceX、Spotify、Uber</li>
+</ul>
+<p><strong>使用流程</strong>：选择设计模板 → <code>skill_view(name="popular-web-designs", file_path="templates/stripe.md")</code> → 获取完整设计令牌 → 在HTML中应用</p>
+<hr>
+<h2 id="17-pretext（DOM-free文本布局）"><a href="#17-pretext（DOM-free文本布局）" class="headerlink" title="17. pretext（DOM-free文本布局）"></a>17. pretext（DOM-free文本布局）</h2><p><strong>用途</strong>：构建创意浏览器演示，使用@chenglou/pretext实现——无DOM的多行文本测量和布局。</p>
+<p><strong>核心功能</strong>：给定<code>(text, font, width)</code>，返回换行位置、每行宽度、每个字素位置和总高度——全部通过canvas测量，无重排。</p>
+<p><strong>创意应用</strong>：</p>
+<ul>
+<li>文本围绕移动障碍物流动（hero区域、编辑布局）</li>
+<li>ASCII艺术效果使用真实单词而非单色光栅</li>
+<li>文字组成的游戏（字母俄罗斯方块、散文 breakout）</li>
+<li>动理学排版，每个字素有物理效果</li>
+<li>多行”收缩包裹”UI</li>
+</ul>
+<p><strong>两个核心API</strong>：</p>
+<ul>
+<li><code>prepare(text, font)</code> + <code>layout(prepared, width)</code> → 测量高度（用例1：CSS/DOM渲染）</li>
+<li><code>prepareWithSegments(text, font)</code> + <code>layoutWithLines(prepared, width)</code> → 获取每行内容和位置（用例2：自定义canvas渲染）</li>
+</ul>
+<hr>
+<h2 id="18-sketch（设计草图变体）"><a href="#18-sketch（设计草图变体）" class="headerlink" title="18. sketch（设计草图变体）"></a>18. sketch（设计草图变体）</h2><p><strong>用途</strong>：快速生成2-3个设计变体进行比较，用于设计探索和方案对比。</p>
+<p><strong>核心原则</strong>：</p>
+<ul>
+<li>从上下文出发，不凭感觉——先检查现有代码、设计令牌、截图</li>
+<li>定义该工件的设计系统：颜色、字体、间距、圆角、阴影、动效姿态、组件处理、交互规则</li>
+<li>选择正确的格式：静态视觉比较→一个HTML画布并排；交互/流程→可点击原型；演示→固定大小HTML幻灯片</li>
+</ul>
+<p><strong>输出</strong>：自包含HTML文件，带变体切换控件。</p>
+<hr>
+<h2 id="19-songwriting-and-ai-music（歌曲创作与AI音乐）"><a href="#19-songwriting-and-ai-music（歌曲创作与AI音乐）" class="headerlink" title="19. songwriting-and-ai-music（歌曲创作与AI音乐）"></a>19. songwriting-and-ai-music（歌曲创作与AI音乐）</h2><p><strong>用途</strong>：歌曲创作技巧 + Suno AI 音乐提示词工程。</p>
+<p><strong>核心技能</strong>：</p>
+<ul>
+<li>歌曲结构：ABABCB、AABA、ABAB、AAA</li>
+<li>押韵类型：完美押韵、家族押韵、谐音押韵、辅音押韵、斜押韵</li>
+<li>内部押韵：行内押韵，而非只在行尾</li>
+<li>情感弧线：能量映射——“从耳语到咆哮再到耳语”</li>
+</ul>
+<p><strong>Suno提示词工程</strong>：</p>
+<pre class="line-numbers language-none"><code class="language-none">格式：Genre + Mood + Era + Instruments + Vocal Style + Production + Dynamics
+
+好的例子：
+"Cinematic orchestral spy thriller, 1960s Cold War era, smoky sultry female vocalist, 
+big band jazz, brass section with trumpets and french horns, sweeping strings, 
+minor key, vintage analog warmth"
+
+坏的例子：
+"sad rock song"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>元标签</strong>（放在歌词中）：</p>
+<ul>
+<li>结构：<code>[Intro] [Verse] [Pre-Chorus] [Chorus] [Bridge] [Outro]</code></li>
+<li>声乐：<code>[Whispered] [Belted] [Falsetto] [Harmonies]</code></li>
+<li>动态：<code>[Building Energy] [Explosive] [Quiet arrangement]</code></li>
+</ul>
+<hr>
+<h2 id="20-touchdesigner-mcp（TouchDesigner控制）"><a href="#20-touchdesigner-mcp（TouchDesigner控制）" class="headerlink" title="20. touchdesigner-mcp（TouchDesigner控制）"></a>20. touchdesigner-mcp（TouchDesigner控制）</h2><p><strong>用途</strong>：通过 twozero MCP 服务器控制运行中的 TouchDesigner 实例，创建运算符、设置参数、连接、执行Python、构建实时视觉。</p>
+<p><strong>36个原生工具</strong>，核心工具：</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>td_execute_python</code></td>
+<td>在TD中运行任意Python</td>
+</tr>
+<tr>
+<td><code>td_create_operator</code></td>
+<td>创建带参数的节点+自动定位</td>
+</tr>
+<tr>
+<td><code>td_set_operator_pars</code></td>
+<td>安全设置参数（验证，不会崩溃）</td>
+</tr>
+<tr>
+<td><code>td_get_network</code></td>
+<td>查看网络结构</td>
+</tr>
+<tr>
+<td><code>td_get_errors</code></td>
+<td>递归查找错误/警告</td>
+</tr>
+<tr>
+<td><code>td_get_screenshot</code></td>
+<td>捕获一个OP查看器到文件</td>
+</tr>
+</tbody></table>
+<p><strong>关键规则</strong>：</p>
+<ul>
+<li>绝不猜参数名——先调用<code>td_get_par_info</code></li>
+<li>如果<code>tdAttributeError</code>触发，停下来</li>
+<li>绝不在脚本回调中硬编码绝对路径——用<code>me.parent()</code> / <code>scriptOp.parent()</code></li>
+<li>优先使用原生MCP工具而非<code>td_execute_python</code></li>
+</ul>
+<p><strong>音频反应GLSL的经验证配方</strong>：</p>
+<ul>
+<li>TimeSlice必须保持ON（否则 AudioSpectrum 处理整个音频文件→24000+样本→溢出）</li>
+<li>输出长度手动设置为256</li>
+<li>不要在频谱上使用Lag CHOP——它以timeslice模式操作并扩展样本</li>
+<li>平滑应在GLSL着色器中进行：<code>mix(prevValue, newValue, 0.3)</code></li>
+</ul>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Creative分类共20个技能，覆盖了：</p>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>技能数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>图形/图表生成</td>
+<td>architecture-diagram, excalidraw, baoyu-infographic, sketch</td>
+</tr>
+<tr>
+<td>ASCII艺术/视频</td>
+<td>ascii-art, ascii-video, pretext</td>
+</tr>
+<tr>
+<td>AI图像/视频生成</td>
+<td>baoyu-article-illustrator, baoyu-comic, comfyui, pixel-art, manim-video</td>
+</tr>
+<tr>
+<td>设计系统</td>
+<td>claude-design, design-md, popular-web-designs</td>
+</tr>
+<tr>
+<td>创意工具</td>
+<td>creative-ideation, humanizer, p5js, songwriting-and-ai-music</td>
+</tr>
+<tr>
+<td>3D/实时视觉</td>
+<td>touchdesigner-mcp</td>
+</tr>
+</tbody></table>
+<p><strong>明天继续学习</strong>：autonomous-ai-agents（5个）、data-science（1个）、devops（4个），共11个技能。</p>
+<hr>
+<p><em>学习进度：1/5天，Creative分类完成 ✓</em></p>
 
                 
             </div>
@@ -705,7 +1018,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.inte8.top/2026/05/04/xiao-ma-xue-xi-bao-gao-2026-05-04/">https://www.inte8.top/2026/05/04/xiao-ma-xue-xi-bao-gao-2026-05-04/</a>
+                    <a href="https://www.inte8.top/2026/06/01/skill-learning-day1-creative/">https://www.inte8.top/2026/06/01/skill-learning-day1-creative/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -747,8 +1060,16 @@
                                     <span class="chip bg-color">Hermes</span>
                                 </a>
                             
-                                <a href="/tags/AI%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">AI学习</span>
+                                <a href="/tags/AI/">
+                                    <span class="chip bg-color">AI</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%8A%80%E8%83%BD%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">技能学习</span>
+                                </a>
+                            
+                                <a href="/tags/Creative/">
+                                    <span class="chip bg-color">Creative</span>
                                 </a>
                             
                         </div>
@@ -1094,17 +1415,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2026/05/04/github-weekly-top10-2026-05-04/">
+                <a href="/2026/06/01/skill-learning-day1-creative/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="GitHub 每周热门开源项目 TOP 10（2026年05月04日）">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Hermes Agent 技能学习笔记 - 第1天：Creative 分类详解">
                         
-                        <span class="card-title">GitHub 每周热门开源项目 TOP 10（2026年05月04日）</span>
+                        <span class="card-title">Hermes Agent 技能学习笔记 - 第1天：Creative 分类详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1114,34 +1436,39 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-06-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" class="post-category">
-                                    技术分享
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/GitHub/">
-                        <span class="chip bg-color">GitHub</span>
+                    <a href="/tags/Hermes/">
+                        <span class="chip bg-color">Hermes</span>
                     </a>
                     
-                    <a href="/tags/%E5%BC%80%E6%BA%90/">
-                        <span class="chip bg-color">开源</span>
+                    <a href="/tags/AI/">
+                        <span class="chip bg-color">AI</span>
                     </a>
                     
-                    <a href="/tags/trending/">
-                        <span class="chip bg-color">trending</span>
+                    <a href="/tags/%E6%8A%80%E8%83%BD%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">技能学习</span>
+                    </a>
+                    
+                    <a href="/tags/Creative/">
+                        <span class="chip bg-color">Creative</span>
                     </a>
                     
                 </div>
@@ -1155,13 +1482,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/05/03/xiao-ma-xue-xi-bao-gao-2026-05-03/">
+                <a href="/2026/06/01/skill-learning-day1-creative-category/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="小马学习报告 2026-05-03">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Hermes Agent 技能学习报告 - 第1天（Creative 分类）">
                         
-                        <span class="card-title">小马学习报告 2026-05-03</span>
+                        <span class="card-title">Hermes Agent 技能学习报告 - 第1天（Creative 分类）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1172,7 +1499,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-06-01
                             </span>
                         <span class="publish-author">
                             
@@ -1193,8 +1520,16 @@
                         <span class="chip bg-color">Hermes</span>
                     </a>
                     
-                    <a href="/tags/AI%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">AI学习</span>
+                    <a href="/tags/AI/">
+                        <span class="chip bg-color">AI</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8A%80%E8%83%BD%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">技能学习</span>
+                    </a>
+                    
+                    <a href="/tags/Creative/">
+                        <span class="chip bg-color">Creative</span>
                     </a>
                     
                 </div>

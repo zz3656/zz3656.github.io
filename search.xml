@@ -35,37 +35,6 @@
     
     
     <entry>
-      <title>Hermes Agent 技能学习报告 - 第1天（Creative 分类）</title>
-      <link href="/2026/06/01/skill-learning-day1-creative-category/"/>
-      <url>/2026/06/01/skill-learning-day1-creative-category/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Hermes-Agent-技能学习报告-第1天"><a href="#Hermes-Agent-技能学习报告-第1天" class="headerlink" title="Hermes Agent 技能学习报告 - 第1天"></a>Hermes Agent 技能学习报告 - 第1天</h1><h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><p>在6月5日前完成全部92个技能的学习，从6月1日开始，每天学习并总结，6月5日发布完整学习报告。</p><h2 id="今日学习内容：Creative-分类"><a href="#今日学习内容：Creative-分类" class="headerlink" title="今日学习内容：Creative 分类"></a>今日学习内容：Creative 分类</h2><h3 id="1-architecture-diagram（架构图）"><a href="#1-architecture-diagram（架构图）" class="headerlink" title="1. architecture-diagram（架构图）"></a>1. architecture-diagram（架构图）</h3><ul><li>功能：生成深色主题的 SVG 架构/云/基础设施图（HTML格式）</li><li>用途：快速生成专业的架构示意图</li></ul><h3 id="2-ascii-art（ASCII艺术）"><a href="#2-ascii-art（ASCII艺术）" class="headerlink" title="2. ascii-art（ASCII艺术）"></a>2. ascii-art（ASCII艺术）</h3><ul><li>功能：使用 pyfiglet、cowsay、boxes 等工具生成 ASCII 艺术</li><li>用途：终端输出美化、Logo生成</li></ul><h3 id="3-ascii-video（ASCII视频）"><a href="#3-ascii-video（ASCII视频）" class="headerlink" title="3. ascii-video（ASCII视频）"></a>3. ascii-video（ASCII视频）</h3><ul><li>功能：将视频/音频转换为彩色 ASCII MP4/GIF</li><li>工具：类似 MJPEG 但输出为 ASCII 字符画</li></ul><h3 id="4-baoyu-article-illustrator（文章插图）"><a href="#4-baoyu-article-illustrator（文章插图）" class="headerlink" title="4. baoyu-article-illustrator（文章插图）"></a>4. baoyu-article-illustrator（文章插图）</h3><ul><li>功能：生成文章配图，保持类型×风格×调色板一致性</li><li>适用：博客文章、营销内容配图</li></ul><h3 id="5-baoyu-comic（知识漫画）"><a href="#5-baoyu-comic（知识漫画）" class="headerlink" title="5. baoyu-comic（知识漫画）"></a>5. baoyu-comic（知识漫画）</h3><ul><li>功能：生成知识漫画（知识漫画）</li><li>类型：教育类、人物传记、教程类</li></ul><h3 id="6-baoyu-infographic（信息图）"><a href="#6-baoyu-infographic（信息图）" class="headerlink" title="6. baoyu-infographic（信息图）"></a>6. baoyu-infographic（信息图）</h3><ul><li>功能：21种布局 × 21种风格的信息图生成</li><li>用途：数据可视化、信息展示</li></ul><h3 id="7-claude-design（设计工具）"><a href="#7-claude-design（设计工具）" class="headerlink" title="7. claude-design（设计工具）"></a>7. claude-design（设计工具）</h3><ul><li>功能：设计一次性 HTML 产物（着陆页、演示文稿、原型）</li><li>特点：基于设计系统生成完整页面</li></ul><h3 id="8-comfyui（AI图像视频生成）"><a href="#8-comfyui（AI图像视频生成）" class="headerlink" title="8. comfyui（AI图像视频生成）"></a>8. comfyui（AI图像视频生成）</h3><ul><li>功能：通过 ComfyUI 生成图片、视频、音频</li><li>工具：comfy-cli 生命周期管理 + REST/WebSocket API</li></ul><h3 id="9-creative-ideation（创意构思）"><a href="#9-creative-ideation（创意构思）" class="headerlink" title="9. creative-ideation（创意构思）"></a>9. creative-ideation（创意构思）</h3><ul><li>功能：通过创意约束生成项目创意</li><li>方法：发散思维 + 限制条件激活创造力</li></ul><h3 id="10-design-md（设计规范）"><a href="#10-design-md（设计规范）" class="headerlink" title="10. design-md（设计规范）"></a>10. design-md（设计规范）</h3><ul><li>功能：编写、验证、导出 Google DESIGN.md Token 规范文件</li><li>用途：设计系统文档化</li></ul><h3 id="11-excalidraw（手绘图表）"><a href="#11-excalidraw（手绘图表）" class="headerlink" title="11. excalidraw（手绘图表）"></a>11. excalidraw（手绘图表）</h3><ul><li>功能：生成手绘风格的 Excalidraw JSON 图表</li><li>类型：架构图、流程图、时序图</li></ul><h3 id="12-humanizer（人性化文本）"><a href="#12-humanizer（人性化文本）" class="headerlink" title="12. humanizer（人性化文本）"></a>12. humanizer（人性化文本）</h3><ul><li>功能：去除 AI 写作痕迹，添加真实人类写作风格</li><li>用途：让 AI 生成内容更自然</li></ul><h3 id="13-manim-video（数学动画）"><a href="#13-manim-video（数学动画）" class="headerlink" title="13. manim-video（数学动画）"></a>13. manim-video（数学动画）</h3><ul><li>功能：使用 Manim CE 生成 3Blue1Brown 风格的数学/算法动画</li><li>适用：教育视频、技术讲解</li></ul><h3 id="14-p5js（创意编程）"><a href="#14-p5js（创意编程）" class="headerlink" title="14. p5js（创意编程）"></a>14. p5js（创意编程）</h3><ul><li>功能：p5.js 素描生成艺术、着色器、交互式、3D内容</li><li>特点：JavaScript 创意编程库</li></ul><h3 id="15-pixel-art（像素艺术）"><a href="#15-pixel-art（像素艺术）" class="headerlink" title="15. pixel-art（像素艺术）"></a>15. pixel-art（像素艺术）</h3><ul><li>功能：使用历史时代调色板（NES、Game Boy、PICO-8）生成像素艺术</li><li>风格：复古游戏美术</li></ul><h3 id="16-popular-web-designs（流行设计）"><a href="#16-popular-web-designs（流行设计）" class="headerlink" title="16. popular-web-designs（流行设计）"></a>16. popular-web-designs（流行设计）</h3><ul><li>功能：将 54 个真实设计系统（Stripe、Linear、Vercel）实现为 HTML/CSS</li><li>用途：设计参考、快速原型</li></ul><h3 id="17-pretext（文本布局）"><a href="#17-pretext（文本布局）" class="headerlink" title="17. pretext（文本布局）"></a>17. pretext（文本布局）</h3><ul><li>功能：使用 @chenglou/pretext 构建创意浏览器演示</li><li>特点：无 DOM 文本布局，ASCII艺术、排版流、文本几何游戏</li></ul><h3 id="18-sketch（草图设计）"><a href="#18-sketch（草图设计）" class="headerlink" title="18. sketch（草图设计）"></a>18. sketch（草图设计）</h3><ul><li>功能：快速生成 2-3 个设计变体进行比较</li><li>用途：设计探索、方案对比</li></ul><h3 id="19-songwriting-and-ai-music（歌曲创作）"><a href="#19-songwriting-and-ai-music（歌曲创作）" class="headerlink" title="19. songwriting-and-ai-music（歌曲创作）"></a>19. songwriting-and-ai-music（歌曲创作）</h3><ul><li>功能：歌曲创作技巧 + Suno AI 音乐提示词</li><li>用途：AI 音乐生成辅助</li></ul><h3 id="20-touchdesigner-mcp（TouchDesigner控制）"><a href="#20-touchdesigner-mcp（TouchDesigner控制）" class="headerlink" title="20. touchdesigner-mcp（TouchDesigner控制）"></a>20. touchdesigner-mcp（TouchDesigner控制）</h3><ul><li>功能：通过 twozero MCP 控制运行中的 TouchDesigner 实例</li><li>能力：创建运算符、设置参数、连接、执行 Python、构建实时视觉</li></ul><hr><h2 id="Creative-分类技能特点总结"><a href="#Creative-分类技能特点总结" class="headerlink" title="Creative 分类技能特点总结"></a>Creative 分类技能特点总结</h2><table><thead><tr><th>技能</th><th>核心能力</th><th>适用场景</th></tr></thead><tbody><tr><td>architecture-diagram</td><td>SVG架构图</td><td>技术文档</td></tr><tr><td>ascii-art/video</td><td>字符艺术</td><td>终端/创意内容</td></tr><tr><td>baoyu-* 系列</td><td>插图/漫画/信息图</td><td>内容创作</td></tr><tr><td>comfyui</td><td>AI生成图片视频</td><td>创意制作</td></tr><tr><td>excalidraw/p5js</td><td>手绘/交互艺术</td><td>设计可视化</td></tr><tr><td>pixel-art</td><td>复古像素画</td><td>游戏美术</td></tr><tr><td>manim</td><td>数学动画</td><td>教育视频</td></tr></tbody></table><hr><p><strong>明天继续学习：autonomous-ai-agents、data-science、devops 等分类</strong></p><blockquote><p>学习进度：1/4 天，已完成 Creative 分类 20 个技能</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 学习笔记 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hermes </tag>
-            
-            <tag> AI </tag>
-            
-            <tag> 技能学习 </tag>
-            
-            <tag> Creative </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hermes Agent 技能学习计划（6月1日-6月5日）</title>
       <link href="/2026/06/01/skill-learning-schedule/"/>
       <url>/2026/06/01/skill-learning-schedule/</url>

@@ -10,7 +10,29 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-06-01T01:37:36.331Z</updated>
+  <updated>2026-06-01T16:50:08.233Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="GitHub" scheme="https://www.inte8.top/categories/GitHub/"/>
+    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
+    <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="GitHub Trending" scheme="https://www.inte8.top/tags/GitHub-Trending/"/>
+    <category term="开发工具" scheme="https://www.inte8.top/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    <id>https://www.inte8.top/2026/06/02/github-trending-2026-06-02/</id>
+    <link href="https://www.inte8.top/2026/06/02/github-trending-2026-06-02/"/>
+    <published>2026-06-02T04:00:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>数据来源：GitHub API，统计周期为最近 7~14 天内创建的新建仓库，分别按 <strong>星标总数</strong> 和 <strong>每日增速</strong> 两个维度排名。</p>
+</blockquote>
+<hr>
+<h2]]>
+    </summary>
+    <title>GitHub 本周热点｜10 个最热门新项目 + 10 个 star 增速最快项目</title>
+    <updated>2026-06-01T16:50:08.233Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>
@@ -332,22 +354,5 @@
     </summary>
     <title>小马学习报告 2026-05-09</title>
     <updated>2026-05-26T00:34:24.554Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="学习笔记" scheme="https://www.inte8.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <category term="Hermes" scheme="https://www.inte8.top/tags/Hermes/"/>
-    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
-    <category term="学习" scheme="https://www.inte8.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    <id>https://www.inte8.top/2026/05/08/xiao-ma-xue-xi-bao-gao-2026-05-08/</id>
-    <link href="https://www.inte8.top/2026/05/08/xiao-ma-xue-xi-bao-gao-2026-05-08/"/>
-    <published>2026-05-08T13:00:00.000Z</published>
-    <summary>
-      <![CDATA[<h1 id="小马学习报告-2026-05-08"><a href="#小马学习报告-2026-05-08" class="headerlink" title="小马学习报告 2026-05-08"></a>小马学习报告 2026-05-08</h1><h2]]>
-    </summary>
-    <title>小马学习报告 2026-05-08</title>
-    <updated>2026-05-26T00:34:24.466Z</updated>
   </entry>
 </feed>

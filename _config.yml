@@ -105,7 +105,7 @@ theme: matery
 deploy:
   type: git
   repo: https://github.com/zz3656/zz3656.github.io.git
-  branch: main
+  branch: master
 
 # 搜索插件配置
 search:

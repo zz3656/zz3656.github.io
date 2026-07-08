@@ -6,7 +6,6 @@ tags:
   - 软路由
   - MikroTik
 categories: 网络技术
-cover: /medias/featureimages/0.jpg
 ---
 
 # RouterOS v7 入门到精通学习笔记

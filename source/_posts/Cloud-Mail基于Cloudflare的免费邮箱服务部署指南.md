@@ -8,7 +8,6 @@ tags:
   - 教程
 categories:
 - 技术教程
-cover: /medias/featureimages/0.jpg
 ---
 
 # 📧 Cloud Mail：基于 Cloudflare 的免费邮箱服务部署指南

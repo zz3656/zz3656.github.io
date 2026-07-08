@@ -3,7 +3,6 @@ title: exo：将多台设备组成AI推理集群的完整指南
 date: 2026-05-03 05:35:00
 tags: [exo, AI集群, 分布式推理]
 categories: 前沿技术
-cover: /medias/featureimages/11.jpg
 ---
 
 ## 什么是 exo？

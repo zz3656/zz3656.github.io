@@ -3,7 +3,6 @@ title: Hermes Agent Windows 安装指南：从零到一完整教程
 date: 2026-05-03 00:53:00
 tags: [Hermes, 教程]
 categories: 技术教程
-cover: /medias/featureimages/0.jpg
 ---
 
 ## 前言

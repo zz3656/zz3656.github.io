@@ -6,7 +6,6 @@ tags:
   - 智能体
   - 开源
 categories: 前沿技术
-cover: /medias/featureimages/2.jpg
 ---
 
 # Hermes Agent vs OpenClaw：两款热门开源 AI 智能体深度横评

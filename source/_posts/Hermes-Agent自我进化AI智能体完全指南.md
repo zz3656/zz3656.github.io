@@ -3,7 +3,6 @@ title: Hermes Agent：能自我进化的AI智能体完全指南
 date: 2026-04-30 06:00:00
 tags: [AI, Hermes, 智能体]
 categories: 编程开发
-cover: /medias/featureimages/0.jpg
 ---
 
 ## 什么是 Hermes Agent？

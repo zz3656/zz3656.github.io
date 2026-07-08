@@ -3,7 +3,6 @@ title: 从零搭建 Hexo 博客并部署到 GitHub Pages 完整记录
 date: 2026-04-29 23:00:00
 tags: [hexo, github, 博客搭建]
 categories: 编程开发
-cover: /medias/featureimages/0.jpg
 ---
 
 ## 前言

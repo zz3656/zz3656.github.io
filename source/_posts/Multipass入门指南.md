@@ -3,7 +3,6 @@ title: Multipass 使用完全指南：本地 Ubuntu 虚拟化管理利器
 date: 2026-04-30 05:30:00
 tags: [Multipass, Ubuntu, 虚拟机]
 categories: 技术教程
-cover: /medias/featureimages/0.jpg
 ---
 
 ## 什么是 Multipass

@@ -6,7 +6,6 @@ tags:
   - 博客
   - 写作
 categories: 技术教程
-cover: /medias/featureimages/11.jpg
 ---
 
 # Markdown 完全使用指南：从入门到精通
@@ -374,7 +373,6 @@ tags:
   - 标签1
   - 标签2
 categories: 分类名称
-cover: /medias/featureimages/0.jpg
 top: 1  # 置顶权重，数字越大越靠前
 ---
 

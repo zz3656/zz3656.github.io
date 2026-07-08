@@ -6,7 +6,6 @@ tags:
   - AI助手
   - 开源
 categories: 前沿技术
-cover: /medias/featureimages/0.jpg
 ---
 
 # OpenClaw 全方位指南 — 你的个人 AI 助手

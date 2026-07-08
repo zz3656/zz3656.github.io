@@ -3,7 +3,6 @@ title: 爱快(iKuai)软路由安装全指南：从实体机到虚拟机再到云
 date: 2026-04-30 07:20:00
 tags: [软路由, iKuai]
 categories: 网络技术
-cover: /medias/featureimages/0.jpg
 ---
 
 ## 什么是爱快(iKuai)软路由？

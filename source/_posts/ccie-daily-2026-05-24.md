@@ -3,7 +3,6 @@ title: 【CCIE学习日记】2026-05-24 | 第144天
 date: 2026-05-24 21:00:00
 categories: 学习笔记
 tags: [CCIE, 网络, Lab]
-cover: /medias/featureimages/8.jpg
 ---
 # 【CCIE学习日记】2026-05-24 | 第144天
 

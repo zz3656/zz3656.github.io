@@ -438,12 +438,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Markdown/">
-                                <span class="chip bg-color">Markdown</span>
-                            </a>
-                        
                             <a href="/tags/%E5%8D%9A%E5%AE%A2/">
                                 <span class="chip bg-color">博客</span>
+                            </a>
+                        
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
                             </a>
                         
                             <a href="/tags/%E5%86%99%E4%BD%9C/">
@@ -601,14 +601,14 @@ ___<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <p>效果：使用 <code>print("Hello")</code> 输出文字。</p>
 <h3 id="3-2-代码块"><a href="#3-2-代码块" class="headerlink" title="3.2 代码块"></a>3.2 代码块</h3><p>用三个反引号包裹，并可指定语言实现语法高亮：</p>
 <pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token code"><span class="token punctuation">```</span><span class="token code-language">python</span>
-<span class="token code-block language-python"><span class="token keyword">def</span> <span class="token function">fibonacci</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span>
-    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">yield</span> a
-        a<span class="token punctuation">,</span> b <span class="token operator">=</span> b<span class="token punctuation">,</span> a <span class="token operator">+</span> b
+<span class="token code-block language-python">def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
 
-<span class="token keyword">for</span> num <span class="token keyword">in</span> fibonacci<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span></span>
+for num in fibonacci(10):
+    print(num)</span>
 <span class="token punctuation">```</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>支持的语言标识：<code>python</code>、<code>javascript</code>、<code>java</code>、<code>c</code>、<code>cpp</code>、<code>go</code>、<code>rust</code>、<code>bash</code>、<code>sql</code>、<code>json</code>、<code>yaml</code>、<code>html</code>、<code>css</code> 等上百种。</p>
@@ -1035,12 +1035,12 @@ HTML 和 CSS 是前端基础。<span aria-hidden="true" class="line-numbers-rows
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Markdown/">
-                                    <span class="chip bg-color">Markdown</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%8D%9A%E5%AE%A2/">
                                     <span class="chip bg-color">博客</span>
+                                </a>
+                            
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
                                 </a>
                             
                                 <a href="/tags/%E5%86%99%E4%BD%9C/">

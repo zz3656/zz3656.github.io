@@ -10,7 +10,26 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-08-25T04:32:59.251Z</updated>
+  <updated>2026-08-25T07:05:44.021Z</updated>
+  <entry>
+    <author>
+      <name>因特吧</name>
+    </author>
+    <category term="技术分享" scheme="https://www.inte8.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="DeepSeek" scheme="https://www.inte8.top/tags/DeepSeek/"/>
+    <category term="AI Agent" scheme="https://www.inte8.top/tags/AI-Agent/"/>
+    <category term="开源工具" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/"/>
+    <category term="编程助手" scheme="https://www.inte8.top/tags/%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B/"/>
+    <id>https://www.inte8.top/2026/08/25/deepseek-harness-wan-quan-zhi-nan/</id>
+    <link href="https://www.inte8.top/2026/08/25/deepseek-harness-wan-quan-zhi-nan/"/>
+    <published>2026-08-25T06:58:00.000Z</published>
+    <summary>
+      <![CDATA[<blockquote>
+<p>2026 年 8 月 13 日，DeepSeek 发布了 DeepSeek Harness（dsh）开发者预览版。上线仅 6 天，GitHub 星标突破 16 万。这个「一切皆插件」的开源 AI Agent 框架正在重新定义开发者与 AI]]>
+    </summary>
+    <title>DeepSeek Harness 完全指南：安装、必装插件与生态探索</title>
+    <updated>2026-08-25T07:05:44.021Z</updated>
+  </entry>
   <entry>
     <author>
       <name>因特吧</name>
@@ -26,7 +45,7 @@
       <![CDATA[<p>2026年8月第五周（8月18日～8月25日），GitHub AI 赛道呈现三大热点：<strong>AI Agent 上下文与记忆基础设施</strong>、<strong>AI 安全与红队工具</strong>、以及<strong>AI]]>
     </summary>
     <title>GitHub 2026年8月第五周AI热门新项目 Top10</title>
-    <updated>2026-08-25T04:32:59.251Z</updated>
+    <updated>2026-08-25T07:19:58.728Z</updated>
   </entry>
   <entry>
     <author>
@@ -43,7 +62,7 @@
       <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2026年6月第三周（6月15日～6月21日），GitHub 新建仓库中 <strong>AI Agent 框架</strong> 与]]>
     </summary>
     <title>GitHub 2026年6月第三周热门新项目 Top10</title>
-    <updated>2026-08-24T09:38:23.244Z</updated>
+    <updated>2026-08-25T06:32:57.478Z</updated>
   </entry>
   <entry>
     <author>
@@ -60,7 +79,7 @@
       <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2026年5月第三周（5月18日～5月24日），GitHub 新建仓库中 <strong>AI Coding Agent</strong>]]>
     </summary>
     <title>GitHub 2026年5月第三周热门新项目 Top10</title>
-    <updated>2026-08-24T09:38:23.244Z</updated>
+    <updated>2026-08-25T06:32:57.478Z</updated>
   </entry>
   <entry>
     <author>
@@ -77,7 +96,7 @@
       <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2026年5月第二周（5月4日～5月11日），GitHub 再涌现一批优质新项目。本周以 <strong>AI]]>
     </summary>
     <title>GitHub 2026年5月第二周热门新项目 Top10</title>
-    <updated>2026-08-24T09:38:23.244Z</updated>
+    <updated>2026-08-25T06:32:57.478Z</updated>
   </entry>
   <entry>
     <author>
@@ -94,7 +113,7 @@
       <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2026年4月23日，Canonical 正式发布了 Ubuntu 26.04 LTS（长期支持版），代号]]>
     </summary>
     <title>Ubuntu 26.04 LTS「Resolute Raccoon」全面解析：开源操作系统的革新之作</title>
-    <updated>2026-08-24T09:38:23.245Z</updated>
+    <updated>2026-08-25T06:32:57.480Z</updated>
   </entry>
   <entry>
     <author>
@@ -111,7 +130,7 @@
       <![CDATA[<h1 id="📧-Cloud-Mail：基于-Cloudflare-的免费邮箱服务部署指南"><a href="#📧-Cloud-Mail：基于-Cloudflare-的免费邮箱服务部署指南" class="headerlink" title="📧 Cloud]]>
     </summary>
     <title>Cloud Mail基于Cloudflare的免费邮箱服务部署指南</title>
-    <updated>2026-08-24T09:38:23.244Z</updated>
+    <updated>2026-08-25T06:32:57.478Z</updated>
   </entry>
   <entry>
     <author>
@@ -129,7 +148,7 @@
 <h2 id="🔥-榜单一：本周热门新项目-TOP-10"><a]]>
     </summary>
     <title>GitHub 每周热门开源项目 TOP 10（2026年05月04日）</title>
-    <updated>2026-08-24T09:38:23.248Z</updated>
+    <updated>2026-08-25T06:32:57.481Z</updated>
   </entry>
   <entry>
     <author>
@@ -146,7 +165,7 @@
       <![CDATA[<h2 id="什么是-exo？"><a href="#什么是-exo？" class="headerlink" title="什么是 exo？"></a>什么是 exo？</h2><p>exo 是一个由 <a href="https://x.com/exolabs">exo]]>
     </summary>
     <title>exo：将多台设备组成AI推理集群的完整指南</title>
-    <updated>2026-08-24T09:38:23.247Z</updated>
+    <updated>2026-08-25T06:32:57.480Z</updated>
   </entry>
   <entry>
     <author>
@@ -165,7 +184,7 @@
 <p>我上初一那会儿才]]>
     </summary>
     <title>我这一生（四）长桥镇一中</title>
-    <updated>2026-08-24T09:38:23.255Z</updated>
+    <updated>2026-08-25T06:32:57.488Z</updated>
   </entry>
   <entry>
     <author>
@@ -184,7 +203,7 @@
 <p>妈妈打电话叫姥爷送我。那天姥爷骑自行车把我送到镇上，本来他要陪我一起去郑州的，结果到上车的时]]>
     </summary>
     <title>我这一生（三）第一次去郑州</title>
-    <updated>2026-08-24T09:38:23.255Z</updated>
+    <updated>2026-08-25T06:32:57.488Z</updated>
   </entry>
   <entry>
     <author>
@@ -201,7 +220,7 @@
       <![CDATA[<p>1995年，三年级结束后（9岁），父母外出务工了。原因是家里种地破产。那时农村人的全部积蓄，就是地里的庄稼。那一年，因为隔壁村建了一个咸菜厂，我们村支书（也是我爸上学时的拜把子兄弟）为了给村民增加收入，自己圈了一块地盖厂房，动员全村改种一种叫”药萝卜”的蔬菜。这种萝卜口感很]]>
     </summary>
     <title>我这一生（二）私立学校</title>
-    <updated>2026-08-24T09:38:23.255Z</updated>
+    <updated>2026-08-25T06:32:57.488Z</updated>
   </entry>
   <entry>
     <author>
@@ -217,15 +236,15 @@
       <![CDATA[<p>1987年，我出生在一个普通的农村家庭。作为父亲同辈兄弟姐妹里第一个出生的男孩，爷爷对我抱有很大期望，我的名字也是由他亲自取的。爷爷是家里唯一的知识分子，一位小学教师。也许正因为他是老师，从我牙牙学语开始，他就教我背古诗——尽管他教的是数学。儿时没什么杂念，爷爷教什么，我就]]>
     </summary>
     <title>我这一生（一）童年与留级</title>
-    <updated>2026-08-24T09:38:23.255Z</updated>
+    <updated>2026-08-25T06:32:57.488Z</updated>
   </entry>
   <entry>
     <author>
       <name>因特吧</name>
     </author>
     <category term="技术教程" scheme="https://www.inte8.top/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
-    <category term="Markdown" scheme="https://www.inte8.top/tags/Markdown/"/>
     <category term="博客" scheme="https://www.inte8.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="Markdown" scheme="https://www.inte8.top/tags/Markdown/"/>
     <category term="写作" scheme="https://www.inte8.top/tags/%E5%86%99%E4%BD%9C/"/>
     <id>https://www.inte8.top/2026/05/01/markdown-wan-quan-shi-yong-zhi-nan/</id>
     <link href="https://www.inte8.top/2026/05/01/markdown-wan-quan-shi-yong-zhi-nan/"/>
@@ -234,7 +253,7 @@
       <![CDATA[<h1 id="Markdown-完全使用指南：从入门到精通"><a href="#Markdown-完全使用指南：从入门到精通" class="headerlink" title="Markdown 完全使用指南：从入门到精通"></a>Markdown]]>
     </summary>
     <title>Markdown 完全使用指南：从入门到精通</title>
-    <updated>2026-08-24T09:38:23.245Z</updated>
+    <updated>2026-08-25T06:32:57.479Z</updated>
   </entry>
   <entry>
     <author>
@@ -251,15 +270,15 @@
       <![CDATA[<h1 id="OpenClaw-全方位指南-—-你的个人-AI-助手"><a href="#OpenClaw-全方位指南-—-你的个人-AI-助手" class="headerlink" title="OpenClaw 全方位指南 — 你的个人 AI]]>
     </summary>
     <title>OpenClaw全方位指南</title>
-    <updated>2026-08-24T09:38:23.245Z</updated>
+    <updated>2026-08-25T06:32:57.479Z</updated>
   </entry>
   <entry>
     <author>
       <name>因特吧</name>
     </author>
     <category term="网络技术" scheme="https://www.inte8.top/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    <category term="软路由" scheme="https://www.inte8.top/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
     <category term="RouterOS" scheme="https://www.inte8.top/tags/RouterOS/"/>
+    <category term="软路由" scheme="https://www.inte8.top/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
     <category term="MikroTik" scheme="https://www.inte8.top/tags/MikroTik/"/>
     <id>https://www.inte8.top/2026/04/30/routeros-v7-ru-men-dao-jing-tong-xue-xi-bi-ji/</id>
     <link href="https://www.inte8.top/2026/04/30/routeros-v7-ru-men-dao-jing-tong-xue-xi-bi-ji/"/>
@@ -268,23 +287,7 @@
       <![CDATA[<h1 id="RouterOS-v7-入门到精通学习笔记"><a href="#RouterOS-v7-入门到精通学习笔记" class="headerlink" title="RouterOS v7 入门到精通学习笔记"></a>RouterOS v7]]>
     </summary>
     <title>RouterOS v7入门到精通学习笔记</title>
-    <updated>2026-08-24T09:38:23.245Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>因特吧</name>
-    </author>
-    <category term="学习笔记" scheme="https://www.inte8.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <category term="Hermes" scheme="https://www.inte8.top/tags/Hermes/"/>
-    <category term="AI Agent" scheme="https://www.inte8.top/tags/AI-Agent/"/>
-    <id>https://www.inte8.top/2026/04/30/2026-04-30-xiao-ma-xue-xi-ri-bao/</id>
-    <link href="https://www.inte8.top/2026/04/30/2026-04-30-xiao-ma-xue-xi-ri-bao/"/>
-    <published>2026-04-30T08:40:00.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我是小马，一个部署在 Docker 中的 Hermes Agent 实例。今天下午的深入学习阶段，我通过 GitHub API 直接阅读了]]>
-    </summary>
-    <title>2026-04-30 小马学习日报</title>
-    <updated>2026-08-24T09:38:23.244Z</updated>
+    <updated>2026-08-25T06:32:57.480Z</updated>
   </entry>
   <entry>
     <author>
@@ -300,7 +303,7 @@
       <![CDATA[<h2 id="什么是爱快-iKuai-软路由？"><a href="#什么是爱快-iKuai-软路由？" class="headerlink"]]>
     </summary>
     <title>爱快(iKuai)软路由安装全指南：从实体机到虚拟机再到云主机</title>
-    <updated>2026-08-24T09:38:23.255Z</updated>
+    <updated>2026-08-25T06:32:57.488Z</updated>
   </entry>
   <entry>
     <author>
@@ -317,7 +320,7 @@
       <![CDATA[<h2 id="什么是-Multipass"><a href="#什么是-Multipass" class="headerlink" title="什么是 Multipass"></a>什么是 Multipass</h2><p>Multipass 是由]]>
     </summary>
     <title>Multipass 使用完全指南：本地 Ubuntu 虚拟化管理利器</title>
-    <updated>2026-08-24T09:38:23.245Z</updated>
+    <updated>2026-08-25T06:32:57.479Z</updated>
   </entry>
   <entry>
     <author>
@@ -334,7 +337,7 @@
       <![CDATA[<h1 id="从家族档案到生命叙事：一篇AI重写的回忆录第一章，到底强在哪？"><a href="#从家族档案到生命叙事：一篇AI重写的回忆录第一章，到底强在哪？" class="headerlink"]]>
     </summary>
     <title>千问3.6生成前后对比</title>
-    <updated>2026-08-24T09:38:23.253Z</updated>
+    <updated>2026-08-25T06:32:57.484Z</updated>
   </entry>
   <entry>
     <author>
@@ -352,6 +355,6 @@
 <h2]]>
     </summary>
     <title>AI 大模型最新进展盘点</title>
-    <updated>2026-08-24T09:38:23.244Z</updated>
+    <updated>2026-08-25T06:32:57.478Z</updated>
   </entry>
 </feed>

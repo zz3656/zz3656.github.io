@@ -438,12 +438,12 @@
                                 <span class="chip bg-color">软路由</span>
                             </a>
                         
-                            <a href="/tags/ros/">
-                                <span class="chip bg-color">ros</span>
-                            </a>
-                        
                             <a href="/tags/routeros/">
                                 <span class="chip bg-color">routeros</span>
+                            </a>
+                        
+                            <a href="/tags/ros/">
+                                <span class="chip bg-color">ros</span>
                             </a>
                         
                     </div>
@@ -491,14 +491,121 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="routeros-7-X-IPV6设置"><a href="#routeros-7-X-IPV6设置" class="headerlink" title="routeros 7.X IPV6设置"></a>routeros 7.X IPV6设置</h2><h5 id="1-再确保routeos正常上网后，设置dhcpv6client。用winbox打开ipv6-dhcpv6client，pool-name值可以写任意自己熟悉的。"><a href="#1-再确保routeos正常上网后，设置dhcpv6client。用winbox打开ipv6-dhcpv6client，pool-name值可以写任意自己熟悉的。" class="headerlink" title="1.再确保routeos正常上网后，设置dhcpv6client。用winbox打开ipv6>dhcpv6client，pool name值可以写任意自己熟悉的。"></a>1.再确保routeos正常上网后，设置dhcpv6client。用winbox打开ipv6&gt;dhcpv6client，pool name值可以写任意自己熟悉的。</h5><p><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/20/d1ff0caaec78de79120cd7b4d3ccd475-image-20240520031336215-5adcbd.png" alt="image-20240520031336215"></p>
-<h5 id="2-给内网网卡设置ipv6地址"><a href="#2-给内网网卡设置ipv6地址" class="headerlink" title="2.给内网网卡设置ipv6地址"></a>2.给内网网卡设置ipv6地址</h5><p><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/20/aa715ad4aad6cf18adc31a744327101a-image-20240520031722408-603ac9.png" alt="image-20240520031722408"></p>
-<h5 id="3-设置内网ipv6地址分配，打开ipv6-dhchv6-server。具体设置参照下图"><a href="#3-设置内网ipv6地址分配，打开ipv6-dhchv6-server。具体设置参照下图" class="headerlink" title="3.设置内网ipv6地址分配，打开ipv6>dhchv6 server。具体设置参照下图"></a>3.设置内网ipv6地址分配，打开ipv6&gt;dhchv6 server。具体设置参照下图</h5><p><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/20/5ac14c3551e9e4801d7e0f81706fca8f-image-20240520031903900-963211.png" alt="image-20240520031903900"></p>
-<h5 id="4-设置ND，打开ipv6-neighbor-discovery"><a href="#4-设置ND，打开ipv6-neighbor-discovery" class="headerlink" title="4.设置ND，打开ipv6>neighbor discovery"></a>4.设置ND，打开ipv6&gt;neighbor discovery</h5><p><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/20/449f6d8ff8f6413603dcf11404f7f073-image-20240520032616623-89b02b.png" alt="image-20240520032616623"></p>
-<h5 id="5-这时候实际上已经可以上网了，但是打开IPV6网页的时候特别慢。我们需要添加一条防火墙规则改变一下MSS，打开ipv6-ipv6-firewall-再mangle下新建一条规则"><a href="#5-这时候实际上已经可以上网了，但是打开IPV6网页的时候特别慢。我们需要添加一条防火墙规则改变一下MSS，打开ipv6-ipv6-firewall-再mangle下新建一条规则" class="headerlink" title="5.这时候实际上已经可以上网了，但是打开IPV6网页的时候特别慢。我们需要添加一条防火墙规则改变一下MSS，打开ipv6>ipv6 firewall 再mangle下新建一条规则"></a>5.这时候实际上已经可以上网了，但是打开IPV6网页的时候特别慢。我们需要添加一条防火墙规则改变一下MSS，打开ipv6&gt;ipv6 firewall 再mangle下新建一条规则</h5><p><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/20/2843be459341759ac68c99cd8eb8887b-image-20240520032758913-8131d6.png" alt="image-20240520032758913"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/20/80b16f4c954f673a951372ddcde8f6b7-image-20240520032809483-6eb283.png" alt="image-20240520032809483"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/zz3656/picgo@main/img/2024/05/20/cbb078bc804999ddc553d92033964b44-image-20240520032820373-0d243b.png" alt="image-20240520032820373"></p>
-<h5 id="完结，至此可以愉快的进行上网了。"><a href="#完结，至此可以愉快的进行上网了。" class="headerlink" title="完结，至此可以愉快的进行上网了。"></a>完结，至此可以愉快的进行上网了。</h5>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>RouterOS 7 开始 IPv6 包内置到主包，不再需要单独安装（RouterOS 6 时代 IPv6 是独立包 <code>ipv6-7.x.npk</code>，需要手动上传重启）。</p>
+<p>国内运营商（电信/联通/移动）从 2020 年起逐步在 PPPoE / DHCP 链路上启用 IPv6 PD（前缀委派），用户端拿到的通常是 <code>/60</code> 或 <code>/56</code> 前缀，可以切成多个 <code>/64</code> 给不同 VLAN / 局域网使用。</p>
+<p>本文记录在 RouterOS 7.X 上启用 IPv6 的完整流程——从 WAN 拨号到 LAN 客户端能访问 IPv6 网站。</p>
+<h2 id="一、前置确认"><a href="#一、前置确认" class="headerlink" title="一、前置确认"></a>一、前置确认</h2><p>配置前确认 3 件事：</p>
+<ol>
+<li><strong>ISP 支持 IPv6 PD</strong>：打电话给运营商或看光猫管理页的 WAN 侧是否有 IPv6 地址</li>
+<li><strong>RouterOS 版本 ≥ 7.1</strong>（早期 v7 有 IPv6 防火墙 bug）：<code>/system resource print</code> 看 version</li>
+<li><strong>WAN 接口类型</strong>：PPPoE / DHCP client / 静态，三种配置略有不同。本文以 PPPoE 为例</li>
+</ol>
+<h2 id="二、WAN-侧配置（DHCPv6-Client）"><a href="#二、WAN-侧配置（DHCPv6-Client）" class="headerlink" title="二、WAN 侧配置（DHCPv6 Client）"></a>二、WAN 侧配置（DHCPv6 Client）</h2><p>确保 RouterOS 已经能正常上网后，开启 IPv6 的 DHCPv6 客户端：</p>
+<p><strong>Winbox 路径</strong>：<code>IPv6 → DHCPv6 Client</code></p>
+<p>或命令行：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros">/ipv6 dhcp-client add interface=pppoe-out1 pool-name=isp-pd \
+ pool-prefix-length=64 add-default-route=yes request=prefix<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>参数说明：</p>
+<ul>
+<li><code>interface=pppoe-out1</code>：你的 WAN 接口名</li>
+<li><code>pool-name=isp-pd</code>：PD 拿到的前缀会存到这个 pool，后续 LAN 地址从这里取</li>
+<li><code>pool-prefix-length=64</code>：每个 LAN 切 /64（最常用）</li>
+<li><code>add-default-route=yes</code>：自动加 IPv6 默认路由</li>
+<li><code>request=prefix</code>：只请求前缀，不请求 IA_NA（WAN 地址用 link-local）</li>
+</ul>
+<p>执行后 <code>status</code> 应该是 <code>bound</code>，<code>prefix</code> 字段会显示类似 <code>2001:db8:1200::/56</code>（运营商分配的）。</p>
+<h2 id="三、给内网网卡分配-IPv6-地址"><a href="#三、给内网网卡分配-IPv6-地址" class="headerlink" title="三、给内网网卡分配 IPv6 地址"></a>三、给内网网卡分配 IPv6 地址</h2><p>WAN 拿到前缀后，给 LAN bridge / ether 接口分配 IPv6：</p>
+<p><strong>Winbox 路径</strong>：<code>IPv6 → Addresses → +</code></p>
+<p>或命令行：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros">/ipv6 address add address=::1/64 interface=bridge-lan \
+ from-pool=isp-pd advertise=yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>关键参数：</p>
+<ul>
+<li><code>from-pool=isp-pd</code>：从 PD pool 自动取地址</li>
+<li><code>advertise=yes</code>：让 RouterOS 在 LAN 侧发送 Router Advertisement（RA），客户端可以走 SLAAC 自动配置</li>
+<li><code>::1/64</code>：从 pool 拿到的前缀，主机位固定为 <code>::1</code></li>
+</ul>
+<h2 id="四、配置-Router-Advertisement（RA）"><a href="#四、配置-Router-Advertisement（RA）" class="headerlink" title="四、配置 Router Advertisement（RA）"></a>四、配置 Router Advertisement（RA）</h2><p>RA 告诉 LAN 上的主机”用什么前缀、用 SLAAC 还是 DHCPv6”。<strong>没有 RA，主机即使拿到地址也没默认网关</strong>。</p>
+<p><strong>Winbox 路径</strong>：<code>IPv6 → Neighbor Discovery</code></p>
+<p>或：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros">/ipv6 nd set [find interface=bridge-lan] advertise-dns=yes \
+ managed-address-configuration=no other-configuration=no \
+ ra-interval=60s-200s ra-lifetime=1800s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>参数说明：</p>
+<ul>
+<li><code>managed-address-configuration=no</code>：客户端用 SLAAC 自配地址（推荐）</li>
+<li><code>other-configuration=no</code>：客户端不需要去 DHCPv6 拿其他参数（DNS 用 RA 推送）</li>
+<li><code>ra-interval=60s-200s</code>：RA 发送间隔（RFC 4861 推荐值）</li>
+<li><code>ra-lifetime=1800s</code>：客户端默认路由有效期</li>
+<li><code>advertise-dns=yes</code>：RA 里带上 DNS 服务器（v6-only 网络必须）</li>
+</ul>
+<p>⚠️ <strong>不要在 RA 里 disable</strong>——禁了 RA 等于禁了整个 IPv6 内网。</p>
+<h2 id="五、DHCPv6-Server（可选）"><a href="#五、DHCPv6-Server（可选）" class="headerlink" title="五、DHCPv6 Server（可选）"></a>五、DHCPv6 Server（可选）</h2><p>如果你想让客户端从 DHCPv6 拿到<strong>有状态地址</strong>（不用 SLAAC），开 DHCPv6 server。但<strong>大部分家用场景用 SLAAC 就够了</strong>，可以跳过这一步。</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros">/ipv6 dhcp-server add name=dhcpv6-lan interface=bridge-lan \
+ address-pool6=isp-pd lease-time=1h<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="六、防火墙（容易遗漏）"><a href="#六、防火墙（容易遗漏）" class="headerlink" title="六、防火墙（容易遗漏）"></a>六、防火墙（容易遗漏）</h2><p><strong>这是 2026 年 RouterOS IPv6 配置最容易踩坑的地方</strong>——很多人配完前面几步后能上网，但<strong>忘了 IPv6 防火墙也是独立的 filter 表</strong>。没有 IPv6 防火墙规则，每个 LAN 设备都直接暴露公网。</p>
+<p>需要 3 组 filter 规则：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros">/ipv6 firewall filter
+# 1. 允许 established/related（回程流量）
+add chain=input action=accept connection-state=established,related \
+ comment="accept established/related"
+add chain=forward action=accept connection-state=established,related \
+ comment="accept established/related"
+
+# 2. 允许 LAN 出网（限制 ICMPv6 不能全 drop）
+add chain=input action=accept protocol=icmpv6 comment="accept ICMPv6"
+add chain=forward action=accept protocol=icmpv6 comment="accept ICMPv6 forward"
+add chain=forward action=accept in-interface=bridge-lan \
+ comment="accept LAN to WAN"
+
+# 3. drop invalid + default drop
+add chain=input action=drop connection-state=invalid comment="drop invalid"
+add chain=forward action=drop connection-state=invalid comment="drop invalid"
+add chain=input action=drop comment="drop all other input"
+add chain=forward action=drop comment="drop all other forward"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>⚠️ <strong>关键：ICMPv6 不能 drop</strong>——Neighbor Discovery、DAD、Path MTU Discovery 都基于 ICMPv6。drop 了 ICMPv6 等于 drop 整个 IPv6。</p>
+<h2 id="七、MTU-MSS-调优（解决-IPv6-网页打不开）"><a href="#七、MTU-MSS-调优（解决-IPv6-网页打不开）" class="headerlink" title="七、MTU / MSS 调优（解决 IPv6 网页打不开）"></a>七、MTU / MSS 调优（解决 IPv6 网页打不开）</h2><p>按上面配完通常就能上网了，但<strong>打开 IPv6 网站有时特别慢</strong>——原因是 PMTUD 失败 + TCP MSS 没协商好。需要加 mangle 规则：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros">/ipv6 firewall mangle
+add chain=forward protocol=tcp tcp-flags=syn \
+ tcp-mss=1201-1535 action=change-mss new-mss=clamp-to-pmtu \
+ comment="clamp TCP MSS for IPv6 path MTU"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这条规则把所有出站 TCP SYN 包的 MSS 改成 <code>clamp-to-pmtu</code>（即根据路径 MTU 自动算）。不开的话，IPv6 包默认 MTU 1280 vs IPv4 1500，会触发分片，部分网站（特别是国内 CDN）会卡住。</p>
+<h2 id="八、验证"><a href="#八、验证" class="headerlink" title="八、验证"></a>八、验证</h2><p>配置完后跑一遍检查：</p>
+<pre class="line-numbers language-routeros" data-language="routeros"><code class="language-routeros"># 1. PD client 是否 bound
+/ipv6 dhcp-client print
+# 应该看到 status=bound, prefix=2001:db8:xxxx::/56
+
+# 2. 内网地址是否分配
+/ipv6 address print
+# 应该看到 bridge-lan 上有一个 /64 地址
+
+# 3. 防火墙规则是否生效
+/ipv6 firewall filter print stats
+# 看各条规则的 packets/bytes 是否在涨
+
+# 4. 从 LAN 设备测 IPv6 连通性
+# 浏览器访问 https://ipv6-test.com/ 或 http://test-ipv6.com/
+# 期望：IPv6 地址出现 + 得分 ≥ 10/10
+
+# 5. 测 IPv6 DNS
+/tool traceroute 2001:4860:4860::8888
+# 期望：能 ping 通 Google IPv6 DNS<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果哪一步卡住，按以下顺序排查：</p>
+<ol>
+<li>PD client <code>searching</code> 状态 → ISP 不分配 PD</li>
+<li>LAN 客户端没拿到地址 → 检查 RA 是否 enabled、interface 是否正确</li>
+<li>能 ping IP 但打不开网页 → MTU/MSS 问题</li>
+<li>某些网站能开某些不能 → 防火墙规则问题</li>
+</ol>
+<h2 id="九、完结"><a href="#九、完结" class="headerlink" title="九、完结"></a>九、完结</h2><p>至此可以愉快地上 IPv6 了——打开浏览器访问 <code>https://ipv6.google.com/</code> 应该能直接连上。<strong>建议</strong>保留 <code>/ipv6 firewall filter print</code> 输出截图，方便对照。</p>
+
                 
             </div>
             <hr/>
@@ -566,12 +673,12 @@
                                     <span class="chip bg-color">软路由</span>
                                 </a>
                             
-                                <a href="/tags/ros/">
-                                    <span class="chip bg-color">ros</span>
-                                </a>
-                            
                                 <a href="/tags/routeros/">
                                     <span class="chip bg-color">routeros</span>
+                                </a>
+                            
+                                <a href="/tags/ros/">
+                                    <span class="chip bg-color">ros</span>
                                 </a>
                             
                         </div>

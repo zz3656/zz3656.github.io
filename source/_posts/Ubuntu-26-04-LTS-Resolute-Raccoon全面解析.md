@@ -1,10 +1,8 @@
 ---
-top: 1
 title: Ubuntu 26.04 LTS「Resolute Raccoon」全面解析：开源操作系统的革新之作
 date: 2026-05-07 03:15:00
 categories: 技术教程
 tags: [Linux, Ubuntu, 操作系统]
-cover: /medias/featureimages/26-04-cover.jpg
 ---
 
 ## 前言

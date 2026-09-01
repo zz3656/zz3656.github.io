@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Mac SSH功能，配合Vim编辑器对编程十分有帮助, blog,hexo">
+    <meta name="keywords" content="Mac SSH功能，配合 Vim 编辑器对编程十分有帮助, blog,hexo">
     <meta name="description" content="因特吧的博客，分享技术与生活">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Mac SSH功能，配合Vim编辑器对编程十分有帮助 | 因特吧</title>
+    <title>Mac SSH功能，配合 Vim 编辑器对编程十分有帮助 | 因特吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,7 +318,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Mac SSH功能，配合Vim编辑器对编程十分有帮助</h1>
+                    <h1 class="description center-align post-title">Mac SSH功能，配合 Vim 编辑器对编程十分有帮助</h1>
                 </div>
             </div>
         </div>
@@ -491,34 +491,305 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="MAC-SSH功能，配合VIM编辑器对编程十分有帮助。"><a href="#MAC-SSH功能，配合VIM编辑器对编程十分有帮助。" class="headerlink" title="MAC SSH功能，配合VIM编辑器对编程十分有帮助。"></a>MAC SSH功能，配合VIM编辑器对编程十分有帮助。</h1><p>本文来源自网络</p>
-<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/xcg132566/article/details/78797339">https://blog.csdn.net/xcg132566/article/details/78797339</a></p>
-<p>MAC作为程序员的神器，在编程上的使用远超window的电脑，而MAC本身提供了SSH功能，配合VIM编辑器对编程十分有帮助。<br>使用ssh连接远程主机</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> username@192.168.100.100<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>本文整合自网络教程（原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/xcg132566/article/details/78797339">https://blog.csdn.net/xcg132566/article/details/78797339</a>），并补充了 2026 年 macOS SSH / Vim 的现代实践。</p>
+</blockquote>
+<p>macOS 内置 OpenSSH 客户端和 Vim 编辑器，无需额外安装就能远程管理 Linux 服务器。这套组合是程序员日常工作的”标配”——尤其在运维、远程开发、跨平台协作场景下。</p>
+<p>本文从基础 SSH 连接讲起，覆盖 SSH 密钥认证、scp 文件传输、Vim 编辑器配置、SSH 高级用法（隧道 / 代理），形成完整的 macOS + Linux 远程开发工作流。</p>
+<h2 id="一、SSH-基础连接"><a href="#一、SSH-基础连接" class="headerlink" title="一、SSH 基础连接"></a>一、SSH 基础连接</h2><h3 id="1-密码登录"><a href="#1-密码登录" class="headerlink" title="1. 密码登录"></a>1. 密码登录</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> username@192.168.100.100<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>其中，username是登录用户名，@后接ip地址，点击确定之后输入密码即连接到远程主机。要查看当前有多少个处于登录状态的用户，可以使用who命令查看。</p>
-<p>使用scp命令实现上传下载</p>
-<h2 id="1、从服务器上下载文件"><a href="#1、从服务器上下载文件" class="headerlink" title="1、从服务器上下载文件"></a>1、从服务器上下载文件</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> username@servername:/path/filename /Users/mac/Desktop（本地目录）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li><code>username</code>：远程主机的用户名</li>
+<li><code>192.168.100.100</code>：远程主机 IP（或域名）</li>
+<li>按提示输入密码即可登录</li>
+</ul>
+<p>⚠️ <strong>macOS 第一次连接陌生主机</strong>会提示：</p>
+<pre class="line-numbers language-none"><code class="language-none">The authenticity of host '192.168.100.100' can't be established.
+ED25519 key fingerprint is SHA256:xxxxxxxxxxx.
+Are you sure you want to continue connecting (yes/no)?<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<p>输入 <code>yes</code> 后会写入 <code>~/.ssh/known_hosts</code>，下次连接不再提示。</p>
+<h3 id="2-指定端口"><a href="#2-指定端口" class="headerlink" title="2. 指定端口"></a>2. 指定端口</h3><p>SSH 默认端口是 22。如果服务器改了端口：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-p</span> <span class="token number">2222</span> username@192.168.100.100<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<h3 id="3-指定私钥登录"><a href="#3-指定私钥登录" class="headerlink" title="3. 指定私钥登录"></a>3. 指定私钥登录</h3><p>如果服务器配置了公钥认证：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-i</span> ~/.ssh/id_rsa username@192.168.100.100<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>例如:scp <a href="mailto:root@123.207.170.40">root@123.207.170.40</a>:/root/test.txt /Users/mac/Desktop就是将服务器上的/root/test.txt下载到本地的/Users/mac/Desktop目录下。注意两个地址之间有空格！</p>
-<h2 id="2、上传本地文件到服务器"><a href="#2、上传本地文件到服务器" class="headerlink" title="2、上传本地文件到服务器"></a>2、上传本地文件到服务器</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> /path/filename username@servername:/path <span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="4-查看当前登录的用户"><a href="#4-查看当前登录的用户" class="headerlink" title="4. 查看当前登录的用户"></a>4. 查看当前登录的用户</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> user@server <span class="token function">who</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<p>或者登录后用 <code>who</code> 命令查看当前所有登录用户。</p>
+<h2 id="二、SSH-公钥认证（免密码登录）"><a href="#二、SSH-公钥认证（免密码登录）" class="headerlink" title="二、SSH 公钥认证（免密码登录）"></a>二、SSH 公钥认证（免密码登录）</h2><p>密码登录每次都要输入密码，<strong>公钥认证</strong>才是日常开发的方式——生成一对密钥，把公钥放到服务器，本地用私钥登录，全程免密。</p>
+<h3 id="1-生成密钥对"><a href="#1-生成密钥对" class="headerlink" title="1. 生成密钥对"></a>1. 生成密钥对</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen <span class="token parameter variable">-t</span> ed25519 <span class="token parameter variable">-C</span> <span class="token string">"your_email@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<p><strong>2026 年推荐用 ed25519</strong>（比 RSA 更短、更快、更安全）。如果你还在用老 RSA：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-b</span> <span class="token number">4096</span> <span class="token parameter variable">-C</span> <span class="token string">"your_email@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>例如scp /Users/mac/Desktop/test.txt <a href="mailto:root@123.207.170.40">root@123.207.170.40</a>:/root/</p>
-<h2 id="3、从服务器下载整个目录"><a href="#3、从服务器下载整个目录" class="headerlink" title="3、从服务器下载整个目录"></a>3、从服务器下载整个目录</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> <span class="token parameter variable">-r</span> username@servername:/root/（远程目录） /Users/mac/Desktop（本地目录）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>按提示设置：</p>
+<ul>
+<li>文件路径：直接回车用默认 <code>~/.ssh/id_ed25519</code></li>
+<li>密码：建议<strong>设一个密码</strong>（passphrase）—— 即使私钥泄露，攻击者也需要密码才能用</li>
+</ul>
+<h3 id="2-上传公钥到服务器"><a href="#2-上传公钥到服务器" class="headerlink" title="2. 上传公钥到服务器"></a>2. 上传公钥到服务器</h3><p><strong>方法 1：ssh-copy-id</strong>（最方便）</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-copy-id username@192.168.100.100<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<p>输入密码一次，公钥自动追加到服务器的 <code>~/.ssh/authorized_keys</code>。</p>
+<p><strong>方法 2：手动复制</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># macOS 本地</span>
+<span class="token function">cat</span> ~/.ssh/id_ed25519.pub <span class="token operator">|</span> <span class="token function">ssh</span> username@192.168.100.100 <span class="token punctuation">\</span>
+  <span class="token string">"mkdir -p ~/.ssh &amp;&amp; chmod 700 ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys &amp;&amp; chmod 600 ~/.ssh/authorized_keys"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<p><strong>方法 3：直接编辑</strong></p>
+<p>mac上：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> ~/.ssh/id_ed25519.pub
+<span class="token comment"># 复制输出内容</span>
 
-<p>例如:scp -r <a href="mailto:root@192.168.0.101">root@192.168.0.101</a>:/root/ /Users/mac/Desktop/</p>
-<h2 id="4、上传目录到服务器"><a href="#4、上传目录到服务器" class="headerlink" title="4、上传目录到服务器"></a>4、上传目录到服务器</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> <span class="token parameter variable">-r</span> local_dir username@servername:remote_dir<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token comment"># 登录服务器后</span>
+<span class="token function">ssh</span> username@192.168.100.100
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> ~/.ssh
+<span class="token function">chmod</span> <span class="token number">700</span> ~/.ssh
+<span class="token comment"># 把公钥内容粘贴进去</span>
+<span class="token builtin class-name">echo</span> <span class="token string">"ssh-ed25519 AAAA... your_email@example.com"</span> <span class="token operator">&gt;&gt;</span> ~/.ssh/authorized_keys
+<span class="token function">chmod</span> <span class="token number">600</span> ~/.ssh/authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>⚠️ <strong>关键</strong>：<code>~/.ssh</code> 必须是 <code>700</code> 权限，<code>authorized_keys</code> 必须是 <code>600</code>。否则 SSH 会拒绝使用公钥认证。</p>
+<h3 id="3-测试免密登录"><a href="#3-测试免密登录" class="headerlink" title="3. 测试免密登录"></a>3. 测试免密登录</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> username@192.168.100.100
+<span class="token comment"># 不再要求输入密码</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
+<h3 id="4-SSH-Config-简化命令"><a href="#4-SSH-Config-简化命令" class="headerlink" title="4. SSH Config 简化命令"></a>4. SSH Config 简化命令</h3><p>如果你经常连多台服务器，可以配 <code>~/.ssh/config</code>：</p>
+<pre class="line-numbers language-none"><code class="language-none">Host myserver
+    HostName 192.168.100.100
+    User username
+    Port 22
+    IdentityFile ~/.ssh/id_ed25519
 
-<p>例如：scp -r test <a href="mailto:root@192.168.0.101">root@192.168.0.101</a>:/root/ 把当前目录下的test目录上传到服务器的/root/ 目录</p>
-<p>注：目标服务器要开启写入权限。<br>————————————————</p>
+Host prod
+    HostName prod.example.com
+    User deploy
+    Port 2222
+    IdentityFile ~/.ssh/work_key<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>之后直接 <code>ssh myserver</code> 或 <code>ssh prod</code>，不用记 IP / 端口 / 用户名。</p>
+<h2 id="三、scp-文件传输"><a href="#三、scp-文件传输" class="headerlink" title="三、scp 文件传输"></a>三、scp 文件传输</h2><p>scp = SSH Copy，本质是在 SSH 加密通道上传输文件。</p>
+<h3 id="1-下载：服务器-→-本地"><a href="#1-下载：服务器-→-本地" class="headerlink" title="1. 下载：服务器 → 本地"></a>1. 下载：服务器 → 本地</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> username@servername:/path/filename /local/path<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>示例：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> root@123.207.170.40:/root/test.txt /Users/mac/Desktop
+<span class="token comment"># 把服务器的 /root/test.txt 下载到本地桌面</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="2-上传：本地-→-服务器"><a href="#2-上传：本地-→-服务器" class="headerlink" title="2. 上传：本地 → 服务器"></a>2. 上传：本地 → 服务器</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> /local/path/filename username@servername:/remote/path<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>示例：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> /Users/mac/Desktop/test.txt root@123.207.170.40:/root/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="3-递归传输整个目录"><a href="#3-递归传输整个目录" class="headerlink" title="3. 递归传输整个目录"></a>3. 递归传输整个目录</h3><p>加 <code>-r</code> 参数：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 下载整个目录</span>
+<span class="token function">scp</span> <span class="token parameter variable">-r</span> root@server:/root/folder /local/
+
+<span class="token comment"># 上传整个目录</span>
+<span class="token function">scp</span> <span class="token parameter variable">-r</span> ./local_folder root@server:/root/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-指定端口"><a href="#4-指定端口" class="headerlink" title="4. 指定端口"></a>4. 指定端口</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> <span class="token parameter variable">-P</span> <span class="token number">2222</span> file.txt user@server:/path
+<span class="token comment"># ⚠️ scp 用大写 -P，ssh 用小写 -p</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="5-保留文件属性"><a href="#5-保留文件属性" class="headerlink" title="5. 保留文件属性"></a>5. 保留文件属性</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> <span class="token parameter variable">-p</span> file.txt user@server:/path
+<span class="token comment"># 保留时间戳、权限、属主等</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="6-限速"><a href="#6-限速" class="headerlink" title="6. 限速"></a>6. 限速</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> <span class="token parameter variable">-l</span> <span class="token number">1000</span> file.txt user@server:/path
+<span class="token comment"># 限制 1000 Kbit/s（用于慢速网络避免占满带宽）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="四、Vim-编辑器基础"><a href="#四、Vim-编辑器基础" class="headerlink" title="四、Vim 编辑器基础"></a>四、Vim 编辑器基础</h2><p>Vim 是 macOS / Linux 自带的文本编辑器，<strong>所有 Unix-like 系统都有</strong>。掌握 Vim 后，你在任何服务器上都能编辑文件。</p>
+<h3 id="1-启动-Vim"><a href="#1-启动-Vim" class="headerlink" title="1. 启动 Vim"></a>1. 启动 Vim</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> filename<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="2-三种模式"><a href="#2-三种模式" class="headerlink" title="2. 三种模式"></a>2. 三种模式</h3><table>
+<thead>
+<tr>
+<th>模式</th>
+<th>进入方式</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>普通模式</strong>（Normal）</td>
+<td>启动默认 / <code>Esc</code></td>
+<td>移动光标、删除、复制、粘贴</td>
+</tr>
+<tr>
+<td><strong>插入模式</strong>（Insert）</td>
+<td><code>i</code> / <code>a</code> / <code>o</code></td>
+<td>输入文本</td>
+</tr>
+<tr>
+<td><strong>命令行模式</strong>（Command）</td>
+<td><code>:</code></td>
+<td>执行命令（保存、退出、查找等）</td>
+</tr>
+</tbody></table>
+<h3 id="3-必备命令"><a href="#3-必备命令" class="headerlink" title="3. 必备命令"></a>3. 必备命令</h3><p><strong>普通模式下</strong>：</p>
+<pre class="line-numbers language-none"><code class="language-none">h j k l      左下上右（替代方向键，更快）
+0           跳到行首
+$           跳到行尾
+gg          跳到文件首行
+G           跳到文件末行
+dd          删除当前行
+yy          复制当前行
+p           粘贴
+/keyword    搜索关键字
+n           下一个匹配
+:N          跳到第 N 行<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>命令行模式下</strong>：</p>
+<pre class="line-numbers language-none"><code class="language-none">:w           保存
+:q           退出
+:wq          保存并退出
+:q!          强制退出（不保存）
+:set nu      显示行号
+:%s/old/new/g  全局替换<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-vimrc-配置"><a href="#4-vimrc-配置" class="headerlink" title="4. .vimrc 配置"></a>4. .vimrc 配置</h3><p>macOS 默认 <code>~/.vimrc</code>，Linux 也是 <code>~/.vimrc</code>：</p>
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token comment">" 显示行号</span>
+<span class="token keyword">set</span> <span class="token keyword">number</span>
+
+<span class="token comment">" 语法高亮</span>
+<span class="token builtin">syntax</span> <span class="token keyword">on</span>
+
+<span class="token comment">" 自动缩进</span>
+<span class="token keyword">set</span> <span class="token builtin">autoindent</span>
+<span class="token keyword">set</span> <span class="token builtin">smartindent</span>
+
+<span class="token comment">" Tab = 4 空格</span>
+<span class="token keyword">set</span> <span class="token builtin">tabstop</span><span class="token operator">=</span><span class="token number">4</span>
+<span class="token keyword">set</span> <span class="token builtin">expandtab</span>
+
+<span class="token comment">" 显示当前模式</span>
+<span class="token keyword">set</span> <span class="token builtin">showmode</span>
+
+<span class="token comment">" 搜索时忽略大小写</span>
+<span class="token keyword">set</span> <span class="token builtin">ignorecase</span>
+<span class="token keyword">set</span> <span class="token builtin">smartcase</span>
+
+<span class="token comment">" 中文编码</span>
+<span class="token keyword">set</span> <span class="token builtin">encoding</span><span class="token operator">=</span>utf<span class="token operator">-</span><span class="token number">8</span>
+<span class="token keyword">set</span> <span class="token builtin">fileencodings</span><span class="token operator">=</span>utf<span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">,</span>gbk<span class="token punctuation">,</span>gb18030<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-Vim-常用插件"><a href="#5-Vim-常用插件" class="headerlink" title="5. Vim 常用插件"></a>5. Vim 常用插件</h3><p><strong>Vundle / vim-plug / pack</strong>：插件管理器</p>
+<pre class="line-numbers language-vim" data-language="vim"><code class="language-vim"><span class="token comment">" ~/.vimrc 装 vim-plug</span>
+<span class="token keyword">call</span> plug#<span class="token function">begin</span><span class="token punctuation">(</span><span class="token string">'~/.vim/plugged'</span><span class="token punctuation">)</span>
+Plug <span class="token string">'vim-airline/vim-airline'</span>
+Plug <span class="token string">'preservim/nerdtree'</span>
+Plug <span class="token string">'tpope/vim-commentary'</span>
+<span class="token keyword">call</span> plug#<span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>安装：<code>curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</code></p>
+<p>然后 <code>:PlugInstall</code>。</p>
+<p>⚠️ <strong>服务器上慎用插件</strong>：远程服务器的 Vim 没法装插件，只用基础命令就好。</p>
+<h2 id="五、SSH-高级用法"><a href="#五、SSH-高级用法" class="headerlink" title="五、SSH 高级用法"></a>五、SSH 高级用法</h2><h3 id="1-SSH-端口转发（隧道）"><a href="#1-SSH-端口转发（隧道）" class="headerlink" title="1. SSH 端口转发（隧道）"></a>1. SSH 端口转发（隧道）</h3><p><strong>本地转发</strong>（本地访问远程服务）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-L</span> <span class="token number">8080</span>:remote-server:80 user@server
+<span class="token comment"># 之后访问 localhost:8080 就像访问 remote-server:80</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>典型场景：在本地访问服务器的 MySQL / Redis / Web 服务（避开公网）。</p>
+<p><strong>远程转发</strong>（远程访问本地服务）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-R</span> <span class="token number">8080</span>:localhost:3000 user@server
+<span class="token comment"># 服务器访问 localhost:8080 就是访问你本地的 :3000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>典型场景：本地开发 Web 应用，让外部用户通过服务器访问。</p>
+<p><strong>动态转发（SOCKS 代理）</strong>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-D</span> <span class="token number">1080</span> user@server
+<span class="token comment"># 配置本地浏览器 / 应用走 SOCKS5 代理 localhost:1080</span>
+<span class="token comment"># 所有流量经 SSH 加密走服务器出去</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>⚠️ 这就是<strong>跳板机</strong>最简单实现——不推荐用来”翻墙”违反当地法规。</p>
+<h3 id="2-SSH-免密-sudo"><a href="#2-SSH-免密-sudo" class="headerlink" title="2. SSH 免密 + sudo"></a>2. SSH 免密 + sudo</h3><p>服务器端 <code>visudo</code>：</p>
+<pre class="line-numbers language-none"><code class="language-none">username ALL=(ALL) NOPASSWD: ALL<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>让 sudo 也免密。<strong>慎用</strong>——只在自己的开发机用。</p>
+<h3 id="3-ssh-agent-转发私钥"><a href="#3-ssh-agent-转发私钥" class="headerlink" title="3. ssh-agent 转发私钥"></a>3. ssh-agent 转发私钥</h3><p>本地有私钥，但 SSH 到中间跳板机后还想用同一私钥连其他服务器：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-A</span> user@jumpserver
+<span class="token comment"># 之后从 jumpserver 跳到目标服务器时直接用本地私钥</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><code>ssh-agent</code> 会管理内存中的私钥，<strong>私钥不会落到跳板机磁盘</strong>。</p>
+<p>macOS 上启用：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 启动 ssh-agent（macOS 默认启用）</span>
+<span class="token builtin class-name">eval</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span>ssh-agent <span class="token parameter variable">-s</span><span class="token variable">)</span></span>"</span>
+
+<span class="token comment"># 添加私钥（一次）</span>
+ssh-add ~/.ssh/id_ed25519
+<span class="token comment"># 输入密码</span>
+
+<span class="token comment"># 之后 ssh-add -l 能看到已加载的密钥</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>⚠️ <strong>2026 年 macOS Keychain 已经自动接管 ssh-agent</strong>——只要 <code>~/.ssh/id_ed25519</code> 是 macOS Keychain 信任的私钥，第一次 <code>ssh</code> 就会自动询问是否保存到 Keychain，之后自动用。</p>
+<h3 id="4-SSH-多因素认证"><a href="#4-SSH-多因素认证" class="headerlink" title="4. SSH 多因素认证"></a>4. SSH 多因素认证</h3><p>服务器开 Google Authenticator / Yubikey：</p>
+<pre class="line-numbers language-none"><code class="language-none">/etc/pam.d/sshd 添加：
+auth required pam_google_authenticator.so<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>macOS 客户端连接时多一步输 6 位 TOTP 码。</p>
+<h2 id="六、SSH-安全最佳实践"><a href="#六、SSH-安全最佳实践" class="headerlink" title="六、SSH 安全最佳实践"></a>六、SSH 安全最佳实践</h2><p>服务器端（<code>/etc/ssh/sshd_config</code>）：</p>
+<pre class="line-numbers language-none"><code class="language-none"># 禁用密码登录（强制公钥）
+PasswordAuthentication no
+
+# 禁用 root 直接登录
+PermitRootLogin prohibit-password
+
+# 限制尝试次数
+MaxAuthTries 3
+
+# 修改默认端口（防扫描）
+Port 2222<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>客户端：</p>
+<ul>
+<li>⚠️ <strong>不要把私钥提交到 git</strong></li>
+<li>给不同用途的服务器<strong>用不同密钥</strong>（work / personal / GitHub）</li>
+<li>私钥密码（passphrase）一定要设</li>
+<li>定期 <code>ssh-keygen -lf ~/.ssh/id_ed25519</code> 看本地有哪些密钥</li>
+</ul>
+<p><code>.gitignore</code> 加：</p>
+<pre class="line-numbers language-none"><code class="language-none">.ssh/id_*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（只忽略私钥，公钥 <code>*.pub</code> 可以提交）</p>
+<h2 id="七、常见问题"><a href="#七、常见问题" class="headerlink" title="七、常见问题"></a>七、常见问题</h2><h3 id="Q-连接提示-“Permission-denied-publickey-password-”？"><a href="#Q-连接提示-“Permission-denied-publickey-password-”？" class="headerlink" title="Q: 连接提示 “Permission denied (publickey,password)”？"></a>Q: 连接提示 “Permission denied (publickey,password)”？</h3><p>99% 是 <code>.ssh</code> 目录权限问题：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">chmod</span> <span class="token number">700</span> ~/.ssh
+<span class="token function">chmod</span> <span class="token number">600</span> ~/.ssh/authorized_keys
+<span class="token function">chmod</span> <span class="token number">600</span> ~/.ssh/id_ed25519
+<span class="token function">chmod</span> <span class="token number">644</span> ~/.ssh/id_ed25519.pub
+<span class="token function">chmod</span> <span class="token number">644</span> ~/.ssh/known_hosts
+<span class="token function">chmod</span> <span class="token number">644</span> ~/.ssh/config<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Q-配了公钥还是要输密码？"><a href="#Q-配了公钥还是要输密码？" class="headerlink" title="Q: 配了公钥还是要输密码？"></a>Q: 配了公钥还是要输密码？</h3><p>服务端 <code>sshd_config</code> 检查：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 必须确认</span>
+PubkeyAuthentication <span class="token function">yes</span>
+AuthorizedKeysFile .ssh/authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>重启 sshd：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> systemctl restart sshd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="Q-macOS-上-ssh-add-后重启要重新输密码？"><a href="#Q-macOS-上-ssh-add-后重启要重新输密码？" class="headerlink" title="Q: macOS 上 ssh-add 后重启要重新输密码？"></a>Q: macOS 上 ssh-add 后重启要重新输密码？</h3><p>macOS 上：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+<span class="token comment"># 添加到 Keychain，重启不丢</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="Q-SSH-经常断线？"><a href="#Q-SSH-经常断线？" class="headerlink" title="Q: SSH 经常断线？"></a>Q: SSH 经常断线？</h3><p>服务端 <code>sshd_config</code> 加：</p>
+<pre class="line-numbers language-none"><code class="language-none">ClientAlive
+Interval 60
+ClientAliveCountMax 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>客户端 <code>~/.ssh/config</code> 加：</p>
+<pre class="line-numbers language-none"><code class="language-none">Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="八、完结"><a href="#八、完结" class="headerlink" title="八、完结"></a>八、完结</h2><p>macOS + SSH + Vim 是程序员<strong>远程工作的三件套</strong>：</p>
+<ul>
+<li>SSH 连接服务器（公钥认证免密登录）</li>
+<li>scp 传输文件</li>
+<li>Vim 编辑服务器文件（基础命令够用，复杂需求用 VSCode Remote）</li>
+</ul>
+<p>把这套练到不查文档就能用，<strong>远程运维能力</strong>会有质的飞跃。</p>
+<p>记住三个核心原则：</p>
+<ol>
+<li><strong>永远用公钥认证</strong>（别再用密码）</li>
+<li><strong>私钥加密码 + 不入 git</strong></li>
+<li><strong>服务器端禁用密码登录 + 改默认端口</strong></li>
+</ol>
 
                 
             </div>

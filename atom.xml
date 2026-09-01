@@ -34,9 +34,9 @@
       <name>因特吧</name>
     </author>
     <category term="技术资讯" scheme="https://www.inte8.top/categories/%E6%8A%80%E6%9C%AF%E8%B5%84%E8%AE%AF/"/>
-    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
     <category term="GitHub" scheme="https://www.inte8.top/tags/GitHub/"/>
     <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
     <id>https://www.inte8.top/2026/06/15/github-2026-06-di-san-zhou-re-men-xin-xiang-mu-top10/</id>
     <link href="https://www.inte8.top/2026/06/15/github-2026-06-di-san-zhou-re-men-xin-xiang-mu-top10/"/>
     <published>2026-06-14T16:05:00.000Z</published>
@@ -51,9 +51,9 @@
       <name>因特吧</name>
     </author>
     <category term="技术资讯" scheme="https://www.inte8.top/categories/%E6%8A%80%E6%9C%AF%E8%B5%84%E8%AE%AF/"/>
-    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
     <category term="GitHub" scheme="https://www.inte8.top/tags/GitHub/"/>
     <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
     <id>https://www.inte8.top/2026/05/18/github-2026-05-di-san-zhou-re-men-xin-xiang-mu-top10/</id>
     <link href="https://www.inte8.top/2026/05/18/github-2026-05-di-san-zhou-re-men-xin-xiang-mu-top10/"/>
     <published>2026-05-17T16:05:00.000Z</published>
@@ -68,9 +68,9 @@
       <name>因特吧</name>
     </author>
     <category term="技术资讯" scheme="https://www.inte8.top/categories/%E6%8A%80%E6%9C%AF%E8%B5%84%E8%AE%AF/"/>
-    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
     <category term="GitHub" scheme="https://www.inte8.top/tags/GitHub/"/>
     <category term="开源" scheme="https://www.inte8.top/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
     <id>https://www.inte8.top/2026/05/11/github-2026-05-di-er-zhou-re-men-xin-xiang-mu-top10/</id>
     <link href="https://www.inte8.top/2026/05/11/github-2026-05-di-er-zhou-re-men-xin-xiang-mu-top10/"/>
     <published>2026-05-10T18:00:00.000Z</published>
@@ -226,8 +226,8 @@
       <name>因特吧</name>
     </author>
     <category term="技术教程" scheme="https://www.inte8.top/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
-    <category term="博客" scheme="https://www.inte8.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     <category term="Markdown" scheme="https://www.inte8.top/tags/Markdown/"/>
+    <category term="博客" scheme="https://www.inte8.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     <category term="写作" scheme="https://www.inte8.top/tags/%E5%86%99%E4%BD%9C/"/>
     <id>https://www.inte8.top/2026/05/01/markdown-wan-quan-shi-yong-zhi-nan/</id>
     <link href="https://www.inte8.top/2026/05/01/markdown-wan-quan-shi-yong-zhi-nan/"/>
@@ -312,8 +312,8 @@
     </author>
     <category term="前沿技术" scheme="https://www.inte8.top/categories/%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/"/>
     <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
-    <category term="大模型" scheme="https://www.inte8.top/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     <category term="写作" scheme="https://www.inte8.top/tags/%E5%86%99%E4%BD%9C/"/>
+    <category term="大模型" scheme="https://www.inte8.top/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     <id>https://www.inte8.top/2026/04/29/qian-wen-3.6-sheng-cheng-qian-hou-dui-bi/</id>
     <link href="https://www.inte8.top/2026/04/29/qian-wen-3.6-sheng-cheng-qian-hou-dui-bi/"/>
     <published>2026-04-29T15:48:04.000Z</published>
@@ -348,9 +348,9 @@
       <name>因特吧</name>
     </author>
     <category term="项目测试" scheme="https://www.inte8.top/categories/%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%95/"/>
+    <category term="博客" scheme="https://www.inte8.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     <category term="hexo" scheme="https://www.inte8.top/tags/hexo/"/>
     <category term="性能优化" scheme="https://www.inte8.top/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    <category term="博客" scheme="https://www.inte8.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     <id>https://www.inte8.top/2026/04/29/hexo-bo-ke-xing-neng-you-hua-shi-jian/</id>
     <link href="https://www.inte8.top/2026/04/29/hexo-bo-ke-xing-neng-you-hua-shi-jian/"/>
     <published>2026-04-29T15:40:00.000Z</published>

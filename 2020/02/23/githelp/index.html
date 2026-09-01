@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="利用Git命令上传项目到GitHub指定仓库, blog,hexo">
+    <meta name="keywords" content="利用 Git 命令上传项目到 GitHub 指定仓库, blog,hexo">
     <meta name="description" content="因特吧的博客，分享技术与生活">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>利用Git命令上传项目到GitHub指定仓库 | 因特吧</title>
+    <title>利用 Git 命令上传项目到 GitHub 指定仓库 | 因特吧</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,7 +318,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">利用Git命令上传项目到GitHub指定仓库</h1>
+                    <h1 class="description center-align post-title">利用 Git 命令上传项目到 GitHub 指定仓库</h1>
                 </div>
             </div>
         </div>
@@ -491,15 +491,152 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>利用GIt命令上传项目到GitHub指定仓库<br>1.建立GIt可管理的仓库 cd到本地项目根目录下，执行 git init 命令：</p>
-<p>  git init<br>2.将项目的所有文件添加到仓库中(注意add后面有一个“ . ”)</p>
-<p>  git add .<br>3.将上一步add的文件commit到仓库</p>
-<p>  git  commit -m “提交的说明注释”<br>4.到GitHub官网新建一个仓库（Create repository）,并复制仓库地址</p>
-<p>5.将本地仓库关联到GitHub新建的仓库上</p>
-<p>  git remote add origin <a target="_blank" rel="noopener" href="https://github.com/Love-LG/Javaweb-firstcup-war">https://github.com/Love-LG/Javaweb-firstcup-war</a><br>6.使用pull命令</p>
-<p>  git pull origin master<br>7.将本地仓库的文件上传到GitHub远程仓库</p>
-<p>  git push -u origin master<br>总结：<br>在最后使用命令“git push -u origin master”将本地仓库的文件上传的远程的GitHub仓库时可能会遇到如下错误</p>
-<p>提示上面错误信息的主要原因是我们在GitHub上新建仓库时一般会选择生成一个README.md的说明文档，因此我们必须使用以下命令将README.md下载到我们的本地仓库再使用<br>git push -u origin master命令就能成功将代码上传到GitHub的远程仓库。</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Git 是目前最主流的分布式版本控制系统，GitHub 是全球最大的代码托管平台。本教程记录如何用 Git 命令把本地项目上传到 GitHub 指定的远程仓库。</p>
+<p><strong>注意</strong>：GitHub 在 2020 年 10 月之后创建的新仓库，默认分支从 <code>master</code> 改为 <code>main</code>。本文命令以 <code>main</code> 为准——如果你在用老仓库还是 <code>master</code>，把下面命令里的 <code>main</code> 换成 <code>master</code> 即可。</p>
+<h2 id="一、第一次推送新项目"><a href="#一、第一次推送新项目" class="headerlink" title="一、第一次推送新项目"></a>一、第一次推送新项目</h2><h3 id="步骤-1：初始化本地仓库"><a href="#步骤-1：初始化本地仓库" class="headerlink" title="步骤 1：初始化本地仓库"></a>步骤 1：初始化本地仓库</h3><p>进入项目根目录：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /path/to/your/project
+
+<span class="token comment"># 初始化 Git 仓库</span>
+<span class="token function">git</span> init<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这会在当前目录生成一个 <code>.git</code> 子目录，Git 用它来跟踪所有版本历史。</p>
+<h3 id="步骤-2：添加文件到暂存区"><a href="#步骤-2：添加文件到暂存区" class="headerlink" title="步骤 2：添加文件到暂存区"></a>步骤 2：添加文件到暂存区</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 添加所有文件（包括未追踪的）</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+
+<span class="token comment"># 或者只添加特定文件</span>
+<span class="token function">git</span> <span class="token function">add</span> filename.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>⚠️ <strong><code>git add .</code> 会把 .gitignore 之外的所有文件加入</strong>。如果有不想上传的（比如 <code>node_modules/</code>、<code>.env</code>、<code>*.log</code>），先在项目根目录建 <code>.gitignore</code> 文件列出它们，再 <code>git add .</code>。</p>
+<h3 id="步骤-3：提交到本地仓库"><a href="#步骤-3：提交到本地仓库" class="headerlink" title="步骤 3：提交到本地仓库"></a>步骤 3：提交到本地仓库</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"首次提交：项目初始化"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><code>-m</code> 后是提交说明。建议用有意义的 commit message（不要写”update”或”fix”这种含糊词）。推荐规范：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;类型&gt;: &lt;简短描述&gt;
+
+&lt;可选详细说明&gt;
+
+类型常见值：feat（新功能）、fix（修复）、docs（文档）、refactor（重构）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="步骤-4：在-GitHub-创建远程仓库"><a href="#步骤-4：在-GitHub-创建远程仓库" class="headerlink" title="步骤 4：在 GitHub 创建远程仓库"></a>步骤 4：在 GitHub 创建远程仓库</h3><ol>
+<li>登录 → 右上角 <strong>+</strong> → <strong>New repository</strong></li>
+<li>填写仓库名（建议跟本地项目目录同名）</li>
+<li><strong>Description</strong>（可选）：项目简介</li>
+<li><strong>公开 / 私有</strong>：按需选择</li>
+<li>⚠️ <strong>不要</strong>勾选 “Add a README file”——如果你已经在本地有 README，勾了会冲突</li>
+<li>⚠️ <strong>不要</strong>勾选 “Add .gitignore”——同上</li>
+<li><strong>不要</strong>勾选 “Choose a license”——除非你有特定 license 偏好</li>
+<li>点 <strong>Create repository</strong></li>
+</ol>
+<p>创建后 GitHub 会给一个仓库 URL，类似：</p>
+<ul>
+<li>HTTPS: <code>https://github.com/yourname/yourrepo.git</code></li>
+<li>SSH: <code>git@github.com:yourname/yourrepo.git</code></li>
+</ul>
+<h3 id="步骤-5：关联远程仓库"><a href="#步骤-5：关联远程仓库" class="headerlink" title="步骤 5：关联远程仓库"></a>步骤 5：关联远程仓库</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/yourname/yourrepo.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><code>origin</code> 是远程仓库的默认别名，可以改成别的名字（但没必要）。</p>
+<h3 id="步骤-6：拉取远程（首次推送建议）"><a href="#步骤-6：拉取远程（首次推送建议）" class="headerlink" title="步骤 6：拉取远程（首次推送建议）"></a>步骤 6：拉取远程（首次推送建议）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> pull origin main <span class="token parameter variable">--rebase</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>⚠️ <strong>重要</strong>：GitHub 自动创建的 README / / .gitignore / LICENSE 会跟本地冲突。先 pull 把远程文件拉下来再 push，否则会报 “non-fast-forward” 错误。</p>
+<p><code>--rebase</code> 把本地提交”接”到远程 HEAD 后面，保持线性历史（不像 <code>merge</code> 会产生合并提交）。</p>
+<h3 id="步骤-7：推送到远程"><a href="#步骤-7：推送到远程" class="headerlink" title="步骤 7：推送到远程"></a>步骤 7：推送到远程</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push <span class="token parameter variable">-u</span> origin main<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><code>-u</code>：把 <code>origin main</code> 设为默认上游（upstream），以后直接 <code>git push</code> 就够了</li>
+<li><code>main</code>：分支名（老仓库是 <code>master</code>）</li>
+</ul>
+<h2 id="二、日常推送流程"><a href="#二、日常推送流程" class="headerlink" title="二、日常推送流程"></a>二、日常推送流程</h2><p>首次推送后，日常修改推送流程简化成 3 步：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 查看改了哪些文件</span>
+<span class="token function">git</span> status
+
+<span class="token comment"># 2. 添加并提交</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token operator">&lt;</span>files<span class="token operator">&gt;</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"feat: 添加用户登录功能"</span>
+
+<span class="token comment"># 3. 推送</span>
+<span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>git status</code> 一定先看——避免误提交调试代码、临时文件。</p>
+<h2 id="三、常见错误与解决"><a href="#三、常见错误与解决" class="headerlink" title="三、常见错误与解决"></a>三、常见错误与解决</h2><h3 id="错误-1：non-fast-forward"><a href="#错误-1：non-fast-forward" class="headerlink" title="错误 1：non-fast-forward"></a>错误 1：<code>non-fast-forward</code></h3><pre class="line-numbers language-none"><code class="language-none">! [rejected] main -&gt; main (non-fast-forward)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>原因</strong>：远程有本地没有的 commit（最常见：GitHub 自动生成的 README）。</p>
+<p><strong>解决</strong>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> pull origin main <span class="token parameter variable">--rebase</span>
+<span class="token function">git</span> push origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="错误-2：Permission-denied-publickey"><a href="#错误-2：Permission-denied-publickey" class="headerlink" title="错误 2：Permission denied (publickey)"></a>错误 2：<code>Permission denied (publickey)</code></h3><p>SSH 推送时认证失败。</p>
+<p><strong>解决</strong>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 检查是否已配置 SSH key</span>
+<span class="token function">cat</span> ~/.ssh/id_rsa.pub
+
+<span class="token comment"># 2. 如果没有，生成</span>
+ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-b</span> <span class="token number">4096</span> <span class="token parameter variable">-C</span> <span class="token string">"your_email@example.com"</span>
+
+<span class="token comment"># 3. 把公钥复制到 GitHub: Settings -&gt; SSH and GPG keys -&gt; New SSH key</span>
+<span class="token function">cat</span> ~/.ssh/id_rsa.pub
+<span class="token comment"># 把输出粘贴到 GitHub</span>
+
+<span class="token comment"># 4. 测试连接</span>
+<span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@github.com
+<span class="token comment"># 应该看到: Hi username! You've successfully authenticated...</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="错误-3：fatal-refusing-to-merge-unrelated-histories"><a href="#错误-3：fatal-refusing-to-merge-unrelated-histories" class="headerlink" title="错误 3：fatal: refusing to merge unrelated histories"></a>错误 3：<code>fatal: refusing to merge unrelated histories</code></h3><p>本地仓库和远程是两个独立的 git 历史（<code>git init</code> 在两边都跑过）。</p>
+<p><strong>解决</strong>：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> pull origin main --allow-unrelated-histories
+<span class="token function">git</span> push origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="错误-4：推送后-GitHub-页面看不到文件"><a href="#错误-4：推送后-GitHub-页面看不到文件" class="headerlink" title="错误 4：推送后 GitHub 页面看不到文件"></a>错误 4：推送后 GitHub 页面看不到文件</h3><p>99% 是 <strong>分支不对</strong>。<code>git push origin main</code> 推到 main 分支，但你的 GitHub Pages 默认可能看 <code>gh-pages</code> 分支。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 查看本地所有分支</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-a</span>
+
+<span class="token comment"># 切换默认推送分支</span>
+<span class="token function">git</span> push <span class="token parameter variable">-u</span> origin <span class="token operator">&lt;</span>branch<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="四、进阶：SSH-vs-HTTPS"><a href="#四、进阶：SSH-vs-HTTPS" class="headerlink" title="四、进阶：SSH vs HTTPS"></a>四、进阶：SSH vs HTTPS</h2><p>GitHub 推送有 HTTPS 和 SSH 两种方式：</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HTTPS</td>
+<td>不需要配置 SSH key</td>
+<td>每次 push 要输用户名密码（或 token）</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>一次配置，永久免密</td>
+<td>需要上传公钥到 GitHub</td>
+</tr>
+</tbody></table>
+<p><strong>2026 年推荐</strong>：HTTPS +  GitHub Personal Access Token（PAT）—— GitHub 已经不支持密码直接推送了。</p>
+<p><strong>设置 PAT 流程</strong>：</p>
+<ol>
+<li>GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)</li>
+<li>Generate new token (classic)</li>
+<li>选 <code>repo</code> 权限</li>
+<li>生成后<strong>复制保存</strong>（页面关闭后看不到）</li>
+<li>本地 git 第一次 push 时，密码框填这个 token（不是 GitHub 密码）</li>
+</ol>
+<p>或者用 GitHub CLI（<code>gh auth login</code>）自动管理认证。</p>
+<h2 id="五、完整命令速查"><a href="#五、完整命令速查" class="headerlink" title="五、完整命令速查"></a>五、完整命令速查</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 初始化 + 推送（新项目）</span>
+<span class="token function">git</span> init
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"Initial commit"</span>
+<span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/user/repo.git
+<span class="token function">git</span> pull origin main <span class="token parameter variable">--rebase</span>
+<span class="token function">git</span> push <span class="token parameter variable">-u</span> origin main
+
+<span class="token comment"># 日常推送</span>
+<span class="token function">git</span> status
+<span class="token function">git</span> <span class="token function">add</span> <span class="token operator">&lt;</span>files<span class="token operator">&gt;</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"message"</span>
+<span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="六、完结"><a href="#六、完结" class="headerlink" title="六、完结"></a>六、完结</h2><p>Git 上传的核心是 <strong>add → commit → push 三步循环</strong>。<code>git pull --rebase</code> 是解决 90% 推送冲突的万能命令。</p>
+<p>记住：<strong>commit message 写清楚</strong>，比写代码还重要——3 个月后回看，只有 commit log 能告诉你当时为什么这么改。</p>
 
                 
             </div>

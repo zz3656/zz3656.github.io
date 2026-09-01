@@ -491,105 +491,130 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="VPS-安装-ros-系统"><a href="#VPS-安装-ros-系统" class="headerlink" title="VPS 安装 ros 系统"></a>VPS 安装 ros 系统</h3><p>VPS预装一个centos7系统，安装wget命令</p>
-<pre class="line-numbers language-none"><code class="language-none">yum install wget -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <blockquote>
+<p><strong>📌 说明</strong>：本文流程与同仓库《各云盘 VPS 写入 ROS 方法》(B8) 90% 重叠，差异点在于本文覆盖<strong>双网卡场景</strong>（VPS 既要访问外网又要被 LAN 设备访问）和<strong>PVE 导入</strong>的另一种实现路径。如果你只需要单网卡 VPS 装 ROS，看 B8 即可；本文针对多网卡 / PVE 场景。</p>
+</blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>VPS 装 RouterOS（ROS）有两种典型场景：</p>
+<ol>
+<li><strong>单网卡</strong>：VPS 自身作为 ROS 软路由，跑 VPN / 策略路由 / 远程组网</li>
+<li><strong>双网卡</strong>：VPS 作为旁路网关，把 LAN 流量引入 ROS（需要 eth0 公网 + eth1 私网）</li>
+</ol>
+<p>本文流程与 B8 几乎一样，差异在 <code>autorun.scr</code> 里多配置一张网卡 + 多一条路由。</p>
+<h2 id="一、单网卡方案（快速版）"><a href="#一、单网卡方案（快速版）" class="headerlink" title="一、单网卡方案（快速版）"></a>一、单网卡方案（快速版）</h2><p>如果你的 VPS 只有 1 块网卡（绝大多数 VPS 都是这样），完整流程参考《各云盘 VPS 写入 ROS 方法》。这里给”快速版”——10 分钟可完成：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 1. 安装 wget（如果 VPS 没装）</span>
+yum <span class="token function">install</span> <span class="token function">wget</span> <span class="token parameter variable">-y</span>   <span class="token comment"># CentOS</span>
+<span class="token function">apt</span> <span class="token function">install</span> <span class="token function">wget</span> <span class="token parameter variable">-y</span>   <span class="token comment"># Debian / Ubuntu</span>
 
+<span class="token comment"># 2. 下载并解压 CHR 镜像</span>
+<span class="token function">wget</span> https://download.mikrotik.com/routeros/6.45.8/chr-6.45.8.img.zip <span class="token parameter variable">-O</span> chr.img.zip
+gunzip <span class="token parameter variable">-c</span> chr.img.zip <span class="token operator">&gt;</span> chr.img
 
+<span class="token comment"># 3. 查 Start 值（v6 = 1，v7 = 34）</span>
+<span class="token function">fdisk</span> <span class="token parameter variable">-lu</span> chr.img
 
-<p>通用单网卡方案	 (适应于绝大多数VPS)</p>
-<p>下载镜像</p>
-<pre class="line-numbers language-none"><code class="language-none">wget https://download.mikrotik.com/routeros/6.45.8/chr-6.45.8.img.zip -O chr.img.zip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token comment"># 4. 挂载镜像（v6 用 512，v7 用 Start*512）</span>
+<span class="token function">mount</span> <span class="token parameter variable">-o</span> loop,offset<span class="token operator">=</span><span class="token number">512</span> chr.img /mnt
 
-<p>解压缩</p>
-<pre class="line-numbers language-none"><code class="language-none">gunzip -c chr.img.zip &gt; chr.img<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token comment"># 5. 自动获取当前 IP / 网关</span>
+<span class="token assign-left variable">ADDR0</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">ip</span> addr show eth0 <span class="token operator">|</span> <span class="token function">grep</span> global <span class="token operator">|</span> <span class="token function">cut</span> -d<span class="token string">' '</span> <span class="token parameter variable">-f</span> <span class="token number">6</span> <span class="token operator">|</span> <span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token number">1</span><span class="token variable">`</span></span>
+<span class="token assign-left variable">GATE0</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">ip</span> route list <span class="token operator">|</span> <span class="token function">grep</span> default <span class="token operator">|</span> <span class="token function">cut</span> -d<span class="token string">' '</span> <span class="token parameter variable">-f</span> <span class="token number">3</span><span class="token variable">`</span></span>
 
-<p>挂载镜像</p>
-<pre class="line-numbers language-none"><code class="language-none">fdisk -lu chr.img  #查看img得start值
-mount -o loop,offset=512 chr.img /mnt
-mount -o loop,offset=17408 chr.img /mnt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># 6. 写入自动配置脚本</span>
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /mnt/rw
+<span class="token builtin class-name">echo</span> <span class="token string">"/ip address add address=<span class="token variable">$ADDR0</span> interface=[/interface ethernet find where name=ether1]
+/ip route add gateway=<span class="token variable">$GATE0</span>
+"</span> <span class="token operator">&gt;</span> /mnt/rw/autorun.scr
 
-<p>获取地址与网关 与 赋入变量</p>
-<pre class="line-numbers language-none"><code class="language-none">ifconfig  #查看网卡名字
-ADDR0=`ip addr show eth0 | grep global | cut -d' ' -f 6 | head -n 1`
-GATE0=`ip route list | grep default | cut -d' ' -f 3`<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># 7. 卸载 + 写盘 + 重启</span>
+<span class="token function">umount</span> /mnt
+<span class="token function">sync</span>
+<span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>chr.img <span class="token assign-left variable">bs</span><span class="token operator">=</span><span class="token number">1024</span> <span class="token assign-left variable">of</span><span class="token operator">=</span>/dev/vda <span class="token operator">&amp;&amp;</span> <span class="token function">reboot</span>   <span class="token comment"># 部分 VPS 用 /dev/sda</span>
+<span class="token builtin class-name">echo</span> <span class="token string">"b"</span> <span class="token operator">&gt;</span> /proc/sysrq-trigger   <span class="token comment"># 如果不会自动重启</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>新建mnt目录下rw文件夹</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir -p /mnt/rw<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>完成后等 30-60 秒，VPS 通过 VNC / 控制台进入 ROS 登录界面（admin 无密码）。</p>
+<h2 id="二、双网卡方案"><a href="#二、双网卡方案" class="headerlink" title="二、双网卡方案"></a>二、双网卡方案</h2><p><strong>双网卡场景</strong>：VPS 有 2 块网卡，eth0 接公网（WAN），eth1 接私网（LAN / 内网互联）。这种配置常见于：</p>
+<ul>
+<li>VPS 当作<strong>远程 VPN 网关</strong>（公司 LAN 通过 VPN 连接到 VPS）</li>
+<li><strong>异地组网</strong>：VPS 在中间，把多个 LAN 桥接起来</li>
+</ul>
+<h3 id="1-先查清楚两张网卡的-IP-段"><a href="#1-先查清楚两张网卡的-IP-段" class="headerlink" title="1. 先查清楚两张网卡的 IP 段"></a>1. 先查清楚两张网卡的 IP 段</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ip</span> addr show
+<span class="token comment"># 典型输出:</span>
+<span class="token comment"># eth0: inet 196.10.68.24/24  (公网 IP)</span>
+<span class="token comment"># eth1: inet 10.0.87.152/8     (私网 IP)</span>
 
-<p>把变量ADDR0和GATE0写入到/mnt/rw/autorun.scr文件</p>
-<pre class="line-numbers language-none"><code class="language-none">echo "/ip address add address=$ADDR0 interface=[/interface ethernet find where name=ether1]
-/ip route add gateway=$GATE0
-" &gt; /mnt/rw/autorun.scr<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token function">ip</span> route show
+<span class="token comment"># default via 196.10.68.1 dev eth0   (默认路由走公网)</span>
+<span class="token comment"># 10.0.0.0/8 via 10.0.0.1 dev eth1  (私网路由)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>卸载镜像</p>
-<pre class="line-numbers language-none"><code class="language-none">umount /mnt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-把两张网卡都配置到-autorun-scr"><a href="#2-把两张网卡都配置到-autorun-scr" class="headerlink" title="2. 把两张网卡都配置到 autorun.scr"></a>2. 把两张网卡都配置到 autorun.scr</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">ADDR0</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">ip</span> addr show eth0 <span class="token operator">|</span> <span class="token function">grep</span> global <span class="token operator">|</span> <span class="token function">cut</span> -d<span class="token string">' '</span> <span class="token parameter variable">-f</span> <span class="token number">6</span> <span class="token operator">|</span> <span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token number">1</span><span class="token variable">`</span></span>
+<span class="token assign-left variable">ADDR1</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">ip</span> addr show eth1 <span class="token operator">|</span> <span class="token function">grep</span> global <span class="token operator">|</span> <span class="token function">cut</span> -d<span class="token string">' '</span> <span class="token parameter variable">-f</span> <span class="token number">6</span> <span class="token operator">|</span> <span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token number">1</span><span class="token variable">`</span></span>
+<span class="token assign-left variable">GATE0</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">ip</span> route list <span class="token operator">|</span> <span class="token function">grep</span> default <span class="token operator">|</span> <span class="token function">cut</span> -d<span class="token string">' '</span> <span class="token parameter variable">-f</span> <span class="token number">3</span><span class="token variable">`</span></span>
+<span class="token assign-left variable">GATE1</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">ip</span> route list <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'10.0.0.0/8'</span> <span class="token operator">|</span> <span class="token function">cut</span> -d<span class="token string">' '</span> <span class="token parameter variable">-f</span> <span class="token number">9</span><span class="token variable">`</span></span>
 
-<p>立即重新挂载所有的文件系统为只读</p>
-<pre class="line-numbers language-none"><code class="language-none">echo u &gt; /proc/sysrq-trigger<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /mnt/rw
+<span class="token builtin class-name">echo</span> <span class="token string">"/ip address add address=<span class="token variable">$ADDR0</span> interface=[/interface ethernet find where name=ether1]
+/ip address add address=<span class="token variable">$ADDR1</span> interface=[/interface ethernet find where name=ether2]
+/ip route add gateway=<span class="token variable">$GATE0</span>
+/ip route add dst-address=10.0.0.0/8 gateway=<span class="token variable">$GATE1</span>
+"</span> <span class="token operator">&gt;</span> /mnt/rw/autorun.scr
 
-<p>DD ros镜像</p>
-<pre class="line-numbers language-none"><code class="language-none">fdisk -lu  #查看磁盘名字
-dd if=chr.img bs=1024 of=/dev/sda &amp;&amp; reboot
-dd if=chr.img bs=1024 of=/dev/vda &amp;&amp; reboot<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token function">cat</span> /mnt/rw/autorun.scr   <span class="token comment"># 验证内容</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>立即重新启动机器</p>
-<pre class="line-numbers language-none"><code class="language-none">echo "b" &gt; /proc/sysrq-trigger<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="3-写盘"><a href="#3-写盘" class="headerlink" title="3. 写盘"></a>3. 写盘</h3><p>跟单网卡一样：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">umount</span> /mnt
+<span class="token function">sync</span>
+<span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>chr.img <span class="token assign-left variable">bs</span><span class="token operator">=</span><span class="token number">1024</span> <span class="token assign-left variable">of</span><span class="token operator">=</span>/dev/vda <span class="token operator">&amp;&amp;</span> <span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<p>ROS 启动后会自动给 ether1 和 ether2 配上 IP，公网 + 私网双栈打通。</p>
+<h2 id="三、PVE-导入（推荐）"><a href="#三、PVE-导入（推荐）" class="headerlink" title="三、PVE 导入（推荐）"></a>三、PVE 导入（推荐）</h2><p>如果你已经在用 <strong>Proxmox VE</strong>（PVE）管理 VPS / 虚拟机集群，PVE 装 ROS 比裸 dd 简单得多——</p>
+<h3 id="1-上传镜像到-PVE"><a href="#1-上传镜像到-PVE" class="headerlink" title="1. 上传镜像到 PVE"></a>1. 上传镜像到 PVE</h3><p>通过 PVE Web UI 上传，或者 scp 到 PVE 节点：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> chr-7.14.3.img root@pve:/var/lib/vz/template/iso/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<h3 id="2-创建-VM（VM-ID-104-例）"><a href="#2-创建-VM（VM-ID-104-例）" class="headerlink" title="2. 创建 VM（VM ID = 104 例）"></a>2. 创建 VM（VM ID = 104 例）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">qm create <span class="token number">104</span> <span class="token parameter variable">--name</span> ros-chr <span class="token parameter variable">--memory</span> <span class="token number">1024</span> <span class="token parameter variable">--net0</span> virtio,bridge<span class="token operator">=</span>vmbr0 <span class="token punctuation">\</span>
+  <span class="token parameter variable">--cores</span> <span class="token number">2</span> <span class="token parameter variable">--sockets</span> <span class="token number">1</span> <span class="token parameter variable">--ostype</span> l26 <span class="token parameter variable">--scsihw</span> virtio-scsi-pci <span class="token parameter variable">--scsi0</span> local-lvm:32<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
+<h3 id="3-导入磁盘到-VM"><a href="#3-导入磁盘到-VM" class="headerlink" title="3. 导入磁盘到 VM"></a>3. 导入磁盘到 VM</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">qm importdisk <span class="token number">104</span> /var/lib/vz/template/iso/chr-7.14.3.img local-lvm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<p>⚠️ <strong>注意</strong>：原命令少了 <code>--importdisk</code> 参数后的 VM ID——上面命令已修正。原命令 <code>qm importdisk /var/lib/vz/template/iso/chr-7.14.3.img local-lvm</code> 会报参数错误。</p>
+<h3 id="4-配置启动盘"><a href="#4-配置启动盘" class="headerlink" title="4. 配置启动盘"></a>4. 配置启动盘</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">qm <span class="token builtin class-name">set</span> <span class="token number">104</span> <span class="token parameter variable">--boot0</span> scsi0 <span class="token parameter variable">--boot</span> <span class="token assign-left variable">order</span><span class="token operator">=</span>scsi0
+qm start <span class="token number">104</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-
-<p>另一款 双网卡的样本	(注意分清 内外 网卡)</p>
-<pre class="line-numbers language-none"><code class="language-none">196.10.68.0/24 dev eth0  proto kernel  scope link  src 196.10.68.24 
-169.254.0.0/16 dev eth0  scope link  metric 1002 
-169.254.0.0/16 dev eth1  scope link  metric 1003 
-10.0.0.0/8 dev eth1  proto kernel  scope link  src 10.0.87.152 
-default via 196.10.68.1 dev eth0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>下载roschr镜像</p>
-<pre class="line-numbers language-none"><code class="language-none">wget https://download.mikrotik.com/routeros/6.45.8/chr-6.45.8.img.zip -O chr.img.zip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>解压镜像</p>
-<pre class="line-numbers language-none"><code class="language-none">gunzip -c chr.img.zip &gt; chr.img<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>挂载镜像到/mnt目录</p>
-<pre class="line-numbers language-none"><code class="language-none">mount -o loop,offset=512 chr.img /mnt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>获取本机IP和网关信息并赋予变量</p>
-<pre class="line-numbers language-none"><code class="language-none">ADDR0=`ip addr show eth0 | grep global | cut -d' ' -f 6 | head -n 1`			
-ADDR1=`ip addr show eth1 | grep global | cut -d' ' -f 6 | head -n 1`			
-GATE0=`ip route list | grep default | cut -d' ' -f 3`
-GATE1=`ip route list | grep '10.0.0.0/8' | cut -d' ' -f 9`<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>给mnt目录新建rw文件夹</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir -p /mnt/rw<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>把刚才获取的变量信息写入到/mnt/rw/autorun.scr文件</p>
-<pre class="line-numbers language-none"><code class="language-none">echo "/ip address add address=$ADDR0 interface=[/interface ethernet find where name=ether1]
-/ip address add address=$ADDR1 interface=[/interface ethernet find where name=ether2]
-/ip route add gateway=$GATE0
-/ip route add dst-address=10.0.0.0/8 gateway=$GATE1
-" &gt; /mnt/rw/autorun.scr<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>卸载镜像</p>
-<pre class="line-numbers language-none"><code class="language-none">umount /mnt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>立即重新挂载所有的文件系统为只读</p>
-<pre class="line-numbers language-none"><code class="language-none">echo u &gt; /proc/sysrq-trigger<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>DD ros镜像</p>
-<pre class="line-numbers language-none"><code class="language-none">dd if=chr.img bs=1024 of=/dev/vda &amp;&amp; reboot<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-
-
-<p>Ros 授权相关</p>
-<p>Ros 系统是商业软件 ，本身是需要授权的，在没有授权的情况下使用，网卡限制速率(1Mbps)，不过Ros CHR版本是支持免费试用的，只需要去官方网站 <a target="_blank" rel="noopener" href="https://mikrotik.com/client">https://mikrotik.com/client</a> 注册一个帐号，然后去邮箱获取帐号通过验证，接着返回到Ros系统  进入 System &gt; License  填入你刚刚注册的帐号登录即可，试用期是两个月时长，但根据我的使用情况来看，只要系统不进行更新，是可以一直免费试用下去的，功能不受限制。</p>
-<p>pve 安装roschr </p>
-<pre class="line-numbers language-none"><code class="language-none">qm importdisk 104 /var/lib/vz/template/iso/chr-7.14.3.img local-lvm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<p>VM 启动后会进入 ROS 登录界面。PVE 控制台直接 VNC 操作。</p>
+<p>PVE 优势：</p>
+<ul>
+<li>不用 dd 整盘，保留 PVE 自己的管理能力</li>
+<li>VM 可以快照（CHR 改配置前打个快照，改坏了能回滚）</li>
+<li>网络配置更灵活（多个 bridge / VLAN 自由组合）</li>
+</ul>
+<h2 id="四、ROS-授权"><a href="#四、ROS-授权" class="headerlink" title="四、ROS 授权"></a>四、ROS 授权</h2><p>ROS 是商业软件，<strong>没有授权也能用</strong>，但<strong>默认 1 Mbps 上行限制</strong>。</p>
+<h3 id="免费试用授权"><a href="#免费试用授权" class="headerlink" title="免费试用授权"></a>免费试用授权</h3><p>CHR 提供<strong>免费试用 license</strong>，步骤：</p>
+<ol>
+<li>去 <a target="_blank" rel="noopener" href="https://mikrotik.com/client">https://mikrotik.com/client</a> 注册账号（要能收邮件）</li>
+<li>邮箱验证账号</li>
+<li>在 ROS 内 <code>System → License</code> 填入账号登录</li>
+<li>获得 60 天免费试用 license</li>
+</ol>
+<h3 id="试用-license-续期经验"><a href="#试用-license-续期经验" class="headerlink" title="试用 license 续期经验"></a>试用 license 续期经验</h3><p><strong>实测</strong>：只要系统<strong>不升级</strong>（不改 RouterOS 版本），试用 license 可以一直用下去。但 RouterOS 7.x 后续小版本（如 7.14 → 7.15）会清掉试用 license，需要重新申请。</p>
+<p>⚠️ 提醒：试用 license 期间功能完整，但 MikroTik 协议上是给你”60 天评估”。生产环境建议买正式 license（P1 起，约 $45 永久）。</p>
+<h2 id="五、CHR-性能-适用场景"><a href="#五、CHR-性能-适用场景" class="headerlink" title="五、CHR 性能 / 适用场景"></a>五、CHR 性能 / 适用场景</h2><p>CHR 适合：</p>
+<ul>
+<li>✅ 单 VPS 跑 ROS（VPN / 远程组网）</li>
+<li>✅ 测试 ROS 配置 / 学习</li>
+<li>✅ 中小规模异地组网（&lt; 100 节点）</li>
+</ul>
+<p>CHR <strong>不适合</strong>：</p>
+<ul>
+<li>❌ 大流量出口（1 Mbps 限制 + 性能损耗）</li>
+<li>❌ 多 VPS 集群（每台都要单独刷系统）</li>
+<li>❌ 容器化部署（CHR 是单 VM）</li>
+</ul>
+<p>大流量场景用实体 RouterOS（hAP / RB / CCR 系列）或 PVE 装完整 ROS 镜像（不受 1 Mbps 限制）。</p>
+<h2 id="六、完结"><a href="#六、完结" class="headerlink" title="六、完结"></a>六、完结</h2><p>VPS 装 ROS 的两种主流方案：</p>
+<ol>
+<li><strong>裸 dd</strong>（直接刷系统）—— 适合单 VPS 简单场景</li>
+<li><strong>PVE 导入</strong> —— 适合集群 / 多 VPS / 需快照场景</li>
+</ol>
+<p>CHR 适合<strong>测试和小规模生产</strong>，大规模部署建议直接上 RouterOS 实体硬件。</p>
 
                 
             </div>

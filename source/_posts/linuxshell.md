@@ -1,5 +1,5 @@
 ---
-title: 科技lion一键 脚本  Linux服务器运维工具箱 监控管理建站一个脚本全搞定！
+title: 科技Lion一键脚本：Linux服务器运维工具箱 监控管理建站一个脚本全搞定
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

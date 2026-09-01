@@ -1,5 +1,5 @@
 ---
-title: 利用GIt命令上传项目到GitHub指定仓库
+title: 利用Git命令上传项目到GitHub指定仓库
 top_img: 
 swiper_index: 10
 top_group_index: 10

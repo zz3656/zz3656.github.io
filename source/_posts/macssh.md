@@ -1,5 +1,5 @@
 ---
-title: MAC SSH功能，配合VIM编辑器对编程十分有帮助。
+title: Mac SSH功能，配合Vim编辑器对编程十分有帮助
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

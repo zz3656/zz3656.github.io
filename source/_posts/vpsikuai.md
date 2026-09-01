@@ -25,6 +25,10 @@ highlight_shrink:
 aside:
 ai:
 ---
+> **📢 本文已迁移到《[爱快(iKuai)软路由安装全指南：从实体机到虚拟机再到云主机](https://www.inte8.top/2026/04/30/ai-kuai-ikuai-ruan-lu-you-an-zhuang-quan-zhi-nan-cong-shi-ti-ji-dao-xu-ni-ji-zai-dao-yun-zhu-ji/)》**(2026-04-30 发布，完整版)。原文保留如下供参考。
+
+---
+
 ### VPS安装爱快
 
 ###### 步骤1:下载爱快ISO并重命名为ikuai8.iso

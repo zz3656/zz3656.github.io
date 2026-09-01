@@ -31,6 +31,10 @@ highlight_shrink:
 aside:
 ai:
 ---
+> **📢 本文已迁移到《[阿里云腾讯云安装爱快系统步骤](https://www.inte8.top/2025/07/11/a-li-yun-teng-xun-yun-an-zhuang-ai-kuai-xi-tong-bu-zou/)》**(2025-07-11 发布，完整版)。原文保留如下供参考。
+
+---
+
 # 阿里云/腾讯云 安装爱快系统步骤
 
 

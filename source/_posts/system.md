@@ -1,5 +1,5 @@
 ---
-title: WINDOWS系统下恢复群晖分区下的文件
+title: Windows系统下恢复群晖分区下的文件
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

@@ -1,6 +1,5 @@
 ---
 title: 从零开始安装CasaOS保姆级教程
-cover: https://img.090227.xyz/file/ae62475a131f3734a201c.png
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

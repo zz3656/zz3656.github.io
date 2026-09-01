@@ -3,7 +3,6 @@ title: GitHub 2026年6月第三周热门新项目 Top10
 date: 2026-06-15 00:05:00
 categories: 技术资讯
 tags: [GitHub, 开源, AI]
-cover: /medias/featureimages/23.jpg
 ---
 
 ## 前言

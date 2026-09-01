@@ -1,6 +1,5 @@
 ---
 title: 绿化大师环境盖伦下载机如何修改绝地求生默认游戏特效
-cover: https://img.090227.xyz/file/ae62475a131f3734a201c.png
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

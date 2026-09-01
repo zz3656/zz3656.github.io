@@ -3,7 +3,6 @@ title: GitHub 2026年5月第二周热门新项目 Top10
 date: 2026-05-11 02:00:00
 categories: 技术资讯
 tags: [GitHub, 开源, AI]
-cover: /medias/featureimages/13.jpg
 ---
 
 ## 前言

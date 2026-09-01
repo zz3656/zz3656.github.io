@@ -1,6 +1,7 @@
 ---
 top: 3
 title: Python 装饰器从入门到精通
+cover: /medias/featureimages/2.jpg
 date: 2026-04-29 23:40:00
 tags: [Python, 装饰器, 编程技巧]
 categories: 编程开发

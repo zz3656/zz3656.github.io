@@ -1,5 +1,5 @@
 ---
-title: PVE安装iStoreOS手把手图文教程
+title: PVE 安装 iStoreOS 手把手图文教程
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

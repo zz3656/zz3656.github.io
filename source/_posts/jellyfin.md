@@ -1,5 +1,5 @@
 ---
-title: jellyfin解决封面乱码和字幕乱码
+title: Jellyfin 解决封面乱码和字幕乱码
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

@@ -1,5 +1,5 @@
 ---
-title: Truenas scale 虚拟机安装istoreos
+title: TrueNAS Scale 虚拟机安装 iStoreOS
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

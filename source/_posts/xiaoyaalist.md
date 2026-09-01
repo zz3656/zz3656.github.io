@@ -1,5 +1,5 @@
 ---
-title: 小雅alist整合脚本
+title: 小雅 alist 整合脚本
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

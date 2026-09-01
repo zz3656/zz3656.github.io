@@ -1,5 +1,5 @@
 ---
-title: hexo 添加第三方评论模块 twikoo
+title: Hexo 添加第三方评论模块 Twikoo
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

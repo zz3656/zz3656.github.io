@@ -1,5 +1,5 @@
 ---
-title: Typora + PicGo-Core + Github 实现图片上传到Github
+title: Typora + PicGo-Core + GitHub 实现图片上传到 GitHub
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

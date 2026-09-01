@@ -1,6 +1,6 @@
 ---
 top: 2
-title: Cloud Mail基于Cloudflare的免费邮箱服务部署指南
+title: Cloud Mail 基于 Cloudflare 的免费邮箱服务部署指南
 cover: /medias/featureimages/0.jpg
 date: 2026-05-05 04:10:00
 tags:

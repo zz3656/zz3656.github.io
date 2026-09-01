@@ -1,5 +1,5 @@
 ---
-title: alist 阿里云盘open
+title: alist 阿里云盘 open
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

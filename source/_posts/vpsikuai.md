@@ -1,5 +1,5 @@
 ---
-title: VPS安装爱快
+title: VPS 安装爱快
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

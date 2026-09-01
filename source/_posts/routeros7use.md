@@ -1,5 +1,5 @@
 ---
-title: routeros 7.X IPV6设置
+title: RouterOS 7.X IPV6 设置
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

@@ -1,5 +1,5 @@
 ---
-title: RouterOS v7入门到精通学习笔记
+title: RouterOS v7 入门到精通学习笔记
 date: 2026-04-30 19:30:00
 tags:
   - RouterOS

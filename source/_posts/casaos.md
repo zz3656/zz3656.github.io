@@ -1,5 +1,5 @@
 ---
-title: 从零开始安装CasaOS保姆级教程
+title: 从零开始安装 CasaOS 保姆级教程
 swiper_index: 10
 top_group_index: 10
 background: '#fff'

@@ -9,6 +9,7 @@ updated:
 tags:
 - linux
 - shell
+- 教程
 categories:
 - 操作系统
 keywords:

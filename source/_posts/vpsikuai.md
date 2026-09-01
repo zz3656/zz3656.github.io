@@ -6,15 +6,8 @@ top_group_index: 10
 background: '#fff'
 date: 2025-07-12 08:34:52
 updated:
-tags:
-- vps
-- ikuai
-- 爱快
-- 软路由
-categories:
-- 操作系统
-keywords:
-description:
+tags: [vps, ikuai, 爱快]
+on:
 top:
 top_img:
 comments:

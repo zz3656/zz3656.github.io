@@ -9,6 +9,7 @@ updated:
 tags:
 - truenas
 - linux
+- nas
 categories:
 - 操作系统
 keywords:

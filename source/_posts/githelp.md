@@ -10,6 +10,7 @@ updated:
 tags:
 - Git
 - Github
+- 教程
 categories:
 - 工作笔记
 keywords:

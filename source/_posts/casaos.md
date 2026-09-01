@@ -9,6 +9,7 @@ updated:
 tags:
 - nas
 - casaos
+- 教程
 categories:
 - 操作系统
 keywords:

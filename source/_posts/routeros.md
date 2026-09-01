@@ -6,17 +6,8 @@ top_group_index: 10
 background: '#fff'
 date: 2025-07-12 08:08:02
 updated:
-tags:
-- routeros
-- ros
-- 软路由
-- vps
-categories:
-- 工作笔记
-keywords:
-description:
-top:
-top_img:
+tags: [routeros, ros, 软路由]
+_img:
 comments:
 toc:
 toc_number:

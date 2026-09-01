@@ -6,17 +6,8 @@ top_group_index: 10
 background: '#fff'
 date: 2025-07-12 08:50:39
 updated:
-tags:
-- pve
-- istoreos
-- all in one
-- 软路由
-categories:
-- 工作笔记
-keywords:
-description:
-top:
-top_img:
+tags: [pve, istoreos, all in one]
+mg:
 comments:
 toc:
 toc_number:

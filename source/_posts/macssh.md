@@ -9,6 +9,7 @@ updated:
 tags:
 - macos
 - linux
+- ssh
 categories:
 - 工作笔记
 keywords:

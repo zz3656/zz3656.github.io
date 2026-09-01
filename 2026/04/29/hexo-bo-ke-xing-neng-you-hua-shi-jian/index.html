@@ -491,57 +491,120 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>搭建好 Hexo 博客之后，性能优化是提升用户体验的重要一环。本文记录了我在优化博客加载速度过程中的实践和心得。</p>
-<h2 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h2><p>首先使用工具分析当前博客的性能瓶颈：</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hexo 博客搭建完成后，访问速度直接影响留存率。本文记录我在优化自己博客（inte8.top）过程中验证有效的几种做法，重点是<strong>不动服务端配置</strong>（GitHub Pages 不开放 .htaccess）、靠 hexo 模板 + 静态资源处理完成的优化。</p>
+<h2 id="性能分析工具"><a href="#性能分析工具" class="headerlink" title="性能分析工具"></a>性能分析工具</h2><p>优化前先用工具找到瓶颈。常用的免费工具：</p>
 <ul>
-<li><strong>Google PageSpeed Insights</strong>：综合评分工具</li>
-<li><strong>Lighthouse</strong>：Chrome 内置的性能审计工具</li>
-<li><strong>WebPageTest</strong>：详细的加载瀑布图分析</li>
+<li><strong>Google PageSpeed Insights</strong>（<a target="_blank" rel="noopener" href="https://pagespeed.web.dev/%EF%BC%89%EF%BC%9A%E7%BB%BC%E5%90%88%E8%AF%84%E5%88%86%EF%BC%8C%E8%BE%93%E5%87%BA">https://pagespeed.web.dev/）：综合评分，输出</a> Core L / SEO / 最佳实践四类指标</li>
+<li><strong>Chrome Lighthouse</strong>：内置在 DevTools 的 <code>Lighthouse</code> 面板，可选移动端/桌面端模拟</li>
+<li><strong>WebPageTest</strong>（<a target="_blank" rel="noopener" href="https://www.webpagetest.org/%EF%BC%89%EF%BC%9A%E5%A4%9A%E5%9C%B0%E7%82%B9%E6%A8%A1%E6%8B%9F%EF%BC%8C%E6%8F%90%E4%BE%9B%E8%AF%A6%E7%BB%86%E7%80%91%E5%B8%83%E5%9B%BE%EF%BC%8C%E8%83%BD%E7%9C%8B%E5%88%B0%E6%AF%8F%E4%B8%AA%E8%B5%84%E6%BA%90%E7%9A%84">https://www.webpagetest.org/）：多地点模拟，提供详细瀑布图，能看到每个资源的</a> DNS / TCP / TLS / TTFB / 下载时间</li>
 </ul>
-<h2 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h2><p>图片通常是网页中最大的资源，优化效果立竿见影：</p>
-<ol>
-<li>使用 WebP 格式替代 PNG/JPG，体积减少 30%-50%</li>
-<li>添加图片懒加载（Lazy Load），首屏外的图片延迟加载</li>
-<li>压缩封面图片，控制在 200KB 以内</li>
-</ol>
-<h2 id="静态资源优化"><a href="#静态资源优化" class="headerlink" title="静态资源优化"></a>静态资源优化</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 开启 Gzip 压缩</span>
-<span class="token comment"># 在 GitHub Pages 上默认已开启</span>
-
-<span class="token comment"># 合并 CSS/JS 文件减少请求数</span>
-<span class="token comment"># 使用 CDN 加速静态资源加载</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h2><p>合理设置缓存策略可以大幅提升回访速度：</p>
+<blockquote>
+<p>PageSpeed 评分基于 Lighthouse v10+ 评分模型（2023 年起），分数是相对的——同一页面在 4G 和 WiFi 下的得分可能差 30+。</p>
+</blockquote>
+<h2 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h2><p><strong>这是 Hexo 博客最常见的瓶颈</strong>。一个 hero 图 1MB+ 是家常便饭。</p>
+<h3 id="1-用-WebP-AVIF-替代-PNG-JPG"><a href="#1-用-WebP-AVIF-替代-PNG-JPG" class="headerlink" title="1. 用 WebP / AVIF 替代 PNG / JPG"></a>1. 用 WebP / AVIF 替代 PNG / JPG</h3><p>WebP 通常比同质量 PNG/JPG 小 <strong>25%-35%</strong>（Google 自家测试数据）。AVIF 更激进，能压到 50% 以下，但浏览器兼容稍差（Safari 16+ 才开始支持）。</p>
+<p>转换工具：</p>
 <ul>
-<li>HTML 文件：短期缓存，确保内容及时更新</li>
-<li>CSS/JS/图片：长期缓存，通过文件名哈希实现版本控制</li>
-<li>字体文件：设置较长的缓存时间</li>
+<li><code>cwebp input.png -o output.webp -q 80</code></li>
+<li><code>magick input.jpg -quality 80 output.webp</code>（ImageMagick 7+）</li>
+<li>macOS 还可以直接 <code>sips -s format webp input.jpg --out output.webp</code></li>
 </ul>
-<h2 id="优化效果"><a href="#优化效果" class="headerlink" title="优化效果"></a>优化效果</h2><p>经过一系列优化后：</p>
+<h3 id="2-主题-featureimages-控制封面尺寸"><a href="#2-主题-featureimages-控制封面尺寸" class="headerlink" title="2. 主题 featureimages 控制封面尺寸"></a>2. 主题 <code>featureimages</code> 控制封面尺寸</h3><p>matery 主题默认从 <code>source/medias/featureimages/</code> 抽取随机图做首页轮播。每张图控制在 <strong>200KB 以内</strong>，整组图片就能压到 1-2MB。</p>
+<h3 id="3-懒加载（Lazy-Load）"><a href="#3-懒加载（Lazy-Load）" class="headerlink" title="3. 懒加载（Lazy Load）"></a>3. 懒加载（Lazy Load）</h3><p>matery 主题默认<strong>没有</strong>内置懒加载。可在 <code>themes/matery/_config.yml</code> 找 <code>lazyload</code> 配置项（部分 fork 版本支持），或者自己加 <code>loading="lazy"</code> 属性到所有 <code>&lt;img&gt;</code> 标签。</p>
+<h2 id="静态资源优化"><a href="#静态资源优化" class="headerlink" title="静态资源优化"></a>静态资源优化</h2><h3 id="1-合并-压缩-CSS-JS"><a href="#1-合并-压缩-CSS-JS" class="headerlink" title="1. 合并 / 压缩 CSS / JS"></a>1. 合并 / 压缩 CSS / JS</h3><p>matery 默认<strong>未压缩</strong>输出 <code>public/</code>。可以装 hexo 官方压缩插件：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-all-minifier <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在 <code>_config.yml</code> 配置：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">all_minifier</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个插件会同时压缩：</p>
+<ul>
+<li>HTML（基于 html-minifier）</li>
+<li>CSS（基于 clean-css）</li>
+<li>JS（基于 ug-tig / terser）</li>
+<li>图片（基于 imagemin，可选）</li>
+</ul>
+<p>实际效果：HTML 体积减少 10%-15%，CSS/JS 减少 30%-50%。</p>
+<h3 id="2-启用-Gzip-Brotli"><a href="#2-启用-Gzip-Brotli" class="headerlink" title="2. 启用 Gzip / Brotli"></a>2. 启用 Gzip / Brotli</h3><p>GitHub Pages <strong>默认开启 Gzip</strong>（基于 Cloudflare CDN 自动协商），不需要在 <code>_config.yml</code> 里配。如果用其他托管（如 Netlify、Vercel），它们默认也开。</p>
+<p>Brotli 比 Gzip 多压 <strong>15%-20%</strong>，但 GitHub Pages 不支持托管端配置 Brotli。Cloudflare 面板里可以单独启用 Brotli，访问者会用上。</p>
+<h3 id="3-CDN-加速"><a href="#3-CDN-加速" class="headerlink" title="3. CDN 加速"></a>3. CDN 加速</h3><p>GitHub Pages 源站在国外，国内访问慢。国内访问用 Cloudflare CDN（我用的就是这个）。</p>
+<p><code>themes/matery/_config.yml</code> 里的 CDN 配置：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">jsDelivr</span><span class="token punctuation">:</span>
+  <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn.jsDelivr.net  <span class="token comment"># 用 jsDelivr 加速主题内置 JS/CSS 库</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>jsDelivr 是免费 CDN，对 GitHub 仓库直接生效。</p>
+<h2 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h2><p>GitHub Pages 走 Cloudflare，缓存规则是 Cloudflare 默认。可以在 Cloudflare 面板加 Cache Rule：</p>
+<table>
+<thead>
+<tr>
+<th>资源类型</th>
+<th>建议缓存时间</th>
+<th>设置方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HTML</td>
+<td>5 分钟 - 1 小时</td>
+<td>Browser Cache TTL: 30 minutes</td>
+</tr>
+<tr>
+<td>CSS / JS / 图片</td>
+<td>1 年</td>
+<td>通过文件名哈希实现版本控制</td>
+</tr>
+<tr>
+<td>字体</td>
+<td>1 年</td>
+<td>Cache Rule: Edge TTL 1 year</td>
+</tr>
+</tbody></table>
+<p>文件名哈希：在 <code>themes/matery/_config.yml</code> 设置 <code>asset_version: true</code>（部分版本支持），输出文件名带 <code>?v=hash</code>，缓存和版本控制两不误。</p>
+<h2 id="减少-HTTP-请求"><a href="#减少-HTTP-请求" class="headerlink" title="减少 HTTP 请求"></a>减少 HTTP 请求</h2><p>每次 HTTP 请求都有 DNS / TCP / TLS / TTFB 开销，请求多比单文件大更糟糕。</p>
+<ul>
+<li><strong>合并第三方库</strong>：matery 用 jQuery + Materialize + 自定义 JS，能合并的就合并</li>
+<li><strong>内联关键 CSS</strong>：首屏渲染需要的样式内联到 <code>&lt;style&gt;</code>，外链只放非关键 CSS</li>
+<li><strong>预连接 / 预解析</strong>：在 <code>&lt;head&gt;</code> 加 <code>&lt;link rel="preconnect" href="https://cdn.jsdelivr.net"&gt;</code>，浏览器提前建连</li>
+</ul>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preconnect<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net<span class="token punctuation">"</span></span> <span class="token attr-name">crossorigin</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dns-prefetch<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>//www.inte8.top<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="服务端配置（GitHub-Pages-不可改的部分）"><a href="#服务端配置（GitHub-Pages-不可改的部分）" class="headerlink" title="服务端配置（GitHub Pages 不可改的部分）"></a>服务端配置（GitHub Pages 不可改的部分）</h2><p>GitHub Pages <strong>不开放</strong>自定义 .htaccess / nginx 配置。所以以下只能在其他托管上做：</p>
+<ul>
+<li>HTTP/2 / HTTP/3：GitHub Pages 默认 HTTP/2，HTTP/3 不一定支持</li>
+<li>HSTS：通过 Cloudflare 面板加</li>
+<li>Brotli：通过 Cloudflare 面板加</li>
+</ul>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>部署后再跑一遍 PageSpeed Insights，看 Core L / LCP / FID / CLS 四个核心指标。常见目标：</p>
 <table>
 <thead>
 <tr>
 <th>指标</th>
-<th>优化前</th>
-<th>优化后</th>
+<th>优秀</th>
+<th>需改进</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>首屏加载</td>
-<td>4.2s</td>
-<td>1.8s</td>
+<td>LCP (Largest Contentful Paint)</td>
+<td>&lt; 2.5s</td>
+<td>&gt; 4.0s</td>
 </tr>
 <tr>
-<td>PageSpeed 评分</td>
-<td>62</td>
-<td>91</td>
+<td>FID (First Input Delay)</td>
+<td>&lt; 100ms</td>
+<td>&gt; 300ms</td>
 </tr>
 <tr>
-<td>请求数</td>
-<td>48</td>
-<td>32</td>
+<td>CLS (Cumulative Layout Shift)</td>
+<td>&lt; 0.1</td>
+<td>&gt; 0.25</td>
+</tr>
+<tr>
+<td>Performance Score</td>
+<td>&gt; 90</td>
+<td>&lt; 50</td>
 </tr>
 </tbody></table>
-<p>性能优化是一个持续的过程，后续还会继续探索更多优化手段。</p>
+<p>性能优化是持续的过程，没有银弹。本文列举的几种是<strong>投入产出比最高</strong>的几项——大部分 hexo 博客做完图片优化 + 资源压缩 + CDN，PageSpeed 就能从 60+ 拉到 85+。</p>
 
                 
             </div>

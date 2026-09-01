@@ -491,9 +491,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Python 装饰器是 Python 中非常强大且优雅的特性，理解装饰器对于写出高质量的 Python 代码至关重要。本文将带你从零开始，逐步掌握装饰器的各种用法。</p>
-<h2 id="什么是装饰器"><a href="#什么是装饰器" class="headerlink" title="什么是装饰器"></a>什么是装饰器</h2><p>装饰器本质上是一个函数，它接受一个函数作为参数，返回一个新的函数。它可以在不修改原函数代码的情况下，给函数增加新的功能。</p>
-<h2 id="基础装饰器"><a href="#基础装饰器" class="headerlink" title="基础装饰器"></a>基础装饰器</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">timer</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Python 装饰器（Decorator）是 Python 中非常强大且优雅的特性。从 Python 2.4 引入 <code>@</code> 语法后，装饰器就被广泛用于日志记录、性能测试、事务处理、缓存等横切关注点（cross-cutting concerns）。理解装饰器对于写出高质量的 Python 代码至关重要。本文将带你从零开始，逐步掌握装饰器的各种用法。</p>
+<p>装饰器本质上是一个<strong>接受函数作为参数、并返回一个新函数的可调用对象</strong>。它可以在不修改原函数代码的情况下，给函数增加新的功能。掌握装饰器后，你会发现很多看似复杂的需求都可以用优雅的方式解决。</p>
+<h2 id="什么是装饰器"><a href="#什么是装饰器" class="headerlink" title="什么是装饰器"></a>什么是装饰器</h2><p>要理解装饰器，先要明确 Python 中<strong>函数是一等公民</strong>（first-class object）：</p>
+<ul>
+<li>函数可以赋值给变量</li>
+<li>函数可以作为参数传递给其他函数</li>
+<li>函数可以定义在其他函数内部（闭包）</li>
+<li>函数可以作为返回值</li>
+</ul>
+<p>装饰器正是利用了这些特性。<strong>核心原则</strong>：装饰器 = 接受函数 + 返回函数。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">my_decorator</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 在调用原函数前的逻辑</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"调用前"</span><span class="token punctuation">)</span>
+        result <span class="token operator">=</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        <span class="token comment"># 在调用原函数后的逻辑</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"调用后"</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> result
+    <span class="token keyword">return</span> wrapper
+
+<span class="token decorator annotation punctuation">@my_decorator</span>
+<span class="token keyword">def</span> <span class="token function">say_hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello!"</span><span class="token punctuation">)</span>
+
+say_hello<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 输出:</span>
+<span class="token comment"># 调用前</span>
+<span class="token comment"># Hello!</span>
+<span class="token comment"># 调用后</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>@my_decorator</code> 是语法糖，等价于 <code>say_hello = my_decorator(say_hello)</code>。</p>
+<h2 id="基础装饰器"><a href="#基础装饰器" class="headerlink" title="基础装饰器"></a>基础装饰器</h2><p>最常见的场景是给函数加上”计时”功能：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">timer</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token triple-quoted-string string">"""计算函数执行时间的装饰器"""</span>
     <span class="token keyword">import</span> time
     <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -514,7 +544,31 @@ slow_function<span class="token punctuation">(</span><span class="token punctuat
 <span class="token comment"># 输出: 函数执行完毕</span>
 <span class="token comment"># 输出: slow_function 执行耗时: 1.0012秒</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="带参数的装饰器"><a href="#带参数的装饰器" class="headerlink" title="带参数的装饰器"></a>带参数的装饰器</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">retry</span><span class="token punctuation">(</span>max_attempts<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> delay<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<p>注意 <code>*args, **kwargs</code> 的写法——这是通用装饰器的标准模板，能兼容任意函数签名。如果不写，会破坏带参数的函数。</p>
+<h2 id="使用-functools-wraps-保留元信息"><a href="#使用-functools-wraps-保留元信息" class="headerlink" title="使用 functools.wraps 保留元信息"></a>使用 functools.wraps 保留元信息</h2><p>上面的 <code>timer</code> 装饰器有一个副作用：<strong>被装饰函数的 <code>__name__</code>、<code>__doc__</code> 等元信息会被替换成 <code>wrapper</code> 的</strong>。这在调试、日志、文档生成时场景会会出问题。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> functools <span class="token keyword">import</span> wraps
+
+<span class="token keyword">def</span> <span class="token function">my_decorator</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token decorator annotation punctuation">@wraps</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""这是 wrapper 的文档"""</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"调用前"</span><span class="token punctuation">)</span>
+        result <span class="token operator">=</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"调用后"</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> result
+    <span class="token keyword">return</span> wrapper
+
+<span class="token decorator annotation punctuation">@my_decorator</span>
+<span class="token keyword">def</span> <span class="token function">greet</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""打招呼函数"""</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"你好, </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">!"</span></span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>greet<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>   <span class="token comment"># greet（而非 wrapper）</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>greet<span class="token punctuation">.</span>__doc__<span class="token punctuation">)</span>    <span class="token comment"># 打招呼函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>functools.wraps</code> 内部把 <code>func</code> 的 <code>__wrapped__</code>、<code>__name__</code>、<code>__doc__</code>、<code>__module__</code>、<code>__qualname__</code>、<code>__dict__</code> 等属性都复制到 <code>wrapper</code> 上。<strong>任何生产环境的装饰器都应该用 <code>wraps</code></strong>。</p>
+<h2 id="带参数的装饰器"><a href="#带参数的装饰器" class="headerlink" title="带参数的装饰器"></a>带参数的装饰器</h2><p>有时候装饰器本身需要参数（比如重试次数、重试间隔）。这种”装饰器工厂”需要三层嵌套：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">retry</span><span class="token punctuation">(</span>max_attempts<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> delay<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token triple-quoted-string string">"""失败自动重试装饰器"""</span>
     <span class="token keyword">def</span> <span class="token function">decorator</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -537,27 +591,10 @@ slow_function<span class="token punctuation">(</span><span class="token punctuat
         <span class="token keyword">raise</span> ConnectionError<span class="token punctuation">(</span><span class="token string">"连接失败"</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> <span class="token string">"请求成功"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="使用-functools-wraps-保留元信息"><a href="#使用-functools-wraps-保留元信息" class="headerlink" title="使用 functools.wraps 保留元信息"></a>使用 functools.wraps 保留元信息</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> functools <span class="token keyword">import</span> wraps
-
-<span class="token keyword">def</span> <span class="token function">my_decorator</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token decorator annotation punctuation">@wraps</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span>
-    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""这是 wrapper 的文档"""</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"调用前"</span><span class="token punctuation">)</span>
-        result <span class="token operator">=</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"调用后"</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> result
-    <span class="token keyword">return</span> wrapper
-
-<span class="token decorator annotation punctuation">@my_decorator</span>
-<span class="token keyword">def</span> <span class="token function">greet</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""打招呼函数"""</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"你好, </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">!"</span></span><span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span>greet<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>   <span class="token comment"># greet（而非 wrapper）</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>greet<span class="token punctuation">.</span>__doc__<span class="token punctuation">)</span>    <span class="token comment"># 打招呼函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="类装饰器"><a href="#类装饰器" class="headerlink" title="类装饰器"></a>类装饰器</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Singleton</span><span class="token punctuation">:</span>
+<p>执行逻辑：<code>@retry(max_attempts=3, delay=2)</code> → <code>decorator = retry(3, 2)</code> → <code>unstable_api_call = decorator(unstable_api_call)</code> → <code>unstable_api_call = wrapper(...)</code>。</p>
+<p>注意：上面的 <code>retry</code> 还没用 <code>@functools.wraps</code>，实际项目中要加上。</p>
+<h2 id="类装饰器"><a href="#类装饰器" class="headerlink" title="类装饰器"></a>类装饰器</h2><p>不只是函数可以当装饰器，<strong>实现了 <code>__call__</code> 的类也可以</strong>。这让装饰器可以维护状态：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Singleton</span><span class="token punctuation">:</span>
     <span class="token triple-quoted-string string">"""单例模式装饰器"""</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
         self<span class="token punctuation">.</span>_cls <span class="token operator">=</span> cls
@@ -577,7 +614,55 @@ db1 <span class="token operator">=</span> Database<span class="token punctuation
 db2 <span class="token operator">=</span> Database<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 无输出，返回同一实例</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>db1 <span class="token keyword">is</span> db2<span class="token punctuation">)</span>  <span class="token comment"># True</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>装饰器是 Python 中实现代码复用和功能增强的利器。掌握装饰器后，你会发现很多看似复杂的需求都可以用优雅的方式解决。记住核心原则：装饰器 = 接受函数 + 返回函数。</p>
+<p>类装饰器的好处：可以通过 <code>self.xxx</code> 在多次调用间保存状态（这里是 <code>_instance</code>），而函数装饰器只能通过闭包变量或全局变量维护状态。</p>
+<h2 id="实际应用场景"><a href="#实际应用场景" class="headerlink" title="实际应用场景"></a>实际应用场景</h2><p>装饰器在生产代码中随处可见，下面是一些典型用法：</p>
+<p><strong>1. Flask / FastAPI 路由装饰器</strong>（框架核心机制）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/api/users/&lt;int:user_id&gt;"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">get_user</span><span class="token punctuation">(</span>user_id<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">"user_id"</span><span class="token punctuation">:</span> user_id<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>2. Django 权限检查</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token decorator annotation punctuation">@login_required</span>
+<span class="token decorator annotation punctuation">@permission_required</span><span class="token punctuation">(</span><span class="token string">"blog.delete_post"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">delete_post</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> post_id<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    Post<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token operator">=</span>post_id<span class="token punctuation">)</span><span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>3. pytest 测试夹具</strong>（fixture 用的就是装饰器模式）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token decorator annotation punctuation">@pytest<span class="token punctuation">.</span>fixture</span>
+<span class="token keyword">def</span> <span class="token function">client</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> TestClient<span class="token punctuation">(</span>app<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>4. 类型检查 / 数据校验</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">validate_types</span><span class="token punctuation">(</span><span class="token operator">*</span>expected_types<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">decorator</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token decorator annotation punctuation">@wraps</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> arg<span class="token punctuation">,</span> expected <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>args<span class="token punctuation">,</span> expected_types<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>arg<span class="token punctuation">,</span> expected<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    <span class="token keyword">raise</span> TypeError<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"参数类型错误：期望 </span><span class="token interpolation"><span class="token punctuation">{</span>expected<span class="token punctuation">}</span></span><span class="token string">, 实际 </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">type</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> wrapper
+    <span class="token keyword">return</span> decorator
+
+<span class="token decorator annotation punctuation">@validate_types</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">create_user</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f"创建用户：</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token punctuation">{</span>age<span class="token punctuation">}</span></span><span class="token string">岁"</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="进阶：装饰器叠加与执行顺序"><a href="#进阶：装饰器叠加与执行顺序" class="headerlink" title="进阶：装饰器叠加与执行顺序"></a>进阶：装饰器叠加与执行顺序</h2><p>多个装饰器可以叠加：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token decorator annotation punctuation">@decorator_a</span>
+<span class="token decorator annotation punctuation">@decorator_b</span>
+<span class="token keyword">def</span> <span class="token function">my_func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>等价于 <code>my_func = decorator_a(decorator_b(my_func))</code>——<strong>从下往上</strong>装饰，<code>my_func()</code> 调用时<strong>从上往下</strong>执行 wrapper 逻辑。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>装饰器的核心就三点：</p>
+<ol>
+<li><strong>接受函数作为参数</strong>（函数是一等公民）</li>
+<li><strong>定义内部函数 wrapper</strong> 处理额外逻辑</li>
+<li><strong>返回 wrapper 函数</strong></li>
+</ol>
+<p>掌握这三点后，配合 <code>functools.wraps</code> 保留元信息，再加上类装饰器维护状态，你就能写出所有生产场景需要的装饰器了。</p>
+<p>记住核心原则：<strong>装饰器 = 接受函数 + 返回函数</strong>。</p>
 
                 
             </div>

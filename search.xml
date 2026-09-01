@@ -252,9 +252,9 @@
       
         <tags>
             
-            <tag> 我的一生 </tag>
-            
             <tag> 回忆录 </tag>
+            
+            <tag> 我的一生 </tag>
             
             <tag> 初中篇 </tag>
             
@@ -281,9 +281,9 @@
       
         <tags>
             
-            <tag> 我的一生 </tag>
-            
             <tag> 回忆录 </tag>
+            
+            <tag> 我的一生 </tag>
             
             <tag> 初中篇 </tag>
             
@@ -339,11 +339,11 @@
       
         <tags>
             
+            <tag> 回忆录 </tag>
+            
             <tag> 我的一生 </tag>
             
             <tag> 童年 </tag>
-            
-            <tag> 回忆录 </tag>
             
         </tags>
       
@@ -671,7 +671,7 @@
     
     
     <entry>
-      <title>科技lion一键 脚本  Linux服务器运维工具箱 监控管理建站一个脚本全搞定！</title>
+      <title>科技Lion一键脚本：Linux服务器运维工具箱 监控管理建站一个脚本全搞定</title>
       <link href="/2025/07/12/linuxshell/"/>
       <url>/2025/07/12/linuxshell/</url>
       
@@ -872,7 +872,7 @@
       <link href="/2025/07/12/vpsikuai/"/>
       <url>/2025/07/12/vpsikuai/</url>
       
-        <content type="html"><![CDATA[<h3 id="VPS安装爱快"><a href="#VPS安装爱快" class="headerlink" title="VPS安装爱快"></a>VPS安装爱快</h3><h6 id="步骤1-下载爱快ISO并重命名为ikuai8-iso"><a href="#步骤1-下载爱快ISO并重命名为ikuai8-iso" class="headerlink" title="步骤1:下载爱快ISO并重命名为ikuai8.iso"></a>步骤1:下载爱快ISO并重命名为ikuai8.iso</h6><pre class="line-numbers language-none"><code class="language-none">wget https://www.ikuai8.com/download.php?n=/3.x/iso/iKuai8_x32_3.7.11_Build202403051040.iso -O ikuai8.iso<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h6 id="步骤2-挂载ISO镜像"><a href="#步骤2-挂载ISO镜像" class="headerlink" title="步骤2: 挂载ISO镜像"></a>步骤2: 挂载ISO镜像</h6><pre class="line-numbers language-none"><code class="language-none">sudo mount ikuai8.iso /mnt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h6 id="步骤3-复制ISO镜像启动文件"><a href="#步骤3-复制ISO镜像启动文件" class="headerlink" title="步骤3: 复制ISO镜像启动文件"></a>步骤3: 复制ISO镜像启动文件</h6><pre class="line-numbers language-none"><code class="language-none">sudo cp -rpf /mnt/boot /<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h6 id="步骤4-重启"><a href="#步骤4-重启" class="headerlink" title="步骤4: 重启"></a>步骤4: 重启</h6><pre class="line-numbers language-none"><code class="language-none">reboot<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h6 id="步骤5-在腾讯云-阿里云的操作页面打开VNC界面-登录-远程登录-–-VNC登录，正常ISO安装爱快系统"><a href="#步骤5-在腾讯云-阿里云的操作页面打开VNC界面-登录-远程登录-–-VNC登录，正常ISO安装爱快系统" class="headerlink" title="步骤5: 在腾讯云/阿里云的操作页面打开VNC界面: 登录/远程登录 –> VNC登录，正常ISO安装爱快系统"></a>步骤5: 在腾讯云/阿里云的操作页面打开VNC界面: 登录/远程登录 –&gt; VNC登录，正常ISO安装爱快系统</h6><h6 id="步骤6-进入控制台”开启外网访问WEB”"><a href="#步骤6-进入控制台”开启外网访问WEB”" class="headerlink" title="步骤6: 进入控制台”开启外网访问WEB”"></a>步骤6: 进入控制台”开启外网访问WEB”</h6><p>o、其他选项 –&gt; 2、开启外网访问web</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p><strong>📢 本文已迁移到《<a href="https://www.inte8.top/2026/04/30/ai-kuai-ikuai-ruan-lu-you-an-zhuang-quan-zhi-nan-cong-shi-ti-ji-dao-xu-ni-ji-zai-dao-yun-zhu-ji/">爱快(iKuai)软路由安装全指南：从实体机到虚拟机再到云主机</a>》</strong>(2026-04-30 发布，完整版)。原文保留如下供参考。</p></blockquote><hr><h3 id="VPS安装爱快"><a href="#VPS安装爱快" class="headerlink" title="VPS安装爱快"></a>VPS安装爱快</h3><h6 id="步骤1-下载爱快ISO并重命名为ikuai8-iso"><a href="#步骤1-下载爱快ISO并重命名为ikuai8-iso" class="headerlink" title="步骤1:下载爱快ISO并重命名为ikuai8.iso"></a>步骤1:下载爱快ISO并重命名为ikuai8.iso</h6><pre class="line-numbers language-none"><code class="language-none">wget https://www.ikuai8.com/download.php?n=/3.x/iso/iKuai8_x32_3.7.11_Build202403051040.iso -O ikuai8.iso<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h6 id="步骤2-挂载ISO镜像"><a href="#步骤2-挂载ISO镜像" class="headerlink" title="步骤2: 挂载ISO镜像"></a>步骤2: 挂载ISO镜像</h6><pre class="line-numbers language-none"><code class="language-none">sudo mount ikuai8.iso /mnt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h6 id="步骤3-复制ISO镜像启动文件"><a href="#步骤3-复制ISO镜像启动文件" class="headerlink" title="步骤3: 复制ISO镜像启动文件"></a>步骤3: 复制ISO镜像启动文件</h6><pre class="line-numbers language-none"><code class="language-none">sudo cp -rpf /mnt/boot /<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h6 id="步骤4-重启"><a href="#步骤4-重启" class="headerlink" title="步骤4: 重启"></a>步骤4: 重启</h6><pre class="line-numbers language-none"><code class="language-none">reboot<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h6 id="步骤5-在腾讯云-阿里云的操作页面打开VNC界面-登录-远程登录-–-VNC登录，正常ISO安装爱快系统"><a href="#步骤5-在腾讯云-阿里云的操作页面打开VNC界面-登录-远程登录-–-VNC登录，正常ISO安装爱快系统" class="headerlink" title="步骤5: 在腾讯云/阿里云的操作页面打开VNC界面: 登录/远程登录 –> VNC登录，正常ISO安装爱快系统"></a>步骤5: 在腾讯云/阿里云的操作页面打开VNC界面: 登录/远程登录 –&gt; VNC登录，正常ISO安装爱快系统</h6><h6 id="步骤6-进入控制台”开启外网访问WEB”"><a href="#步骤6-进入控制台”开启外网访问WEB”" class="headerlink" title="步骤6: 进入控制台”开启外网访问WEB”"></a>步骤6: 进入控制台”开启外网访问WEB”</h6><p>o、其他选项 –&gt; 2、开启外网访问web</p>]]></content>
       
       
       
@@ -978,7 +978,7 @@
     
     
     <entry>
-      <title>MAC SSH功能，配合VIM编辑器对编程十分有帮助。</title>
+      <title>Mac SSH功能，配合Vim编辑器对编程十分有帮助</title>
       <link href="/2025/07/12/macssh/"/>
       <url>/2025/07/12/macssh/</url>
       
@@ -1063,7 +1063,7 @@
       <link href="/2025/07/12/aliyunikuai/"/>
       <url>/2025/07/12/aliyunikuai/</url>
       
-        <content type="html"><![CDATA[<h1 id="阿里云-腾讯云-安装爱快系统步骤"><a href="#阿里云-腾讯云-安装爱快系统步骤" class="headerlink" title="阿里云/腾讯云 安装爱快系统步骤"></a>阿里云/腾讯云 安装爱快系统步骤</h1><p>开始: 随便安装一个ubuntu系统</p><h2 id="步骤1-下载ISO安装包"><a href="#步骤1-下载ISO安装包" class="headerlink" title="步骤1: 下载ISO安装包"></a>步骤1: 下载ISO安装包</h2><p>x32位</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> https://www.ikuai8.com/download.php?n<span class="token operator">=</span>/3.x/iso/iKuai8_x32_3.7.14_Build202408011011.iso <span class="token parameter variable">-O</span> ikuai8.iso<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>x64位</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> https://www.ikuai8.com/download.php?n<span class="token operator">=</span>/3.x/iso/iKuai8_x64_3.7.14_Build202408011011.iso <span class="token parameter variable">-O</span> ikuai8.iso<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="步骤2-挂载ISO镜像"><a href="#步骤2-挂载ISO镜像" class="headerlink" title="步骤2: 挂载ISO镜像"></a>步骤2: 挂载ISO镜像</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">mount</span> ikuai8.iso /mnt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="步骤3-复制ISO镜像启动文件"><a href="#步骤3-复制ISO镜像启动文件" class="headerlink" title="步骤3: 复制ISO镜像启动文件"></a>步骤3: 复制ISO镜像启动文件</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-rpf</span> /mnt/boot /<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="步骤4"><a href="#步骤4" class="headerlink" title="步骤4:"></a>步骤4:</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>##步骤5: 在腾讯云/阿里云的操作页面打开VNC界面: 登录/远程登录 –&gt; VNC登录，正常ISO安装爱快系统<br>##步骤6: 进入控制台"开启外网访问WEB"<br> o、其他选项 –&gt; 2、开启外网访问web</p><p>#结束</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p><strong>📢 本文已迁移到《<a href="https://www.inte8.top/2025/07/11/a-li-yun-teng-xun-yun-an-zhuang-ai-kuai-xi-tong-bu-zou/">阿里云腾讯云安装爱快系统步骤</a>》</strong>(2025-07-11 发布，完整版)。原文保留如下供参考。</p></blockquote><hr><h1 id="阿里云-腾讯云-安装爱快系统步骤"><a href="#阿里云-腾讯云-安装爱快系统步骤" class="headerlink" title="阿里云/腾讯云 安装爱快系统步骤"></a>阿里云/腾讯云 安装爱快系统步骤</h1><p>开始: 随便安装一个ubuntu系统</p><h2 id="步骤1-下载ISO安装包"><a href="#步骤1-下载ISO安装包" class="headerlink" title="步骤1: 下载ISO安装包"></a>步骤1: 下载ISO安装包</h2><p>x32位</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> https://www.ikuai8.com/download.php?n<span class="token operator">=</span>/3.x/iso/iKuai8_x32_3.7.14_Build202408011011.iso <span class="token parameter variable">-O</span> ikuai8.iso<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>x64位</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> https://www.ikuai8.com/download.php?n<span class="token operator">=</span>/3.x/iso/iKuai8_x64_3.7.14_Build202408011011.iso <span class="token parameter variable">-O</span> ikuai8.iso<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="步骤2-挂载ISO镜像"><a href="#步骤2-挂载ISO镜像" class="headerlink" title="步骤2: 挂载ISO镜像"></a>步骤2: 挂载ISO镜像</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">mount</span> ikuai8.iso /mnt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="步骤3-复制ISO镜像启动文件"><a href="#步骤3-复制ISO镜像启动文件" class="headerlink" title="步骤3: 复制ISO镜像启动文件"></a>步骤3: 复制ISO镜像启动文件</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-rpf</span> /mnt/boot /<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="步骤4"><a href="#步骤4" class="headerlink" title="步骤4:"></a>步骤4:</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>##步骤5: 在腾讯云/阿里云的操作页面打开VNC界面: 登录/远程登录 –&gt; VNC登录，正常ISO安装爱快系统<br>##步骤6: 进入控制台"开启外网访问WEB"<br> o、其他选项 –&gt; 2、开启外网访问web</p><p>#结束</p>]]></content>
       
       
       <categories>
@@ -1146,7 +1146,7 @@
     
     
     <entry>
-      <title>WINDOWS系统下恢复群晖分区下的文件</title>
+      <title>Windows系统下恢复群晖分区下的文件</title>
       <link href="/2020/02/23/system/"/>
       <url>/2020/02/23/system/</url>
       
@@ -1175,7 +1175,7 @@
     
     
     <entry>
-      <title>利用GIt命令上传项目到GitHub指定仓库</title>
+      <title>利用Git命令上传项目到GitHub指定仓库</title>
       <link href="/2020/02/23/githelp/"/>
       <url>/2020/02/23/githelp/</url>
       
@@ -1220,11 +1220,11 @@
       
         <tags>
             
-            <tag> 回忆录 </tag>
-            
             <tag> 屌丝网管 </tag>
             
             <tag> 网管 </tag>
+            
+            <tag> 回忆录 </tag>
             
         </tags>
       

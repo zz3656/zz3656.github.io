@@ -49,11 +49,11 @@
       
         <tags>
             
+            <tag> AI </tag>
+            
             <tag> GitHub </tag>
             
             <tag> 开源 </tag>
-            
-            <tag> AI </tag>
             
         </tags>
       
@@ -78,11 +78,11 @@
       
         <tags>
             
+            <tag> AI </tag>
+            
             <tag> GitHub </tag>
             
             <tag> 开源 </tag>
-            
-            <tag> AI </tag>
             
         </tags>
       
@@ -107,11 +107,11 @@
       
         <tags>
             
+            <tag> AI </tag>
+            
             <tag> GitHub </tag>
             
             <tag> 开源 </tag>
-            
-            <tag> AI </tag>
             
         </tags>
       
@@ -252,9 +252,9 @@
       
         <tags>
             
-            <tag> 我的一生 </tag>
-            
             <tag> 回忆录 </tag>
+            
+            <tag> 我的一生 </tag>
             
             <tag> 初中篇 </tag>
             
@@ -281,9 +281,9 @@
       
         <tags>
             
-            <tag> 我的一生 </tag>
-            
             <tag> 回忆录 </tag>
+            
+            <tag> 我的一生 </tag>
             
             <tag> 初中篇 </tag>
             
@@ -339,11 +339,11 @@
       
         <tags>
             
+            <tag> 回忆录 </tag>
+            
             <tag> 我的一生 </tag>
             
             <tag> 童年 </tag>
-            
-            <tag> 回忆录 </tag>
             
         </tags>
       
@@ -515,9 +515,38 @@
             
             <tag> AI </tag>
             
+            <tag> 大模型 </tag>
+            
             <tag> 写作 </tag>
             
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AI 大模型最新进展盘点</title>
+      <link href="/2026/04/29/ai-da-mo-xing-zui-xin-jin-zhan-pan-dian/"/>
+      <url>/2026/04/29/ai-da-mo-xing-zui-xin-jin-zhan-pan-dian/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>人工智能领域在近两年迎来了爆发式增长，大语言模型（LLM）技术日新月异。本文将盘点当前 AI 大模型的最新进展与趋势。</p><h2 id="多模态能力突破"><a href="#多模态能力突破" class="headerlink" title="多模态能力突破"></a>多模态能力突破</h2><p>现代大模型已经不再局限于文本处理，而是朝着多模态方向快速发展：</p><ul><li><strong>视觉理解</strong>：GPT-4V、Gemini 等模型能够理解图片内容并进行分析</li><li><strong>视频生成</strong>：Sora 等模型可以根据文本描述生成高质量视频</li><li><strong>音频处理</strong>：语音识别、合成和实时翻译能力不断提升</li></ul><h2 id="开源生态繁荣"><a href="#开源生态繁荣" class="headerlink" title="开源生态繁荣"></a>开源生态繁荣</h2><p>开源大模型社区蓬勃发展，涌现出众多优秀的开源项目：</p><ul><li><strong>Llama 系列</strong>：Meta 开源的 Llama 模型不断迭代，性能逼近闭源模型</li><li><strong>Qwen 系列</strong>：阿里巴巴通义千问在中文理解方面表现优异</li><li><strong>DeepSeek</strong>：深度求索推出的模型在数学和编程领域表现突出</li></ul><h2 id="Agent-与工具调用"><a href="#Agent-与工具调用" class="headerlink" title="Agent 与工具调用"></a>Agent 与工具调用</h2><p>大模型正在从单纯的对话工具演变为能够自主完成复杂任务的智能体：</p><ol><li>函数调用（Function Calling）让模型能调用外部 API</li><li>RAG（检索增强生成）技术让模型能利用实时信息</li><li>多 Agent 协作完成复杂的工作流程</li></ol><h2 id="未来展望"><a href="#未来展望" class="headerlink" title="未来展望"></a>未来展望</h2><p>AI 大模型技术仍在快速演进中，我们期待看到更强大的推理能力、更低的使用成本、以及更广泛的应用场景。保持学习，拥抱变化！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前沿技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
             <tag> 大模型 </tag>
+            
+            <tag> GPT </tag>
             
         </tags>
       
@@ -576,35 +605,6 @@
             <tag> 装饰器 </tag>
             
             <tag> 编程技巧 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>AI 大模型最新进展盘点</title>
-      <link href="/2026/04/29/ai-da-mo-xing-zui-xin-jin-zhan-pan-dian/"/>
-      <url>/2026/04/29/ai-da-mo-xing-zui-xin-jin-zhan-pan-dian/</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>人工智能领域在近两年迎来了爆发式增长，大语言模型（LLM）技术日新月异。本文将盘点当前 AI 大模型的最新进展与趋势。</p><h2 id="多模态能力突破"><a href="#多模态能力突破" class="headerlink" title="多模态能力突破"></a>多模态能力突破</h2><p>现代大模型已经不再局限于文本处理，而是朝着多模态方向快速发展：</p><ul><li><strong>视觉理解</strong>：GPT-4V、Gemini 等模型能够理解图片内容并进行分析</li><li><strong>视频生成</strong>：Sora 等模型可以根据文本描述生成高质量视频</li><li><strong>音频处理</strong>：语音识别、合成和实时翻译能力不断提升</li></ul><h2 id="开源生态繁荣"><a href="#开源生态繁荣" class="headerlink" title="开源生态繁荣"></a>开源生态繁荣</h2><p>开源大模型社区蓬勃发展，涌现出众多优秀的开源项目：</p><ul><li><strong>Llama 系列</strong>：Meta 开源的 Llama 模型不断迭代，性能逼近闭源模型</li><li><strong>Qwen 系列</strong>：阿里巴巴通义千问在中文理解方面表现优异</li><li><strong>DeepSeek</strong>：深度求索推出的模型在数学和编程领域表现突出</li></ul><h2 id="Agent-与工具调用"><a href="#Agent-与工具调用" class="headerlink" title="Agent 与工具调用"></a>Agent 与工具调用</h2><p>大模型正在从单纯的对话工具演变为能够自主完成复杂任务的智能体：</p><ol><li>函数调用（Function Calling）让模型能调用外部 API</li><li>RAG（检索增强生成）技术让模型能利用实时信息</li><li>多 Agent 协作完成复杂的工作流程</li></ol><h2 id="未来展望"><a href="#未来展望" class="headerlink" title="未来展望"></a>未来展望</h2><p>AI 大模型技术仍在快速演进中，我们期待看到更强大的推理能力、更低的使用成本、以及更广泛的应用场景。保持学习，拥抱变化！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前沿技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> AI </tag>
-            
-            <tag> 大模型 </tag>
-            
-            <tag> GPT </tag>
             
         </tags>
       
@@ -828,9 +828,9 @@
             
             <tag> 软路由 </tag>
             
-            <tag> routeros </tag>
-            
             <tag> ros </tag>
+            
+            <tag> routeros </tag>
             
         </tags>
       
@@ -1048,9 +1048,9 @@
             
             <tag> 软路由 </tag>
             
-            <tag> routeros </tag>
-            
             <tag> ros </tag>
+            
+            <tag> routeros </tag>
             
         </tags>
       

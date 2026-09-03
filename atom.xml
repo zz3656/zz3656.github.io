@@ -10,7 +10,7 @@
   <rights>All rights reserved 2026, 因特吧</rights>
   <subtitle>因特吧</subtitle>
   <title>因特吧</title>
-  <updated>2026-09-03T01:44:16.578Z</updated>
+  <updated>2026-09-03T01:50:19.365Z</updated>
   <entry>
     <author>
       <name>因特吧</name>
@@ -18,12 +18,13 @@
     <category term="工作笔记" scheme="https://www.inte8.top/categories/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/"/>
     <category term="AI" scheme="https://www.inte8.top/tags/AI/"/>
     <category term="编程" scheme="https://www.inte8.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    <category term="AI-Agent" scheme="https://www.inte8.top/tags/AI-Agent/"/>
     <id>https://www.inte8.top/2026/09/03/pi-agent-guide/</id>
     <link href="https://www.inte8.top/2026/09/03/pi-agent-guide/"/>
     <published>2026-09-03T01:30:00.000Z</published>
     <summary>Pi 是 earendil-works 出品的极简终端编程 agent，本文是 npm 安装、多家模型认证、交互模式、扩展/技能/提示模板、SDK/RPC 集成、容器化沙箱的完整实战手册。</summary>
     <title>Pi Agent 详细使用指南：从安装到自部署</title>
-    <updated>2026-09-03T01:44:16.578Z</updated>
+    <updated>2026-09-03T01:50:19.365Z</updated>
   </entry>
   <entry>
     <author>

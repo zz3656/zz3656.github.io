@@ -69,6 +69,9 @@ jobs:
           # Use a temp clone to swap branches cleanly
           TMPDIR=$(mktemp -d)
           git clone --depth 1 --branch main "https://x-access-token:${DEPLOY_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$TMPDIR/main"
+          # Configure identity inside the cloned repo (config is per-repo)
+          git -C "$TMPDIR/main" config user.name "GitHub Actions"
+          git -C "$TMPDIR/main" config user.email "actions@github.com"
           rm -rf "$TMPDIR/main"/*
           cp -r public/. "$TMPDIR/main/"
           cd "$TMPDIR/main"

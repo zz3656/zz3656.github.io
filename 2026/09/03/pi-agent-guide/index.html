@@ -866,8 +866,8 @@ pi <span class="token parameter variable">--fork</span> <span class="token opera
 <p>可做的事比工具多得多——权限闸门（拦截 <code>rm -rf</code> / <code>sudo</code>）、Git checkpoint（每个 turn stash、分支错误就回滚）、路径保护（禁止写 <code>.env</code> / <code>node_modules/</code>）、自定义压缩策略、conversation summary、TUI 自定义组件（<code>ctx.ui.custom()</code>）。完整 API 见 <code>docs/extensions.md</code>。</p>
 <h3 id="5-2-技能（Skills）"><a href="#5-2-技能（Skills）" class="headerlink" title="5.2 技能（Skills）"></a>5.2 技能（Skills）</h3><p>按 <a target="_blank" rel="noopener" href="https://agentskills.io/specification">Agent Skills spec</a> 的标准化格式：每个技能是一个目录，根下放 <code>SKILL.md</code>（frontmatter + 自然语言说明），自由附 <code>scripts/</code>、<code>references/</code>、<code>assets/</code>。</p>
 <pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
-<span class="token front-matter yaml language-yaml">name: pdf-extract
-description: 从 PDF 中提取文字与表格，保留版式。文件类型 .pdf 时调用。</span>
+<span class="token front-matter yaml language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> pdf<span class="token punctuation">-</span>extract
+<span class="token key atrule">description</span><span class="token punctuation">:</span> 从 PDF 中提取文字与表格，保留版式。文件类型 .pdf 时调用。</span>
 <span class="token punctuation">---</span></span>
 
 <span class="token title important"><span class="token punctuation">#</span> pdf-extract</span>
@@ -904,8 +904,8 @@ Review the staged changes (<span class="token code-snippet code keyword">`git di
 
 <p>输入 <code>/review</code> 展开。带参数的话用 <code>argument-hint</code>：</p>
 <pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
-<span class="token front-matter yaml language-yaml">description: Review PRs from URLs with structured issue and code analysis
-argument-hint: &lt;pr-url&gt;</span>
+<span class="token front-matter yaml language-yaml"><span class="token key atrule">description</span><span class="token punctuation">:</span> Review PRs from URLs with structured issue and code analysis
+<span class="token key atrule">argument-hint</span><span class="token punctuation">:</span> &lt;pr<span class="token punctuation">-</span>url<span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><code>&lt;angle&gt;</code> 必填，<code>[square]</code> 可选。禁用自动发现：<code>--no-prompt-templates</code>。</p>
